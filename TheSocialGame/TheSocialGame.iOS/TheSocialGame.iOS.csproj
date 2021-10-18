@@ -133,4 +133,16 @@
       <Name>TheSocialGame</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\golden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rightarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\star.png" />
+  </ItemGroup>
 </Project>

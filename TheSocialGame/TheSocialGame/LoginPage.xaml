@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:TheSocialGame"
+             x:Class="TheSocialGame.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <ContentPage.BindingContext>
+        <local:LoginPage/>
+    </ContentPage.BindingContext>
+
+    <RelativeLayout>
+        <Label Text="Accedi a TheSocialGame."
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.20}"
+               FontAttributes="Bold"
+               FontSize="Large"
+            />
+        <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.28}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.80}">
+            <Entry  x:Name="UsernameEntry"
+                    Placeholder="il tuo username" 
+                    Text="{Binding Username}"
+                    BackgroundColor="{StaticResource FirstColor}"
+                    Opacity="0.5" 
+                    ClearButtonVisibility="WhileEditing"
+                    />
+            <Entry  x:Name="PasswordEntry"
+                    Placeholder="la tua password" 
+                    Text="{Binding Password}"
+                    BackgroundColor="{StaticResource FirstColor}"
+                    Opacity="0.5" 
+                    ClearButtonVisibility="WhileEditing"
+                    IsPassword="True"
+                    Margin="0, 10, 0, 0"
+                    />
+            <Frame Margin="10"
+                   BorderColor="DarkOrange"
+                   BackgroundColor="{StaticResource FirstColor}"
+                   CornerRadius="50"
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   IsClippedToBounds="True"
+                   HorizontalOptions="End"
+                   VerticalOptions="Center">
+                <Image Source="star.png"
+                       Aspect="AspectFill"
+                       Margin="-50"
+                       HeightRequest="100"
+                       WidthRequest="100" 
+                       IsVisible="{Binding IsCredentialsInserted}">
+                <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Star_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+        </StackLayout>
+
+        <Label x:Name="SignUpLabel"
+               FontSize="Medium"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.20}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.8}"
+               Text="Non sei registrato? Clicca qui" TextColor="{StaticResource FirstColor}" 
+               FontAttributes="Bold" 
+               TextDecorations="Underline">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="SignUpLabel_Tapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+        <Label x:Name="ForgottenPasswordLabel"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SignUpLabel, Property=X, Constant=0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SignUpLabel, Property=Y, Constant=30}"
+               Text="Password dimenticata?" 
+               TextColor="{StaticResource FirstColor}" 
+               FontSize="Medium" 
+               FontAttributes="Bold" 
+               TextDecorations="Underline">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ForgottenPasswordLabel_Tapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+    </RelativeLayout>
+
+</ContentPage>

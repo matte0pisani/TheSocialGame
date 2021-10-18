@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
+             x:Class="TheSocialGame.WelcomePage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+        <StackLayout Spacing="3">
+            <Image Source= "{StaticResource logo}" 
+                   VerticalOptions="Center"
+                   HeightRequest="300"
+            />
+            <Frame BorderColor= "{StaticResource FirstColor}"
+                   CornerRadius="5"
+                   Padding="8"
+                   Margin="20, 0, 20, 0">
+                   <StackLayout>
+                        <Label Text="Share. Inspire. Have fun!"
+                               FontSize="Medium"
+                               FontAttributes="Bold" />
+                        <BoxView Color="{StaticResource FirstColor}"
+                               HeightRequest="2"
+                               HorizontalOptions="Fill" />
+                        <Label Text="Benvenuto in TheSocialGame, il primo social network basato sui gruppi e sulle esperienze delle persone."/>
+                   </StackLayout>
+            </Frame>
+        <Button Margin="80, 40, 80, 40"
+                BackgroundColor="{StaticResource FirstColor}"
+                Text="Accedi"
+                VerticalOptions="Start"
+                Clicked="Button_Clicked"
+        />
+    </StackLayout>
+
+</ContentPage>

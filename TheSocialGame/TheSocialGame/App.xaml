@@ -3,6 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TheSocialGame.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <OnPlatform x:Key="logo"
+                        x:TypeArguments="FileImageSource"
+                        Android="golden.png"
+                        iOS ="golden.png" />
+            <Color x:Key="FirstColor">Orange</Color>
+            <Color x:Key="SecondColor">Yellow</Color>
+            <Color x:Key="BackgroundColor">AntiqueWhite</Color>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
