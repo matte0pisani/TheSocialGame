@@ -7,8 +7,9 @@
              BackgroundColor="{StaticResource BackgroundColor}">
 
     <ContentPage.BindingContext>
-        <local:LoginPage/>
+        <local:LoginPageViewModel/>
     </ContentPage.BindingContext>
+    
 
     <RelativeLayout>
         <Label Text="Accedi a TheSocialGame."
@@ -50,7 +51,7 @@
                        Margin="-50"
                        HeightRequest="100"
                        WidthRequest="100" 
-                       IsVisible="{Binding IsCredentialsInserted}">
+                       IsEnabled ="{Binding IsCredentialsInserted}">
                 <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Star_Tapped"/>
                     </Image.GestureRecognizers>

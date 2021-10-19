@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,20 +13,7 @@ namespace TheSocialGame
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-        public bool IsCredentialsInserted
-        {
-            get
-            {
-                if (Password == null || Username == null) return false;
-                return Password.Length > 0 && Username.Length > 0;
-            }
-
-        }
-
-        public string Username { get; set; }
-
-        public string Password { get; set; }
-
+       
         public LoginPage()
         {
             InitializeComponent();
@@ -45,8 +33,8 @@ namespace TheSocialGame
 
         private bool IsUserValid()
         {
-            if (this.Password == null || this.Username == null) return false;
-            return Password.Length > 0 && this.Username.Length > 0;
+            if (this.PasswordEntry.Text == null || this.UsernameEntry.Text == null) return false;
+            return PasswordEntry.Text.Length > 0 && this.UsernameEntry.Text.Length > 0;
         }
 
         async private void Star_Tapped(object sender, EventArgs e)
