@@ -6,11 +6,6 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource BackgroundColor}">
 
-    <ContentPage.BindingContext>
-        <local:LoginPageViewModel/>
-    </ContentPage.BindingContext>
-    
-
     <RelativeLayout>
         <Label Text="Accedi a TheSocialGame."
                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
@@ -23,19 +18,19 @@
                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.80}">
             <Entry  x:Name="UsernameEntry"
                     Placeholder="il tuo username" 
-                    Text="{Binding Username}"
                     BackgroundColor="{StaticResource FirstColor}"
                     Opacity="0.5" 
                     ClearButtonVisibility="WhileEditing"
+                    TextChanged="UsernameEntry_TextChanged"
                     />
             <Entry  x:Name="PasswordEntry"
                     Placeholder="la tua password" 
-                    Text="{Binding Password}"
                     BackgroundColor="{StaticResource FirstColor}"
                     Opacity="0.5" 
                     ClearButtonVisibility="WhileEditing"
                     IsPassword="True"
                     Margin="0, 10, 0, 0"
+                    TextChanged="PasswordEntry_TextChanged"
                     />
             <Frame Margin="10"
                    BorderColor="DarkOrange"
@@ -46,13 +41,13 @@
                    IsClippedToBounds="True"
                    HorizontalOptions="End"
                    VerticalOptions="Center">
-                <Image Source="star.png"
+                <Image x:Name="StarImage"
+                       Source="star.png"
                        Aspect="AspectFill"
                        Margin="-50"
                        HeightRequest="100"
-                       WidthRequest="100" 
-                       IsEnabled ="{Binding IsCredentialsInserted}">
-                <Image.GestureRecognizers>
+                       WidthRequest="100"  >
+                    <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Star_Tapped"/>
                     </Image.GestureRecognizers>
                 </Image>

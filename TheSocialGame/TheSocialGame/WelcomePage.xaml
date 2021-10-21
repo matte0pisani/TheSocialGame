@@ -5,25 +5,25 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource BackgroundColor}">
 
-        <StackLayout Spacing="3">
-            <Image Source= "{StaticResource logo}" 
+    <StackLayout Spacing="3">
+        <Image Source= "{StaticResource logo}" 
                    VerticalOptions="Center"
                    HeightRequest="300"
             />
-            <Frame BorderColor= "{StaticResource FirstColor}"
+        <Frame BorderColor= "{StaticResource FirstColor}"
                    CornerRadius="5"
                    Padding="8"
                    Margin="20, 0, 20, 0">
-                   <StackLayout>
-                        <Label Text="Share. Inspire. Have fun!"
+            <StackLayout>
+                <Label Text="Share. Inspire. Have fun!"
                                FontSize="Medium"
                                FontAttributes="Bold" />
-                        <BoxView Color="{StaticResource FirstColor}"
+                <BoxView Color="{StaticResource FirstColor}"
                                HeightRequest="2"
                                HorizontalOptions="Fill" />
-                        <Label Text="Benvenuto in TheSocialGame, il primo social network basato sui gruppi e sulle esperienze delle persone."/>
-                   </StackLayout>
-            </Frame>
+                <Label Text="Benvenuto in TheSocialGame, il primo social network basato sui gruppi e sulle esperienze delle persone."/>
+            </StackLayout>
+        </Frame>
         <Button Margin="80, 40, 80, 40"
                 BackgroundColor="{StaticResource FirstColor}"
                 Text="Accedi"
