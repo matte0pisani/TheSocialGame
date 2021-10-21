@@ -66,8 +66,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
-    <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Info.plist" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -125,16 +125,26 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xam.Plugins.Forms.ProgressRing">
+      <Version>0.1.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\TheSocialGame\TheSocialGame.csproj">
-      <Project>{D0A81996-96C1-493E-96FC-57C3A9D60506}</Project>
+      <Project>{0D8E7BC3-8B0B-4120-9697-98C7814C7A99}</Project>
       <Name>TheSocialGame</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\golden.png" />
+    <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\notification.png" />
+    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\plus.png" />
+    <BundleResource Include="Resources\ranking.png" />
+    <BundleResource Include="Resources\Acme-Regular.ttf" />
+    <BundleResource Include="Resources\setting.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\horizontal.png" />
