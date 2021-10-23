@@ -8,6 +8,10 @@
                         x:TypeArguments="FileImageSource"
                         Android="golden.png"
                         iOS ="golden.png" />
+            <OnPlatform x:Key="horizontalLogo"
+                        x:TypeArguments="FileImageSource"
+                        Android="horizontal.png"
+                        iOS ="golden.png" />
             <OnPlatform x:Key="iconaHome"
                         x:TypeArguments="FileImageSource"
                         Android="home.png"

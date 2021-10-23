@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TheSocialGame"
+             x:Class="TheSocialGame.SignUpPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource BackgroundColor}">
+    <ContentPage.BindingContext>
+        <local:SignUpViewModel />
+    </ContentPage.BindingContext>
+          
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Label Text="Unisciti a noi e inizia a condividere!"
+                   FontSize="Medium"
+                   FontAttributes="Italic,Bold"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.1 }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.1 }"
+                   />
+            <StackLayout x:Name="Stack"
+                         Padding="30"
+                         Spacing="20"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor= 0 }"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.1 }">
+                <Frame x:Name="FirstFrame"
+                       CornerRadius="5"
+                       BackgroundColor="FloralWhite"
+                       Padding="8">
+                    <FlexLayout Direction="Row"
+                                AlignItems="Center">
+                        <Label Text="username:" FontAttributes="Bold"/>
+                        <Entry Placeholder="inserisci qui" 
+                               Text="{Binding Username, Mode=TwoWay}"
+                               ClearButtonVisibility="WhileEditing"
+                               FlexLayout.Grow="1"
+                               />
+                    </FlexLayout>
+                </Frame>
+                <Frame CornerRadius="5"
+                       BackgroundColor="FloralWhite"
+                       Padding="8">
+                    <FlexLayout Direction="Row"
+                                AlignItems="Center">
+                        <Label Text="email:" FontAttributes="Bold"/>
+                        <Entry Placeholder="inserisci qui" 
+                               Text="{Binding Email, Mode=TwoWay}"
+                               ClearButtonVisibility="WhileEditing"
+                               FlexLayout.Grow="1"/>
+                    </FlexLayout>
+                </Frame>
+                <Frame CornerRadius="5"
+                       BackgroundColor="FloralWhite"
+                       Padding="8">
+                    <FlexLayout Direction="Row"
+                                AlignItems="Center">
+                        <Label Text="password:" FontAttributes="Bold"/>
+                        <Entry x:Name="passwordEntry"
+                               Placeholder="inserisci qui" 
+                               Text="{Binding Password, Mode=TwoWay}"
+                               ClearButtonVisibility="WhileEditing"
+                               FlexLayout.Grow="1"
+                               IsPassword="True"/>
+                    </FlexLayout>
+                </Frame>
+                <Frame CornerRadius="5"
+                       BackgroundColor="FloralWhite"
+                       Padding="8">
+                    <FlexLayout Direction="Row"
+                                AlignItems="Center">
+                        <StackLayout>
+                            <Label Text="conferma" FontAttributes="Bold"/>
+                            <Label Text="password:" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <Entry Placeholder="inserisci qui"
+                               Text="{Binding ConfermaPassword, Mode=TwoWay}"
+                               ClearButtonVisibility="WhileEditing"
+                               FlexLayout.Grow="1"
+                               IsPassword="True"/>
+                    </FlexLayout>
+                </Frame>
+            </StackLayout>
+            <Button BackgroundColor="{StaticResource FirstColor}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Stack, Property=Width, Factor=.72}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Stack, Property=Height, Factor=1.15}"
+                    Text="Sign up"
+                    CornerRadius="40"
+                    Clicked="Button_Clicked"
+                    />
+            <Label  x:Name="errorLabel"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Stack, Property=Width, Factor=.1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Stack, Property=Height, Factor=1.15}"
+                    Text="{Binding ErrorLabel}"
+                    TextColor="Red"
+                   />
+            <Image Source="{StaticResource horizontalLogo}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.8}"/>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

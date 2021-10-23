@@ -35,7 +35,7 @@ namespace TheSocialGame
             StarImage.IsVisible = IsUsernameSet && IsPasswordSet;
         }
 
-        async private void Star_Tapped(object sender, EventArgs e)
+        private async void Star_Tapped(object sender, EventArgs e)
         {
             if (IsUserValid())
                 await Navigation.PushAsync(new ProfilePage(null)); // provvisoriamente manda null come parametro, poi dovrà mandare il riferimento all'utente che sta accedendo al suo profilo
@@ -52,9 +52,9 @@ namespace TheSocialGame
             IsPasswordSet = PasswordEntry.Text.Length > 0;
             RefreshStarVisibility();
         }
-        private void SignUpLabel_Tapped(object sender, EventArgs e)
+        private async void SignUpLabel_Tapped(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new SignUpPage());
         }
 
         private void ForgottenPasswordLabel_Tapped(object sender, EventArgs e)
