@@ -23,7 +23,6 @@ namespace TheSocialGame
             StarImage.IsVisible = false;
             IsUsernameSet = false;
             IsPasswordSet = false;
-            BindingContext = this;
         }
 
         private bool IsUserValid()
