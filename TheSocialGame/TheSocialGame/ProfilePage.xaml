@@ -7,8 +7,8 @@
     BackgroundColor="{DynamicResource BackgroundColor}">
     <ContentPage.Content>
 
-        <RelativeLayout>
-            <BoxView Color="{StaticResource FirstColor}" 
+        <RelativeLayout x:Name="RelativeLayout">
+            <BoxView x:Name="UpperBound" Color="{StaticResource FirstColor}" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
@@ -20,139 +20,120 @@
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.05}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}" />
 
-            <Image Source="{StaticResource iconaNotifiche}" 
-                     RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0}"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.045}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.952}"  />
-
-            <Image Source="{StaticResource iconaHome}" 
-                     RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.04}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.955}"  />
            
-           
-            <Image Source="{StaticResource iconaAggiungi}" 
-                     RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.4}"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.945}"  />
-           
-           
-            <Image Source="{StaticResource iconaCerca}" 
-                     RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.6}"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.05}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"  />
-           
-           
-            <Image Source="{StaticResource iconaClassifiche}" 
-                     RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.8}"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.045}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.951}"  />
-
-             <Image Source="{StaticResource iconaImpostazioni}" 
-                     RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.9}"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.09}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.09}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.01}"  />
-           
-           
-            <Button x:Name="NotificationButton" BackgroundColor="Transparent" Clicked="NotificationClicked"
+            <ImageButton x:Name="NotificationButton" Source="{StaticResource iconaNotifiche}"  BackgroundColor="Transparent" Clicked="NotificationClicked"
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.05}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.048}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
            
-            <Button x:Name="HomeButton" BackgroundColor="Transparent" Clicked="HomeClicked"
+            <ImageButton x:Name="HomeButton" Source="{StaticResource iconaHome}" BackgroundColor="Transparent" Clicked="HomeClicked"
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.05}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.045}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
            
-            <Button x:Name="AddExperienceButton" BackgroundColor="Transparent" Clicked="AddClicked"
+            <ImageButton x:Name="AddExperienceButton" Source="{StaticResource iconaAggiungi}"   BackgroundColor="Transparent" Clicked="AddClicked" BorderColor="Black" BorderWidth="3" CornerRadius="10" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.05}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.945}"/>
            
-           <Button x:Name="SearchButton" BackgroundColor="Transparent" Clicked="SearchClicked"
+           <ImageButton x:Name="SearchButton" Source="{StaticResource iconaCerca}"  BackgroundColor="Transparent" Clicked="SearchClicked"
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.05}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.055}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.945}"/>
            
-            <Button x:Name="RankingButton" BackgroundColor="Transparent" Clicked="RankingClicked"
+            <ImageButton x:Name="RankingButton" Source="{StaticResource iconaClassifiche}"  BackgroundColor="Transparent" Clicked="RankingClicked"
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.05}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.047}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
 
-            <Button x:Name="SettingButton" BackgroundColor="Transparent" Clicked="SettingClicked" 
-                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.85}"
+            <ImageButton x:Name="SettingButton" BackgroundColor="Transparent" Source="{StaticResource iconaImpostazioni}"  Clicked="SettingClicked" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.84}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.001}"/>
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.08}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.01}"/>
            
            
             <Label x:Name="UsernameLabel" TextColor="Black" FontAttributes="Bold" FontSize="47"
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.021}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.015}"/>
-            
             <ScrollView 
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.85}"
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
                 <RelativeLayout >
-               
+           
                      <control:ProgressRing x:Name="SocialPointBar" RingThickness="15"  RingBaseColor="{StaticResource FirstColor}" RingProgressColor="{StaticResource SecondColor}" Rotation="180" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
-                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.6}"
-                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.21}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.005}"/>
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.6}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.215}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.01}"/>
 
                     <Ellipse Stroke="Black" StrokeThickness="5" 
-                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.632}"
-                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.458}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.101}"
-                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.143}" />
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,   Property=Width, Factor=0.63}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.46}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.2}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.08}" />
                     <Ellipse Stroke="Black" StrokeThickness="5" Fill="Bisque"
-                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.53}"
-                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.388}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.15}"
-                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.18}" />
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.525}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.385}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.253}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.118}" />
 
                     <Image Source="{StaticResource iconaUser}" 
-                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.31}"
-                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.4}"
-                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.7}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=-0.02}"  />
+                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.295}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.45}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.45}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.09}"  />
 
-                    <Image Source="{StaticResource iconaAggiungi}" 
-                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.45}"
-                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.12}"
-                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.12}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.23}"  />
-                    
-                     <Ellipse Fill="Gold" Stroke="Black" StrokeThickness="5"
+                    <ImageButton Source="{StaticResource iconaAggiungi}" BackgroundColor="Transparent"
+                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.422}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.2}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height,  Type=RelativeToParent, Factor=0.15}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.197}"  />
+
+                    <Frame x:Name="AddPhotoFrame" CornerRadius="20" BackgroundColor="FloralWhite" Padding="8" HasShadow="True"
+                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.05}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.9}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height,  Type=RelativeToParent, Factor=0.4}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.1}"  >
+
+                        <RelativeLayout>
+                            <Label Text="Inserisci la tua foto profilo:" FontAttributes="Bold" TextDecorations="Underline" FontSize="Title"  TextColor="{StaticResource FirstColor}"
+                                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.01}"
+                                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.08}"/>
+               
+                            <Button  Text="Scatta ora" FontSize="25" BackgroundColor="NavajoWhite" BorderColor="{StaticResource FirstColor}" BorderWidth="3"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.23}"
+                                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.9}"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.71}"/>
+                            <Button  Text="Importa da Galleria" FontSize="25" BackgroundColor="NavajoWhite" BorderColor="{StaticResource FirstColor}" BorderWidth="3"
+                                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.5}"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.35}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4}"/>
+                        
+                        
+                         </RelativeLayout>
+                     </Frame>
+
+                    <Ellipse Fill="Gold" Stroke="Black" StrokeThickness="5"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.43}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.17}"
-                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.12}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.52}"  />
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height,  Type=RelativeToParent, Factor=0.12}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.535}"  />
 
-                     <Label x:Name="LabelLevel"
-                            TextColor="Black" FontAttributes="Bold" FontSize="50" 
-                            RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.44}"
-                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.52}"  />
+                    <Label x:Name="LabelLevel"
+                         TextColor="Black" FontAttributes="Bold" FontSize="50"
+                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.477}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,  Factor=0.53}"  />
 
 
-                 </RelativeLayout>
-
-            </ScrollView> 
-           
-           
+               </RelativeLayout>  
+               </ScrollView>
            </RelativeLayout>
         
     </ContentPage.Content>
