@@ -24,15 +24,15 @@ namespace TheSocialGame
             else
             user = us;
             UsernameLabel.Text =this.user.username;
-           
-            SocialPointBar.Progress =(double) (user.puntiSocial%10)/10;
-            
+            RiempiProgressBar();
+            LabelLevel.Text = Convert.ToString((user.puntiSocial / 10)+1);
 
             BindingContext = this;
         }
 
-      
-
+        async void RiempiProgressBar() {
+            await SocialPointBar.ProgressTo((double)(user.puntiSocial % 10) / 10, 3000, Easing.Linear);
+        }
 
         async void NotificationClicked(Object sender, EventArgs e)
         {

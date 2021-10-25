@@ -36,6 +36,10 @@
                         x:TypeArguments="FileImageSource"
                         Android="setting.png"
                         iOS ="setting.png" />
+             <OnPlatform x:Key="iconaUser"
+                        x:TypeArguments="FileImageSource"
+                        Android="user.png"
+                        iOS ="user.png" />
             <Color x:Key="FirstColor">Orange</Color>
             <Color x:Key="SecondColor">Yellow</Color>
             <Color x:Key="BackgroundColor">AntiqueWhite</Color>

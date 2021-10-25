@@ -70,7 +70,6 @@
     <None Include="Info.plist" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -113,6 +112,7 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -137,22 +137,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\Acme-Regular.ttf" />
     <BundleResource Include="Resources\golden.png" />
     <BundleResource Include="Resources\home.png" />
     <BundleResource Include="Resources\notification.png" />
-    <BundleResource Include="Resources\search.png" />
     <BundleResource Include="Resources\plus.png" />
     <BundleResource Include="Resources\ranking.png" />
-    <BundleResource Include="Resources\Acme-Regular.ttf" />
-    <BundleResource Include="Resources\setting.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\horizontal.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\rightarrow.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\setting.png" />
     <BundleResource Include="Resources\star.png" />
+    <BundleResource Include="Resources\user.png" />
   </ItemGroup>
 </Project>
