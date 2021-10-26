@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace TheSocialGame
@@ -24,6 +24,14 @@ namespace TheSocialGame
 
             }
             else user = us;
+            if(user.fotoProfilo == null)
+            {
+                ProfilePicFrame.IsVisible = false;
+            } else
+            {
+                ProfilePic.Source = user.fotoProfilo; 
+            }
+
             UsernameLabel.Text =this.user.username;
             RiempiProgressBar();
             if (user.livello < 10)
@@ -41,6 +49,36 @@ namespace TheSocialGame
         async void RiempiProgressBar() {
             await SocialPointBar.ProgressTo((double)(user.puntiSocial % 10) / 10, 3000, Easing.Linear);
         }
+
+        async void CameraClicked(Object sender, EventArgs e)
+        {
+            var foto = await MediaPicker.CapturePhotoAsync();
+
+            if (foto != null)
+            {
+                var stream = await foto.OpenReadAsync();
+                user.fotoProfilo = ImageSource.FromStream(() => stream);
+                ProfilePicFrame.IsVisible = true;
+                ProfilePic.Source = ImageSource.FromStream(() => stream);
+            }
+        }
+
+        async void FromGalleryClicked(Object sender, EventArgs e)
+        {
+            var foto = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+            {
+                Title = "Scegli la tua immagine del profilo!"
+            });
+
+            if (foto != null)
+            {
+                var stream = await foto.OpenReadAsync();
+                user.fotoProfilo = ImageSource.FromStream(() => stream);
+                ProfilePicFrame.IsVisible = true;
+                ProfilePic.Source = ImageSource.FromStream(() => stream);
+            }
+         }
+
 
         async void NotificationClicked(Object sender, EventArgs e)
         {

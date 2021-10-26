@@ -36,5 +36,9 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>Font</key>
 	<string>Acme-Regular.ttf</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>This App would like to access your photos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This App would like to take pictures</string>
 </dict>
 </plist>

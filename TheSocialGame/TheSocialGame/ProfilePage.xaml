@@ -96,6 +96,17 @@
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height,  Type=RelativeToParent, Factor=0.15}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.197}"  />
 
+                    <Frame x:Name="ProfilePicFrame" CornerRadius="120" BorderColor="Black" BackgroundColor="Black" IsClippedToBounds="True" Padding="0" HasShadow="True"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.525}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.385}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.253}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.118}" >
+
+                        <Image x:Name="ProfilePic" Margin="-36"/>
+                        
+
+                    </Frame>
+
                     <Frame x:Name="AddPhotoFrame" CornerRadius="20" BackgroundColor="BlanchedAlmond" Padding="8" HasShadow="True" BorderColor="{StaticResource FirstColor}"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.05}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.9}"
@@ -106,6 +117,8 @@
                             <Label Text="Inserisci la tua foto profilo:" FontAttributes="Bold" TextDecorations="Underline" FontSize="Title"  TextColor="{StaticResource FirstColor}"
                                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.01}"
                                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.14}"/>
+
+                           
 
                             <Image   Source="{StaticResource iconaGalleria}"
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.15}"
@@ -123,10 +136,12 @@
                            
                             
                             <Button x:Name="CameraButton" Text="SCATTA ORA" FontSize="25" BackgroundColor="Transparent" BorderColor="{StaticResource FirstColor}" BorderWidth="3" TextColor="Black"
+                                     Clicked="CameraClicked"
                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.4}"
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.9}"
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.71}"/>
                             <Button x:Name="FromGalleryButton" Text="IMPORTA DA GALLERIA" FontSize="25" BackgroundColor="Transparent" BorderColor="{StaticResource FirstColor}" BorderWidth="3" TextColor="Black"
+                                     Clicked="FromGalleryClicked"
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.5}"
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.35}"
                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7}"/>
@@ -146,7 +161,7 @@
                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.48}"
                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,  Factor=0.53}"/>
 
-                    <Label x:Name="LabelLevelDouble" IsVisible="false"
+                    <Label x:Name="LabelLevelDouble" 
                          TextColor="Black" FontAttributes="Bold" FontSize="50"
                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.445}"
                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,  Factor=0.53}"/>
