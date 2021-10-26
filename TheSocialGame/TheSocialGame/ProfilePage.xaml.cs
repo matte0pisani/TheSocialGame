@@ -19,16 +19,24 @@ namespace TheSocialGame
                 this.user = new Utente();
                 user.username = "Cavia";
                 user.puntiSocial = new Random().Next(100);
-               
+                user.livello = (user.puntiSocial / 10) + 1;
+
+
             }
-            else
-            user = us;
+            else user = us;
             UsernameLabel.Text =this.user.username;
             RiempiProgressBar();
-            LabelLevel.Text = Convert.ToString((user.puntiSocial / 10)+1);
+            if (user.livello < 10)
+                 LabelLevelSingle.Text = Convert.ToString(user.livello);
+            else LabelLevelDouble.Text = Convert.ToString(user.livello);
+               
 
+            AddPhotoFrame.IsVisible = false;
             BindingContext = this;
         }
+
+
+        
 
         async void RiempiProgressBar() {
             await SocialPointBar.ProgressTo((double)(user.puntiSocial % 10) / 10, 3000, Easing.Linear);
@@ -62,6 +70,16 @@ namespace TheSocialGame
         async void SettingClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SettingPage());
+        }
+
+        void AddPhoto(Object sender, EventArgs e)
+        {
+            AddPhotoFrame.IsVisible = true;
+        }
+
+        void ExitFromAddPhoto(Object sender, EventArgs e)
+        {
+            AddPhotoFrame.IsVisible = false;
         }
     }
 }
