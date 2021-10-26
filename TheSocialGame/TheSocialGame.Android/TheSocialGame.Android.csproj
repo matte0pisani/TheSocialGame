@@ -125,11 +125,11 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\gallery.png">
+    <AndroidResource Include="Resources\drawable\camera.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\camera.png">
+    <AndroidResource Include="Resources\drawable\gallery.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

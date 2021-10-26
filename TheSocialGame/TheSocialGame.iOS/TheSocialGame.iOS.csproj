@@ -147,10 +147,17 @@
     <BundleResource Include="Resources\setting.png" />
     <BundleResource Include="Resources\star.png" />
     <BundleResource Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\camera.png" />
-    <AndroidResource Include="Resources\gallery.png" />
-    <AndroidResource Include="Resources\x.png" />
+    <BundleResource Include="Resources\camera.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </BundleResource>
+    <BundleResource Include="Resources\gallery.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </BundleResource>
+    <BundleResource Include="Resources\x.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </BundleResource>
   </ItemGroup>
 </Project>

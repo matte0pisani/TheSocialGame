@@ -111,7 +111,7 @@
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.15}"
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.85}"
                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.695}"/>
-                            <Image Source="{StaticResource iconaFotocamera}"
+                            <Image   Source="{StaticResource iconaFotocamera}"
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.15}"
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.85}"
                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.4}"/>
@@ -122,11 +122,11 @@
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.93}"/>
                            
                             
-                            <Button x:Name="CameraButton" Text="Scatta ora" FontSize="25" BackgroundColor="Transparent" BorderColor="{StaticResource FirstColor}" BorderWidth="3"
+                            <Button x:Name="CameraButton" Text="SCATTA ORA" FontSize="25" BackgroundColor="Transparent" BorderColor="{StaticResource FirstColor}" BorderWidth="3" TextColor="Black"
                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.4}"
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.9}"
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.71}"/>
-                            <Button x:Name="FromGalleryButton" Text="Importa da Galleria" FontSize="25" BackgroundColor="Transparent" BorderColor="{StaticResource FirstColor}" BorderWidth="3"
+                            <Button x:Name="FromGalleryButton" Text="IMPORTA DA GALLERIA" FontSize="25" BackgroundColor="Transparent" BorderColor="{StaticResource FirstColor}" BorderWidth="3" TextColor="Black"
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.5}"
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.35}"
                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7}"/>
