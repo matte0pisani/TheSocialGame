@@ -38,7 +38,11 @@ namespace TheSocialGame
         private async void Star_Tapped(object sender, EventArgs e)
         {
             if (IsUserValid())
-                await Navigation.PushAsync(new ProfilePage(null)); // provvisoriamente manda null come parametro, poi dovrà mandare il riferimento all'utente che sta accedendo al suo profilo
+            {
+                Utente usr = new Utente();
+                usr.username = UsernameEntry.Text;
+                await Navigation.PushAsync(new ProfilePage(usr)); // provvisoriamente manda null come parametro, poi dovrà mandare il riferimento all'utente che sta accedendo al suo profilo
+            }
         }
 
         private void UsernameEntry_TextChanged(object sender, TextChangedEventArgs e)

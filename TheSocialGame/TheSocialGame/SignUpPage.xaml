@@ -29,7 +29,8 @@
                     <FlexLayout Direction="Row"
                                 AlignItems="Center">
                         <Label Text="username:" FontAttributes="Bold"/>
-                        <Entry Placeholder="inserisci qui" 
+                        <Entry x:Name="UsernameEntry"
+                               Placeholder="inserisci qui" 
                                Text="{Binding Username, Mode=TwoWay}"
                                ClearButtonVisibility="WhileEditing"
                                FlexLayout.Grow="1"

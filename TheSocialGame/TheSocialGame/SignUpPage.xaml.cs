@@ -20,7 +20,11 @@ namespace TheSocialGame
         private async void Button_Clicked(object sender, EventArgs e)
         {
             if (errorLabel.Text.Length == 0 && passwordEntry.Text.Length != 0)
-                await Navigation.PushAsync(new ProfilePage(null));
+            {
+                Utente usr = new Utente();
+                usr.username = UsernameEntry.Text;
+                await Navigation.PushAsync(new ProfilePage(usr));
+            }
         }
     }
 }
