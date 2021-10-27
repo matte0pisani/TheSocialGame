@@ -36,9 +36,15 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>Font</key>
 	<string>Acme-Regular.ttf</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>This App would like to access your photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This App would like to access your photo</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This App would like to take pictures</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>This App would like to access your multimedia library</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This App would like to add element to your phto library</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This App would like to access your microphone</string>
 </dict>
 </plist>

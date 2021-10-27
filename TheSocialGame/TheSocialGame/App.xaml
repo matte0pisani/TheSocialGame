@@ -52,6 +52,14 @@
                         x:TypeArguments="FileImageSource"
                         Android="x.png"
                         iOS ="x.png" />
+            <OnPlatform x:Key="iconaCambiaFoto"
+                        x:TypeArguments="FileImageSource"
+                        Android="photo.png"
+                        iOS ="photo.png" />
+             <OnPlatform x:Key="iconaCestino"
+                        x:TypeArguments="FileImageSource"
+                        Android="trash.png"
+                        iOS ="trash.png" />
             <Color x:Key="FirstColor">Orange</Color>
             <Color x:Key="SecondColor">Yellow</Color>
             <Color x:Key="BackgroundColor">AntiqueWhite</Color>

@@ -12,24 +12,26 @@ namespace TheSocialGame
         public ProfilePage(Utente us)
         {
             InitializeComponent();
-            /*Utente di default finchè non abbiamo database*/
+           
 
-            if(us == null)
+            
+            user = us;
+            if(user.puntiSocial == 0) // provvisorio!!!!
             {
-                this.user = new Utente();
-                user.username = "Cavia";
                 user.puntiSocial = new Random().Next(100);
                 user.livello = (user.puntiSocial / 10) + 1;
-
-
             }
-            else user = us;
+
             if(user.fotoProfilo == null)
             {
                 ProfilePicFrame.IsVisible = false;
+                ChangeProfilePicButton.IsVisible = false;
+                
             } else
             {
-                ProfilePic.Source = user.fotoProfilo; 
+                ProfilePic.Source = user.fotoProfilo;
+                ChangeProfilePicButton.IsVisible = true;
+               
             }
 
             UsernameLabel.Text =this.user.username;
@@ -52,6 +54,7 @@ namespace TheSocialGame
 
         async void CameraClicked(Object sender, EventArgs e)
         {
+           
             var foto = await MediaPicker.CapturePhotoAsync();
 
             if (foto != null)
@@ -59,6 +62,7 @@ namespace TheSocialGame
                 var stream = await foto.OpenReadAsync();
                 user.fotoProfilo = ImageSource.FromStream(() => stream);
                 ProfilePicFrame.IsVisible = true;
+                ChangeProfilePicButton.IsVisible = true;
                 ProfilePic.Source = ImageSource.FromStream(() => stream);
             }
         }
@@ -75,6 +79,7 @@ namespace TheSocialGame
                 var stream = await foto.OpenReadAsync();
                 user.fotoProfilo = ImageSource.FromStream(() => stream);
                 ProfilePicFrame.IsVisible = true;
+                ChangeProfilePicButton.IsVisible = true;
                 ProfilePic.Source = ImageSource.FromStream(() => stream);
             }
          }
@@ -113,11 +118,17 @@ namespace TheSocialGame
         void AddPhoto(Object sender, EventArgs e)
         {
             AddPhotoFrame.IsVisible = true;
+            if (user.fotoProfilo != null)
+                EliminaButton.IsVisible = true;
+            else
+                EliminaButton.IsVisible = false;
         }
 
         void ExitFromAddPhoto(Object sender, EventArgs e)
         {
+            
             AddPhotoFrame.IsVisible = false;
+            
         }
     }
 }

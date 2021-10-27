@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -147,17 +147,10 @@
     <BundleResource Include="Resources\setting.png" />
     <BundleResource Include="Resources\star.png" />
     <BundleResource Include="Resources\user.png" />
-    <BundleResource Include="Resources\camera.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </BundleResource>
-    <BundleResource Include="Resources\gallery.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </BundleResource>
-    <BundleResource Include="Resources\x.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </BundleResource>
+    <BundleResource Include="Resources\camera.png" />
+    <BundleResource Include="Resources\gallery.png" />
+    <BundleResource Include="Resources\x.png" />
+    <BundleResource Include="Resources\photo.png" />
+    <BundleResource Include="Resources\trash.png" />
   </ItemGroup>
 </Project>
