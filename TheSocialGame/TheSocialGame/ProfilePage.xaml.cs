@@ -33,14 +33,13 @@ namespace TheSocialGame
                 ChangeProfilePicButton.IsVisible = true;
                
             }
-
             UsernameLabel.Text =this.user.username;
             RiempiProgressBar();
             if (user.livello < 10)
                  LabelLevelSingle.Text = Convert.ToString(user.livello);
             else LabelLevelDouble.Text = Convert.ToString(user.livello);
-               
 
+            ConfermaEliminazioneFrame.IsVisible = false;
             AddPhotoFrame.IsVisible = false;
             BindingContext = this;
         }
@@ -52,6 +51,7 @@ namespace TheSocialGame
             await SocialPointBar.ProgressTo((double)(user.puntiSocial % 10) / 10, 3000, Easing.Linear);
         }
 
+        //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         async void CameraClicked(Object sender, EventArgs e)
         {
            
@@ -67,6 +67,7 @@ namespace TheSocialGame
             }
         }
 
+        //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         async void FromGalleryClicked(Object sender, EventArgs e)
         {
             var foto = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
@@ -83,6 +84,25 @@ namespace TheSocialGame
                 ProfilePic.Source = ImageSource.FromStream(() => stream);
             }
          }
+
+        void ConfermaElimina(Object sender, EventArgs e)
+        {
+            ConfermaEliminazioneFrame.IsVisible = true;
+        }
+
+        //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
+        void EliminaFoto(Object sender, EventArgs e)
+        {
+            user.fotoProfilo = null;
+            ProfilePicFrame.IsVisible = false;
+            ChangeProfilePicButton.IsVisible = false;
+            ConfermaEliminazioneFrame.IsVisible = false;
+        }
+
+        void AnnullaElimina(Object sender, EventArgs e)
+        {
+            ConfermaEliminazioneFrame.IsVisible = false;
+        }
 
 
         async void NotificationClicked(Object sender, EventArgs e)
@@ -124,6 +144,7 @@ namespace TheSocialGame
                 EliminaButton.IsVisible = false;
         }
 
+        
         void ExitFromAddPhoto(Object sender, EventArgs e)
         {
             

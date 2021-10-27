@@ -152,5 +152,6 @@
     <BundleResource Include="Resources\x.png" />
     <BundleResource Include="Resources\photo.png" />
     <BundleResource Include="Resources\trash.png" />
+    <BundleResource Include="Resources\triangle.png" />
   </ItemGroup>
 </Project>
