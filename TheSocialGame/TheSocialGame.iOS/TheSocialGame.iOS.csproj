@@ -144,14 +144,14 @@
     <BundleResource Include="Resources\ranking.png" />
     <BundleResource Include="Resources\rightarrow.png" />
     <BundleResource Include="Resources\search.png" />
-    <BundleResource Include="Resources\setting.png" />
     <BundleResource Include="Resources\star.png" />
-    <BundleResource Include="Resources\user.png" />
     <BundleResource Include="Resources\camera.png" />
     <BundleResource Include="Resources\gallery.png" />
     <BundleResource Include="Resources\x.png" />
     <BundleResource Include="Resources\photo.png" />
     <BundleResource Include="Resources\trash.png" />
     <BundleResource Include="Resources\triangle.png" />
+    <BundleResource Include="Resources\setting.png" />
+    <BundleResource Include="Resources\user.png" />
   </ItemGroup>
 </Project>
