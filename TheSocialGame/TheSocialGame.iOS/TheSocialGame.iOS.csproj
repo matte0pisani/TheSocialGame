@@ -127,6 +127,9 @@
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing">
       <Version>0.1.2</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar">
+      <Version>19.3.0.47</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -153,5 +156,7 @@
     <BundleResource Include="Resources\triangle.png" />
     <BundleResource Include="Resources\setting.png" />
     <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\WhitePlus.png" />
+    <BundleResource Include="Resources\Uptriangle.png" />
   </ItemGroup>
 </Project>

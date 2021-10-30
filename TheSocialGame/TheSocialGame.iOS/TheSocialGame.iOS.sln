@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.11
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSocialGame.iOS", "TheSocialGame.iOS.csproj", "{C8E6E59F-88A8-4383-B1D5-4ED8E7D991C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8E6E59F-88A8-4383-B1D5-4ED8E7D991C0}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{C8E6E59F-88A8-4383-B1D5-4ED8E7D991C0}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{C8E6E59F-88A8-4383-B1D5-4ED8E7D991C0}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{C8E6E59F-88A8-4383-B1D5-4ED8E7D991C0}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{C8E6E59F-88A8-4383-B1D5-4ED8E7D991C0}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{C8E6E59F-88A8-4383-B1D5-4ED8E7D991C0}.Debug|iPhone.Build.0 = Debug|iPhone
+		{C8E6E59F-88A8-4383-B1D5-4ED8E7D991C0}.Release|iPhone.ActiveCfg = Release|iPhone
+		{C8E6E59F-88A8-4383-B1D5-4ED8E7D991C0}.Release|iPhone.Build.0 = Release|iPhone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ACC2E47-4B5E-490F-B7E0-7D3F35FA1C8F}
+	EndGlobalSection
+EndGlobal
