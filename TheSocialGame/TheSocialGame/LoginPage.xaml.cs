@@ -41,7 +41,7 @@ namespace TheSocialGame
             {
                 Utente usr = new Utente();
                 usr.username = UsernameEntry.Text;
-                await Navigation.PushAsync(new ProfilePage(usr)); // provvisoriamente manda null come parametro, poi dovrà mandare il riferimento all'utente che sta accedendo al suo profilo
+                await Navigation.PushAsync(new ProfilePage(usr));
             }
         }
 
