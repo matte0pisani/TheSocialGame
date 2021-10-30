@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Net.Mail;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
@@ -41,6 +41,34 @@ namespace TheSocialGame
             {
                 // Some other exception occurred
                 System.Diagnostics.Debug.Print(ex.ToString());
+            }
+        }
+
+        void Button_Clicked2(object sender, System.EventArgs e)
+        {
+            try
+            {
+
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress("matteo.pisani.roma@gmail.com");
+                mail.To.Add(EmailEntry.Text);
+                mail.Subject = "prova email TSG";
+                mail.Body = "messaggio di prova";
+
+                SmtpServer.Port = 587;
+                SmtpServer.Host = "smtp.gmail.com";
+                SmtpServer.EnableSsl = true;
+                SmtpServer.UseDefaultCredentials = false;
+                var psswrd = "bender.1";
+                SmtpServer.Credentials = new System.Net.NetworkCredential("matteo.pisani.roma@gmail.com", psswrd);
+
+                SmtpServer.Send(mail);
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Failed", ex.Message, "OK");
             }
         }
 
