@@ -20,6 +20,16 @@ namespace TheSocialGame
             {
                 user.puntiSocial = new Random().Next(100);
                 user.livello = (user.puntiSocial / 10) + 1;
+                user.personalita1 = new Random().Next(100);
+                user.personalita2 = new Random().Next(100);
+                user.personalita3 = new Random().Next(100);
+                user.personalita4 = new Random().Next(100);
+                user.personalita5 = new Random().Next(100);
+                user.personalita6 = new Random().Next(100);
+                user.personalita7 = new Random().Next(100);
+                user.personalita8 = new Random().Next(100);
+                user.personalita9 = new Random().Next(100);
+                user.personalita10 = new Random().Next(100);
             }
 
             if(user.fotoProfilo == null)
@@ -40,6 +50,8 @@ namespace TheSocialGame
             else LabelLevelDouble.Text = Convert.ToString(user.livello);
 
             ConfermaEliminazioneFrame.IsVisible = false;
+            MenuPersonalita.IsVisible = false;
+            TriangoloChiudi.IsVisible = false;
             AddPhotoFrame.IsVisible = false;
             BindingContext = this;
         }
@@ -49,6 +61,35 @@ namespace TheSocialGame
 
         async void RiempiProgressBar() {
             await SocialPointBar.ProgressTo((double)(user.puntiSocial % 10) / 10, 3000, Easing.Linear);
+        }
+
+        async void RiempiPersonalityBar()
+        {
+            int puntiTotali = user.personalita1 + user.personalita2 + user.personalita3 + user.personalita4 + user.personalita5 + user.personalita6 + user.personalita7 + user.personalita8 + user.personalita9 + user.personalita10;
+            await Tipo1.ProgressTo((double) user.personalita1/puntiTotali, 500, Easing.Linear);
+            await Tipo2.ProgressTo((double)user.personalita2 / puntiTotali, 500, Easing.Linear);
+            await Tipo3.ProgressTo((double)user.personalita3 / puntiTotali, 500, Easing.Linear);
+            await Tipo4.ProgressTo((double)user.personalita4 / puntiTotali, 500, Easing.Linear);
+            await Tipo5.ProgressTo((double)user.personalita5 / puntiTotali, 500, Easing.Linear);
+            await Tipo6.ProgressTo((double)user.personalita6 / puntiTotali, 500, Easing.Linear);
+            await Tipo7.ProgressTo((double)user.personalita7 / puntiTotali, 500, Easing.Linear);
+            await Tipo8.ProgressTo((double)user.personalita8 / puntiTotali, 500, Easing.Linear);
+            await Tipo9.ProgressTo((double)user.personalita9 / puntiTotali, 500, Easing.Linear);
+            await Tipo10.ProgressTo((double)user.personalita10 / puntiTotali, 500, Easing.Linear);
+        }
+
+        void SvuotaPersonalityBar()
+        {
+            Tipo1.Progress = 0;
+            Tipo2.Progress = 0;
+            Tipo3.Progress = 0;
+            Tipo4.Progress = 0;
+            Tipo5.Progress = 0;
+            Tipo6.Progress = 0;
+            Tipo7.Progress = 0;
+            Tipo8.Progress = 0;
+            Tipo9.Progress = 0;
+            Tipo10.Progress = 0;
         }
 
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
@@ -104,7 +145,21 @@ namespace TheSocialGame
             ConfermaEliminazioneFrame.IsVisible = false;
         }
 
+        void ApriMenuPersonalita(Object sender, EventArgs e)
+        {
+            TriangoloChiudi.IsVisible = true;
+            TriangoloApri.IsVisible = false;
+            MenuPersonalita.IsVisible = true;
+            RiempiPersonalityBar();
+        }
 
+        void ChiudiMenuPersonalita(Object sender, EventArgs e)
+        {
+            TriangoloChiudi.IsVisible = false;
+            TriangoloApri.IsVisible = true;
+            MenuPersonalita.IsVisible = false;
+            SvuotaPersonalityBar();
+        }
         async void NotificationClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new NotificationPage());
