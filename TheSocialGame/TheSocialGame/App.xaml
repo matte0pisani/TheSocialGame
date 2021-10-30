@@ -60,10 +60,6 @@
                         x:TypeArguments="FileImageSource"
                         Android="trash.png"
                         iOS ="trash.png" />
-            <OnPlatform x:Key="triangolo"
-                        x:TypeArguments="FileImageSource"
-                        Android="triangle.png"
-                        iOS ="triangle.png" />
             <Color x:Key="FirstColor">Orange</Color>
             <Color x:Key="SecondColor">Yellow</Color>
             <Color x:Key="BackgroundColor">AntiqueWhite</Color>
