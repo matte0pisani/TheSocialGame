@@ -46,5 +46,9 @@
 	<string>This App would like to add element to your phto library</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This App would like to access your microphone</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>mailto</string>
+	</array>
 </dict>
 </plist>

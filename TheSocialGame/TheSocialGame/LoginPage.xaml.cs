@@ -41,7 +41,7 @@ namespace TheSocialGame
             {
                 Utente usr = new Utente();
                 usr.username = UsernameEntry.Text;
-                await Navigation.PushAsync(new ProfilePage(usr)); // provvisoriamente manda null come parametro, poi dovrà mandare il riferimento all'utente che sta accedendo al suo profilo
+                await Navigation.PushAsync(new ProfilePage(usr));
             }
         }
 
@@ -61,9 +61,9 @@ namespace TheSocialGame
             await Navigation.PushAsync(new SignUpPage());
         }
 
-        private void ForgottenPasswordLabel_Tapped(object sender, EventArgs e)
+        private async void ForgottenPasswordLabel_Tapped(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new ForgottenPasswordPage());
         }
 
     }
