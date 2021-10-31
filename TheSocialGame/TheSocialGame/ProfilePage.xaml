@@ -65,7 +65,7 @@
                     <OnPlatform x:TypeArguments="x:Double" Android="45" iOS="44"/>
                 </Label.FontSize>
             </Label>
-            <ScrollView  HeightRequest="551"
+            <ScrollView  HeightRequest="{OnPlatform Android='551', iOS='565'}" 
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
                 <RelativeLayout x:Name="Scrolling" >
@@ -172,7 +172,7 @@
                                     </Button.FontSize>
                              </Button>
                             <Button x:Name="FromGalleryButton" Text="IMPORTA DA GALLERIA" FontAttributes="Bold" CornerRadius="15"  BackgroundColor="{StaticResource FirstColor}"  BorderWidth="3" TextColor="Black"
-                                     Clicked="FromGalleryClicked"
+                                     Clicked="FromGalleryClicked" 
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.84}"
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7}">
@@ -192,7 +192,7 @@
 
                         <RelativeLayout>
 
-                            <Label Text="Conferma eliminazione" TextColor="Black" TextDecorations="Underline" FontAttributes="Bold" FontSize="30"
+                            <Label Text="Conferma eliminazione" TextColor="Black" TextDecorations="Underline" FontAttributes="Bold" FontSize="{OnPlatform Android='30', iOS='25'}"
                                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.1}"/>
 
                             <Label Text="Sei sicuro di voler eliminare la tua foto profilo?" TextColor="Black" FontSize="17"
@@ -204,7 +204,7 @@
                                     RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.54}"
                                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.4}"/>
 
-                            <Button x:Name="Annulla" BackgroundColor="{StaticResource FirstColor}" Text="Annulla" FontSize="20" TextColor="Black" FontAttributes="Bold" CornerRadius="15"
+                            <Button x:Name="Annulla" BackgroundColor="{StaticResource FirstColor}" Text="ANNULLA" FontSize="20" TextColor="Black" FontAttributes="Bold" CornerRadius="15"
                                     Clicked="AnnullaElimina"
                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.65}"
                                     RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.05}"
@@ -351,25 +351,25 @@
 
 
                            <Label x:Name="PercentualeTipo1" TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='14, 17, 100, 180', iOS='16, 10, 100, 184'}"/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='14, 17, 100, 180', iOS='16, 20, 100, 184'}"/>
                            <Label x:Name="PercentualeTipo2"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='50, 17, 100, 180', iOS='48, 10, 100, 184'} "/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='50, 17, 100, 180', iOS='51, 20, 100, 184'} "/>
                            <Label x:Name="PercentualeTipo3"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='87, 17, 100, 180', iOS='84, 10, 100, 180'} "/>
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='87, 17, 100, 180', iOS='80, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo4"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='126, 17, 100, 180', iOS='119, 10, 100, 180'} "/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='126, 17, 100, 180', iOS='115, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo5"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='160, 17, 100, 180', iOS='153, 10, 100, 180'} "/>
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='160, 17, 100, 180', iOS='150, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo6"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='192, 17, 100, 180', iOS='183, 10, 100, 180'} "/>
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='192, 17, 100, 180', iOS='180, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo7"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='228, 17, 100, 180', iOS='218, 10, 100, 180'} "/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='228, 17, 100, 180', iOS='216, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo8"  TextColor="Black"  FontSize="{OnPlatform Android='14', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='264, 17, 100, 180', iOS='246, 10, 100, 180'} "/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='264, 17, 100, 180', iOS='247, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo9" TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='300, 17, 100, 180', iOS='282, 10, 100, 180'} "/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='300, 17, 100, 180', iOS='279, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo10"  FontAttributes="Bold"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='334, 17, 100, 180', iOS='310, 10, 100, 180'} "/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='334, 17, 100, 180', iOS='312, 20, 100, 180'} "/>
                            
                           
 

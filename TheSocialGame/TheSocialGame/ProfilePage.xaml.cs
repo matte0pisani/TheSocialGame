@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace TheSocialGame
 {
@@ -91,21 +92,37 @@ namespace TheSocialGame
         void SvuotaPersonalityBar()
         {
             Tipo1.Progress = 0;
+            PercentualeTipo1.Text="";
             Tipo2.Progress = 0;
+            PercentualeTipo2.Text="";
             Tipo3.Progress = 0;
+            PercentualeTipo3.Text="";
             Tipo4.Progress = 0;
+            PercentualeTipo4.Text="";
             Tipo5.Progress = 0;
+            PercentualeTipo5.Text="";
             Tipo6.Progress = 0;
+            PercentualeTipo6.Text="";
             Tipo7.Progress = 0;
+            PercentualeTipo7.Text="";
             Tipo8.Progress = 0;
+            PercentualeTipo8.Text="";
             Tipo9.Progress = 0;
+            PercentualeTipo9.Text="";
             Tipo10.Progress = 0;
+            PercentualeTipo10.Text="";
         }
 
+      
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         async void CameraClicked(Object sender, EventArgs e)
         {
-           
+           if(Device.iOS != null)
+                ProfilePicFrame.Rotation=90;
+           else
+                ProfilePicFrame.Rotation=0;
+
+          
             var foto = await MediaPicker.CapturePhotoAsync();
 
             if (foto != null)
@@ -121,6 +138,7 @@ namespace TheSocialGame
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         async void FromGalleryClicked(Object sender, EventArgs e)
         {
+            ProfilePicFrame.Rotation=0;
             var foto = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
             {
                 Title = "Scegli la tua immagine del profilo!"
