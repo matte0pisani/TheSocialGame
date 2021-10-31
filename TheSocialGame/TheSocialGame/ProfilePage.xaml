@@ -65,9 +65,8 @@
                     <OnPlatform x:TypeArguments="x:Double" Android="45" iOS="44"/>
                 </Label.FontSize>
             </Label>
-            <ScrollView 
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.355}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
+            <ScrollView  HeightRequest="551"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
                 <RelativeLayout x:Name="Scrolling" >
            
@@ -225,7 +224,7 @@
                     <Label x:Name="LabelLevelSingle" 
                          TextColor="Black" FontAttributes="Bold" 
                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.486}"
-                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor=0.714}">
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor={OnPlatform Android='0.714', iOS='0.718'}}">
                         <Label.FontSize>
                             <OnPlatform x:TypeArguments="x:Double" Android="40" iOS="38"/>
                         </Label.FontSize>
@@ -233,7 +232,7 @@
                     <Label x:Name="LabelLevelDouble" 
                          TextColor="Black" FontAttributes="Bold" 
                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.463}"
-                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor=0.719}">
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor={OnPlatform Android='0.719', iOS='0.722'}}">
                         <Label.FontSize>
                             <OnPlatform x:TypeArguments="x:Double" Android="35" iOS="34"/>
                         </Label.FontSize>
@@ -269,75 +268,120 @@
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.065}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.86}"  />
 
-                     <Frame x:Name="MenuPersonalita" BackgroundColor="Bisque"
+                     <Frame x:Name="MenuPersonalita" BackgroundColor="Bisque" HasShadow="false"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.8}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.95}" >
-                       <RelativeLayout>
+                       <AbsoluteLayout>
 
                            <Line    Stroke="Black" StrokeThickness="7"
-                                    X1="24" X2="358"
-                                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}" />
+                                    X1="24"  X2="{OnPlatform Android='358', iOS='340'}"
+                                   AbsoluteLayout.LayoutBounds="{OnPlatform Android='-5,250, 400, 50', iOS='-10,250, 400, 50'}" >
+                             
+                           </Line>
 
-                           <ProgressBar x:Name="Tipo1"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=-0.165}"
-                               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}" />
-                           <ProgressBar x:Name="Tipo2"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=-0.07}"
-                               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}" />
-                           <ProgressBar x:Name="Tipo3"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.025}"
-                               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}" />
-                           <ProgressBar x:Name="Tipo4"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.12}"
-                               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}" />
+                           <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='-72, 147, 200, 5', iOS='-72, 147, 200, 5'} "/>
+                           <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='-37, 147, 200, 5', iOS='-39, 147, 200, 5'} "/>
+                           <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270"  ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='-2, 147, 200, 5', iOS='-6, 147, 200, 5'} "/>
+                          <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='33, 147, 200, 5', iOS='27, 147, 200, 5'} "/>
+                           <ProgressBar  ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='68, 147, 200, 5', iOS='60, 147, 200, 5'} "/>
+                           <ProgressBar  ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='103, 147, 200, 5', iOS='93, 147, 200, 5'} "/>
+                           <ProgressBar  ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='138, 147, 200, 5', iOS='126, 147, 200, 5'} "/>
+                          <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='173, 147, 200, 5', iOS='159, 147, 200, 5'} "/>
+                           <ProgressBar  ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='208, 147, 200, 5', iOS='192, 147, 200, 5'} "/>
+                           <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='243, 147, 200, 5', iOS='225, 147, 200, 5'} "/>
+                          
+
+
+
+
+
+                           <ProgressBar x:Name="Tipo1"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='-72, 147, 200, 5', iOS='-72, 147, 200, 5'} "/>
+                           <ProgressBar x:Name="Tipo2"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='-37, 147, 200, 5', iOS='-39, 147, 200, 5'} "/>
+                           <ProgressBar x:Name="Tipo3"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270"  ScaleY="4"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='-2, 147, 200, 5', iOS='-6, 147, 200, 5'} "/>
+                          <ProgressBar x:Name="Tipo4"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='33, 147, 200, 5', iOS='27, 147, 200, 5'} "/>
                            <ProgressBar x:Name="Tipo5"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.215}"
-                               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}" />
-                           <ProgressBar x:Name="Tipo6"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.31}"
-                               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}" />
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='68, 147, 200, 5', iOS='60, 147, 200, 5'} "/>
+                           <ProgressBar x:Name="Tipo6"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='103, 147, 200, 5', iOS='93, 147, 200, 5'} "/>
                            <ProgressBar x:Name="Tipo7"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.405}"
-                               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}" />
-                           <ProgressBar x:Name="Tipo8"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}" />
-                           <ProgressBar x:Name="Tipo9"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.595}"
-                               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}" />
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='138, 147, 200, 5', iOS='126, 147, 200, 5'} "/>
+                          <ProgressBar x:Name="Tipo8"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='173, 147, 200, 5', iOS='159, 147, 200, 5'} "/>
+                           <ProgressBar x:Name="Tipo9"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='208, 147, 200, 5', iOS='192, 147, 200, 5'} "/>
                            <ProgressBar x:Name="Tipo10"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                               RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.69}"
-                               RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                               RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}" />
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='243, 147, 200, 5', iOS='225, 147, 200, 5'} "/>
+                          
+                           <Label Text="Tipo 1" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='52, 10, 100, 180', iOS='54, 10, 100, 180'} "/>
+                           <Label Text="Tipo 2" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='87, 10, 100, 180', iOS='87, 10, 100, 180'} "/>
+                           <Label Text="Tipo 3" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='122, 10, 100, 180', iOS='120, 10, 100, 180'} "/>
+                           <Label Text="Tipo 4" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='157, 10, 100, 180', iOS='153, 10, 100, 180'} "/>
+                           <Label Text="Tipo 5" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='192, 10, 100, 180', iOS='186, 10, 100, 180'} "/>
+                           <Label Text="Tipo 6" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='227, 10, 100, 180', iOS='219, 10, 100, 180'} "/>
+                           <Label Text="Tipo 7" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='262, 10, 100, 180', iOS='252, 10, 100, 180'} "/>
+                           <Label Text="Tipo 8" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='297, 10, 100, 180', iOS='285, 10, 100, 180'} "/>
+                           <Label Text="Tipo 9" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='332, 10, 100, 180', iOS='318, 10, 100, 180'} "/>
+                           <Label Text="Tipo 10" FontAttributes="Bold"  TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='367, 10, 100, 180', iOS='351, 10, 100, 180'} "/>
+
+
+                           <Label x:Name="PercentualeTipo1" TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='14, 17, 100, 180', iOS='16, 10, 100, 184'}"/>
+                           <Label x:Name="PercentualeTipo2"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='50, 17, 100, 180', iOS='48, 10, 100, 184'} "/>
+                           <Label x:Name="PercentualeTipo3"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='87, 17, 100, 180', iOS='84, 10, 100, 180'} "/>
+                           <Label x:Name="PercentualeTipo4"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='126, 17, 100, 180', iOS='119, 10, 100, 180'} "/>
+                           <Label x:Name="PercentualeTipo5"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='160, 17, 100, 180', iOS='153, 10, 100, 180'} "/>
+                           <Label x:Name="PercentualeTipo6"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='192, 17, 100, 180', iOS='183, 10, 100, 180'} "/>
+                           <Label x:Name="PercentualeTipo7"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='228, 17, 100, 180', iOS='218, 10, 100, 180'} "/>
+                           <Label x:Name="PercentualeTipo8"  TextColor="Black"  FontSize="{OnPlatform Android='14', iOS='14'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='264, 17, 100, 180', iOS='246, 10, 100, 180'} "/>
+                           <Label x:Name="PercentualeTipo9" TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='300, 17, 100, 180', iOS='282, 10, 100, 180'} "/>
+                           <Label x:Name="PercentualeTipo10"  FontAttributes="Bold"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='334, 17, 100, 180', iOS='310, 10, 100, 180'} "/>
                            
-                           
+                          
+
+
+
+
                            
                            
                            
                       
                       
-                       </RelativeLayout>
+                       </AbsoluteLayout>
                      </Frame>
 
 

@@ -67,15 +67,25 @@ namespace TheSocialGame
         {
             int puntiTotali = user.personalita1 + user.personalita2 + user.personalita3 + user.personalita4 + user.personalita5 + user.personalita6 + user.personalita7 + user.personalita8 + user.personalita9 + user.personalita10;
             await Tipo1.ProgressTo((double) user.personalita1/puntiTotali, 500, Easing.Linear);
+            PercentualeTipo1.Text = Convert.ToString(user.personalita1 * 100 / puntiTotali) + "%";
             await Tipo2.ProgressTo((double)user.personalita2 / puntiTotali, 500, Easing.Linear);
+            PercentualeTipo2.Text = Convert.ToString(user.personalita2 * 100 / puntiTotali) + "%";
             await Tipo3.ProgressTo((double)user.personalita3 / puntiTotali, 500, Easing.Linear);
+            PercentualeTipo3.Text = Convert.ToString(user.personalita3 * 100 / puntiTotali) + "%";
             await Tipo4.ProgressTo((double)user.personalita4 / puntiTotali, 500, Easing.Linear);
+            PercentualeTipo4.Text = Convert.ToString(user.personalita4 * 100 / puntiTotali) + "%";
             await Tipo5.ProgressTo((double)user.personalita5 / puntiTotali, 500, Easing.Linear);
+            PercentualeTipo5.Text = Convert.ToString(user.personalita5 * 100 / puntiTotali) + "%";
             await Tipo6.ProgressTo((double)user.personalita6 / puntiTotali, 500, Easing.Linear);
-            await Tipo7.ProgressTo((double)user.personalita7 / puntiTotali, 500, Easing.Linear);
+            PercentualeTipo6.Text = Convert.ToString(user.personalita1 * 100 / puntiTotali) + "%";
+            await Tipo7.ProgressTo((double)user.personalita6 / puntiTotali, 500, Easing.Linear);
+            PercentualeTipo7.Text = Convert.ToString(user.personalita7 * 100 / puntiTotali) + "%";
             await Tipo8.ProgressTo((double)user.personalita8 / puntiTotali, 500, Easing.Linear);
+            PercentualeTipo8.Text = Convert.ToString(user.personalita8 * 100 / puntiTotali) + "%";
             await Tipo9.ProgressTo((double)user.personalita9 / puntiTotali, 500, Easing.Linear);
+            PercentualeTipo9.Text = Convert.ToString(user.personalita9 * 100 / puntiTotali) + "%";
             await Tipo10.ProgressTo((double)user.personalita10 / puntiTotali, 500, Easing.Linear);
+            PercentualeTipo10.Text = Convert.ToString(user.personalita10 * 100 / puntiTotali) + "%";
         }
 
         void SvuotaPersonalityBar()
