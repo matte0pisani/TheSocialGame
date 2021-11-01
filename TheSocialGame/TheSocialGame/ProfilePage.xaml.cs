@@ -32,8 +32,15 @@ namespace TheSocialGame
                 user.personalita9 = new Random().Next(100);
                 user.personalita10 = new Random().Next(100);
             }
+            //provvisiorio
+            user.BestFriend1 = new Utente();
+            user.BestFriend2 = new Utente();
+            user.BestFriend3 = new Utente();
+            user.BestFriend1.username = "BestFriend1"; 
+            user.BestFriend2.username = "BestFriend2";
+            user.BestFriend3.username = "BestFriend3";
 
-            if(user.fotoProfilo == null)
+            if (user.fotoProfilo == null)
             {
                 ProfilePicFrame.IsVisible = false;
                 ChangeProfilePicButton.IsVisible = false;
@@ -45,6 +52,7 @@ namespace TheSocialGame
                
             }
             UsernameLabel.Text =this.user.username;
+            MostraAmici();
             RiempiProgressBar();
             if (user.livello < 10)
                  LabelLevelSingle.Text = Convert.ToString(user.livello);
@@ -58,6 +66,60 @@ namespace TheSocialGame
         }
 
 
+        void MostraAmici()
+        {
+            BF1.Text ="@"+user.BestFriend1.username;
+            BF2.Text ="@" + user.BestFriend2.username;
+            BF3.Text ="@" + user.BestFriend3.username;
+
+            //provvisorio, bisognerà accedere ad esperienze in comune
+            int x, y, z;
+            x = new Random().Next(1000);
+            y = new Random().Next(1000);
+            z = new Random().Next(1000);
+
+            if( x > y && x > z)
+            {
+                EspBF1.Text = Convert.ToString(x) + " esperienze insieme";
+                if(y> z)
+                {
+                    EspBF2.Text = Convert.ToString(y) + " esperienze insieme";
+                    EspBF3.Text = Convert.ToString(z) + " esperienze insieme";
+                } else
+                {
+                    EspBF2.Text = Convert.ToString(z) + " esperienze insieme";
+                    EspBF3.Text = Convert.ToString(y) + " esperienze insieme";
+                }
+            } else if(y>x && y> z)
+            {
+                EspBF1.Text = Convert.ToString(y) + " esperienze insieme";
+                if (x > z)
+                {
+                    EspBF2.Text = Convert.ToString(x) + " esperienze insieme";
+                    EspBF3.Text = Convert.ToString(z) + " esperienze insieme";
+                }
+                else
+                {
+                    EspBF2.Text = Convert.ToString(z) + " esperienze insieme";
+                    EspBF3.Text = Convert.ToString(x) + " esperienze insieme";
+                }
+            }
+            else
+            {
+                EspBF1.Text = Convert.ToString(z) + " esperienze insieme";
+                if (x > y)
+                {
+                    EspBF2.Text = Convert.ToString(x) + " esperienze insieme";
+                    EspBF3.Text = Convert.ToString(y) + " esperienze insieme";
+                }
+                else
+                {
+                    EspBF2.Text = Convert.ToString(z) + " esperienze insieme";
+                    EspBF3.Text = Convert.ToString(y) + " esperienze insieme";
+                }
+            }
+
+        }
         
 
         async void RiempiProgressBar() {
@@ -178,6 +240,8 @@ namespace TheSocialGame
             TriangoloChiudi.IsVisible = true;
             TriangoloApri.IsVisible = false;
             MenuPersonalita.IsVisible = true;
+            BestFriendsFrame.TranslationY = 320;
+            Scrolling.HeightRequest = 1000;
             RiempiPersonalityBar();
         }
 
@@ -186,6 +250,8 @@ namespace TheSocialGame
             TriangoloChiudi.IsVisible = false;
             TriangoloApri.IsVisible = true;
             MenuPersonalita.IsVisible = false;
+            BestFriendsFrame.TranslationY = 0;
+            Scrolling.HeightRequest = 650;
             SvuotaPersonalityBar();
         }
         async void NotificationClicked(Object sender, EventArgs e)
@@ -217,6 +283,17 @@ namespace TheSocialGame
         {
             await Navigation.PushAsync(new SettingPage());
         }
+
+        async void DiaryClicked(Object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DiaryPage());
+        }
+
+        async void FriendsClicked(Object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FriendsPage());
+        }
+
 
         void AddPhoto(Object sender, EventArgs e)
         {

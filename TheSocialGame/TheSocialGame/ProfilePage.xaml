@@ -238,13 +238,32 @@
                         </Label.FontSize>
                     </Label>
 
+                    <ImageButton Source="{StaticResource iconaDiario}" BackgroundColor="NavajoWhite" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="DiaryClicked"
+                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.78}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.18}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"  />
+                    <ImageButton Source="{StaticResource iconaAmici}" BackgroundColor="NavajoWhite" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="FriendsClicked"
+                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.07}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.18}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"  />
+
+
+                   <Label Text="Diario" TextColor="Black" FontAttributes="Bold" FontSize="21"
+                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.8}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.77}"  />
+                    <Label Text="Amici" TextColor="Black" FontAttributes="Bold" FontSize="21"
+                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.09}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.77}"  />
+                    
                     
                     <Label Text="Personalità" TextColor="Black" FontAttributes="Bold" TextDecorations="Underline"
                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.05}"
                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor=0.85}">
                        
                         <Label.FontSize>
-                            <OnPlatform x:TypeArguments="x:Double" Android="25" iOS="23"/>
+                            <OnPlatform x:TypeArguments="x:Double" Android="25" iOS="21"/>
                         </Label.FontSize>
 
                      </Label>
@@ -268,7 +287,50 @@
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.065}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.86}"  />
 
-                     <Frame x:Name="MenuPersonalita" BackgroundColor="Bisque" HasShadow="false"
+                     
+                  
+                     <Frame x:Name="BestFriendsFrame"  BackgroundColor="{StaticResource BackgroundColor}" HasShadow="False" BorderColor="Transparent"
+                            RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.8}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.95}" >
+                         <AbsoluteLayout>
+                             <BoxView BackgroundColor="NavajoWhite" Opacity="0.35" 
+                                   AbsoluteLayout.LayoutBounds="{OnPlatform Android='40, 45, 320, 170', iOS='40, 45, 320, 170'} "/>
+                              <Line    Stroke="Orange" StrokeThickness="4"
+                                    X1="24"  X2="{OnPlatform Android='300', iOS='300'}"
+                                   AbsoluteLayout.LayoutBounds="{OnPlatform Android='30,105, 400, 50', iOS='30,105, 400, 50'}" />
+                              <Line    Stroke="Orange" StrokeThickness="4"
+                                    X1="24"  X2="{OnPlatform Android='300', iOS='300'}"
+                                   AbsoluteLayout.LayoutBounds="{OnPlatform Android='30,155, 400, 50', iOS='30,155, 400, 50'}" />
+                            <Label Text="Best Friends:" TextDecorations="Underline" FontAttributes="Bold" TextColor="Black" FontSize="{OnPlatform  Android='25', iOS='21'}"
+                                    AbsoluteLayout.LayoutBounds="{OnPlatform Android='-2, 0, 160, 40', iOS='-2, 0, 160, 40'} "/>
+                             <Label Text="1" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='30', iOS='27'}"
+                                 AbsoluteLayout.LayoutBounds="{OnPlatform Android='10, 60, 160, 40', iOS='10, 60, 160, 40'}" />
+                             <Label x:Name="EspBF1" FontAttributes="Bold" FontSize="{OnPlatform  Android='15', iOS='12'}"
+                                 AbsoluteLayout.LayoutBounds="{OnPlatform Android='190, 87, 160, 40', iOS='190, 87, 160, 40'}" />
+                              <Label x:Name="BF1" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='26', iOS='19'}"
+                                 AbsoluteLayout.LayoutBounds="{OnPlatform Android=' 60, 60, 200, 40', iOS=' 60, 60, 200, 40'}" />
+                             <Label Text="2" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='30', iOS='27'}"
+                                 AbsoluteLayout.LayoutBounds="{OnPlatform Android='10, 110, 160, 40', iOS='10, 110, 160, 40'}" />
+                              <Label x:Name="EspBF2" FontAttributes="Bold" FontSize="{OnPlatform  Android='15', iOS='12'}"
+                                 AbsoluteLayout.LayoutBounds="{OnPlatform Android='190, 137, 160, 40', iOS='190, 137, 160, 40'}" />
+                              <Label x:Name="BF2" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='26', iOS='19'}"
+                                 AbsoluteLayout.LayoutBounds="{OnPlatform Android=' 60, 110, 200, 40', iOS=' 60, 110, 200, 40'}" />
+                            <Label Text="3" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='30', iOS='27'}"
+                                 AbsoluteLayout.LayoutBounds="{OnPlatform Android='10, 160, 160, 40', iOS='10, 160, 160, 40'}" />
+                             <Label x:Name="EspBF3" FontAttributes="Bold" FontSize="{OnPlatform  Android='15', iOS='12'}"
+                                 AbsoluteLayout.LayoutBounds="{OnPlatform Android='190, 187, 160, 40', iOS='190, 187, 160, 40'}" />
+                             
+                             <Label x:Name="BF3" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='26', iOS='19'}"
+                                 AbsoluteLayout.LayoutBounds="{OnPlatform Android=' 60, 160, 200, 40', iOS=' 60, 160, 200, 40'}" />
+                            
+                            
+                            
+                         </AbsoluteLayout>
+                       
+                     </Frame>
+                     <Frame x:Name="MenuPersonalita" BackgroundColor="Bisque" HasShadow="false" 
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.8}"
@@ -353,9 +415,9 @@
                            <Label x:Name="PercentualeTipo1" TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='14, 17, 100, 180', iOS='16, 20, 100, 184'}"/>
                            <Label x:Name="PercentualeTipo2"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='50, 17, 100, 180', iOS='51, 20, 100, 184'} "/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='50, 17, 100, 180', iOS='49, 20, 100, 184'} "/>
                            <Label x:Name="PercentualeTipo3"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='87, 17, 100, 180', iOS='80, 20, 100, 180'} "/>
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='87, 17, 100, 180', iOS='83, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo4"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='126, 17, 100, 180', iOS='115, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo5"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
@@ -370,19 +432,14 @@
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='300, 17, 100, 180', iOS='279, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo10"  FontAttributes="Bold"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" 
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='334, 17, 100, 180', iOS='312, 20, 100, 180'} "/>
-                           
                           
-
-
-
-
-                           
-                           
-                           
-                      
-                      
                        </AbsoluteLayout>
                      </Frame>
+
+                    
+
+
+                    
 
 
 

@@ -68,6 +68,14 @@
                         x:TypeArguments="FileImageSource"
                         Android="Uptriangle.png"
                         iOS ="Uptriangle.png" />
+            <OnPlatform x:Key="iconaDiario"
+                         x:TypeArguments="FileImageSource"
+                        Android="book.png"
+                        iOS ="book.png" />
+             <OnPlatform x:Key="iconaAmici"
+                         x:TypeArguments="FileImageSource"
+                        Android="friends.png"
+                        iOS ="friends.png" />
             <Color x:Key="FirstColor">Orange</Color>
             <Color x:Key="SecondColor">Yellow</Color>
             <Color x:Key="BackgroundColor">BlanchedAlmond</Color>

@@ -20,7 +20,14 @@ namespace TheSocialGame
         public int personalita8 { get; set; }
         public int personalita9 { get; set; }
         public int personalita10 { get; set; }
+        public Utente BestFriend1 { get; set; }
+        public Utente BestFriend2 { get; set; }
+        public Utente BestFriend3 { get; set; }
+
+        
 
 
     }
+
+   
 }
