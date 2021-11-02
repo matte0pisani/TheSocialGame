@@ -4,10 +4,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
     x:Class="TheSocialGame.ProfilePage"
     NavigationPage.HasNavigationBar="False"
-    BackgroundColor="{DynamicResource BackgroundColor}">
+    BackgroundColor="{StaticResource BackgroundColor}">
     <ContentPage.Content >
         
         <RelativeLayout x:Name="RelativeLayout">
+
+            <!--INIZIO E FINE PAGINA-->
             <BoxView x:Name="UpperBound" Color="{StaticResource FirstColor}" Opacity="0.7" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
@@ -20,7 +22,8 @@
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}" />
 
-           
+          
+            <!--TASTI DI NAVIGAZIONE-->
             <ImageButton x:Name="NotificationButton" Source="{StaticResource iconaNotifiche}"  BackgroundColor="Transparent" Clicked="NotificationClicked"
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
@@ -57,7 +60,7 @@
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.015}"/>
            
-           
+            <!--USERNAME-->
             <Label x:Name="UsernameLabel" TextColor="Black" FontAttributes="Bold" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.021}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.036}">
@@ -65,46 +68,160 @@
                     <OnPlatform x:TypeArguments="x:Double" Android="45" iOS="44"/>
                 </Label.FontSize>
             </Label>
-            <ScrollView  HeightRequest="{OnPlatform Android='551', iOS='565'}" 
+
+            <!--CONTENUTI IN SCROLL-->
+            <ScrollView  HeightRequest="{OnPlatform Android='549', iOS='563'}" 
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
                 <RelativeLayout x:Name="Scrolling" >
+
+                      <!--DISTINTIVI-->
+                    <Image Source="{StaticResource iconaDistintivi}"  
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.01}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.005}"/>
            
+
+                    <ScrollView  HorizontalScrollBarVisibility="Always" Orientation="Horizontal" HeightRequest="60" 
+                                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.02}"
+                                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.848}"
+                                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.147}" >
+                        <AbsoluteLayout >
+              
+                         <Line    Stroke="Orange" StrokeThickness="8"
+                                    X1="12"  X2="{OnPlatform Android='1100', iOS='340'}"
+                                   AbsoluteLayout.LayoutBounds="{OnPlatform Android='-12, 28, 1100, 5', iOS='-10,250, 400, 50'}" >
+                             
+                         </Line>
+                         
+                         <ImageButton Source="{StaticResource ViaggioMare1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" IsOpaque="True" 
+                                      AbsoluteLayout.LayoutBounds="5,5,50,50" />
+                         <BoxView x:Name="ViaggioMare1" AbsoluteLayout.LayoutBounds="5,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8"/>
+                         <ImageButton Source="{StaticResource Ristorante1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="65,5,50,50"/>
+                         <BoxView x:Name="Ristorante1" AbsoluteLayout.LayoutBounds="65,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton Source="{StaticResource Sport1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="125,5,50,50"/>
+                         <BoxView x:Name="Sport1" AbsoluteLayout.LayoutBounds="125,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton Source="{StaticResource Discoteca1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="185,5,50,50"/>
+                         <BoxView x:Name="Discoteca1" AbsoluteLayout.LayoutBounds="185,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton Source="{StaticResource Compleanno1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="245,5,50,50"/>
+                         <BoxView x:Name="Compleanno1" AbsoluteLayout.LayoutBounds="245,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton Source="{StaticResource ViaggioMontagna1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="305,5,50,50"/>
+                         <BoxView x:Name="ViaggioMontagna1" AbsoluteLayout.LayoutBounds="305,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton Source="{StaticResource ViaggioCitta1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="365,5,50,50"/>
+                         <BoxView x:Name="ViaggioCitta1" AbsoluteLayout.LayoutBounds="365,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton Source="{StaticResource Cultura1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="425,5,50,50"/>
+                         <BoxView x:Name="Cultura1" AbsoluteLayout.LayoutBounds="425,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton Source="{StaticResource Aperitivo1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="485,5,50,50"/>
+                         <BoxView x:Name="Cocktail1" AbsoluteLayout.LayoutBounds="485,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton Source="{StaticResource Maschera1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="545,5,50,50"/>
+                         <BoxView x:Name="Maschera1" AbsoluteLayout.LayoutBounds="545,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton Source="{StaticResource Casa1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="605,5,50,50"/>
+                         <BoxView x:Name="Casa1" AbsoluteLayout.LayoutBounds="605,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="665,5,50,50"/>
+                         <BoxView AbsoluteLayout.LayoutBounds="665,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="725,5,50,50"/>
+                         <BoxView AbsoluteLayout.LayoutBounds="725,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="785,5,50,50"/>
+                         <BoxView AbsoluteLayout.LayoutBounds="785,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="845,5,50,50"/>
+                         <BoxView AbsoluteLayout.LayoutBounds="845,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="905,5,50,50"/>
+                         <BoxView AbsoluteLayout.LayoutBounds="905,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="965,5,50,50"/>
+                         <BoxView AbsoluteLayout.LayoutBounds="965,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="1025,5,50,50"/>
+                         <BoxView AbsoluteLayout.LayoutBounds="1025,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                         <ImageButton BackgroundColor="{StaticResource FirstColor}" CornerRadius="100" BorderColor="Black" BorderWidth="1" 
+                                      AbsoluteLayout.LayoutBounds="1085,5,50,50"/>
+                         <BoxView AbsoluteLayout.LayoutBounds="1085,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="100" Opacity="0.8" />
+                      
+                        
+                    
+                    
+                    
+                    
+                    
+                    
+
+                        </AbsoluteLayout>
+                    </ScrollView>
+                
+           
+                    <!--BARRA PUNTI SOCIAL-->
                      <control:ProgressRing x:Name="SocialPointBar" RingThickness="9"  RingBaseColor="{StaticResource FirstColor}" RingProgressColor="{StaticResource SecondColor}" Rotation="180" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.6}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.215}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.119}"/>
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.18}"/>
 
+                    <!--CONTORNI BARRA PUNTI SOCIAL-->
                     <Ellipse Stroke="Black" StrokeThickness="3" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,   Property=Width, Factor=0.61}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.61}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.21}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.119}" />
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.18}" />
                     <Ellipse Stroke="Black" StrokeThickness="3" Fill="NavajoWhite"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.557}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.557}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.237}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.142}" />
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.203}" />
 
+                    <!--CONTROLLI FOTO PROFILO-->
                     <Image Source="{StaticResource iconaUser}" Opacity="0.7"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.265}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.5}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.5}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}"  />
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.241}"  />
 
                     <ImageButton Source="{StaticResource iconaAggiungi}" BackgroundColor="Transparent" Clicked="AddPhoto"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.44}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.15}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.15}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.23}"  />
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.291}"  />
 
+                    <!--COLLEGAMENTI A DIARIO E LISTA AMICI-->
+                    <ImageButton Source="{StaticResource iconaDiario}" BackgroundColor="NavajoWhite" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="DiaryClicked"
+                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.795}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.18}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.661}"  />
+                    <ImageButton Source="{StaticResource iconaAmici}" BackgroundColor="NavajoWhite" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="FriendsClicked"
+                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.05}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.18}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.661}"  />
 
+                     <Label Text="Diario" TextColor="Black" FontAttributes="Bold" FontSize="21"
+                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.813}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.831}"  />
+                     <Label Text="Amici" TextColor="Black" FontAttributes="Bold" FontSize="21"
+                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.06}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.831}"  />
+                    
+                    <!--FOTO PROFILO e GESTIONE-->
                     <Frame  x:Name="ProfilePicFrame" BorderColor="Black" BackgroundColor="Black" IsClippedToBounds="True" Padding="0" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.55}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.55}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.24}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.149}">
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.21}">
                         <Frame.CornerRadius>
                             <OnPlatform x:TypeArguments="x:Single" Android="115" iOS="105"/>
                         </Frame.CornerRadius>
@@ -113,15 +230,11 @@
                         
                     </Frame>
 
-                       
-
-                        
-
-                        <Button x:Name="ChangeProfilePicButton" BackgroundColor="Transparent" Clicked="AddPhoto"
+                    <Button x:Name="ChangeProfilePicButton" BackgroundColor="Transparent" Clicked="AddPhoto"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.55}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.55}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.24}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.149}"/>
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.21}"/>
                         
                     
                     
@@ -129,7 +242,7 @@
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.05}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.9}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.57}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.135}"  >
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.195}"  >
 
                         <RelativeLayout>
                             <Label Text="Inserisci la tua foto profilo:" FontAttributes="Bold" TextDecorations="Underline"   TextColor="Black"
@@ -188,7 +301,7 @@
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.05}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.9}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.57}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.135}"  >
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.195}"  >
 
                         <RelativeLayout>
 
@@ -215,16 +328,18 @@
                         </RelativeLayout>
 
                      </Frame>
+
+                    <!--INDICATORE LIVELLO-->
                     <Ellipse Fill="Gold" Stroke="Black" StrokeThickness="3" Opacity="0.8"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.455}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.12}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.12}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.72}"  />
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.781}"  />
 
                     <Label x:Name="LabelLevelSingle" 
                          TextColor="Black" FontAttributes="Bold" 
                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.486}"
-                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor={OnPlatform Android='0.714', iOS='0.718'}}">
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor={OnPlatform Android='0.775', iOS='0.779'}}">
                         <Label.FontSize>
                             <OnPlatform x:TypeArguments="x:Double" Android="40" iOS="38"/>
                         </Label.FontSize>
@@ -232,35 +347,19 @@
                     <Label x:Name="LabelLevelDouble" 
                          TextColor="Black" FontAttributes="Bold" 
                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.463}"
-                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor={OnPlatform Android='0.719', iOS='0.722'}}">
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor={OnPlatform Android='0.78', iOS='0.793'}}">
                         <Label.FontSize>
                             <OnPlatform x:TypeArguments="x:Double" Android="35" iOS="34"/>
                         </Label.FontSize>
                     </Label>
 
-                    <ImageButton Source="{StaticResource iconaDiario}" BackgroundColor="NavajoWhite" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="DiaryClicked"
-                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.78}"
-                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
-                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.18}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"  />
-                    <ImageButton Source="{StaticResource iconaAmici}" BackgroundColor="NavajoWhite" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="FriendsClicked"
-                        RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.07}"
-                        RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
-                        RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.18}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"  />
-
-
-                   <Label Text="Diario" TextColor="Black" FontAttributes="Bold" FontSize="21"
-                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.8}"
-                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.77}"  />
-                    <Label Text="Amici" TextColor="Black" FontAttributes="Bold" FontSize="21"
-                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.09}"
-                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.77}"  />
                     
-                    
+
+                  
+                    <!--GESTIONE MENU PERSONALITA-->
                     <Label Text="Personalità" TextColor="Black" FontAttributes="Bold" TextDecorations="Underline"
                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.05}"
-                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor=0.85}">
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor=0.931}">
                        
                         <Label.FontSize>
                             <OnPlatform x:TypeArguments="x:Double" Android="25" iOS="21"/>
@@ -271,29 +370,29 @@
                     <Button BackgroundColor="Transparent" Clicked="ApriMenuPersonalita"
                          RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.3}"
                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.05}"
-                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor=0.85}"/>
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor=0.931}"/>
                        
                     <ImageButton x:Name="TriangoloApri" Source="{StaticResource triangolo}" BackgroundColor="Transparent"
                         Clicked="ApriMenuPersonalita"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.36}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.09}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.09}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.85}"  />
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.931}"  />
 
                      <ImageButton x:Name="TriangoloChiudi" Source="{StaticResource triangoloAlto}" BackgroundColor="Transparent"
                         Clicked="ChiudiMenuPersonalita"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.37}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.065}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.065}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.86}"  />
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.951}"  />
 
                      
-                  
+                    <!--VISUALIZZAZIONE MIGLIORI AMICI-->
                      <Frame x:Name="BestFriendsFrame"  BackgroundColor="{StaticResource BackgroundColor}" HasShadow="False" BorderColor="Transparent"
                             RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0}"
                             RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                             RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.8}"
-                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.95}" >
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.01}" >
                          <AbsoluteLayout>
                              <BoxView BackgroundColor="NavajoWhite" Opacity="0.35" 
                                    AbsoluteLayout.LayoutBounds="{OnPlatform Android='40, 45, 320, 170', iOS='40, 45, 320, 170'} "/>
@@ -307,19 +406,19 @@
                                     AbsoluteLayout.LayoutBounds="{OnPlatform Android='-2, 0, 160, 40', iOS='-2, 0, 160, 40'} "/>
                              <Label Text="1" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='30', iOS='27'}"
                                  AbsoluteLayout.LayoutBounds="{OnPlatform Android='10, 60, 160, 40', iOS='10, 60, 160, 40'}" />
-                             <Label x:Name="EspBF1" FontAttributes="Bold" FontSize="{OnPlatform  Android='15', iOS='12'}"
+                             <Label x:Name="EspBF1" TextColor="{OnPlatform iOS=Black}" FontAttributes="Bold" FontSize="{OnPlatform  Android='15', iOS='12'}"
                                  AbsoluteLayout.LayoutBounds="{OnPlatform Android='190, 87, 160, 40', iOS='190, 87, 160, 40'}" />
                               <Label x:Name="BF1" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='26', iOS='19'}"
                                  AbsoluteLayout.LayoutBounds="{OnPlatform Android=' 60, 60, 200, 40', iOS=' 60, 60, 200, 40'}" />
                              <Label Text="2" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='30', iOS='27'}"
                                  AbsoluteLayout.LayoutBounds="{OnPlatform Android='10, 110, 160, 40', iOS='10, 110, 160, 40'}" />
-                              <Label x:Name="EspBF2" FontAttributes="Bold" FontSize="{OnPlatform  Android='15', iOS='12'}"
+                              <Label x:Name="EspBF2" TextColor="{OnPlatform iOS=Black}" FontAttributes="Bold" FontSize="{OnPlatform  Android='15', iOS='12'}"
                                  AbsoluteLayout.LayoutBounds="{OnPlatform Android='190, 137, 160, 40', iOS='190, 137, 160, 40'}" />
                               <Label x:Name="BF2" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='26', iOS='19'}"
                                  AbsoluteLayout.LayoutBounds="{OnPlatform Android=' 60, 110, 200, 40', iOS=' 60, 110, 200, 40'}" />
                             <Label Text="3" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='30', iOS='27'}"
                                  AbsoluteLayout.LayoutBounds="{OnPlatform Android='10, 160, 160, 40', iOS='10, 160, 160, 40'}" />
-                             <Label x:Name="EspBF3" FontAttributes="Bold" FontSize="{OnPlatform  Android='15', iOS='12'}"
+                             <Label x:Name="EspBF3" TextColor="{OnPlatform iOS=Black}" FontAttributes="Bold" FontSize="{OnPlatform  Android='15', iOS='12'}"
                                  AbsoluteLayout.LayoutBounds="{OnPlatform Android='190, 187, 160, 40', iOS='190, 187, 160, 40'}" />
                              
                              <Label x:Name="BF3" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='26', iOS='19'}"
@@ -330,11 +429,13 @@
                          </AbsoluteLayout>
                        
                      </Frame>
+
+                     <!--INDICATORI DI PERSONALITA-->
                      <Frame x:Name="MenuPersonalita" BackgroundColor="Bisque" HasShadow="false" 
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.8}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.95}" >
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.08}" >
                        <AbsoluteLayout>
 
                            <Line    Stroke="Black" StrokeThickness="7"
@@ -415,21 +516,21 @@
                            <Label x:Name="PercentualeTipo1" TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='14, 17, 100, 180', iOS='16, 20, 100, 184'}"/>
                            <Label x:Name="PercentualeTipo2"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='50, 17, 100, 180', iOS='49, 20, 100, 184'} "/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='55, 17, 100, 180', iOS='49, 20, 100, 184'} "/>
                            <Label x:Name="PercentualeTipo3"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='87, 17, 100, 180', iOS='83, 20, 100, 180'} "/>
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='86, 17, 100, 180', iOS='83, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo4"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='126, 17, 100, 180', iOS='115, 20, 100, 180'} "/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='125, 17, 100, 180', iOS='115, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo5"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='160, 17, 100, 180', iOS='150, 20, 100, 180'} "/>
+                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='155, 17, 100, 180', iOS='150, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo6"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='192, 17, 100, 180', iOS='180, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo7"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='228, 17, 100, 180', iOS='216, 20, 100, 180'} "/>
-                           <Label x:Name="PercentualeTipo8"  TextColor="Black"  FontSize="{OnPlatform Android='14', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='264, 17, 100, 180', iOS='247, 20, 100, 180'} "/>
+                           <Label x:Name="PercentualeTipo8"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='266, 17, 100, 180', iOS='247, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo9" TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='300, 17, 100, 180', iOS='279, 20, 100, 180'} "/>
+                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='295, 17, 100, 180', iOS='279, 20, 100, 180'} "/>
                            <Label x:Name="PercentualeTipo10"  FontAttributes="Bold"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" 
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='334, 17, 100, 180', iOS='312, 20, 100, 180'} "/>
                           

@@ -160,5 +160,17 @@
     <BundleResource Include="Resources\Uptriangle.png" />
     <BundleResource Include="Resources\book.png" />
     <BundleResource Include="Resources\friends.png" />
+    <BundleResource Include="Resources\medal.png" />
+    <BundleResource Include="Resources\beach.png" />
+    <BundleResource Include="Resources\food.png" />
+    <BundleResource Include="Resources\cocktail.png" />
+    <BundleResource Include="Resources\mountain.png" />
+    <BundleResource Include="Resources\museum.png" />
+    <BundleResource Include="Resources\sofa.png" />
+    <BundleResource Include="Resources\birthdaycake.png" />
+    <BundleResource Include="Resources\carnivalmask.png" />
+    <BundleResource Include="Resources\discolight.png" />
+    <BundleResource Include="Resources\eiffeltower.png" />
+    <BundleResource Include="Resources\fitnesscenter.png" />
   </ItemGroup>
 </Project>
