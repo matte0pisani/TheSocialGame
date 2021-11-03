@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
+
+
 
 namespace TheSocialGame
 {
@@ -28,21 +31,61 @@ namespace TheSocialGame
         public Utente BestFriend2 { get; set; }
         public Utente BestFriend3 { get; set; }
 
-        /* DISTINTIVI */
-        public int ViaggioMare { get; set; }
-        public int Ristorante { get; set; }
-        public int Sport { get; set; }
-        public int Discoteca { get; set; }
-        public int Compleanno { get; set; }
-        public int Maschera { get; set; }
-        public int ViaggioMontagna { get; set; }
-        public int ViaggioCitta { get; set; }
-        public int Cultura { get; set; }
-        public int Cocktail { get; set; }
-        public int Casa { get; set; }
+
+        public Dictionary<string, (int, Dictionary<int, bool>)> listaDistintivi;
+
+        public Utente()
+        {
+           this.listaDistintivi = inizializzaListaDistintivi();
+        }
 
 
+        private Dictionary<string, (int, Dictionary<int, bool>)> inizializzaListaDistintivi()
+        {
+            int livelloMax;
+            livelloMax = 1;
+            Dictionary<string,(int, Dictionary<int, bool>)> mappa = new Dictionary<string, (int, Dictionary<int, bool>)>();
+            Dictionary<int, bool> livelliMare = new Dictionary<int, bool>();
+            Dictionary<int, bool> livelliRistorante = new Dictionary<int, bool>();
+            Dictionary<int, bool> livelliSport = new Dictionary<int, bool>();
+            Dictionary<int, bool> livelliDiscoteca = new Dictionary<int, bool>();
+            Dictionary<int, bool> livelliCompleanno = new Dictionary<int, bool>();
+            Dictionary<int, bool> livelliMaschera = new Dictionary<int, bool>();
+            Dictionary<int, bool> livelliMontagna = new Dictionary<int, bool>();
+            Dictionary<int, bool> livelliCitta = new Dictionary<int, bool>();
+            Dictionary<int, bool> livelliCultura = new Dictionary<int, bool>();
+            Dictionary<int, bool> livelliCocktail = new Dictionary<int, bool>();
+            Dictionary<int, bool> livelliCasa = new Dictionary<int, bool>();
 
+
+            for (int i = 1; i <= livelloMax; i++)
+            {
+                livelliMare.Add(i, false);
+                livelliRistorante.Add(i, false);
+                livelliSport.Add(i, false);
+                livelliDiscoteca.Add(i, false);
+                livelliCompleanno.Add(i, false);
+                livelliMaschera.Add(i, false);
+                livelliMontagna.Add(i, false);
+                livelliCitta.Add(i, false);
+                livelliCultura.Add(i, false);
+                livelliCocktail.Add(i, false);
+                livelliCasa.Add(i, false);
+            }
+
+            mappa.Add("ViaggioMare",(0, livelliMare));
+            mappa.Add("Ristorante", (0, livelliRistorante));
+            mappa.Add("Sport", (0, livelliSport));
+            mappa.Add("Discoteca", (0, livelliDiscoteca));
+            mappa.Add("Compleanno", (0, livelliCompleanno));
+            mappa.Add("Maschera", (0, livelliMaschera));
+            mappa.Add("ViaggioMontagna", (0, livelliMontagna));
+            mappa.Add("ViaggioCitta", (0, livelliCitta));
+            mappa.Add("Cultura", (0, livelliCultura));
+            mappa.Add("Cocktail", (0, livelliCocktail));
+            mappa.Add("Casa", (0, livelliCasa));
+            return mappa;
+        }
 
     }
 

@@ -167,51 +167,20 @@ namespace TheSocialGame
         {
             int Guadagnati = 0;
 
-            if (user.ViaggioMare >= 3)
-            {
-                ViaggioMare1.IsVisible = false;
-                Guadagnati++;
-            }
-            if (user.Ristorante >= 3) {
-                Ristorante1.IsVisible = false;
-                Guadagnati++;
-            }
-            if (user.Sport >= 3) {
-                Sport1.IsVisible = false;
-                Guadagnati++;
-            }
-            if (user.Discoteca >= 3) {
-                Discoteca1.IsVisible = false;
-                Guadagnati++;
-            }
-            if (user.Compleanno >= 3) {
-                Compleanno1.IsVisible = false;
-                Guadagnati++;
-            }
-            if (user.Maschera >= 3) {
-                Maschera1.IsVisible = false;
-                Guadagnati++;
-            }
-            if (user.ViaggioMontagna >= 3) { 
-                ViaggioMontagna1.IsVisible = false;
-                Guadagnati++;
-            }
-            if (user.ViaggioCitta >= 3) { 
-                ViaggioCitta1.IsVisible = false;
-                Guadagnati++;
-            }
-            if (user.Cultura >= 3) { 
-                Cultura1.IsVisible = false;
-                Guadagnati++;
-            }
-            if (user.Cocktail >= 3) { 
-                Cocktail1.IsVisible = false;
-                Guadagnati++;
-            }
-            if (user.Casa >= 3) { 
-                Casa1.IsVisible = false;
-                Guadagnati++;
-            }
+
+            ViaggioMare1.IsVisible = user.listaDistintivi["ViaggioMare"].Item2[1];
+            Ristorante1.IsVisible = user.listaDistintivi["Ristorante"].Item2[1];
+            Sport1.IsVisible = user.listaDistintivi["Sport"].Item2[1];
+            Discoteca1.IsVisible = user.listaDistintivi["Discoteca"].Item2[1];
+            Compleanno1.IsVisible = user.listaDistintivi["Compleanno"].Item2[1];
+            Maschera1.IsVisible = user.listaDistintivi["Maschera"].Item2[1];
+            ViaggioMontagna1.IsVisible = user.listaDistintivi["ViaggioMontagna"].Item2[1];
+            ViaggioCitta1.IsVisible = user.listaDistintivi["ViaggioCitta"].Item2[1];
+            Cultura1.IsVisible = user.listaDistintivi["Cultura"].Item2[1];
+            Cocktail1.IsVisible = user.listaDistintivi["Cocktail"].Item2[1];
+            Casa1.IsVisible = user.listaDistintivi["Casa"].Item2[1];
+
+
 
             DistintiviGuadagnati.Text = Convert.ToString(Guadagnati) + "/\n11";
             Mare1Frame.IsVisible = false;
@@ -394,17 +363,19 @@ namespace TheSocialGame
             user.BestFriend2.username = "BestFriend2";
             user.BestFriend3.username = "BestFriend3";
 
-            user.ViaggioMare = new Random().Next(5);
-            user.Ristorante = new Random().Next(5);
-            user.Sport = new Random().Next(5);
-            user.Discoteca = new Random().Next(5);
-            user.Compleanno = new Random().Next(5);
-            user.Maschera = new Random().Next(5);
-            user.ViaggioMontagna = new Random().Next(5);
-            user.ViaggioCitta = new Random().Next(5);
-            user.Cultura = new Random().Next(5);
-            user.Cocktail = new Random().Next(5);
-            user.Casa = new Random().Next(5);
+
+           
+            user.listaDistintivi["ViaggioMare"].Item2[1] = new Random().Next(0,2) > 0;
+            user.listaDistintivi["Ristorante"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Sport"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Compleanno"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Maschera"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["ViaggioMontagna"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["ViaggioCitta"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Cultura"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Cocktail"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Casa"].Item2[1] = new Random().Next(0, 2) > 0;
+
 
 
         }
