@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
@@ -163,29 +165,68 @@ namespace TheSocialGame
         /* abilita i distintivi ottenuti */
         void AbilitaDistinitvi()
         {
+            int Guadagnati = 0;
+
             if (user.ViaggioMare >= 3)
+            {
                 ViaggioMare1.IsVisible = false;
-            if (user.Ristorante >= 3)
+                Guadagnati++;
+            }
+            if (user.Ristorante >= 3) {
                 Ristorante1.IsVisible = false;
-            if (user.Sport >= 3)
+                Guadagnati++;
+            }
+            if (user.Sport >= 3) {
                 Sport1.IsVisible = false;
-            if (user.Discoteca >= 3)
+                Guadagnati++;
+            }
+            if (user.Discoteca >= 3) {
                 Discoteca1.IsVisible = false;
-            if (user.Compleanno >= 3)
+                Guadagnati++;
+            }
+            if (user.Compleanno >= 3) {
                 Compleanno1.IsVisible = false;
-            if (user.Maschera >= 3)
+                Guadagnati++;
+            }
+            if (user.Maschera >= 3) {
                 Maschera1.IsVisible = false;
-            if (user.ViaggioMontagna >= 3)
+                Guadagnati++;
+            }
+            if (user.ViaggioMontagna >= 3) { 
                 ViaggioMontagna1.IsVisible = false;
-            if (user.ViaggioCitta >= 3)
+                Guadagnati++;
+            }
+            if (user.ViaggioCitta >= 3) { 
                 ViaggioCitta1.IsVisible = false;
-            if (user.Cultura >= 3)
+                Guadagnati++;
+            }
+            if (user.Cultura >= 3) { 
                 Cultura1.IsVisible = false;
-            if (user.Cocktail >= 3)
+                Guadagnati++;
+            }
+            if (user.Cocktail >= 3) { 
                 Cocktail1.IsVisible = false;
-            if (user.Casa >= 3)
+                Guadagnati++;
+            }
+            if (user.Casa >= 3) { 
                 Casa1.IsVisible = false;
+                Guadagnati++;
+            }
+
+            DistintiviGuadagnati.Text = Convert.ToString(Guadagnati) + "/\n11";
+            Mare1Frame.IsVisible = false;
+            Ristorante1Frame.IsVisible = false;
+            Sport1Frame.IsVisible = false;
+            Disco1Frame.IsVisible = false;
+            Compleanno1Frame.IsVisible = false;
+            Montagna1Frame.IsVisible = false;
+            Citta1Frame.IsVisible = false;
+            Cultura1Frame.IsVisible = false;
+            Cocktail1Frame.IsVisible = false;
+            Maschera1Frame.IsVisible = false;
+            Casa1Frame.IsVisible = false;
            
+
 
         }
 
@@ -368,7 +409,84 @@ namespace TheSocialGame
 
         }
 
+        async void Mare1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Mare1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Mare1Frame.IsVisible = false;
+        }
 
-        
+        async void Ristorante1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Ristorante1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Ristorante1Frame.IsVisible = false;
+        }
+
+        async void Sport1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Sport1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Sport1Frame.IsVisible = false;
+        }
+
+        async void Disco1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Disco1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Disco1Frame.IsVisible = false;
+        }
+
+        async void Compleanno1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Compleanno1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Compleanno1Frame.IsVisible = false;
+        }
+
+        async void Montagna1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Montagna1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Montagna1Frame.IsVisible = false;
+        }
+
+        async void Citta1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Citta1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Citta1Frame.IsVisible = false;
+        }
+
+        async void Cultura1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Cultura1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Cultura1Frame.IsVisible = false;
+        }
+
+        async void Cocktail1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Cocktail1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Cocktail1Frame.IsVisible = false;
+        }
+
+        async void Maschera1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Maschera1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Maschera1Frame.IsVisible = false;
+        }
+
+        async void Casa1Clicked(System.Object sender, System.EventArgs e)
+        {
+            Casa1Frame.IsVisible = true;
+            await Task.Delay(2500);
+            Casa1Frame.IsVisible = false;
+        }
+
+
+
     }
 }
