@@ -34,7 +34,7 @@ namespace TheSocialGame
                
             }
             UsernameLabel.Text =this.user.username;
-            AbilitaDistinitvi();
+            AbilitaDistintivi();
             MostraAmici();
             RiempiProgressBar();
             if (user.livello < 10)
@@ -163,9 +163,9 @@ namespace TheSocialGame
         }
 
         /* abilita i distintivi ottenuti */
-        void AbilitaDistinitvi()
+        void AbilitaDistintivi()
         {
-            int Guadagnati = 0;
+            int guadagnati = 0;
 
 
             ViaggioMare1.IsVisible = user.listaDistintivi["ViaggioMare"].Item2[1];
@@ -180,9 +180,19 @@ namespace TheSocialGame
             Cocktail1.IsVisible = user.listaDistintivi["Cocktail"].Item2[1];
             Casa1.IsVisible = user.listaDistintivi["Casa"].Item2[1];
 
+            Dictionary<string, (int, Dictionary<int, bool>)>.ValueCollection valori = user.listaDistintivi.Values;
+            foreach ((int, Dictionary<int, bool>) elem in valori)
+            {
+                Dictionary<int, bool> val = elem.Item2;
+                foreach (KeyValuePair<int, bool> coppia in val)
+                {
+                    if (coppia.Value)
+                        guadagnati++;
+                }
+            }
 
 
-            DistintiviGuadagnati.Text = Convert.ToString(Guadagnati) + "/\n11";
+            DistintiviGuadagnati.Text = Convert.ToString(guadagnati) + "/\n11";
             Mare1Frame.IsVisible = false;
             Ristorante1Frame.IsVisible = false;
             Sport1Frame.IsVisible = false;
