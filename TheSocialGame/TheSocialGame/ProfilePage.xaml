@@ -157,14 +157,14 @@
                          <ImageButton BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="1085,5,50,50"/>
                          <BoxView AbsoluteLayout.LayoutBounds="1085,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                         <Frame x:Name="Mare1Frame" BackgroundColor="WhiteSmoke" BorderColor= "{StaticResource FirstColor}" CornerRadius="5" Padding="3" Margin="60, 0, 20, 10" HeightRequest="70" HasShadow="True">
+                         <Frame x:Name="DescriptionFrame" BackgroundColor="WhiteSmoke" BorderColor= "{StaticResource FirstColor}" CornerRadius="5" Padding="3" Margin="60, 0, 20, 10" HeightRequest="70" HasShadow="True" IsVisible="false">
                             <StackLayout>
-                                 <Label Text="Tipo da Spiaggia" TextColor="{StaticResource FirstColor}" FontSize="Medium" FontAttributes="Bold" />
+                                 <Label x:Name="TitoloDistintivo"  TextColor="{StaticResource FirstColor}" FontSize="Medium" FontAttributes="Bold" />
                                  <BoxView Color="{StaticResource FirstColor}" HeightRequest="2"  HorizontalOptions="Fill" />
-                                 <Label TextColor="Black"   Text="Hai completato almeno 3 esperienze nella &#10; categoria Viaggio al Mare" />
+                                 <Label x:Name="DescrizioneDistintivo" TextColor="Black"   Text="Hai completato almeno 3 esperienze nella &#10; categoria Viaggio al Mare" />
                             </StackLayout>
                           </Frame>
-                          <Frame x:Name="Ristorante1Frame" BackgroundColor="WhiteSmoke" BorderColor= "{StaticResource FirstColor}" CornerRadius="5" Padding="3" Margin="120, 0, 20, 10" HeightRequest="70" HasShadow="True" IsVisible="False">
+                          <Frame x:Name="Ristorante1Frame" BackgroundColor="WhiteSmoke" BorderColor= "{StaticResource FirstColor}" CornerRadius="5" Padding="3" Margin="120, 0, 20, 10" HeightRequest="70" HasShadow="True" IsVisible="false">
                             <StackLayout>
                                  <Label Text="Assaggiatore" TextColor="{StaticResource FirstColor}" FontSize="Medium" FontAttributes="Bold" />
                                  <BoxView Color="{StaticResource FirstColor}" HeightRequest="2"  HorizontalOptions="Fill" />

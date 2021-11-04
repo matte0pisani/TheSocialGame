@@ -168,33 +168,22 @@ namespace TheSocialGame
             int Guadagnati = 0;
 
 
-            ViaggioMare1.IsVisible = user.listaDistintivi["ViaggioMare"].Item2[1];
-            Ristorante1.IsVisible = user.listaDistintivi["Ristorante"].Item2[1];
-            Sport1.IsVisible = user.listaDistintivi["Sport"].Item2[1];
-            Discoteca1.IsVisible = user.listaDistintivi["Discoteca"].Item2[1];
-            Compleanno1.IsVisible = user.listaDistintivi["Compleanno"].Item2[1];
-            Maschera1.IsVisible = user.listaDistintivi["Maschera"].Item2[1];
-            ViaggioMontagna1.IsVisible = user.listaDistintivi["ViaggioMontagna"].Item2[1];
-            ViaggioCitta1.IsVisible = user.listaDistintivi["ViaggioCitta"].Item2[1];
-            Cultura1.IsVisible = user.listaDistintivi["Cultura"].Item2[1];
-            Cocktail1.IsVisible = user.listaDistintivi["Cocktail"].Item2[1];
-            Casa1.IsVisible = user.listaDistintivi["Casa"].Item2[1];
+            ViaggioMare1.IsVisible = !user.listaDistintivi["ViaggioMare"].Item2[1];
+            Ristorante1.IsVisible = !user.listaDistintivi["Ristorante"].Item2[1];
+            Sport1.IsVisible = !user.listaDistintivi["Sport"].Item2[1];
+            Discoteca1.IsVisible = !user.listaDistintivi["Discoteca"].Item2[1];
+            Compleanno1.IsVisible = !user.listaDistintivi["Compleanno"].Item2[1];
+            Maschera1.IsVisible = !user.listaDistintivi["Maschera"].Item2[1];
+            ViaggioMontagna1.IsVisible = !user.listaDistintivi["ViaggioMontagna"].Item2[1];
+            ViaggioCitta1.IsVisible = !user.listaDistintivi["ViaggioCitta"].Item2[1];
+            Cultura1.IsVisible = !user.listaDistintivi["Cultura"].Item2[1];
+            Cocktail1.IsVisible = !user.listaDistintivi["Cocktail"].Item2[1];
+            Casa1.IsVisible = !user.listaDistintivi["Casa"].Item2[1];
 
 
 
             DistintiviGuadagnati.Text = Convert.ToString(Guadagnati) + "/\n11";
-            Mare1Frame.IsVisible = false;
-            Ristorante1Frame.IsVisible = false;
-            Sport1Frame.IsVisible = false;
-            Disco1Frame.IsVisible = false;
-            Compleanno1Frame.IsVisible = false;
-            Montagna1Frame.IsVisible = false;
-            Citta1Frame.IsVisible = false;
-            Cultura1Frame.IsVisible = false;
-            Cocktail1Frame.IsVisible = false;
-            Maschera1Frame.IsVisible = false;
-            Casa1Frame.IsVisible = false;
-           
+            DescriptionFrame.IsVisible = false;
 
 
         }
@@ -382,79 +371,111 @@ namespace TheSocialGame
 
         async void Mare1Clicked(System.Object sender, System.EventArgs e)
         {
-            Mare1Frame.IsVisible = true;
+            TitoloDistintivo.Text = "Tipo da Spiaggia";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella\ncategoria Viaggio al Mare";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Mare1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
         async void Ristorante1Clicked(System.Object sender, System.EventArgs e)
         {
-            Ristorante1Frame.IsVisible = true;
+            DescriptionFrame.TranslationX = 60;
+            TitoloDistintivo.Text = "Assaggiatore";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Ristorante";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Ristorante1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
         async void Sport1Clicked(System.Object sender, System.EventArgs e)
         {
-            Sport1Frame.IsVisible = true;
+            DescriptionFrame.TranslationX = 120;
+            TitoloDistintivo.Text = "Sportivo occasionale";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Sport";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Sport1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
         async void Disco1Clicked(System.Object sender, System.EventArgs e)
         {
-            Disco1Frame.IsVisible = true;
+            DescriptionFrame.TranslationX = 180;
+            TitoloDistintivo.Text = "Passo Base";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Discoteca";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Disco1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
         async void Compleanno1Clicked(System.Object sender, System.EventArgs e)
         {
-            Compleanno1Frame.IsVisible = true;
+            DescriptionFrame.TranslationX = 240;
+            TitoloDistintivo.Text = "Mangiatore di Torte";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Compleanno";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Compleanno1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
         async void Montagna1Clicked(System.Object sender, System.EventArgs e)
         {
-            Montagna1Frame.IsVisible = true;
+            DescriptionFrame.TranslationX = 300;
+            TitoloDistintivo.Text = "Amanate dell'Aria Pulita";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Viaggio in Montagna";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Montagna1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
         async void Citta1Clicked(System.Object sender, System.EventArgs e)
         {
-            Citta1Frame.IsVisible = true;
+            DescriptionFrame.TranslationX = 360;
+            TitoloDistintivo.Text = "Esploratore";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Viaggio in Città";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Citta1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
         async void Cultura1Clicked(System.Object sender, System.EventArgs e)
         {
-            Cultura1Frame.IsVisible = true;
+            DescriptionFrame.TranslationX = 420;
+            TitoloDistintivo.Text = "Studioso";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Visita Culturale";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Cultura1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
         async void Cocktail1Clicked(System.Object sender, System.EventArgs e)
         {
-            Cocktail1Frame.IsVisible = true;
+            DescriptionFrame.TranslationX = 480;
+            TitoloDistintivo.Text = "Sommelier";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Drink";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Cocktail1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
         async void Maschera1Clicked(System.Object sender, System.EventArgs e)
         {
-            Maschera1Frame.IsVisible = true;
+            DescriptionFrame.TranslationX = 540;
+            TitoloDistintivo.Text = "Incognito";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Travestimenti";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Maschera1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
         async void Casa1Clicked(System.Object sender, System.EventArgs e)
         {
-            Casa1Frame.IsVisible = true;
+            DescriptionFrame.TranslationX = 600;
+            TitoloDistintivo.Text = "Re del Divano";
+            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Casa";
+            DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
-            Casa1Frame.IsVisible = false;
+            DescriptionFrame.IsVisible = false;
         }
 
 
