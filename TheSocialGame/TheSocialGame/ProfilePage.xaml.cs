@@ -192,7 +192,7 @@ namespace TheSocialGame
             }
 
 
-            DistintiviGuadagnati.Text = Convert.ToString(Guadagnati) + "/\n11";
+            DistintiviGuadagnati.Text = Convert.ToString(guadagnati) + "/\n11";
             DescriptionFrame.IsVisible = false;
 
 
@@ -381,6 +381,7 @@ namespace TheSocialGame
 
         async void Mare1Clicked(System.Object sender, System.EventArgs e)
         {
+            TranslationX = 0;
             TitoloDistintivo.Text = "Tipo da Spiaggia";
             DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella\ncategoria Viaggio al Mare";
             DescriptionFrame.IsVisible = true;
