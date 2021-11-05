@@ -22,7 +22,7 @@ namespace TheSocialGame
         {
             if (EmailEntry.Text != null && EmailEntry.Text.Length > 0)
             {
-                var client = new AmazonSimpleEmailServiceClient("AKIASJHAN5BQHT333L5H", "gd511to6cJ8bX9K0GDcGWCNnphDXjSGaBn+swALo", RegionEndpoint.EUSouth1);
+                var client = new AmazonSimpleEmailServiceClient("", "", RegionEndpoint.EUSouth1);
                 SendEmailRequest sendRequest = GenerateDefaultEmailRequest("matteo.pisani.roma@gmail.com", EmailEntry.Text);
                 try
                 {
