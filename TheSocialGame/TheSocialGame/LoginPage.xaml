@@ -6,7 +6,7 @@
              BackgroundColor="{StaticResource BackgroundColor}">
 
     <RelativeLayout>
-        <Label Text="Accedi a TheSocialGame."
+        <Label Text="Accedi a TheSocialGame." TextColor="{StaticResource FirstColor}"
                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.20}"
                FontAttributes="Bold"
@@ -16,14 +16,18 @@
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.28}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.80}">
             <Entry  x:Name="UsernameEntry"
-                    Placeholder="il tuo username" 
+                    Placeholder="il tuo username"
+                    PlaceholderColor="Black"
+                    TextColor="Black"
                     BackgroundColor="{StaticResource FirstColor}"
                     Opacity="0.5" 
                     ClearButtonVisibility="WhileEditing"
                     TextChanged="UsernameEntry_TextChanged"
                     />
             <Entry  x:Name="PasswordEntry"
-                    Placeholder="la tua password" 
+                    Placeholder="la tua password"
+                    PlaceholderColor="Black"
+                    TextColor="Black"
                     BackgroundColor="{StaticResource FirstColor}"
                     Opacity="0.5" 
                     ClearButtonVisibility="WhileEditing"
@@ -34,7 +38,7 @@
             <Frame Margin="10"
                    BorderColor="DarkOrange"
                    BackgroundColor="{StaticResource FirstColor}"
-                   CornerRadius="50"
+                   CornerRadius="{OnPlatform Android='50', iOS='35'}"
                    HeightRequest="30"
                    WidthRequest="30"
                    IsClippedToBounds="True"

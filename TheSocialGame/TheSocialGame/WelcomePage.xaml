@@ -11,21 +11,24 @@
                    HeightRequest="300"
             />
         <Frame BorderColor= "{StaticResource FirstColor}"
+                   BackgroundColor="GhostWhite"
                    CornerRadius="5"
                    Padding="8"
                    Margin="20, 0, 20, 0">
             <StackLayout>
                 <Label Text="Share. Inspire. Have fun!"
+                               TextColor="Black"
                                FontSize="Medium"
                                FontAttributes="Bold" />
                 <BoxView Color="{StaticResource FirstColor}"
                                HeightRequest="2"
                                HorizontalOptions="Fill" />
-                <Label Text="Benvenuto in TheSocialGame, il primo social network basato sui gruppi e sulle esperienze delle persone."/>
+                <Label TextColor="Black" Text="Benvenuto in TheSocialGame, il primo social network basato sui gruppi e sulle esperienze delle persone."/>
             </StackLayout>
         </Frame>
         <Button Margin="80, 40, 80, 40"
                 BackgroundColor="{StaticResource FirstColor}"
+                TextColor="Black"
                 Text="Accedi"
                 VerticalOptions="Start"
                 Clicked="Button_Clicked"

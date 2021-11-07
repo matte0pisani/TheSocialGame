@@ -12,6 +12,7 @@
     <ContentPage.Content>
         <RelativeLayout>
             <Label Text="Unisciti a noi e inizia a condividere!"
+                   TextColor="{StaticResource FirstColor}"
                    FontSize="Medium"
                    FontAttributes="Italic,Bold"
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.1 }"
@@ -28,9 +29,11 @@
                        Padding="8">
                     <FlexLayout Direction="Row"
                                 AlignItems="Center">
-                        <Label Text="username:" FontAttributes="Bold"/>
+                        <Label Text="username:" FontAttributes="Bold" TextColor="{StaticResource FirstColor}"/>
                         <Entry x:Name="UsernameEntry"
-                               Placeholder="inserisci qui" 
+                               Placeholder="inserisci qui"
+                               TextColor="Black"
+                               BackgroundColor="GhostWhite"
                                Text="{Binding Username, Mode=TwoWay}"
                                ClearButtonVisibility="WhileEditing"
                                FlexLayout.Grow="1"
@@ -42,9 +45,11 @@
                        Padding="8">
                     <FlexLayout Direction="Row"
                                 AlignItems="Center">
-                        <Label Text="email:" FontAttributes="Bold"/>
+                        <Label Text="email:" FontAttributes="Bold" TextColor="{StaticResource FirstColor}"/>
                         <Entry Placeholder="inserisci qui" 
                                Text="{Binding Email, Mode=TwoWay}"
+                               TextColor="Black"
+                               BackgroundColor="GhostWhite"
                                ClearButtonVisibility="WhileEditing"
                                FlexLayout.Grow="1"/>
                     </FlexLayout>
@@ -54,9 +59,11 @@
                        Padding="8">
                     <FlexLayout Direction="Row"
                                 AlignItems="Center">
-                        <Label Text="password:" FontAttributes="Bold"/>
+                        <Label Text="password:" FontAttributes="Bold" TextColor="{StaticResource FirstColor}"/>
                         <Entry x:Name="passwordEntry"
-                               Placeholder="inserisci qui" 
+                               Placeholder="inserisci qui"
+                               TextColor="Black"
+                               BackgroundColor="GhostWhite"
                                Text="{Binding Password, Mode=TwoWay}"
                                ClearButtonVisibility="WhileEditing"
                                FlexLayout.Grow="1"
@@ -69,11 +76,13 @@
                     <FlexLayout Direction="Row"
                                 AlignItems="Center">
                         <StackLayout>
-                            <Label Text="conferma" FontAttributes="Bold"/>
-                            <Label Text="password:" FontAttributes="Bold"/>
+                            <Label Text="conferma" FontAttributes="Bold" TextColor="{StaticResource FirstColor}"/>
+                            <Label Text="password:" FontAttributes="Bold" TextColor="{StaticResource FirstColor}"/>
                         </StackLayout>
                         <Entry Placeholder="inserisci qui"
                                Text="{Binding ConfermaPassword, Mode=TwoWay}"
+                               TextColor="Black"
+                               BackgroundColor="GhostWhite"
                                ClearButtonVisibility="WhileEditing"
                                FlexLayout.Grow="1"
                                IsPassword="True"/>
@@ -84,7 +93,8 @@
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Stack, Property=Width, Factor=.72}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Stack, Property=Height, Factor=1.15}"
                     Text="Sign up"
-                    CornerRadius="40"
+                    TextColor="DarkSlateGray"
+                    CornerRadius="{OnPlatform Android='40', iOS='23'}"
                     Clicked="Button_Clicked"
                     />
             <Label  x:Name="errorLabel"
