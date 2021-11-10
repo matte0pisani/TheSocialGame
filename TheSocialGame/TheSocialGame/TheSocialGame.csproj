@@ -17,6 +17,8 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing" Version="0.1.2" />
     <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.3.0.48" />
+    <PackageReference Include="AWSSDK.RDS" Version="3.7.6.8" />
+    <PackageReference Include="Npgsql" Version="5.0.10" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,5 +41,7 @@
   <ItemGroup>
     <None Remove="Xam.Plugins.Forms.ProgressRing" />
     <None Remove="Syncfusion.Xamarin.SfProgressBar" />
+    <None Remove="AWSSDK.RDS" />
+    <None Remove="Npgsql" />
   </ItemGroup>
 </Project>

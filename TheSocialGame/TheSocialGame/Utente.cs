@@ -43,7 +43,7 @@ namespace TheSocialGame
         private Dictionary<string, (int, Dictionary<int, bool>)> inizializzaListaDistintivi()
         {
             int livelloMax;
-            livelloMax = 1;
+            livelloMax = 2;
             Dictionary<string,(int, Dictionary<int, bool>)> mappa = new Dictionary<string, (int, Dictionary<int, bool>)>();
             Dictionary<int, bool> livelliMare = new Dictionary<int, bool>();
             Dictionary<int, bool> livelliRistorante = new Dictionary<int, bool>();

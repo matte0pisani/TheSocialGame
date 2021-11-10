@@ -131,7 +131,50 @@
                          x:TypeArguments="FileImageSource"
                         Android="sofa.png"
                         iOS ="sofa.png" />
-            
+            <OnPlatform x:Key="ViaggioMare2"
+                         x:TypeArguments="FileImageSource"
+                        Android="lifeguard.png"
+                        iOS ="lifeguard.png" />
+            <OnPlatform x:Key="Ristorante2"
+                         x:TypeArguments="FileImageSource"
+                        Android="food2.png"
+                        iOS ="food2.png" />
+            <OnPlatform x:Key="Sport2"
+                         x:TypeArguments="FileImageSource"
+                        Android="basketball.png"
+                        iOS ="basketball.png" />
+            <OnPlatform x:Key="Discoteca2"
+                         x:TypeArguments="FileImageSource"
+                        Android="man.png"
+                        iOS ="man.png" />
+            <OnPlatform x:Key="Compleanno2"
+                         x:TypeArguments="FileImageSource"
+                        Android="gift.png"
+                        iOS ="gift.png" />
+            <OnPlatform x:Key="ViaggioMontagna2"
+                         x:TypeArguments="FileImageSource"
+                        Android="camping.png"
+                        iOS ="camping.png" />
+            <OnPlatform x:Key="ViaggioCitta2"
+                         x:TypeArguments="FileImageSource"
+                        Android="libertystatue.png"
+                        iOS ="libertystatue.png" />
+            <OnPlatform x:Key="Cultura2"
+                         x:TypeArguments="FileImageSource"
+                        Android="book2.png"
+                        iOS ="book2.png" />
+            <OnPlatform x:Key="Aperitivo2"
+                         x:TypeArguments="FileImageSource"
+                        Android="cocktail2.png"
+                        iOS ="cocktail2.png" />
+            <OnPlatform x:Key="Maschera2"
+                         x:TypeArguments="FileImageSource"
+                        Android="disguisemask.png"
+                        iOS ="disguisemask.png" />
+            <OnPlatform x:Key="Casa2"
+                         x:TypeArguments="FileImageSource"
+                        Android="pajamas.png"
+                        iOS ="pajamas.png" />
 
             
             

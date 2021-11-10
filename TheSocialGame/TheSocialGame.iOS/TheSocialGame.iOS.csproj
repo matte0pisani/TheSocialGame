@@ -136,6 +136,12 @@
     <PackageReference Include="Syncfusion.Xamarin.SfProgressBar">
       <Version>19.3.0.48</Version>
     </PackageReference>
+    <PackageReference Include="AWSSDK.RDS">
+      <Version>3.7.6.8</Version>
+    </PackageReference>
+    <PackageReference Include="Npgsql">
+      <Version>5.0.10</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -178,5 +184,16 @@
     <BundleResource Include="Resources\discolight.png" />
     <BundleResource Include="Resources\eiffeltower.png" />
     <BundleResource Include="Resources\fitnesscenter.png" />
+    <BundleResource Include="Resources\basketball.png" />
+    <BundleResource Include="Resources\book2.png" />
+    <BundleResource Include="Resources\camping.png" />
+    <BundleResource Include="Resources\cocktail2.png" />
+    <BundleResource Include="Resources\disguisemask.png" />
+    <BundleResource Include="Resources\food2.png" />
+    <BundleResource Include="Resources\gift.png" />
+    <BundleResource Include="Resources\libertystatue.png" />
+    <BundleResource Include="Resources\lifeguard.png" />
+    <BundleResource Include="Resources\man.png" />
+    <BundleResource Include="Resources\pajamas.png" />
   </ItemGroup>
 </Project>
