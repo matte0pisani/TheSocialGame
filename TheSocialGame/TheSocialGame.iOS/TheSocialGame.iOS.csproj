@@ -195,5 +195,8 @@
     <BundleResource Include="Resources\lifeguard.png" />
     <BundleResource Include="Resources\man.png" />
     <BundleResource Include="Resources\pajamas.png" />
+    <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\userblack.png" />
+    <BundleResource Include="Resources\add.png" />
   </ItemGroup>
 </Project>

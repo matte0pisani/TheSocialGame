@@ -315,41 +315,49 @@ namespace TheSocialGame
         async void NotificationClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new NotificationPage());
+            Navigation.RemovePage(this);
         }
 
         async void HomeClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new HomePage());
+            Navigation.RemovePage(this);
         }
 
         async void AddClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddExperiencePage());
+            await Navigation.PushAsync(new AddExperiencePage(user));
+            Navigation.RemovePage(this);
         }
 
         async void SearchClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SearchPage());
+            Navigation.RemovePage(this);
         }
 
         async void RankingClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new RankingPage());
+            Navigation.RemovePage(this);
         }
 
         async void SettingClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SettingPage());
+            Navigation.RemovePage(this);
         }
 
         async void DiaryClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new DiaryPage());
+            Navigation.RemovePage(this);
         }
 
         async void FriendsClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new FriendsPage());
+            Navigation.RemovePage(this);
         }
 
         void creaUtenteFake()

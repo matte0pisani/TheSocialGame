@@ -88,7 +88,7 @@
                    
            
 
-                    <ScrollView  Orientation="Horizontal" HeightRequest="100" 
+                    <ScrollView  Orientation="Horizontal" HeightRequest="100" HorizontalScrollBarVisibility="Never"
                                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.02}"
                                  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.848}"
                                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.147}" >

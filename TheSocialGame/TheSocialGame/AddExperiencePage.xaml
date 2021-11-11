@@ -2,9 +2,147 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="TheSocialGame.AddExperiencePage">
+    x:Class="TheSocialGame.AddExperiencePage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="{StaticResource BackgroundColor}">
     <ContentPage.Content>
-         <Label Text="Aggiungi Esperienza" TextColor="{DynamicResource SecondColor}" BackgroundColor="{DynamicResource FirstColor}" FontFamily="{DynamicResource StandardFont}" HorizontalOptions="Center" VerticalOptions="Center" />
-   
+        <RelativeLayout>
+
+            <!--LAYOUT DI PAGINA-->
+
+             <BoxView  Color="{StaticResource FirstColor}" Opacity="0.7" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"  />
+
+            <Label Text="Aggiungi un'esperienza" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform Android='35', iOS='28'}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.09}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.036', iOS='0.07'}}"/>
+               
+            <BoxView Color="{StaticResource FirstColor}" Opacity="0.7"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}" />
+
+            <ImageButton x:Name="NotificationButton" Source="{StaticResource iconaNotifiche}"  BackgroundColor="Transparent" Clicked="NotificationClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.048}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+           
+            <ImageButton x:Name="HomeButton" Source="{StaticResource iconaHome}" BackgroundColor="Transparent" Clicked="HomeClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.045}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+
+            <ImageButton x:Name="SearchButton" Source="{StaticResource iconaCerca}"  BackgroundColor="Transparent" Clicked="SearchClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.055}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.945}"/>
+           
+            <ImageButton x:Name="RankingButton" Source="{StaticResource iconaClassifiche}"  BackgroundColor="Transparent" Clicked="RankingClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.047}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+
+             <ImageButton x:Name="ProfileButton" Source="{StaticResource iconaProfiloNero }"   BackgroundColor="Transparent" Clicked="ProfileClicked" BorderColor="Black" BorderWidth="3" CornerRadius="10" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.945}"/>
+
+            <ImageButton x:Name="BackButton" BackgroundColor="Transparent" Source="{StaticResource iconaIndietro}"  Clicked="BackClicked" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.015}"/>
+
+           
+            <ScrollView  HeightRequest="{OnPlatform Android='549', iOS='563'}" 
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                <AbsoluteLayout>
+                    <Label Text="Dai un titolo alla tua esperienza" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,10,400,30" />
+                    <Entry x:Name="Titolo" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" PlaceholderColor="Black" TextColor="Black" Placeholder="Titolo" AbsoluteLayout.LayoutBounds="20,40,350,40" TextChanged="TitoloCopertina"  />
+                    <Label Text="Immagine di copertina" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,85,400,30" />
+                    <Label x:Name="AvvisoCopertina" Text="Se non inserisci un'immagine di copertina verrà usata una copertina di default" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="20,110,400,40" />
+                    <Rectangle Stroke="Black" StrokeDashArray="1,1" StrokeDashOffset="6" StrokeThickness="2" AbsoluteLayout.LayoutBounds="20,150,350,150" />
+                    <Button Text="SCATTA DA FOTOCAMERA" TextColor="Black" BackgroundColor="{StaticResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,170,250,40" Clicked="CameraClicked" />
+                    <Button Text="IMPORTA DA GALLERIA" TextColor="Black" BackgroundColor="{StaticResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,230,250,40" Clicked="FromGalleryClicked" />
+                    <Button x:Name="Rimuovi" Text="RIMUOVI" TextColor="Black" BackgroundColor="{StaticResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="270,110,100,35" Clicked="RimuoviClicked"  />
+                    <Frame x:Name="CopertinaFrame" BackgroundColor="{StaticResource BackgroundColor}" AbsoluteLayout.LayoutBounds="20,148,360,160" IsClippedToBounds="True" HasShadow="False"  >
+                        <Image x:Name="Copertina" Margin="-20" />
+                    </Frame>
+                    <Label Text="Dal" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,310,400,30" />
+                    <DatePicker x:Name="DataInizio" BackgroundColor="{StaticResource BackgroundColor}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='60,308,100,40', iOS='60,310,100,25'}" FontSize="{OnPlatform Android='18', iOS='16'}" TextColor="Black" DateSelected="DataInizioSelected" />
+                    <Label Text="Al" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="180,310,400,30" />
+                    <DatePicker x:Name="DataFine" BackgroundColor="{StaticResource BackgroundColor}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='220,308,100,40', iOS='220,310,100,25'}" FontSize="{OnPlatform Android='18', iOS='16'}" TextColor="Black" DateSelected="DataFineSelected" />
+                    <Label Text="Esperienza Live" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,345,110,50" />
+                    <Switch x:Name="Live" AbsoluteLayout.LayoutBounds="{OnPlatform Android='30,345,150,60', iOS='30,352,150,40'}" OnColor="DarkOrange" ThumbColor="{StaticResource FirstColor}" Scale="{OnPlatform Android='1.2'}" Toggled="LiveChanged" TranslationX="{OnPlatform iOS='110'}" />
+                    <Label x:Name="LabelFromTime" Text="Dalle" TextColor="Black" FontSize="{OnPlatform Android='18', iOS='16'}" AbsoluteLayout.LayoutBounds="210,348,110,30" />
+                    <TimePicker x:Name="FromTime" BackgroundColor="{StaticResource BackgroundColor}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='260,342,75,40', iOS='260,338,75,40'}" TextColor="Black" FontSize="{OnPlatform Android='16', iOS='14'}" />
+                    <Label x:Name="LabelToTime" Text="Alle" TextColor="Black" FontSize="{OnPlatform Android='18', iOS='16'}" AbsoluteLayout.LayoutBounds="210,375,110,30" />
+                    <TimePicker x:Name="ToTime" BackgroundColor="{StaticResource BackgroundColor}"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='260,369,75,40', iOS='260,365,75,40'}" TextColor="Black" FontSize="{OnPlatform Android='16', iOS='14'}" />
+                    <Label Text="Impostando questa esperienza come live potrete partecipare alle sfide e gli altri utenti potranno interagire con voi" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="20,400,393,55" />
+                    <Label Text="Tipologia Esperienza" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,460,110,53" />                   
+                    <Picker x:Name="TipiEsp" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" AbsoluteLayout.LayoutBounds="150,462,190,40" TextColor="Black" SelectedIndexChanged="TipoEsperienza" FontSize="{OnPlatform Android='20', iOS='18'}" />
+                    <Label Text="Partecipanti" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,530,120,50" />
+                    <Entry x:Name="Partecipanti" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" TextColor="Black" Placeholder="username" AbsoluteLayout.LayoutBounds="150,520,190,40" Completed="AggiungiPartecipanti" />
+                    <ScrollView AbsoluteLayout.LayoutBounds="20,565,360,45"  >
+                        <Label x:Name="ListaPartecipanti" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="20,1000,360,55" />
+                    </ScrollView>
+                    <Label Text="Esperienza Privata" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,610,110,50" />
+                    <Switch x:Name="Privata" AbsoluteLayout.LayoutBounds="30,610,150,60" OnColor="DarkOrange" ThumbColor="{StaticResource FirstColor}" Scale="{OnPlatform Android='1.2'}" TranslationX="{OnPlatform iOS='110'}" Toggled="PrivataChanged" />
+                    <Label Text="Se l'esperienza è privata solo i partecipanti potranno visualizzarla" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="205,610,180,55" />
+                    
+                    
+                   
+                   
+
+
+
+
+
+                     <Frame x:Name="EsciSenzaSalvareFrame" CornerRadius="20" BackgroundColor="NavajoWhite" Padding="8" HasShadow="True" BorderColor="Black"  AbsoluteLayout.LayoutBounds="20, 140, 350, 200" >
+                        <RelativeLayout>
+
+                            <Label Text="Attenzione!" TextColor="Black" TextDecorations="Underline" FontAttributes="Bold" FontSize="{OnPlatform Android='30', iOS='25'}"
+                                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.1}"/>
+
+                            <Label Text="Se lasci la pagina la tua esperienza non sarà salvata &#x0a;Sicuro di voler continuare?" TextColor="Black" FontSize="17"
+                                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.33}"/>
+
+                            <Button x:Name="Conferma" BackgroundColor="{StaticResource FirstColor}" Text="CONFERMA" FontSize="20" TextColor="Black" FontAttributes="Bold" CornerRadius="15"
+                                    Clicked="ConfermaClicked"
+                                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.7}"
+                                    RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.54}"
+                                    RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.4}"/>
+
+                            <Button x:Name="Annulla" BackgroundColor="{StaticResource FirstColor}" Text="ANNULLA" FontSize="20" TextColor="Black" FontAttributes="Bold" CornerRadius="15"
+                                    Clicked="AnnullaClicked"
+                                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.7}"
+                                    RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.05}"
+                                    RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.4}" />
+
+                    </RelativeLayout>
+              </Frame>
+
+
+
+
+
+
+
+                </AbsoluteLayout>
+                </ScrollView>
+           
+
+           
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

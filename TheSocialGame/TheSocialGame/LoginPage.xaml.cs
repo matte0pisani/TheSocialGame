@@ -64,6 +64,7 @@ namespace TheSocialGame
         private async void ForgottenPasswordLabel_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ForgottenPasswordPage());
+            Navigation.RemovePage(this);
         }
 
     }
