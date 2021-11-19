@@ -82,8 +82,8 @@
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.02}"/>
                     <Label x:Name="DistintiviGuadagnati" FontAttributes="Bold" TextColor="Black" FontSize="13"
-                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.07}"
-                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.042}"/>
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.065}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.045}"/>
                    
                    
            
@@ -95,8 +95,8 @@
                         <AbsoluteLayout >
               
                          <Line    Stroke="Orange" StrokeThickness="8"
-                                    X1="12"  X2="{OnPlatform Android='1300', iOS='440'}"
-                                   AbsoluteLayout.LayoutBounds="{OnPlatform Android='-12, 28, 1300, 5', iOS='-10,250, 400, 50'}" >
+                                    X1="12"  X2="{OnPlatform Android='1300', iOS='1300'}"
+                                   AbsoluteLayout.LayoutBounds="{OnPlatform Android='-12, 28, 1300, 5', iOS='-12, 28, 1300, 5'}" >
                              
                          </Line>
                          

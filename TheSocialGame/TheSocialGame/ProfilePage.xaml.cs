@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
 
 namespace TheSocialGame
 {
@@ -22,14 +22,15 @@ namespace TheSocialGame
 
             creaUtenteFake();
 
-            if (user.fotoProfilo == null)
+            if (user.pathFotoProfilo == null)
             {
                 ProfilePicFrame.IsVisible = false;
                 ChangeProfilePicButton.IsVisible = false;
                 
             } else
             {
-                ProfilePic.Source = user.fotoProfilo;
+                if (user.fotoLiveiOS) ProfilePic.Rotation = 90;
+                ProfilePic.Source = ImageSource.FromFile(user.pathFotoProfilo);
                 ChangeProfilePicButton.IsVisible = true;
                
             }
@@ -214,23 +215,37 @@ namespace TheSocialGame
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         async void CameraClicked(Object sender, EventArgs e)
         {
-           if(Device.iOS != null)
-                ProfilePicFrame.Rotation=90;
-           else
-                ProfilePicFrame.Rotation=0;
-
-          
             var foto = await MediaPicker.CapturePhotoAsync();
+           
+                
 
             if (foto != null)
             {
-                var stream = await foto.OpenReadAsync();
-                user.fotoProfilo = ImageSource.FromStream(() => stream);
+                
+                var newFile = Path.Combine(FileSystem.CacheDirectory, foto.FileName);
+                using (var stream = await foto.OpenReadAsync())
+                using (var newStream = File.OpenWrite(newFile))
+                await stream.CopyToAsync(newStream);
+
+                
+
+                user.pathFotoProfilo = newFile;
+                
                 ProfilePicFrame.IsVisible = true;
                 ChangeProfilePicButton.IsVisible = true;
-                ProfilePic.Source = ImageSource.FromStream(() => stream);
+                ProfilePic.Source = newFile;
+                if(Device.iOS != null)
+                {
+                    user.fotoLiveiOS = true;
+                    ProfilePic.Rotation = 90;
+
+                }
             }
         }
+
+       
+        
+
 
         /* gestione foto profilo da galleria*/
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
@@ -244,11 +259,12 @@ namespace TheSocialGame
 
             if (foto != null)
             {
-                var stream = await foto.OpenReadAsync();
-                user.fotoProfilo = ImageSource.FromStream(() => stream);
+                ProfilePic.Rotation = 0;
+                user.fotoLiveiOS = false;
+                user.pathFotoProfilo = foto.FullPath;
                 ProfilePicFrame.IsVisible = true;
                 ChangeProfilePicButton.IsVisible = true;
-                ProfilePic.Source = ImageSource.FromStream(() => stream);
+                ProfilePic.Source = foto.FullPath;
             }
          }
 
@@ -261,7 +277,7 @@ namespace TheSocialGame
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         void EliminaFoto(Object sender, EventArgs e)
         {
-            user.fotoProfilo = null;
+            user.pathFotoProfilo = null;
             ProfilePicFrame.IsVisible = false;
             ChangeProfilePicButton.IsVisible = false;
             ConfermaEliminazioneFrame.IsVisible = false;
@@ -297,7 +313,7 @@ namespace TheSocialGame
         void AddPhoto(Object sender, EventArgs e)
         {
             AddPhotoFrame.IsVisible = true;
-            if (user.fotoProfilo != null)
+            if (user.pathFotoProfilo != null)
                 EliminaButton.IsVisible = true;
             else
                 EliminaButton.IsVisible = false;
@@ -350,7 +366,7 @@ namespace TheSocialGame
 
         async void DiaryClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DiaryPage());
+            await Navigation.PushAsync(new DiaryPage(user));
             Navigation.RemovePage(this);
         }
 
