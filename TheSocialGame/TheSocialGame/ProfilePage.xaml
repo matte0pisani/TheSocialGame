@@ -85,22 +85,22 @@
                             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.065}"
                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.045}"/>
 
-
-
+                   
+           
 
                     <ScrollView  Orientation="Horizontal" HeightRequest="100" HorizontalScrollBarVisibility="Never"
                                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.02}"
                                  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.848}"
                                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.147}" >
                         <AbsoluteLayout >
-
-                            <Line    Stroke="Orange" StrokeThickness="8"
+              
+                         <Line    Stroke="Orange" StrokeThickness="8"
                                     X1="12"  X2="{OnPlatform Android='1300', iOS='1300'}"
                                    AbsoluteLayout.LayoutBounds="{OnPlatform Android='-12, 28, 1300, 5', iOS='-12, 28, 1300, 5'}" >
-
-                            </Line>
-
-                            <ImageButton Source="{StaticResource ViaggioMare1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" IsOpaque="True" 
+                             
+                         </Line>
+                         
+                         <ImageButton Source="{StaticResource ViaggioMare1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" IsOpaque="True" 
                                       Clicked="Mare1Clicked" AbsoluteLayout.LayoutBounds="5,5,50,50" />
                             <BoxView x:Name="ViaggioMare1" AbsoluteLayout.LayoutBounds="5,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
                             <ImageButton Source="{StaticResource Ristorante1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 

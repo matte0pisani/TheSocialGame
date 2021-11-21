@@ -12,7 +12,8 @@ namespace TheSocialGame
         public string password { get; set; }
         public int puntiSocial { get; set; }
         public int livello { get; set; }
-        public ImageSource fotoProfilo { get; set; }
+        public string pathFotoProfilo { get; set; }
+        public bool fotoLiveiOS { get; set; }
 
         /* PERSONALITA*/
         public int personalita1 {get; set;}
@@ -32,11 +33,16 @@ namespace TheSocialGame
         public Utente BestFriend3 { get; set; }
 
 
-        public Dictionary<string, (int, Dictionary<int, bool>)> listaDistintivi;
+        public Dictionary<string, (int, Dictionary<int, bool>)> listaDistintivi { get; set; }
+        public List<Esperienza> esperienze { get; set; }
+
+
 
         public Utente()
         {
            this.listaDistintivi = inizializzaListaDistintivi();
+            esperienze = new List<Esperienza>();
+            fotoLiveiOS = false;
         }
 
 

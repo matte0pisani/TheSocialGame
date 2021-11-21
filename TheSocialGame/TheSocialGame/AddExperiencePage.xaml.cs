@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -17,6 +18,7 @@ namespace TheSocialGame
             user = us;
             nuova = new Esperienza();
 
+            nuova.ListaPartecipanti.Add(user);
             EsciSenzaSalvareFrame.IsVisible = false;
             CopertinaFrame.IsVisible = false;
             Rimuovi.IsVisible = false;
@@ -24,6 +26,9 @@ namespace TheSocialGame
             FromTime.IsVisible = false;
             LabelToTime.IsVisible = false;
             ToTime.IsVisible = false;
+            WarningPartecipanti.IsVisible = false;
+            WarningTipologia.IsVisible = false;
+            WarningTitolo.IsVisible = false;
             TipiEsp.ItemsSource = new List<string>(user.listaDistintivi.Keys);
         }
 
@@ -93,12 +98,24 @@ namespace TheSocialGame
 
             if (foto != null)
             {
-                var stream = await foto.OpenReadAsync();
-                nuova.Copertina = ImageSource.FromStream(() => stream);
+                
+                var newFile = Path.Combine(FileSystem.CacheDirectory, foto.FileName);
+                using (var stream = await foto.OpenReadAsync())
+                using (var newStream = File.OpenWrite(newFile))
+                await stream.CopyToAsync(newStream);
+                
+                nuova.Copertina = newFile;
                 CopertinaFrame.IsVisible = true;
                 AvvisoCopertina.IsVisible = false;
                 Rimuovi.IsVisible = true;
-                Copertina.Source = ImageSource.FromStream(() => stream);
+                Fotocamera.IsVisible = false;
+                Galleria.IsVisible = false;
+                Copertina.Source = newFile;
+                if (Device.iOS != null)
+                {
+                    nuova.copertinaLiveIOS = true;
+                    Copertina.Rotation = 90;
+                }
             }
         }
 
@@ -113,13 +130,16 @@ namespace TheSocialGame
             });
 
             if (foto != null)
-            {
-                var stream = await foto.OpenReadAsync();
-                nuova.Copertina = ImageSource.FromStream(() => stream);
+            {                
+
+                nuova.Copertina = foto.FullPath;
                 CopertinaFrame.IsVisible = true;
                 AvvisoCopertina.IsVisible = false;
                 Rimuovi.IsVisible = true;
-                Copertina.Source = ImageSource.FromStream(() => stream);
+                Fotocamera.IsVisible = false;
+                Galleria.IsVisible = false;
+                Copertina.Source = foto.FullPath;
+                
             }
         }
 
@@ -129,6 +149,8 @@ namespace TheSocialGame
             CopertinaFrame.IsVisible = false;
             AvvisoCopertina.IsVisible = true;
             Rimuovi.IsVisible = false;
+            Fotocamera.IsVisible = true;
+            Galleria.IsVisible = true;
         }
 
         void DataInizioSelected(Object sender, EventArgs e)
@@ -152,12 +174,14 @@ namespace TheSocialGame
                 FromTime.IsVisible = true;
                 LabelToTime.IsVisible = true;
                 ToTime.IsVisible = true;
+                nuova.live = true;
             } else
             {
                 LabelFromTime.IsVisible = false;
                 FromTime.IsVisible = false;
                 LabelToTime.IsVisible = false;
                 ToTime.IsVisible = false;
+                nuova.live = false;
             }
         }
 
@@ -172,8 +196,11 @@ namespace TheSocialGame
         {
             Utente partecipante = new Utente();
             partecipante.username = Partecipanti.Text;
-            nuova.ListaPartecipanti.Add(partecipante);
-            ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + partecipante.username + "  ";
+            if (!Partecipanti.Text.Equals(""))
+            {
+                nuova.ListaPartecipanti.Add(partecipante);
+                ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + partecipante.username + "  ";
+            }
             Partecipanti.Text=null;
         }
 
@@ -182,6 +209,37 @@ namespace TheSocialGame
             if (Privata.IsToggled)
                 nuova.privata = true;
             else nuova.privata = false;
+        }
+
+
+        //DA CAPIRE come gestire amicizie
+       async void Salva(Object sender, EventArgs e)
+        {
+            if (nuova.DataInizio == null) nuova.DataInizio = DataInizio.Date;
+            if (nuova.DataFine == null) nuova.DataFine = DataFine.Date;
+
+            if (nuova.Titolo == null ||  nuova.Tipologia == null || nuova.ListaPartecipanti.Count == 0)
+            {
+                SavingLabel.IsVisible = false;
+                Warning.IsVisible = true;
+                if (nuova.Titolo == null) WarningTitolo.IsVisible = true;
+                if (nuova.Tipologia == null) WarningTipologia.IsVisible = true;
+                if (nuova.ListaPartecipanti.Count == 1) WarningPartecipanti.IsVisible = true;
+                
+            }
+            else
+            {
+                foreach (Utente u in nuova.ListaPartecipanti)
+                {
+                    u.esperienze.Add(nuova);
+                    int x = u.listaDistintivi[nuova.Tipologia].Item1;
+                    Dictionary<int, bool> diz = u.listaDistintivi[nuova.Tipologia].Item2;
+                    x++;
+                    u.listaDistintivi[nuova.Tipologia] = (x, diz);
+                }
+                await Navigation.PushAsync(new DiaryPage(user));
+                Navigation.RemovePage(this);
+            }
         }
 
     }

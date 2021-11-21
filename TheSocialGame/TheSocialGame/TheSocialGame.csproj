@@ -13,6 +13,7 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.Core" Version="3.7.3.33" />
     <PackageReference Include="AWSSDK.SimpleEmail" Version="3.7.0.93" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing" Version="0.1.2" />
@@ -22,6 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="DBtestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Dummy.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

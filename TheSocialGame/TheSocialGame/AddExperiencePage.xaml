@@ -69,14 +69,15 @@
                 <AbsoluteLayout>
                     <Label Text="Dai un titolo alla tua esperienza" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,10,400,30" />
                     <Entry x:Name="Titolo" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" PlaceholderColor="Black" TextColor="Black" Placeholder="Titolo" AbsoluteLayout.LayoutBounds="20,40,350,40" TextChanged="TitoloCopertina"  />
+                    <Label x:Name="WarningTitolo" Text="!" TextColor="{StaticResource FirstColor}" FontSize="30" FontAttributes="Bold"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='380,40,350,40', iOS='350,40,350,40'}" />
                     <Label Text="Immagine di copertina" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,85,400,30" />
-                    <Label x:Name="AvvisoCopertina" Text="Se non inserisci un'immagine di copertina verrà usata una copertina di default" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="20,110,400,40" />
+                    <Label x:Name="AvvisoCopertina" Text="Se non inserisci un'immagine di copertina verrà usata una copertina di default" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,110,400,40', iOS='20,110,350,40'}" />
                     <Rectangle Stroke="Black" StrokeDashArray="1,1" StrokeDashOffset="6" StrokeThickness="2" AbsoluteLayout.LayoutBounds="20,150,350,150" />
-                    <Button Text="SCATTA DA FOTOCAMERA" TextColor="Black" BackgroundColor="{StaticResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,170,250,40" Clicked="CameraClicked" />
-                    <Button Text="IMPORTA DA GALLERIA" TextColor="Black" BackgroundColor="{StaticResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,230,250,40" Clicked="FromGalleryClicked" />
+                    <Button x:Name="Fotocamera" Text="SCATTA DA FOTOCAMERA" TextColor="Black" BackgroundColor="{StaticResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,170,250,40" Clicked="CameraClicked" />
+                    <Button x:Name="Galleria" Text="IMPORTA DA GALLERIA" TextColor="Black" BackgroundColor="{StaticResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,230,250,40" Clicked="FromGalleryClicked" />
                     <Button x:Name="Rimuovi" Text="RIMUOVI" TextColor="Black" BackgroundColor="{StaticResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="270,110,100,35" Clicked="RimuoviClicked"  />
                     <Frame x:Name="CopertinaFrame" BackgroundColor="{StaticResource BackgroundColor}" AbsoluteLayout.LayoutBounds="20,148,360,160" IsClippedToBounds="True" HasShadow="False"  >
-                        <Image x:Name="Copertina" Margin="-20" />
+                        <Image x:Name="Copertina" Margin="-20" Aspect="AspectFit" />
                     </Frame>
                     <Label Text="Dal" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,310,400,30" />
                     <DatePicker x:Name="DataInizio" BackgroundColor="{StaticResource BackgroundColor}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='60,308,100,40', iOS='60,310,100,25'}" FontSize="{OnPlatform Android='18', iOS='16'}" TextColor="Black" DateSelected="DataInizioSelected" />
@@ -88,17 +89,23 @@
                     <TimePicker x:Name="FromTime" BackgroundColor="{StaticResource BackgroundColor}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='260,342,75,40', iOS='260,338,75,40'}" TextColor="Black" FontSize="{OnPlatform Android='16', iOS='14'}" />
                     <Label x:Name="LabelToTime" Text="Alle" TextColor="Black" FontSize="{OnPlatform Android='18', iOS='16'}" AbsoluteLayout.LayoutBounds="210,375,110,30" />
                     <TimePicker x:Name="ToTime" BackgroundColor="{StaticResource BackgroundColor}"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='260,369,75,40', iOS='260,365,75,40'}" TextColor="Black" FontSize="{OnPlatform Android='16', iOS='14'}" />
-                    <Label Text="Impostando questa esperienza come live potrete partecipare alle sfide e gli altri utenti potranno interagire con voi" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="20,400,393,55" />
-                    <Label Text="Tipologia Esperienza" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,460,110,53" />                   
-                    <Picker x:Name="TipiEsp" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" AbsoluteLayout.LayoutBounds="150,462,190,40" TextColor="Black" SelectedIndexChanged="TipoEsperienza" FontSize="{OnPlatform Android='20', iOS='18'}" />
+                    <Label Text="Impostando questa esperienza come live potrete partecipare alle sfide e gli altri utenti potranno interagire con voi" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,400,393,55', iOS='20,400,350,55'}" />
+                    <Label Text="Tipologia Esperienza"  TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,460,110,53" />                   
+                    <Picker x:Name="TipiEsp" Title="Scegli tipologia" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" AbsoluteLayout.LayoutBounds="150,462,190,40" TextColor="Black" SelectedIndexChanged="TipoEsperienza" FontSize="{OnPlatform Android='18', iOS='18'}" />
+                    <Label x:Name="WarningTipologia"  Text="!" TextColor="{StaticResource FirstColor}" FontSize="30" FontAttributes="Bold"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='380,462,350,40', iOS='350,462,350,40'}" />                    
                     <Label Text="Partecipanti" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,530,120,50" />
-                    <Entry x:Name="Partecipanti" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" TextColor="Black" Placeholder="username" AbsoluteLayout.LayoutBounds="150,520,190,40" Completed="AggiungiPartecipanti" />
+                    <Entry x:Name="Partecipanti" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" TextColor="Black" PlaceholderColor="Black" Placeholder="username" AbsoluteLayout.LayoutBounds="150,520,190,40" Completed="AggiungiPartecipanti" />
                     <ScrollView AbsoluteLayout.LayoutBounds="20,565,360,45"  >
                         <Label x:Name="ListaPartecipanti" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="20,1000,360,55" />
                     </ScrollView>
+                    <Label x:Name="WarningPartecipanti"  Text="!" TextColor="{StaticResource FirstColor}" FontSize="30" FontAttributes="Bold"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='380,520,350,40', iOS='350,520,350,40'}" />            
                     <Label Text="Esperienza Privata" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,610,110,50" />
                     <Switch x:Name="Privata" AbsoluteLayout.LayoutBounds="30,610,150,60" OnColor="DarkOrange" ThumbColor="{StaticResource FirstColor}" Scale="{OnPlatform Android='1.2'}" TranslationX="{OnPlatform iOS='110'}" Toggled="PrivataChanged" />
                     <Label Text="Se l'esperienza è privata solo i partecipanti potranno visualizzarla" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="205,610,180,55" />
+                    <Label x:Name="SavingLabel" Text="Salvando l'esperienza sarà aggiunta al diario di tutti i partecipanti ed ognuno potrà modificarne il contenuto " TextColor="DarkSlateGray" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='40,685,390,55', iOS='20,675,350,55'}" />     
+                    <Label x:Name="Warning" Text="Devi completare tutti i campi!" TextColor="Orange" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='40,685,390,55', iOS='100,700,350,55'}" IsVisible="False"/>    
+                    <Button Text="SALVA" TextColor="Black" BackgroundColor="{StaticResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,730,250,40" Clicked="Salva" />
+                    <BoxView Color="Transparent" AbsoluteLayout.LayoutBounds="70,760,250,40" />
                     
                     
                    
