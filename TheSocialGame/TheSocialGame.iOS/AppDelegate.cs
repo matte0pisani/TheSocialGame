@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using PCLAppConfig;
 using ProgressRingControl.Forms.Plugin.iOS;
 using UIKit;
 
@@ -25,6 +26,7 @@ namespace TheSocialGame.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             ProgressRingRenderer.Init();
+        //    ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

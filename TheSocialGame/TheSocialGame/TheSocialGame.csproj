@@ -11,15 +11,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.Core" Version="3.7.3.33" />
-    <PackageReference Include="AWSSDK.SimpleEmail" Version="3.7.0.93" />
+    <PackageReference Include="AWSSDK.Core" Version="3.7.5.2" />
+    <PackageReference Include="AWSSDK.SimpleEmail" Version="3.7.0.103" />
+    <PackageReference Include="PCLAppConfig" Version="1.0.1" />
+    <PackageReference Include="PCLStorage" Version="1.0.2" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2244" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing" Version="0.1.2" />
-    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.3.0.48" />
-    <PackageReference Include="AWSSDK.RDS" Version="3.7.6.8" />
-    <PackageReference Include="Npgsql" Version="5.0.10" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.3.0.55" />
+    <PackageReference Include="AWSSDK.RDS" Version="3.7.8" />
   </ItemGroup>
 
   <ItemGroup>

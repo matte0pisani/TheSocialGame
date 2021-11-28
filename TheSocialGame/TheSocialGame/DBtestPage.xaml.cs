@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Data;
+using PCLAppConfig;
 using System.Data.SqlClient;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -16,7 +16,21 @@ namespace TheSocialGame
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            string connectionString = "User ID=db_read_write; Password=; Data Source=tcp:3.68.133.230,1433";    //inserire la password
+            string settings = ConfigurationManager.AppSettings["connectString"];
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+
+            if (null != settings)
+            {
+                string connectString = settings;
+                System.Diagnostics.Debug.Print("Modified: {0}", connectString);
+
+                builder.ConnectionString = connectString;
+
+                builder.Password = "";
+                System.Diagnostics.Debug.Print("Modified: {0}", builder.ConnectionString);
+            }
+            else
+                return;
 
             string queryString =
                 "SELECT * FROM prova_db.dbo.tabella_prova "
@@ -25,18 +39,11 @@ namespace TheSocialGame
 
             // Provare una query con dei parametri esterni
 
-            // Create and open the connection in a using block. This
-            // ensures that all resources will be closed and disposed
-            // when the code exits.
             using (SqlConnection connection =
-                new SqlConnection(connectionString))
+                new SqlConnection(builder.ConnectionString))
             {
-                // Create the Command and Parameter objects.
                 SqlCommand command = new SqlCommand(queryString, connection);
 
-                // Open the connection in a try/catch block.
-                // Create and execute the DataReader, writing the result
-                // set to the console window.
                 try
                 {
                     connection.Open();

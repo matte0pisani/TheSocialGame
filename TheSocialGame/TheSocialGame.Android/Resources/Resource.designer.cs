@@ -25,6 +25,1912 @@ namespace TheSocialGame.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_fade_in = global::TheSocialGame.Droid.Resource.Animation.abc_fade_in;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_fade_out = global::TheSocialGame.Droid.Resource.Animation.abc_fade_out;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_grow_fade_in_from_bottom = global::TheSocialGame.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_popup_enter = global::TheSocialGame.Droid.Resource.Animation.abc_popup_enter;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_popup_exit = global::TheSocialGame.Droid.Resource.Animation.abc_popup_exit;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_shrink_fade_out_from_bottom = global::TheSocialGame.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_slide_in_bottom = global::TheSocialGame.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_slide_in_top = global::TheSocialGame.Droid.Resource.Animation.abc_slide_in_top;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_slide_out_bottom = global::TheSocialGame.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_slide_out_top = global::TheSocialGame.Droid.Resource.Animation.abc_slide_out_top;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.design_bottom_sheet_slide_in = global::TheSocialGame.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.design_bottom_sheet_slide_out = global::TheSocialGame.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.design_snackbar_in = global::TheSocialGame.Droid.Resource.Animation.design_snackbar_in;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.design_snackbar_out = global::TheSocialGame.Droid.Resource.Animation.design_snackbar_out;
+			global::PCLAppConfig.FileSystemStream.Resource.Animator.design_appbar_state_list_animator = global::TheSocialGame.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarDivider = global::TheSocialGame.Droid.Resource.Attribute.actionBarDivider;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarItemBackground = global::TheSocialGame.Droid.Resource.Attribute.actionBarItemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarPopupTheme = global::TheSocialGame.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarSize = global::TheSocialGame.Droid.Resource.Attribute.actionBarSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarSplitStyle = global::TheSocialGame.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarStyle = global::TheSocialGame.Droid.Resource.Attribute.actionBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarTabBarStyle = global::TheSocialGame.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarTabStyle = global::TheSocialGame.Droid.Resource.Attribute.actionBarTabStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarTabTextStyle = global::TheSocialGame.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarTheme = global::TheSocialGame.Droid.Resource.Attribute.actionBarTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarWidgetTheme = global::TheSocialGame.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.actionButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionDropDownStyle = global::TheSocialGame.Droid.Resource.Attribute.actionDropDownStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionLayout = global::TheSocialGame.Droid.Resource.Attribute.actionLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionMenuTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionMenuTextColor = global::TheSocialGame.Droid.Resource.Attribute.actionMenuTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeBackground = global::TheSocialGame.Droid.Resource.Attribute.actionModeBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeCloseButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeCloseDrawable = global::TheSocialGame.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeCopyDrawable = global::TheSocialGame.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeCutDrawable = global::TheSocialGame.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeFindDrawable = global::TheSocialGame.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModePasteDrawable = global::TheSocialGame.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModePopupWindowStyle = global::TheSocialGame.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeSelectAllDrawable = global::TheSocialGame.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeShareDrawable = global::TheSocialGame.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeSplitBackground = global::TheSocialGame.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeStyle = global::TheSocialGame.Droid.Resource.Attribute.actionModeStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeWebSearchDrawable = global::TheSocialGame.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionOverflowButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionOverflowMenuStyle = global::TheSocialGame.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionProviderClass = global::TheSocialGame.Droid.Resource.Attribute.actionProviderClass;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionViewClass = global::TheSocialGame.Droid.Resource.Attribute.actionViewClass;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.activityChooserViewStyle = global::TheSocialGame.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alertDialogButtonGroupStyle = global::TheSocialGame.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alertDialogCenterButtons = global::TheSocialGame.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alertDialogStyle = global::TheSocialGame.Droid.Resource.Attribute.alertDialogStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alertDialogTheme = global::TheSocialGame.Droid.Resource.Attribute.alertDialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.allowStacking = global::TheSocialGame.Droid.Resource.Attribute.allowStacking;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alpha = global::TheSocialGame.Droid.Resource.Attribute.alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alphabeticModifiers = global::TheSocialGame.Droid.Resource.Attribute.alphabeticModifiers;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.arrowHeadLength = global::TheSocialGame.Droid.Resource.Attribute.arrowHeadLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.arrowShaftLength = global::TheSocialGame.Droid.Resource.Attribute.arrowShaftLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoCompleteTextViewStyle = global::TheSocialGame.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoSizeMaxTextSize = global::TheSocialGame.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoSizeMinTextSize = global::TheSocialGame.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoSizePresetSizes = global::TheSocialGame.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoSizeStepGranularity = global::TheSocialGame.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoSizeTextType = global::TheSocialGame.Droid.Resource.Attribute.autoSizeTextType;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.background = global::TheSocialGame.Droid.Resource.Attribute.background;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.backgroundSplit = global::TheSocialGame.Droid.Resource.Attribute.backgroundSplit;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.backgroundStacked = global::TheSocialGame.Droid.Resource.Attribute.backgroundStacked;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.backgroundTint = global::TheSocialGame.Droid.Resource.Attribute.backgroundTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.backgroundTintMode = global::TheSocialGame.Droid.Resource.Attribute.backgroundTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.barLength = global::TheSocialGame.Droid.Resource.Attribute.barLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.behavior_autoHide = global::TheSocialGame.Droid.Resource.Attribute.behavior_autoHide;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.behavior_hideable = global::TheSocialGame.Droid.Resource.Attribute.behavior_hideable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.behavior_overlapTop = global::TheSocialGame.Droid.Resource.Attribute.behavior_overlapTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.behavior_peekHeight = global::TheSocialGame.Droid.Resource.Attribute.behavior_peekHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.behavior_skipCollapsed = global::TheSocialGame.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.borderWidth = global::TheSocialGame.Droid.Resource.Attribute.borderWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.borderlessButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.bottomSheetDialogTheme = global::TheSocialGame.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.bottomSheetStyle = global::TheSocialGame.Droid.Resource.Attribute.bottomSheetStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonBarButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonBarNegativeButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonBarNeutralButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonBarPositiveButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonBarStyle = global::TheSocialGame.Droid.Resource.Attribute.buttonBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonGravity = global::TheSocialGame.Droid.Resource.Attribute.buttonGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonPanelSideLayout = global::TheSocialGame.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonStyle = global::TheSocialGame.Droid.Resource.Attribute.buttonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonStyleSmall = global::TheSocialGame.Droid.Resource.Attribute.buttonStyleSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonTint = global::TheSocialGame.Droid.Resource.Attribute.buttonTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonTintMode = global::TheSocialGame.Droid.Resource.Attribute.buttonTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.cardBackgroundColor = global::TheSocialGame.Droid.Resource.Attribute.cardBackgroundColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.cardCornerRadius = global::TheSocialGame.Droid.Resource.Attribute.cardCornerRadius;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.cardElevation = global::TheSocialGame.Droid.Resource.Attribute.cardElevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.cardMaxElevation = global::TheSocialGame.Droid.Resource.Attribute.cardMaxElevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.cardPreventCornerOverlap = global::TheSocialGame.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.cardUseCompatPadding = global::TheSocialGame.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.checkboxStyle = global::TheSocialGame.Droid.Resource.Attribute.checkboxStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.checkedTextViewStyle = global::TheSocialGame.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.closeIcon = global::TheSocialGame.Droid.Resource.Attribute.closeIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.closeItemLayout = global::TheSocialGame.Droid.Resource.Attribute.closeItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.collapseContentDescription = global::TheSocialGame.Droid.Resource.Attribute.collapseContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.collapseIcon = global::TheSocialGame.Droid.Resource.Attribute.collapseIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.collapsedTitleGravity = global::TheSocialGame.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.collapsedTitleTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.color = global::TheSocialGame.Droid.Resource.Attribute.color;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorAccent = global::TheSocialGame.Droid.Resource.Attribute.colorAccent;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorBackgroundFloating = global::TheSocialGame.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorButtonNormal = global::TheSocialGame.Droid.Resource.Attribute.colorButtonNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorControlActivated = global::TheSocialGame.Droid.Resource.Attribute.colorControlActivated;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorControlHighlight = global::TheSocialGame.Droid.Resource.Attribute.colorControlHighlight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorControlNormal = global::TheSocialGame.Droid.Resource.Attribute.colorControlNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorError = global::TheSocialGame.Droid.Resource.Attribute.colorError;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorPrimary = global::TheSocialGame.Droid.Resource.Attribute.colorPrimary;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorPrimaryDark = global::TheSocialGame.Droid.Resource.Attribute.colorPrimaryDark;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorSwitchThumbNormal = global::TheSocialGame.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.commitIcon = global::TheSocialGame.Droid.Resource.Attribute.commitIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentDescription = global::TheSocialGame.Droid.Resource.Attribute.contentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetEnd = global::TheSocialGame.Droid.Resource.Attribute.contentInsetEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetEndWithActions = global::TheSocialGame.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetLeft = global::TheSocialGame.Droid.Resource.Attribute.contentInsetLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetRight = global::TheSocialGame.Droid.Resource.Attribute.contentInsetRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetStart = global::TheSocialGame.Droid.Resource.Attribute.contentInsetStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetStartWithNavigation = global::TheSocialGame.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentPadding = global::TheSocialGame.Droid.Resource.Attribute.contentPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentPaddingBottom = global::TheSocialGame.Droid.Resource.Attribute.contentPaddingBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentPaddingLeft = global::TheSocialGame.Droid.Resource.Attribute.contentPaddingLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentPaddingRight = global::TheSocialGame.Droid.Resource.Attribute.contentPaddingRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentPaddingTop = global::TheSocialGame.Droid.Resource.Attribute.contentPaddingTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentScrim = global::TheSocialGame.Droid.Resource.Attribute.contentScrim;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.controlBackground = global::TheSocialGame.Droid.Resource.Attribute.controlBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.counterEnabled = global::TheSocialGame.Droid.Resource.Attribute.counterEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.counterMaxLength = global::TheSocialGame.Droid.Resource.Attribute.counterMaxLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.counterOverflowTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.counterTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.counterTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.customNavigationLayout = global::TheSocialGame.Droid.Resource.Attribute.customNavigationLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.defaultQueryHint = global::TheSocialGame.Droid.Resource.Attribute.defaultQueryHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dialogPreferredPadding = global::TheSocialGame.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dialogTheme = global::TheSocialGame.Droid.Resource.Attribute.dialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.displayOptions = global::TheSocialGame.Droid.Resource.Attribute.displayOptions;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.divider = global::TheSocialGame.Droid.Resource.Attribute.divider;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dividerHorizontal = global::TheSocialGame.Droid.Resource.Attribute.dividerHorizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dividerPadding = global::TheSocialGame.Droid.Resource.Attribute.dividerPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dividerVertical = global::TheSocialGame.Droid.Resource.Attribute.dividerVertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.drawableSize = global::TheSocialGame.Droid.Resource.Attribute.drawableSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.drawerArrowStyle = global::TheSocialGame.Droid.Resource.Attribute.drawerArrowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dropDownListViewStyle = global::TheSocialGame.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dropdownListPreferredItemHeight = global::TheSocialGame.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.editTextBackground = global::TheSocialGame.Droid.Resource.Attribute.editTextBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.editTextColor = global::TheSocialGame.Droid.Resource.Attribute.editTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.editTextStyle = global::TheSocialGame.Droid.Resource.Attribute.editTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.elevation = global::TheSocialGame.Droid.Resource.Attribute.elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.errorEnabled = global::TheSocialGame.Droid.Resource.Attribute.errorEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.errorTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.errorTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandActivityOverflowButtonDrawable = global::TheSocialGame.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expanded = global::TheSocialGame.Droid.Resource.Attribute.expanded;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleGravity = global::TheSocialGame.Droid.Resource.Attribute.expandedTitleGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleMargin = global::TheSocialGame.Droid.Resource.Attribute.expandedTitleMargin;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleMarginBottom = global::TheSocialGame.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleMarginEnd = global::TheSocialGame.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleMarginStart = global::TheSocialGame.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleMarginTop = global::TheSocialGame.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fabSize = global::TheSocialGame.Droid.Resource.Attribute.fabSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fastScrollEnabled = global::TheSocialGame.Droid.Resource.Attribute.fastScrollEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::TheSocialGame.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::TheSocialGame.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fastScrollVerticalThumbDrawable = global::TheSocialGame.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fastScrollVerticalTrackDrawable = global::TheSocialGame.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.font = global::TheSocialGame.Droid.Resource.Attribute.font;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontFamily = global::TheSocialGame.Droid.Resource.Attribute.fontFamily;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderAuthority = global::TheSocialGame.Droid.Resource.Attribute.fontProviderAuthority;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderCerts = global::TheSocialGame.Droid.Resource.Attribute.fontProviderCerts;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderFetchStrategy = global::TheSocialGame.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderFetchTimeout = global::TheSocialGame.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderPackage = global::TheSocialGame.Droid.Resource.Attribute.fontProviderPackage;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderQuery = global::TheSocialGame.Droid.Resource.Attribute.fontProviderQuery;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontStyle = global::TheSocialGame.Droid.Resource.Attribute.fontStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontWeight = global::TheSocialGame.Droid.Resource.Attribute.fontWeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.foregroundInsidePadding = global::TheSocialGame.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.gapBetweenBars = global::TheSocialGame.Droid.Resource.Attribute.gapBetweenBars;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.goIcon = global::TheSocialGame.Droid.Resource.Attribute.goIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.headerLayout = global::TheSocialGame.Droid.Resource.Attribute.headerLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.height = global::TheSocialGame.Droid.Resource.Attribute.height;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.hideOnContentScroll = global::TheSocialGame.Droid.Resource.Attribute.hideOnContentScroll;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.hintAnimationEnabled = global::TheSocialGame.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.hintEnabled = global::TheSocialGame.Droid.Resource.Attribute.hintEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.hintTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.hintTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.homeAsUpIndicator = global::TheSocialGame.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.homeLayout = global::TheSocialGame.Droid.Resource.Attribute.homeLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.icon = global::TheSocialGame.Droid.Resource.Attribute.icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.iconTint = global::TheSocialGame.Droid.Resource.Attribute.iconTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.iconTintMode = global::TheSocialGame.Droid.Resource.Attribute.iconTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.iconifiedByDefault = global::TheSocialGame.Droid.Resource.Attribute.iconifiedByDefault;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.imageButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.imageButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.indeterminateProgressStyle = global::TheSocialGame.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.initialActivityCount = global::TheSocialGame.Droid.Resource.Attribute.initialActivityCount;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.insetForeground = global::TheSocialGame.Droid.Resource.Attribute.insetForeground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.isLightTheme = global::TheSocialGame.Droid.Resource.Attribute.isLightTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.itemBackground = global::TheSocialGame.Droid.Resource.Attribute.itemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.itemIconTint = global::TheSocialGame.Droid.Resource.Attribute.itemIconTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.itemPadding = global::TheSocialGame.Droid.Resource.Attribute.itemPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.itemTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.itemTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.itemTextColor = global::TheSocialGame.Droid.Resource.Attribute.itemTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.keylines = global::TheSocialGame.Droid.Resource.Attribute.keylines;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout = global::TheSocialGame.Droid.Resource.Attribute.layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layoutManager = global::TheSocialGame.Droid.Resource.Attribute.layoutManager;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_anchor = global::TheSocialGame.Droid.Resource.Attribute.layout_anchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_anchorGravity = global::TheSocialGame.Droid.Resource.Attribute.layout_anchorGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_behavior = global::TheSocialGame.Droid.Resource.Attribute.layout_behavior;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_collapseMode = global::TheSocialGame.Droid.Resource.Attribute.layout_collapseMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_collapseParallaxMultiplier = global::TheSocialGame.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_dodgeInsetEdges = global::TheSocialGame.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_insetEdge = global::TheSocialGame.Droid.Resource.Attribute.layout_insetEdge;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_keyline = global::TheSocialGame.Droid.Resource.Attribute.layout_keyline;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_scrollFlags = global::TheSocialGame.Droid.Resource.Attribute.layout_scrollFlags;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_scrollInterpolator = global::TheSocialGame.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listChoiceBackgroundIndicator = global::TheSocialGame.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listDividerAlertDialog = global::TheSocialGame.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listItemLayout = global::TheSocialGame.Droid.Resource.Attribute.listItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listLayout = global::TheSocialGame.Droid.Resource.Attribute.listLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listMenuViewStyle = global::TheSocialGame.Droid.Resource.Attribute.listMenuViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPopupWindowStyle = global::TheSocialGame.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPreferredItemHeight = global::TheSocialGame.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPreferredItemHeightLarge = global::TheSocialGame.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPreferredItemHeightSmall = global::TheSocialGame.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPreferredItemPaddingLeft = global::TheSocialGame.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPreferredItemPaddingRight = global::TheSocialGame.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.logo = global::TheSocialGame.Droid.Resource.Attribute.logo;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.logoDescription = global::TheSocialGame.Droid.Resource.Attribute.logoDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.maxActionInlineWidth = global::TheSocialGame.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.maxButtonHeight = global::TheSocialGame.Droid.Resource.Attribute.maxButtonHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.measureWithLargestChild = global::TheSocialGame.Droid.Resource.Attribute.measureWithLargestChild;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.menu = global::TheSocialGame.Droid.Resource.Attribute.menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.multiChoiceItemLayout = global::TheSocialGame.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.navigationContentDescription = global::TheSocialGame.Droid.Resource.Attribute.navigationContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.navigationIcon = global::TheSocialGame.Droid.Resource.Attribute.navigationIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.navigationMode = global::TheSocialGame.Droid.Resource.Attribute.navigationMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.numericModifiers = global::TheSocialGame.Droid.Resource.Attribute.numericModifiers;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.overlapAnchor = global::TheSocialGame.Droid.Resource.Attribute.overlapAnchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.paddingBottomNoButtons = global::TheSocialGame.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.paddingEnd = global::TheSocialGame.Droid.Resource.Attribute.paddingEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.paddingStart = global::TheSocialGame.Droid.Resource.Attribute.paddingStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.paddingTopNoTitle = global::TheSocialGame.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.panelBackground = global::TheSocialGame.Droid.Resource.Attribute.panelBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.panelMenuListTheme = global::TheSocialGame.Droid.Resource.Attribute.panelMenuListTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.panelMenuListWidth = global::TheSocialGame.Droid.Resource.Attribute.panelMenuListWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.passwordToggleContentDescription = global::TheSocialGame.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.passwordToggleDrawable = global::TheSocialGame.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.passwordToggleEnabled = global::TheSocialGame.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.passwordToggleTint = global::TheSocialGame.Droid.Resource.Attribute.passwordToggleTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.passwordToggleTintMode = global::TheSocialGame.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.popupMenuStyle = global::TheSocialGame.Droid.Resource.Attribute.popupMenuStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.popupTheme = global::TheSocialGame.Droid.Resource.Attribute.popupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.popupWindowStyle = global::TheSocialGame.Droid.Resource.Attribute.popupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.preserveIconSpacing = global::TheSocialGame.Droid.Resource.Attribute.preserveIconSpacing;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.pressedTranslationZ = global::TheSocialGame.Droid.Resource.Attribute.pressedTranslationZ;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.progressBarPadding = global::TheSocialGame.Droid.Resource.Attribute.progressBarPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.progressBarStyle = global::TheSocialGame.Droid.Resource.Attribute.progressBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.queryBackground = global::TheSocialGame.Droid.Resource.Attribute.queryBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.queryHint = global::TheSocialGame.Droid.Resource.Attribute.queryHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.radioButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.radioButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.ratingBarStyle = global::TheSocialGame.Droid.Resource.Attribute.ratingBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.ratingBarStyleIndicator = global::TheSocialGame.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.ratingBarStyleSmall = global::TheSocialGame.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.reverseLayout = global::TheSocialGame.Droid.Resource.Attribute.reverseLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.rippleColor = global::TheSocialGame.Droid.Resource.Attribute.rippleColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.scrimAnimationDuration = global::TheSocialGame.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.scrimVisibleHeightTrigger = global::TheSocialGame.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.searchHintIcon = global::TheSocialGame.Droid.Resource.Attribute.searchHintIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.searchIcon = global::TheSocialGame.Droid.Resource.Attribute.searchIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.searchViewStyle = global::TheSocialGame.Droid.Resource.Attribute.searchViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.seekBarStyle = global::TheSocialGame.Droid.Resource.Attribute.seekBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.selectableItemBackground = global::TheSocialGame.Droid.Resource.Attribute.selectableItemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.selectableItemBackgroundBorderless = global::TheSocialGame.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.showAsAction = global::TheSocialGame.Droid.Resource.Attribute.showAsAction;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.showDividers = global::TheSocialGame.Droid.Resource.Attribute.showDividers;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.showText = global::TheSocialGame.Droid.Resource.Attribute.showText;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.showTitle = global::TheSocialGame.Droid.Resource.Attribute.showTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.singleChoiceItemLayout = global::TheSocialGame.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.spanCount = global::TheSocialGame.Droid.Resource.Attribute.spanCount;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.spinBars = global::TheSocialGame.Droid.Resource.Attribute.spinBars;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.spinnerDropDownItemStyle = global::TheSocialGame.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.spinnerStyle = global::TheSocialGame.Droid.Resource.Attribute.spinnerStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.splitTrack = global::TheSocialGame.Droid.Resource.Attribute.splitTrack;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.srcCompat = global::TheSocialGame.Droid.Resource.Attribute.srcCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.stackFromEnd = global::TheSocialGame.Droid.Resource.Attribute.stackFromEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.state_above_anchor = global::TheSocialGame.Droid.Resource.Attribute.state_above_anchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.state_collapsed = global::TheSocialGame.Droid.Resource.Attribute.state_collapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.state_collapsible = global::TheSocialGame.Droid.Resource.Attribute.state_collapsible;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.statusBarBackground = global::TheSocialGame.Droid.Resource.Attribute.statusBarBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.statusBarScrim = global::TheSocialGame.Droid.Resource.Attribute.statusBarScrim;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.subMenuArrow = global::TheSocialGame.Droid.Resource.Attribute.subMenuArrow;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.submitBackground = global::TheSocialGame.Droid.Resource.Attribute.submitBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.subtitle = global::TheSocialGame.Droid.Resource.Attribute.subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.subtitleTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.subtitleTextColor = global::TheSocialGame.Droid.Resource.Attribute.subtitleTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.subtitleTextStyle = global::TheSocialGame.Droid.Resource.Attribute.subtitleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.suggestionRowLayout = global::TheSocialGame.Droid.Resource.Attribute.suggestionRowLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.switchMinWidth = global::TheSocialGame.Droid.Resource.Attribute.switchMinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.switchPadding = global::TheSocialGame.Droid.Resource.Attribute.switchPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.switchStyle = global::TheSocialGame.Droid.Resource.Attribute.switchStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.switchTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.switchTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabBackground = global::TheSocialGame.Droid.Resource.Attribute.tabBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabContentStart = global::TheSocialGame.Droid.Resource.Attribute.tabContentStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabGravity = global::TheSocialGame.Droid.Resource.Attribute.tabGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabIndicatorColor = global::TheSocialGame.Droid.Resource.Attribute.tabIndicatorColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabIndicatorHeight = global::TheSocialGame.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabMaxWidth = global::TheSocialGame.Droid.Resource.Attribute.tabMaxWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabMinWidth = global::TheSocialGame.Droid.Resource.Attribute.tabMinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabMode = global::TheSocialGame.Droid.Resource.Attribute.tabMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabPadding = global::TheSocialGame.Droid.Resource.Attribute.tabPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabPaddingBottom = global::TheSocialGame.Droid.Resource.Attribute.tabPaddingBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabPaddingEnd = global::TheSocialGame.Droid.Resource.Attribute.tabPaddingEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabPaddingStart = global::TheSocialGame.Droid.Resource.Attribute.tabPaddingStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabPaddingTop = global::TheSocialGame.Droid.Resource.Attribute.tabPaddingTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabSelectedTextColor = global::TheSocialGame.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.tabTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabTextColor = global::TheSocialGame.Droid.Resource.Attribute.tabTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAllCaps = global::TheSocialGame.Droid.Resource.Attribute.textAllCaps;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceLargePopupMenu = global::TheSocialGame.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceListItem = global::TheSocialGame.Droid.Resource.Attribute.textAppearanceListItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceListItemSecondary = global::TheSocialGame.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceListItemSmall = global::TheSocialGame.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearancePopupMenuHeader = global::TheSocialGame.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceSearchResultSubtitle = global::TheSocialGame.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceSearchResultTitle = global::TheSocialGame.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceSmallPopupMenu = global::TheSocialGame.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textColorAlertDialogListItem = global::TheSocialGame.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textColorSearchUrl = global::TheSocialGame.Droid.Resource.Attribute.textColorSearchUrl;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.theme = global::TheSocialGame.Droid.Resource.Attribute.theme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.thickness = global::TheSocialGame.Droid.Resource.Attribute.thickness;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.thumbTextPadding = global::TheSocialGame.Droid.Resource.Attribute.thumbTextPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.thumbTint = global::TheSocialGame.Droid.Resource.Attribute.thumbTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.thumbTintMode = global::TheSocialGame.Droid.Resource.Attribute.thumbTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tickMark = global::TheSocialGame.Droid.Resource.Attribute.tickMark;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tickMarkTint = global::TheSocialGame.Droid.Resource.Attribute.tickMarkTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tickMarkTintMode = global::TheSocialGame.Droid.Resource.Attribute.tickMarkTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tint = global::TheSocialGame.Droid.Resource.Attribute.tint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tintMode = global::TheSocialGame.Droid.Resource.Attribute.tintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.title = global::TheSocialGame.Droid.Resource.Attribute.title;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleEnabled = global::TheSocialGame.Droid.Resource.Attribute.titleEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMargin = global::TheSocialGame.Droid.Resource.Attribute.titleMargin;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMarginBottom = global::TheSocialGame.Droid.Resource.Attribute.titleMarginBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMarginEnd = global::TheSocialGame.Droid.Resource.Attribute.titleMarginEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMarginStart = global::TheSocialGame.Droid.Resource.Attribute.titleMarginStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMarginTop = global::TheSocialGame.Droid.Resource.Attribute.titleMarginTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMargins = global::TheSocialGame.Droid.Resource.Attribute.titleMargins;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleTextAppearance = global::TheSocialGame.Droid.Resource.Attribute.titleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleTextColor = global::TheSocialGame.Droid.Resource.Attribute.titleTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleTextStyle = global::TheSocialGame.Droid.Resource.Attribute.titleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.toolbarId = global::TheSocialGame.Droid.Resource.Attribute.toolbarId;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.toolbarNavigationButtonStyle = global::TheSocialGame.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.toolbarStyle = global::TheSocialGame.Droid.Resource.Attribute.toolbarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tooltipForegroundColor = global::TheSocialGame.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tooltipFrameBackground = global::TheSocialGame.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tooltipText = global::TheSocialGame.Droid.Resource.Attribute.tooltipText;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.track = global::TheSocialGame.Droid.Resource.Attribute.track;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.trackTint = global::TheSocialGame.Droid.Resource.Attribute.trackTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.trackTintMode = global::TheSocialGame.Droid.Resource.Attribute.trackTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.useCompatPadding = global::TheSocialGame.Droid.Resource.Attribute.useCompatPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.voiceIcon = global::TheSocialGame.Droid.Resource.Attribute.voiceIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowActionBar = global::TheSocialGame.Droid.Resource.Attribute.windowActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowActionBarOverlay = global::TheSocialGame.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowActionModeOverlay = global::TheSocialGame.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowFixedHeightMajor = global::TheSocialGame.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowFixedHeightMinor = global::TheSocialGame.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowFixedWidthMajor = global::TheSocialGame.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowFixedWidthMinor = global::TheSocialGame.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowMinWidthMajor = global::TheSocialGame.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowMinWidthMinor = global::TheSocialGame.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowNoTitle = global::TheSocialGame.Droid.Resource.Attribute.windowNoTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Boolean.abc_action_bar_embed_tabs = global::TheSocialGame.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::PCLAppConfig.FileSystemStream.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::TheSocialGame.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_background_cache_hint_selector_material_dark = global::TheSocialGame.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_background_cache_hint_selector_material_light = global::TheSocialGame.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_btn_colored_borderless_text_material = global::TheSocialGame.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_btn_colored_text_material = global::TheSocialGame.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_color_highlight_material = global::TheSocialGame.Droid.Resource.Color.abc_color_highlight_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_hint_foreground_material_dark = global::TheSocialGame.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_hint_foreground_material_light = global::TheSocialGame.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_primary_text_disable_only_material_dark = global::TheSocialGame.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_primary_text_disable_only_material_light = global::TheSocialGame.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_primary_text_material_dark = global::TheSocialGame.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_primary_text_material_light = global::TheSocialGame.Droid.Resource.Color.abc_primary_text_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_search_url_text = global::TheSocialGame.Droid.Resource.Color.abc_search_url_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_search_url_text_normal = global::TheSocialGame.Droid.Resource.Color.abc_search_url_text_normal;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_search_url_text_pressed = global::TheSocialGame.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_search_url_text_selected = global::TheSocialGame.Droid.Resource.Color.abc_search_url_text_selected;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_secondary_text_material_dark = global::TheSocialGame.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_secondary_text_material_light = global::TheSocialGame.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_btn_checkable = global::TheSocialGame.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_default = global::TheSocialGame.Droid.Resource.Color.abc_tint_default;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_edittext = global::TheSocialGame.Droid.Resource.Color.abc_tint_edittext;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_seek_thumb = global::TheSocialGame.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_spinner = global::TheSocialGame.Droid.Resource.Color.abc_tint_spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_switch_track = global::TheSocialGame.Droid.Resource.Color.abc_tint_switch_track;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.accent_material_dark = global::TheSocialGame.Droid.Resource.Color.accent_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.accent_material_light = global::TheSocialGame.Droid.Resource.Color.accent_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.background_floating_material_dark = global::TheSocialGame.Droid.Resource.Color.background_floating_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.background_floating_material_light = global::TheSocialGame.Droid.Resource.Color.background_floating_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.background_material_dark = global::TheSocialGame.Droid.Resource.Color.background_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.background_material_light = global::TheSocialGame.Droid.Resource.Color.background_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_disabled_material_dark = global::TheSocialGame.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_disabled_material_light = global::TheSocialGame.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_inverse_material_dark = global::TheSocialGame.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_inverse_material_light = global::TheSocialGame.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_material_dark = global::TheSocialGame.Droid.Resource.Color.bright_foreground_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_material_light = global::TheSocialGame.Droid.Resource.Color.bright_foreground_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.button_material_dark = global::TheSocialGame.Droid.Resource.Color.button_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.button_material_light = global::TheSocialGame.Droid.Resource.Color.button_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.cardview_dark_background = global::TheSocialGame.Droid.Resource.Color.cardview_dark_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.cardview_light_background = global::TheSocialGame.Droid.Resource.Color.cardview_light_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.cardview_shadow_end_color = global::TheSocialGame.Droid.Resource.Color.cardview_shadow_end_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.cardview_shadow_start_color = global::TheSocialGame.Droid.Resource.Color.cardview_shadow_start_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_bottom_navigation_shadow_color = global::TheSocialGame.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_error = global::TheSocialGame.Droid.Resource.Color.design_error;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_shadow_end_color = global::TheSocialGame.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_shadow_mid_color = global::TheSocialGame.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_shadow_start_color = global::TheSocialGame.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_stroke_end_inner_color = global::TheSocialGame.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_stroke_end_outer_color = global::TheSocialGame.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_stroke_top_inner_color = global::TheSocialGame.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_stroke_top_outer_color = global::TheSocialGame.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_snackbar_background_color = global::TheSocialGame.Droid.Resource.Color.design_snackbar_background_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.dim_foreground_disabled_material_dark = global::TheSocialGame.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.dim_foreground_disabled_material_light = global::TheSocialGame.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.dim_foreground_material_dark = global::TheSocialGame.Droid.Resource.Color.dim_foreground_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.dim_foreground_material_light = global::TheSocialGame.Droid.Resource.Color.dim_foreground_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.foreground_material_dark = global::TheSocialGame.Droid.Resource.Color.foreground_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.foreground_material_light = global::TheSocialGame.Droid.Resource.Color.foreground_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.highlighted_text_material_dark = global::TheSocialGame.Droid.Resource.Color.highlighted_text_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.highlighted_text_material_light = global::TheSocialGame.Droid.Resource.Color.highlighted_text_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_blue_grey_800 = global::TheSocialGame.Droid.Resource.Color.material_blue_grey_800;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_blue_grey_900 = global::TheSocialGame.Droid.Resource.Color.material_blue_grey_900;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_blue_grey_950 = global::TheSocialGame.Droid.Resource.Color.material_blue_grey_950;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_deep_teal_200 = global::TheSocialGame.Droid.Resource.Color.material_deep_teal_200;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_deep_teal_500 = global::TheSocialGame.Droid.Resource.Color.material_deep_teal_500;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_100 = global::TheSocialGame.Droid.Resource.Color.material_grey_100;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_300 = global::TheSocialGame.Droid.Resource.Color.material_grey_300;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_50 = global::TheSocialGame.Droid.Resource.Color.material_grey_50;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_600 = global::TheSocialGame.Droid.Resource.Color.material_grey_600;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_800 = global::TheSocialGame.Droid.Resource.Color.material_grey_800;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_850 = global::TheSocialGame.Droid.Resource.Color.material_grey_850;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_900 = global::TheSocialGame.Droid.Resource.Color.material_grey_900;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.notification_action_color_filter = global::TheSocialGame.Droid.Resource.Color.notification_action_color_filter;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.notification_icon_bg_color = global::TheSocialGame.Droid.Resource.Color.notification_icon_bg_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.notification_material_background_media_default_color = global::TheSocialGame.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_dark_material_dark = global::TheSocialGame.Droid.Resource.Color.primary_dark_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_dark_material_light = global::TheSocialGame.Droid.Resource.Color.primary_dark_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_material_dark = global::TheSocialGame.Droid.Resource.Color.primary_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_material_light = global::TheSocialGame.Droid.Resource.Color.primary_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_text_default_material_dark = global::TheSocialGame.Droid.Resource.Color.primary_text_default_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_text_default_material_light = global::TheSocialGame.Droid.Resource.Color.primary_text_default_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_text_disabled_material_dark = global::TheSocialGame.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_text_disabled_material_light = global::TheSocialGame.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.ripple_material_dark = global::TheSocialGame.Droid.Resource.Color.ripple_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.ripple_material_light = global::TheSocialGame.Droid.Resource.Color.ripple_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.secondary_text_default_material_dark = global::TheSocialGame.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.secondary_text_default_material_light = global::TheSocialGame.Droid.Resource.Color.secondary_text_default_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.secondary_text_disabled_material_dark = global::TheSocialGame.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.secondary_text_disabled_material_light = global::TheSocialGame.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_disabled_material_dark = global::TheSocialGame.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_disabled_material_light = global::TheSocialGame.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_material_dark = global::TheSocialGame.Droid.Resource.Color.switch_thumb_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_material_light = global::TheSocialGame.Droid.Resource.Color.switch_thumb_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_normal_material_dark = global::TheSocialGame.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_normal_material_light = global::TheSocialGame.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.tooltip_background_dark = global::TheSocialGame.Droid.Resource.Color.tooltip_background_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.tooltip_background_light = global::TheSocialGame.Droid.Resource.Color.tooltip_background_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_content_inset_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_default_height_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_default_padding_end_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_default_padding_start_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_elevation_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_stacked_max_height = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_button_min_height_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_button_min_width_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_button_min_width_overflow_material = global::TheSocialGame.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_alert_dialog_button_bar_height = global::TheSocialGame.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_button_inset_horizontal_material = global::TheSocialGame.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_button_inset_vertical_material = global::TheSocialGame.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_button_padding_horizontal_material = global::TheSocialGame.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_button_padding_vertical_material = global::TheSocialGame.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::TheSocialGame.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_config_prefDialogWidth = global::TheSocialGame.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_control_corner_material = global::TheSocialGame.Droid.Resource.Dimension.abc_control_corner_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_control_inset_material = global::TheSocialGame.Droid.Resource.Dimension.abc_control_inset_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_control_padding_material = global::TheSocialGame.Droid.Resource.Dimension.abc_control_padding_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_fixed_height_major = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_fixed_height_minor = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_fixed_width_major = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_fixed_width_minor = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_min_width_major = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_min_width_minor = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_padding_material = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_padding_top_material = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_title_divider_material = global::TheSocialGame.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_disabled_alpha_material_dark = global::TheSocialGame.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_disabled_alpha_material_light = global::TheSocialGame.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dropdownitem_icon_width = global::TheSocialGame.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dropdownitem_text_padding_left = global::TheSocialGame.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dropdownitem_text_padding_right = global::TheSocialGame.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_edit_text_inset_bottom_material = global::TheSocialGame.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::TheSocialGame.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_edit_text_inset_top_material = global::TheSocialGame.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_floating_window_z = global::TheSocialGame.Droid.Resource.Dimension.abc_floating_window_z;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_list_item_padding_horizontal_material = global::TheSocialGame.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_panel_menu_list_width = global::TheSocialGame.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_progress_bar_height_material = global::TheSocialGame.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_search_view_preferred_height = global::TheSocialGame.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_search_view_preferred_width = global::TheSocialGame.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_seekbar_track_background_height_material = global::TheSocialGame.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_seekbar_track_progress_height_material = global::TheSocialGame.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_select_dialog_padding_start_material = global::TheSocialGame.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_switch_padding = global::TheSocialGame.Droid.Resource.Dimension.abc_switch_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_body_1_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_body_2_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_button_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_caption_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_display_1_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_display_2_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_display_3_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_display_4_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_headline_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_large_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_medium_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_menu_header_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_menu_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_small_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_subhead_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_title_material = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_title_material_toolbar = global::TheSocialGame.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.cardview_compat_inset_shadow = global::TheSocialGame.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.cardview_default_elevation = global::TheSocialGame.Droid.Resource.Dimension.cardview_default_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.cardview_default_radius = global::TheSocialGame.Droid.Resource.Dimension.cardview_default_radius;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.compat_button_inset_horizontal_material = global::TheSocialGame.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.compat_button_inset_vertical_material = global::TheSocialGame.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.compat_button_padding_horizontal_material = global::TheSocialGame.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.compat_button_padding_vertical_material = global::TheSocialGame.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.compat_control_corner_material = global::TheSocialGame.Droid.Resource.Dimension.compat_control_corner_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_appbar_elevation = global::TheSocialGame.Droid.Resource.Dimension.design_appbar_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_active_text_size = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_elevation = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_height = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_item_max_width = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_item_min_width = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_margin = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_shadow_height = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_text_size = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_sheet_modal_elevation = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_sheet_peek_height_min = global::TheSocialGame.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_border_width = global::TheSocialGame.Droid.Resource.Dimension.design_fab_border_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_elevation = global::TheSocialGame.Droid.Resource.Dimension.design_fab_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_image_size = global::TheSocialGame.Droid.Resource.Dimension.design_fab_image_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_size_mini = global::TheSocialGame.Droid.Resource.Dimension.design_fab_size_mini;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_size_normal = global::TheSocialGame.Droid.Resource.Dimension.design_fab_size_normal;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_translation_z_pressed = global::TheSocialGame.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_elevation = global::TheSocialGame.Droid.Resource.Dimension.design_navigation_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_icon_padding = global::TheSocialGame.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_icon_size = global::TheSocialGame.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_max_width = global::TheSocialGame.Droid.Resource.Dimension.design_navigation_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_padding_bottom = global::TheSocialGame.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_separator_vertical_padding = global::TheSocialGame.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_action_inline_max_width = global::TheSocialGame.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_background_corner_radius = global::TheSocialGame.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_elevation = global::TheSocialGame.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::TheSocialGame.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_max_width = global::TheSocialGame.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_min_width = global::TheSocialGame.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_padding_horizontal = global::TheSocialGame.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_padding_vertical = global::TheSocialGame.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::TheSocialGame.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_text_size = global::TheSocialGame.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_tab_max_width = global::TheSocialGame.Droid.Resource.Dimension.design_tab_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_tab_scrollable_min_width = global::TheSocialGame.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_tab_text_size = global::TheSocialGame.Droid.Resource.Dimension.design_tab_text_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_tab_text_size_2line = global::TheSocialGame.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.disabled_alpha_material_dark = global::TheSocialGame.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.disabled_alpha_material_light = global::TheSocialGame.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.fastscroll_default_thickness = global::TheSocialGame.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.fastscroll_margin = global::TheSocialGame.Droid.Resource.Dimension.fastscroll_margin;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.fastscroll_minimum_range = global::TheSocialGame.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.highlight_alpha_material_colored = global::TheSocialGame.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.highlight_alpha_material_dark = global::TheSocialGame.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.highlight_alpha_material_light = global::TheSocialGame.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.hint_alpha_material_dark = global::TheSocialGame.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.hint_alpha_material_light = global::TheSocialGame.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.hint_pressed_alpha_material_dark = global::TheSocialGame.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.hint_pressed_alpha_material_light = global::TheSocialGame.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::TheSocialGame.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::TheSocialGame.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::TheSocialGame.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_action_icon_size = global::TheSocialGame.Droid.Resource.Dimension.notification_action_icon_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_action_text_size = global::TheSocialGame.Droid.Resource.Dimension.notification_action_text_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_big_circle_margin = global::TheSocialGame.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_content_margin_start = global::TheSocialGame.Droid.Resource.Dimension.notification_content_margin_start;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_large_icon_height = global::TheSocialGame.Droid.Resource.Dimension.notification_large_icon_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_large_icon_width = global::TheSocialGame.Droid.Resource.Dimension.notification_large_icon_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_main_column_padding_top = global::TheSocialGame.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_media_narrow_margin = global::TheSocialGame.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_right_icon_size = global::TheSocialGame.Droid.Resource.Dimension.notification_right_icon_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_right_side_padding_top = global::TheSocialGame.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_small_icon_background_padding = global::TheSocialGame.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_small_icon_size_as_large = global::TheSocialGame.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_subtext_size = global::TheSocialGame.Droid.Resource.Dimension.notification_subtext_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_top_pad = global::TheSocialGame.Droid.Resource.Dimension.notification_top_pad;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_top_pad_large_text = global::TheSocialGame.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_corner_radius = global::TheSocialGame.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_horizontal_padding = global::TheSocialGame.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_margin = global::TheSocialGame.Droid.Resource.Dimension.tooltip_margin;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::TheSocialGame.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_precise_anchor_threshold = global::TheSocialGame.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_vertical_padding = global::TheSocialGame.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_y_offset_non_touch = global::TheSocialGame.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_y_offset_touch = global::TheSocialGame.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_action_bar_item_background_material = global::TheSocialGame.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_borderless_material = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_check_material = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_check_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_colored_material = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_default_mtrl_shape = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_radio_material = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::TheSocialGame.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_cab_background_internal_bg = global::TheSocialGame.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_cab_background_top_material = global::TheSocialGame.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_control_background_material = global::TheSocialGame.Droid.Resource.Drawable.abc_control_background_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_dialog_material_background = global::TheSocialGame.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_edit_text_material = global::TheSocialGame.Droid.Resource.Drawable.abc_edit_text_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_ab_back_material = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_clear_material = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_go_search_api_material = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_overflow_material = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_search_api_material = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_voice_search_api_material = global::TheSocialGame.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_item_background_holo_dark = global::TheSocialGame.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_item_background_holo_light = global::TheSocialGame.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_divider_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_focused_holo = global::TheSocialGame.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_longpressed_holo = global::TheSocialGame.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_pressed_holo_dark = global::TheSocialGame.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_pressed_holo_light = global::TheSocialGame.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::TheSocialGame.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::TheSocialGame.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::TheSocialGame.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_disabled_holo_light = global::TheSocialGame.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_holo_dark = global::TheSocialGame.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_holo_light = global::TheSocialGame.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::TheSocialGame.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_popup_background_mtrl_mult = global::TheSocialGame.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ratingbar_indicator_material = global::TheSocialGame.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ratingbar_material = global::TheSocialGame.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ratingbar_small_material = global::TheSocialGame.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::TheSocialGame.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::TheSocialGame.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_seekbar_thumb_material = global::TheSocialGame.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_seekbar_tick_mark_material = global::TheSocialGame.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_seekbar_track_material = global::TheSocialGame.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_spinner_textfield_background_material = global::TheSocialGame.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_switch_thumb_material = global::TheSocialGame.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_switch_track_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_tab_indicator_material = global::TheSocialGame.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_text_cursor_material = global::TheSocialGame.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::TheSocialGame.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_textfield_search_material = global::TheSocialGame.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_vector_test = global::TheSocialGame.Droid.Resource.Drawable.abc_vector_test;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.avd_hide_password = global::TheSocialGame.Droid.Resource.Drawable.avd_hide_password;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.avd_show_password = global::TheSocialGame.Droid.Resource.Drawable.avd_show_password;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_fab_background = global::TheSocialGame.Droid.Resource.Drawable.design_fab_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_ic_visibility = global::TheSocialGame.Droid.Resource.Drawable.design_ic_visibility;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_ic_visibility_off = global::TheSocialGame.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_password_eye = global::TheSocialGame.Droid.Resource.Drawable.design_password_eye;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_snackbar_background = global::TheSocialGame.Droid.Resource.Drawable.design_snackbar_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.navigation_empty_icon = global::TheSocialGame.Droid.Resource.Drawable.navigation_empty_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_action_background = global::TheSocialGame.Droid.Resource.Drawable.notification_action_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg = global::TheSocialGame.Droid.Resource.Drawable.notification_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg_low = global::TheSocialGame.Droid.Resource.Drawable.notification_bg_low;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg_low_normal = global::TheSocialGame.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg_low_pressed = global::TheSocialGame.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg_normal = global::TheSocialGame.Droid.Resource.Drawable.notification_bg_normal;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg_normal_pressed = global::TheSocialGame.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_icon_background = global::TheSocialGame.Droid.Resource.Drawable.notification_icon_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_template_icon_bg = global::TheSocialGame.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_template_icon_low_bg = global::TheSocialGame.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_tile_bg = global::TheSocialGame.Droid.Resource.Drawable.notification_tile_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notify_panel_notification_icon_bg = global::TheSocialGame.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.tooltip_frame_dark = global::TheSocialGame.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.tooltip_frame_light = global::TheSocialGame.Droid.Resource.Drawable.tooltip_frame_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.ALT = global::TheSocialGame.Droid.Resource.Id.ALT;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.CTRL = global::TheSocialGame.Droid.Resource.Id.CTRL;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.FUNCTION = global::TheSocialGame.Droid.Resource.Id.FUNCTION;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.META = global::TheSocialGame.Droid.Resource.Id.META;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.SHIFT = global::TheSocialGame.Droid.Resource.Id.SHIFT;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.SYM = global::TheSocialGame.Droid.Resource.Id.SYM;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action0 = global::TheSocialGame.Droid.Resource.Id.action0;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar = global::TheSocialGame.Droid.Resource.Id.action_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_activity_content = global::TheSocialGame.Droid.Resource.Id.action_bar_activity_content;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_container = global::TheSocialGame.Droid.Resource.Id.action_bar_container;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_root = global::TheSocialGame.Droid.Resource.Id.action_bar_root;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_spinner = global::TheSocialGame.Droid.Resource.Id.action_bar_spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_subtitle = global::TheSocialGame.Droid.Resource.Id.action_bar_subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_title = global::TheSocialGame.Droid.Resource.Id.action_bar_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_container = global::TheSocialGame.Droid.Resource.Id.action_container;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_context_bar = global::TheSocialGame.Droid.Resource.Id.action_context_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_divider = global::TheSocialGame.Droid.Resource.Id.action_divider;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_image = global::TheSocialGame.Droid.Resource.Id.action_image;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_menu_divider = global::TheSocialGame.Droid.Resource.Id.action_menu_divider;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_menu_presenter = global::TheSocialGame.Droid.Resource.Id.action_menu_presenter;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_mode_bar = global::TheSocialGame.Droid.Resource.Id.action_mode_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_mode_bar_stub = global::TheSocialGame.Droid.Resource.Id.action_mode_bar_stub;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_mode_close_button = global::TheSocialGame.Droid.Resource.Id.action_mode_close_button;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_text = global::TheSocialGame.Droid.Resource.Id.action_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.actions = global::TheSocialGame.Droid.Resource.Id.actions;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.activity_chooser_view_content = global::TheSocialGame.Droid.Resource.Id.activity_chooser_view_content;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.add = global::TheSocialGame.Droid.Resource.Id.add;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.alertTitle = global::TheSocialGame.Droid.Resource.Id.alertTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.all = global::TheSocialGame.Droid.Resource.Id.all;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.always = global::TheSocialGame.Droid.Resource.Id.always;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.async = global::TheSocialGame.Droid.Resource.Id.async;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.auto = global::TheSocialGame.Droid.Resource.Id.auto;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.beginning = global::TheSocialGame.Droid.Resource.Id.beginning;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.blocking = global::TheSocialGame.Droid.Resource.Id.blocking;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.bottom = global::TheSocialGame.Droid.Resource.Id.bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.buttonPanel = global::TheSocialGame.Droid.Resource.Id.buttonPanel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.cancel_action = global::TheSocialGame.Droid.Resource.Id.cancel_action;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.center = global::TheSocialGame.Droid.Resource.Id.center;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.center_horizontal = global::TheSocialGame.Droid.Resource.Id.center_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.center_vertical = global::TheSocialGame.Droid.Resource.Id.center_vertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.checkbox = global::TheSocialGame.Droid.Resource.Id.checkbox;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.chronometer = global::TheSocialGame.Droid.Resource.Id.chronometer;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.clip_horizontal = global::TheSocialGame.Droid.Resource.Id.clip_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.clip_vertical = global::TheSocialGame.Droid.Resource.Id.clip_vertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.collapseActionView = global::TheSocialGame.Droid.Resource.Id.collapseActionView;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.container = global::TheSocialGame.Droid.Resource.Id.container;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.contentPanel = global::TheSocialGame.Droid.Resource.Id.contentPanel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.coordinator = global::TheSocialGame.Droid.Resource.Id.coordinator;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.custom = global::TheSocialGame.Droid.Resource.Id.custom;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.customPanel = global::TheSocialGame.Droid.Resource.Id.customPanel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.decor_content_parent = global::TheSocialGame.Droid.Resource.Id.decor_content_parent;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.default_activity_button = global::TheSocialGame.Droid.Resource.Id.default_activity_button;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.design_bottom_sheet = global::TheSocialGame.Droid.Resource.Id.design_bottom_sheet;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.design_menu_item_action_area = global::TheSocialGame.Droid.Resource.Id.design_menu_item_action_area;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.design_menu_item_action_area_stub = global::TheSocialGame.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.design_menu_item_text = global::TheSocialGame.Droid.Resource.Id.design_menu_item_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.design_navigation_view = global::TheSocialGame.Droid.Resource.Id.design_navigation_view;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.disableHome = global::TheSocialGame.Droid.Resource.Id.disableHome;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.edit_query = global::TheSocialGame.Droid.Resource.Id.edit_query;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.end = global::TheSocialGame.Droid.Resource.Id.end;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.end_padder = global::TheSocialGame.Droid.Resource.Id.end_padder;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.enterAlways = global::TheSocialGame.Droid.Resource.Id.enterAlways;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.enterAlwaysCollapsed = global::TheSocialGame.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.exitUntilCollapsed = global::TheSocialGame.Droid.Resource.Id.exitUntilCollapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.expand_activities_button = global::TheSocialGame.Droid.Resource.Id.expand_activities_button;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.expanded_menu = global::TheSocialGame.Droid.Resource.Id.expanded_menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.fill = global::TheSocialGame.Droid.Resource.Id.fill;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.fill_horizontal = global::TheSocialGame.Droid.Resource.Id.fill_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.fill_vertical = global::TheSocialGame.Droid.Resource.Id.fill_vertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.@fixed = global::TheSocialGame.Droid.Resource.Id.@fixed;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.forever = global::TheSocialGame.Droid.Resource.Id.forever;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.ghost_view = global::TheSocialGame.Droid.Resource.Id.ghost_view;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.home = global::TheSocialGame.Droid.Resource.Id.home;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.homeAsUp = global::TheSocialGame.Droid.Resource.Id.homeAsUp;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.icon = global::TheSocialGame.Droid.Resource.Id.icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.icon_group = global::TheSocialGame.Droid.Resource.Id.icon_group;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.ifRoom = global::TheSocialGame.Droid.Resource.Id.ifRoom;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.image = global::TheSocialGame.Droid.Resource.Id.image;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.info = global::TheSocialGame.Droid.Resource.Id.info;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.italic = global::TheSocialGame.Droid.Resource.Id.italic;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.item_touch_helper_previous_elevation = global::TheSocialGame.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.left = global::TheSocialGame.Droid.Resource.Id.left;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.line1 = global::TheSocialGame.Droid.Resource.Id.line1;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.line3 = global::TheSocialGame.Droid.Resource.Id.line3;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.listMode = global::TheSocialGame.Droid.Resource.Id.listMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.list_item = global::TheSocialGame.Droid.Resource.Id.list_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.masked = global::TheSocialGame.Droid.Resource.Id.masked;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.media_actions = global::TheSocialGame.Droid.Resource.Id.media_actions;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.message = global::TheSocialGame.Droid.Resource.Id.message;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.middle = global::TheSocialGame.Droid.Resource.Id.middle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.mini = global::TheSocialGame.Droid.Resource.Id.mini;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.multiply = global::TheSocialGame.Droid.Resource.Id.multiply;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.navigation_header_container = global::TheSocialGame.Droid.Resource.Id.navigation_header_container;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.never = global::TheSocialGame.Droid.Resource.Id.never;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.none = global::TheSocialGame.Droid.Resource.Id.none;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.normal = global::TheSocialGame.Droid.Resource.Id.normal;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.notification_background = global::TheSocialGame.Droid.Resource.Id.notification_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.notification_main_column = global::TheSocialGame.Droid.Resource.Id.notification_main_column;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.notification_main_column_container = global::TheSocialGame.Droid.Resource.Id.notification_main_column_container;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.parallax = global::TheSocialGame.Droid.Resource.Id.parallax;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.parentPanel = global::TheSocialGame.Droid.Resource.Id.parentPanel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.parent_matrix = global::TheSocialGame.Droid.Resource.Id.parent_matrix;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.pin = global::TheSocialGame.Droid.Resource.Id.pin;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.progress_circular = global::TheSocialGame.Droid.Resource.Id.progress_circular;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.progress_horizontal = global::TheSocialGame.Droid.Resource.Id.progress_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.radio = global::TheSocialGame.Droid.Resource.Id.radio;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.right = global::TheSocialGame.Droid.Resource.Id.right;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.right_icon = global::TheSocialGame.Droid.Resource.Id.right_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.right_side = global::TheSocialGame.Droid.Resource.Id.right_side;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.save_non_transition_alpha = global::TheSocialGame.Droid.Resource.Id.save_non_transition_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.screen = global::TheSocialGame.Droid.Resource.Id.screen;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.scroll = global::TheSocialGame.Droid.Resource.Id.scroll;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.scrollIndicatorDown = global::TheSocialGame.Droid.Resource.Id.scrollIndicatorDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.scrollIndicatorUp = global::TheSocialGame.Droid.Resource.Id.scrollIndicatorUp;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.scrollView = global::TheSocialGame.Droid.Resource.Id.scrollView;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.scrollable = global::TheSocialGame.Droid.Resource.Id.scrollable;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_badge = global::TheSocialGame.Droid.Resource.Id.search_badge;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_bar = global::TheSocialGame.Droid.Resource.Id.search_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_button = global::TheSocialGame.Droid.Resource.Id.search_button;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_close_btn = global::TheSocialGame.Droid.Resource.Id.search_close_btn;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_edit_frame = global::TheSocialGame.Droid.Resource.Id.search_edit_frame;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_go_btn = global::TheSocialGame.Droid.Resource.Id.search_go_btn;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_mag_icon = global::TheSocialGame.Droid.Resource.Id.search_mag_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_plate = global::TheSocialGame.Droid.Resource.Id.search_plate;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_src_text = global::TheSocialGame.Droid.Resource.Id.search_src_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_voice_btn = global::TheSocialGame.Droid.Resource.Id.search_voice_btn;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.select_dialog_listview = global::TheSocialGame.Droid.Resource.Id.select_dialog_listview;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.shortcut = global::TheSocialGame.Droid.Resource.Id.shortcut;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.showCustom = global::TheSocialGame.Droid.Resource.Id.showCustom;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.showHome = global::TheSocialGame.Droid.Resource.Id.showHome;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.showTitle = global::TheSocialGame.Droid.Resource.Id.showTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.snackbar_action = global::TheSocialGame.Droid.Resource.Id.snackbar_action;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.snackbar_text = global::TheSocialGame.Droid.Resource.Id.snackbar_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.snap = global::TheSocialGame.Droid.Resource.Id.snap;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.spacer = global::TheSocialGame.Droid.Resource.Id.spacer;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.split_action_bar = global::TheSocialGame.Droid.Resource.Id.split_action_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.src_atop = global::TheSocialGame.Droid.Resource.Id.src_atop;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.src_in = global::TheSocialGame.Droid.Resource.Id.src_in;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.src_over = global::TheSocialGame.Droid.Resource.Id.src_over;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.start = global::TheSocialGame.Droid.Resource.Id.start;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.status_bar_latest_event_content = global::TheSocialGame.Droid.Resource.Id.status_bar_latest_event_content;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.submenuarrow = global::TheSocialGame.Droid.Resource.Id.submenuarrow;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.submit_area = global::TheSocialGame.Droid.Resource.Id.submit_area;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.tabMode = global::TheSocialGame.Droid.Resource.Id.tabMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.tag_transition_group = global::TheSocialGame.Droid.Resource.Id.tag_transition_group;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.text = global::TheSocialGame.Droid.Resource.Id.text;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.text2 = global::TheSocialGame.Droid.Resource.Id.text2;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.textSpacerNoButtons = global::TheSocialGame.Droid.Resource.Id.textSpacerNoButtons;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.textSpacerNoTitle = global::TheSocialGame.Droid.Resource.Id.textSpacerNoTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.textinput_counter = global::TheSocialGame.Droid.Resource.Id.textinput_counter;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.textinput_error = global::TheSocialGame.Droid.Resource.Id.textinput_error;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.time = global::TheSocialGame.Droid.Resource.Id.time;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.title = global::TheSocialGame.Droid.Resource.Id.title;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.titleDividerNoCustom = global::TheSocialGame.Droid.Resource.Id.titleDividerNoCustom;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.title_template = global::TheSocialGame.Droid.Resource.Id.title_template;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.top = global::TheSocialGame.Droid.Resource.Id.top;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.topPanel = global::TheSocialGame.Droid.Resource.Id.topPanel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.touch_outside = global::TheSocialGame.Droid.Resource.Id.touch_outside;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.transition_current_scene = global::TheSocialGame.Droid.Resource.Id.transition_current_scene;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.transition_layout_save = global::TheSocialGame.Droid.Resource.Id.transition_layout_save;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.transition_position = global::TheSocialGame.Droid.Resource.Id.transition_position;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.transition_scene_layoutid_cache = global::TheSocialGame.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.transition_transform = global::TheSocialGame.Droid.Resource.Id.transition_transform;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.uniform = global::TheSocialGame.Droid.Resource.Id.uniform;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.up = global::TheSocialGame.Droid.Resource.Id.up;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.useLogo = global::TheSocialGame.Droid.Resource.Id.useLogo;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.view_offset_helper = global::TheSocialGame.Droid.Resource.Id.view_offset_helper;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.visible = global::TheSocialGame.Droid.Resource.Id.visible;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.withText = global::TheSocialGame.Droid.Resource.Id.withText;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.wrap_content = global::TheSocialGame.Droid.Resource.Id.wrap_content;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.abc_config_activityDefaultDur = global::TheSocialGame.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.abc_config_activityShortDur = global::TheSocialGame.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.app_bar_elevation_anim_duration = global::TheSocialGame.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.bottom_sheet_slide_duration = global::TheSocialGame.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.cancel_button_image_alpha = global::TheSocialGame.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.config_tooltipAnimTime = global::TheSocialGame.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.design_snackbar_text_max_lines = global::TheSocialGame.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.hide_password_duration = global::TheSocialGame.Droid.Resource.Integer.hide_password_duration;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.show_password_duration = global::TheSocialGame.Droid.Resource.Integer.show_password_duration;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.status_bar_notification_info_maxnum = global::TheSocialGame.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_bar_title_item = global::TheSocialGame.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_bar_up_container = global::TheSocialGame.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_menu_item_layout = global::TheSocialGame.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_menu_layout = global::TheSocialGame.Droid.Resource.Layout.abc_action_menu_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_mode_bar = global::TheSocialGame.Droid.Resource.Layout.abc_action_mode_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_mode_close_item_material = global::TheSocialGame.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_activity_chooser_view = global::TheSocialGame.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_activity_chooser_view_list_item = global::TheSocialGame.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_alert_dialog_button_bar_material = global::TheSocialGame.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_alert_dialog_material = global::TheSocialGame.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_alert_dialog_title_material = global::TheSocialGame.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_dialog_title_material = global::TheSocialGame.Droid.Resource.Layout.abc_dialog_title_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_expanded_menu_layout = global::TheSocialGame.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_list_menu_item_checkbox = global::TheSocialGame.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_list_menu_item_icon = global::TheSocialGame.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_list_menu_item_layout = global::TheSocialGame.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_list_menu_item_radio = global::TheSocialGame.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_popup_menu_header_item_layout = global::TheSocialGame.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_popup_menu_item_layout = global::TheSocialGame.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_screen_content_include = global::TheSocialGame.Droid.Resource.Layout.abc_screen_content_include;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_screen_simple = global::TheSocialGame.Droid.Resource.Layout.abc_screen_simple;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_screen_simple_overlay_action_mode = global::TheSocialGame.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_screen_toolbar = global::TheSocialGame.Droid.Resource.Layout.abc_screen_toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_search_dropdown_item_icons_2line = global::TheSocialGame.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_search_view = global::TheSocialGame.Droid.Resource.Layout.abc_search_view;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_select_dialog_material = global::TheSocialGame.Droid.Resource.Layout.abc_select_dialog_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_bottom_navigation_item = global::TheSocialGame.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_bottom_sheet_dialog = global::TheSocialGame.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_layout_snackbar = global::TheSocialGame.Droid.Resource.Layout.design_layout_snackbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_layout_snackbar_include = global::TheSocialGame.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_layout_tab_icon = global::TheSocialGame.Droid.Resource.Layout.design_layout_tab_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_layout_tab_text = global::TheSocialGame.Droid.Resource.Layout.design_layout_tab_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_menu_item_action_area = global::TheSocialGame.Droid.Resource.Layout.design_menu_item_action_area;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_item = global::TheSocialGame.Droid.Resource.Layout.design_navigation_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_item_header = global::TheSocialGame.Droid.Resource.Layout.design_navigation_item_header;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_item_separator = global::TheSocialGame.Droid.Resource.Layout.design_navigation_item_separator;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_item_subheader = global::TheSocialGame.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_menu = global::TheSocialGame.Droid.Resource.Layout.design_navigation_menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_menu_item = global::TheSocialGame.Droid.Resource.Layout.design_navigation_menu_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_action = global::TheSocialGame.Droid.Resource.Layout.notification_action;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_action_tombstone = global::TheSocialGame.Droid.Resource.Layout.notification_action_tombstone;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_media_action = global::TheSocialGame.Droid.Resource.Layout.notification_media_action;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_media_cancel_action = global::TheSocialGame.Droid.Resource.Layout.notification_media_cancel_action;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_big_media = global::TheSocialGame.Droid.Resource.Layout.notification_template_big_media;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_big_media_custom = global::TheSocialGame.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_big_media_narrow = global::TheSocialGame.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_big_media_narrow_custom = global::TheSocialGame.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_custom_big = global::TheSocialGame.Droid.Resource.Layout.notification_template_custom_big;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_icon_group = global::TheSocialGame.Droid.Resource.Layout.notification_template_icon_group;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_lines_media = global::TheSocialGame.Droid.Resource.Layout.notification_template_lines_media;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_media = global::TheSocialGame.Droid.Resource.Layout.notification_template_media;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_media_custom = global::TheSocialGame.Droid.Resource.Layout.notification_template_media_custom;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_part_chronometer = global::TheSocialGame.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_part_time = global::TheSocialGame.Droid.Resource.Layout.notification_template_part_time;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.select_dialog_item_material = global::TheSocialGame.Droid.Resource.Layout.select_dialog_item_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.select_dialog_multichoice_material = global::TheSocialGame.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.select_dialog_singlechoice_material = global::TheSocialGame.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.support_simple_spinner_dropdown_item = global::TheSocialGame.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::PCLAppConfig.FileSystemStream.Resource.String.ApplicationName = global::TheSocialGame.Droid.Resource.String.ApplicationName;
+			global::PCLAppConfig.FileSystemStream.Resource.String.Hello = global::TheSocialGame.Droid.Resource.String.Hello;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_action_bar_home_description = global::TheSocialGame.Droid.Resource.String.abc_action_bar_home_description;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_action_bar_up_description = global::TheSocialGame.Droid.Resource.String.abc_action_bar_up_description;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_action_menu_overflow_description = global::TheSocialGame.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_action_mode_done = global::TheSocialGame.Droid.Resource.String.abc_action_mode_done;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_activity_chooser_view_see_all = global::TheSocialGame.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_activitychooserview_choose_application = global::TheSocialGame.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_capital_off = global::TheSocialGame.Droid.Resource.String.abc_capital_off;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_capital_on = global::TheSocialGame.Droid.Resource.String.abc_capital_on;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_search_hint = global::TheSocialGame.Droid.Resource.String.abc_search_hint;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_searchview_description_clear = global::TheSocialGame.Droid.Resource.String.abc_searchview_description_clear;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_searchview_description_query = global::TheSocialGame.Droid.Resource.String.abc_searchview_description_query;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_searchview_description_search = global::TheSocialGame.Droid.Resource.String.abc_searchview_description_search;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_searchview_description_submit = global::TheSocialGame.Droid.Resource.String.abc_searchview_description_submit;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_searchview_description_voice = global::TheSocialGame.Droid.Resource.String.abc_searchview_description_voice;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_shareactionprovider_share_with = global::TheSocialGame.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_shareactionprovider_share_with_application = global::TheSocialGame.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_toolbar_collapse_description = global::TheSocialGame.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::PCLAppConfig.FileSystemStream.Resource.String.appbar_scrolling_view_behavior = global::TheSocialGame.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::PCLAppConfig.FileSystemStream.Resource.String.bottom_sheet_behavior = global::TheSocialGame.Droid.Resource.String.bottom_sheet_behavior;
+			global::PCLAppConfig.FileSystemStream.Resource.String.character_counter_pattern = global::TheSocialGame.Droid.Resource.String.character_counter_pattern;
+			global::PCLAppConfig.FileSystemStream.Resource.String.password_toggle_content_description = global::TheSocialGame.Droid.Resource.String.password_toggle_content_description;
+			global::PCLAppConfig.FileSystemStream.Resource.String.path_password_eye = global::TheSocialGame.Droid.Resource.String.path_password_eye;
+			global::PCLAppConfig.FileSystemStream.Resource.String.path_password_eye_mask_strike_through = global::TheSocialGame.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::PCLAppConfig.FileSystemStream.Resource.String.path_password_eye_mask_visible = global::TheSocialGame.Droid.Resource.String.path_password_eye_mask_visible;
+			global::PCLAppConfig.FileSystemStream.Resource.String.path_password_strike_through = global::TheSocialGame.Droid.Resource.String.path_password_strike_through;
+			global::PCLAppConfig.FileSystemStream.Resource.String.search_menu_title = global::TheSocialGame.Droid.Resource.String.search_menu_title;
+			global::PCLAppConfig.FileSystemStream.Resource.String.status_bar_notification_info_overflow = global::TheSocialGame.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.AlertDialog_AppCompat = global::TheSocialGame.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.AlertDialog_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Animation_AppCompat_Dialog = global::TheSocialGame.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Animation_AppCompat_DropDownUp = global::TheSocialGame.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Animation_AppCompat_Tooltip = global::TheSocialGame.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Animation_Design_BottomSheetDialog = global::TheSocialGame.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_AlertDialog_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_AlertDialog_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Animation_AppCompat_Dialog = global::TheSocialGame.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::TheSocialGame.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Animation_AppCompat_Tooltip = global::TheSocialGame.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_CardView = global::TheSocialGame.Droid.Resource.Style.Base_CardView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_DialogWindowTitle_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Button = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Large = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Small = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Title = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::TheSocialGame.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Dialog = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::TheSocialGame.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::TheSocialGame.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::TheSocialGame.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::TheSocialGame.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::TheSocialGame.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::TheSocialGame.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_Theme_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::TheSocialGame.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_Theme_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::TheSocialGame.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::TheSocialGame.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V22_Theme_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V22_Theme_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V23_Theme_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V23_Theme_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V26_Theme_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V26_Theme_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::TheSocialGame.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Theme_AppCompat = global::TheSocialGame.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::TheSocialGame.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Theme_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::TheSocialGame.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::TheSocialGame.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::TheSocialGame.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::TheSocialGame.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::TheSocialGame.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionBar = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionButton = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionMode = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button_Small = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_EditText = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ImageButton = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ListView = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_RatingBar = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_SearchView = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_SeekBar = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Spinner = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Toolbar = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::TheSocialGame.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_Design_TabLayout = global::TheSocialGame.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.CardView = global::TheSocialGame.Droid.Resource.Style.CardView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.CardView_Dark = global::TheSocialGame.Droid.Resource.Style.CardView_Dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.CardView_Light = global::TheSocialGame.Droid.Resource.Style.CardView_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_AppCompat = global::TheSocialGame.Droid.Resource.Style.Platform_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_ThemeOverlay_AppCompat = global::TheSocialGame.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::TheSocialGame.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V21_AppCompat = global::TheSocialGame.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V21_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V25_AppCompat = global::TheSocialGame.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V25_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_Widget_AppCompat_Spinner = global::TheSocialGame.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::TheSocialGame.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::TheSocialGame.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::TheSocialGame.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Body1 = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Body2 = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Button = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Caption = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Display1 = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Display2 = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Display3 = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Display4 = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Headline = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Large = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Medium = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Menu = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Small = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Subhead = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Title = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Tooltip = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::TheSocialGame.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Info = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Media = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Time = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Title = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Counter = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Counter_Overflow = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Error = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Hint = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Snackbar_Message = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Tab = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::TheSocialGame.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_CompactMenu = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Dialog = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Dialog_Alert = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_Dialog = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_NoActionBar = global::TheSocialGame.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design = global::TheSocialGame.Droid.Resource.Style.Theme_Design;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design_BottomSheetDialog = global::TheSocialGame.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design_Light = global::TheSocialGame.Droid.Resource.Style.Theme_Design_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::TheSocialGame.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design_Light_NoActionBar = global::TheSocialGame.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design_NoActionBar = global::TheSocialGame.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat = global::TheSocialGame.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::TheSocialGame.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_Dark = global::TheSocialGame.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::TheSocialGame.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::TheSocialGame.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::TheSocialGame.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_Light = global::TheSocialGame.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionButton = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionMode = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActivityChooserView = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button_Borderless = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button_Colored = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button_Small = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ButtonBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_EditText = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ImageButton = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionButton = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_SearchView = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ListMenuView = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ListPopupWindow = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ListView = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ListView_DropDown = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ListView_Menu = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_PopupMenu = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_PopupWindow = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ProgressBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_RatingBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_RatingBar_Small = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_SearchView = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_SeekBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Spinner = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Toolbar = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::TheSocialGame.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Compat_NotificationActionContainer = global::TheSocialGame.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Compat_NotificationActionText = global::TheSocialGame.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_AppBarLayout = global::TheSocialGame.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_BottomNavigationView = global::TheSocialGame.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_BottomSheet_Modal = global::TheSocialGame.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_CollapsingToolbar = global::TheSocialGame.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_FloatingActionButton = global::TheSocialGame.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_NavigationView = global::TheSocialGame.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::TheSocialGame.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_Snackbar = global::TheSocialGame.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_TabLayout = global::TheSocialGame.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_TextInputLayout = global::TheSocialGame.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar = global::TheSocialGame.Droid.Resource.Styleable.ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_background = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_backgroundSplit = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_backgroundStacked = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetEnd = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetLeft = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetRight = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetStart = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_customNavigationLayout = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_displayOptions = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_divider = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_divider;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_elevation = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_height = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_hideOnContentScroll = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_homeAsUpIndicator = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_homeLayout = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_icon = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_itemPadding = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_logo = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_logo;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_navigationMode = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_popupTheme = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_progressBarPadding = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_progressBarStyle = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_subtitle = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_subtitleTextStyle = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_title = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_titleTextStyle = global::TheSocialGame.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBarLayout = global::TheSocialGame.Droid.Resource.Styleable.ActionBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::TheSocialGame.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMenuItemView = global::TheSocialGame.Droid.Resource.Styleable.ActionMenuItemView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMenuItemView_android_minWidth = global::TheSocialGame.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMenuView = global::TheSocialGame.Droid.Resource.Styleable.ActionMenuView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode = global::TheSocialGame.Droid.Resource.Styleable.ActionMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_background = global::TheSocialGame.Droid.Resource.Styleable.ActionMode_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_backgroundSplit = global::TheSocialGame.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_closeItemLayout = global::TheSocialGame.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_height = global::TheSocialGame.Droid.Resource.Styleable.ActionMode_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_subtitleTextStyle = global::TheSocialGame.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_titleTextStyle = global::TheSocialGame.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActivityChooserView = global::TheSocialGame.Droid.Resource.Styleable.ActivityChooserView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::TheSocialGame.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActivityChooserView_initialActivityCount = global::TheSocialGame.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog = global::TheSocialGame.Droid.Resource.Styleable.AlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_android_layout = global::TheSocialGame.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::TheSocialGame.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_listItemLayout = global::TheSocialGame.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_listLayout = global::TheSocialGame.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::TheSocialGame.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_showTitle = global::TheSocialGame.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::TheSocialGame.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_android_background = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_elevation = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_expanded = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayoutStates = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_Layout = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::TheSocialGame.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatImageView = global::TheSocialGame.Droid.Resource.Styleable.AppCompatImageView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatImageView_android_src = global::TheSocialGame.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatImageView_srcCompat = global::TheSocialGame.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatImageView_tint = global::TheSocialGame.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatImageView_tintMode = global::TheSocialGame.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatSeekBar = global::TheSocialGame.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatSeekBar_android_thumb = global::TheSocialGame.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatSeekBar_tickMark = global::TheSocialGame.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::TheSocialGame.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::TheSocialGame.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_android_textAppearance = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_fontFamily = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_textAllCaps = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarDivider = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarSize = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarTheme = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeBackground = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_checkboxStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorAccent = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorControlActivated = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorControlNormal = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorError = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorPrimary = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_controlBackground = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dialogTheme = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dividerVertical = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_editTextBackground = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_editTextColor = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_editTextStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_panelBackground = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_searchViewStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_seekBarStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_spinnerStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_switchStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_toolbarStyle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowActionBar = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowNoTitle = global::TheSocialGame.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomNavigationView = global::TheSocialGame.Droid.Resource.Styleable.BottomNavigationView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomSheetBehavior_Layout = global::TheSocialGame.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::TheSocialGame.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::TheSocialGame.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::TheSocialGame.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ButtonBarLayout = global::TheSocialGame.Droid.Resource.Styleable.ButtonBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ButtonBarLayout_allowStacking = global::TheSocialGame.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView = global::TheSocialGame.Droid.Resource.Styleable.CardView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_android_minHeight = global::TheSocialGame.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_android_minWidth = global::TheSocialGame.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_cardBackgroundColor = global::TheSocialGame.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_cardCornerRadius = global::TheSocialGame.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_cardElevation = global::TheSocialGame.Droid.Resource.Styleable.CardView_cardElevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_cardMaxElevation = global::TheSocialGame.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_cardPreventCornerOverlap = global::TheSocialGame.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_cardUseCompatPadding = global::TheSocialGame.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_contentPadding = global::TheSocialGame.Droid.Resource.Styleable.CardView_contentPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_contentPaddingBottom = global::TheSocialGame.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_contentPaddingLeft = global::TheSocialGame.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_contentPaddingRight = global::TheSocialGame.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CardView_contentPaddingTop = global::TheSocialGame.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_title = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_Layout = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::TheSocialGame.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ColorStateListItem = global::TheSocialGame.Droid.Resource.Styleable.ColorStateListItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ColorStateListItem_alpha = global::TheSocialGame.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ColorStateListItem_android_alpha = global::TheSocialGame.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ColorStateListItem_android_color = global::TheSocialGame.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CompoundButton = global::TheSocialGame.Droid.Resource.Styleable.CompoundButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CompoundButton_android_button = global::TheSocialGame.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CompoundButton_buttonTint = global::TheSocialGame.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CompoundButton_buttonTintMode = global::TheSocialGame.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_keylines = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::TheSocialGame.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle = global::TheSocialGame.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::TheSocialGame.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::TheSocialGame.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_barLength = global::TheSocialGame.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_color = global::TheSocialGame.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_drawableSize = global::TheSocialGame.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::TheSocialGame.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_spinBars = global::TheSocialGame.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_thickness = global::TheSocialGame.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_backgroundTint = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_borderWidth = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_elevation = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_fabSize = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_rippleColor = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_useCompatPadding = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::TheSocialGame.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily = global::TheSocialGame.Droid.Resource.Styleable.FontFamily;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderAuthority = global::TheSocialGame.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderCerts = global::TheSocialGame.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::TheSocialGame.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::TheSocialGame.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderPackage = global::TheSocialGame.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderQuery = global::TheSocialGame.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont = global::TheSocialGame.Droid.Resource.Styleable.FontFamilyFont;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_android_font = global::TheSocialGame.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_android_fontStyle = global::TheSocialGame.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_android_fontWeight = global::TheSocialGame.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_font = global::TheSocialGame.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_fontStyle = global::TheSocialGame.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_fontWeight = global::TheSocialGame.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ForegroundLinearLayout = global::TheSocialGame.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::TheSocialGame.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::TheSocialGame.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::TheSocialGame.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_android_gravity = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_android_orientation = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_divider = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_showDividers = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_Layout = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::TheSocialGame.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ListPopupWindow = global::TheSocialGame.Droid.Resource.Styleable.ListPopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::TheSocialGame.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::TheSocialGame.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup = global::TheSocialGame.Droid.Resource.Styleable.MenuGroup;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_checkableBehavior = global::TheSocialGame.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_enabled = global::TheSocialGame.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_id = global::TheSocialGame.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_menuCategory = global::TheSocialGame.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_orderInCategory = global::TheSocialGame.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_visible = global::TheSocialGame.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem = global::TheSocialGame.Droid.Resource.Styleable.MenuItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_actionLayout = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_actionProviderClass = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_actionViewClass = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_alphabeticModifiers = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_checkable = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_checked = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_enabled = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_icon = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_id = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_id;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_menuCategory = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_numericShortcut = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_onClick = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_orderInCategory = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_title = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_titleCondensed = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_visible = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_contentDescription = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_iconTint = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_iconTintMode = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_numericModifiers = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_showAsAction = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_tooltipText = global::TheSocialGame.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView = global::TheSocialGame.Droid.Resource.Styleable.MenuView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_headerBackground = global::TheSocialGame.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_horizontalDivider = global::TheSocialGame.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_itemBackground = global::TheSocialGame.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::TheSocialGame.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_itemTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_verticalDivider = global::TheSocialGame.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_windowAnimationStyle = global::TheSocialGame.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_preserveIconSpacing = global::TheSocialGame.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_subMenuArrow = global::TheSocialGame.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView = global::TheSocialGame.Droid.Resource.Styleable.NavigationView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_android_background = global::TheSocialGame.Droid.Resource.Styleable.NavigationView_android_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::TheSocialGame.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_android_maxWidth = global::TheSocialGame.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_elevation = global::TheSocialGame.Droid.Resource.Styleable.NavigationView_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_headerLayout = global::TheSocialGame.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_itemBackground = global::TheSocialGame.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_itemIconTint = global::TheSocialGame.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_itemTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_itemTextColor = global::TheSocialGame.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_menu = global::TheSocialGame.Droid.Resource.Styleable.NavigationView_menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindow = global::TheSocialGame.Droid.Resource.Styleable.PopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::TheSocialGame.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindow_android_popupBackground = global::TheSocialGame.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindow_overlapAnchor = global::TheSocialGame.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindowBackgroundState = global::TheSocialGame.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::TheSocialGame.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecycleListView = global::TheSocialGame.Droid.Resource.Styleable.RecycleListView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::TheSocialGame.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::TheSocialGame.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_android_descendantFocusability = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_android_orientation = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_fastScrollEnabled = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_layoutManager = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_reverseLayout = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_spanCount = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_stackFromEnd = global::TheSocialGame.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ScrimInsetsFrameLayout = global::TheSocialGame.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::TheSocialGame.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ScrollingViewBehavior_Layout = global::TheSocialGame.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::TheSocialGame.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView = global::TheSocialGame.Droid.Resource.Styleable.SearchView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_android_focusable = global::TheSocialGame.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_android_imeOptions = global::TheSocialGame.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_android_inputType = global::TheSocialGame.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_android_maxWidth = global::TheSocialGame.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_closeIcon = global::TheSocialGame.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_commitIcon = global::TheSocialGame.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_defaultQueryHint = global::TheSocialGame.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_goIcon = global::TheSocialGame.Droid.Resource.Styleable.SearchView_goIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_iconifiedByDefault = global::TheSocialGame.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_layout = global::TheSocialGame.Droid.Resource.Styleable.SearchView_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_queryBackground = global::TheSocialGame.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_queryHint = global::TheSocialGame.Droid.Resource.Styleable.SearchView_queryHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_searchHintIcon = global::TheSocialGame.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_searchIcon = global::TheSocialGame.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_submitBackground = global::TheSocialGame.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_suggestionRowLayout = global::TheSocialGame.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_voiceIcon = global::TheSocialGame.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SnackbarLayout = global::TheSocialGame.Droid.Resource.Styleable.SnackbarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SnackbarLayout_android_maxWidth = global::TheSocialGame.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SnackbarLayout_elevation = global::TheSocialGame.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::TheSocialGame.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner = global::TheSocialGame.Droid.Resource.Styleable.Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner_android_dropDownWidth = global::TheSocialGame.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner_android_entries = global::TheSocialGame.Droid.Resource.Styleable.Spinner_android_entries;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner_android_popupBackground = global::TheSocialGame.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner_android_prompt = global::TheSocialGame.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner_popupTheme = global::TheSocialGame.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_android_textOff = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_android_textOn = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_android_thumb = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_showText = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_splitTrack = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_switchMinWidth = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_switchPadding = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_switchTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_thumbTextPadding = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_thumbTint = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_thumbTintMode = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_track = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_track;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_trackTint = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_trackTintMode = global::TheSocialGame.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabItem = global::TheSocialGame.Droid.Resource.Styleable.TabItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabItem_android_icon = global::TheSocialGame.Droid.Resource.Styleable.TabItem_android_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabItem_android_layout = global::TheSocialGame.Droid.Resource.Styleable.TabItem_android_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabItem_android_text = global::TheSocialGame.Droid.Resource.Styleable.TabItem_android_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout = global::TheSocialGame.Droid.Resource.Styleable.TabLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabBackground = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabContentStart = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabGravity = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabIndicatorColor = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabIndicatorHeight = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabMaxWidth = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabMinWidth = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabMode = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabPadding = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabPaddingBottom = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabPaddingEnd = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabPaddingStart = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabPaddingTop = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabSelectedTextColor = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabTextColor = global::TheSocialGame.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_fontFamily = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_shadowColor = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_shadowDx = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_shadowDy = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_shadowRadius = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_textColor = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_textColorHint = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_textColorLink = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_textSize = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_textStyle = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_typeface = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_fontFamily = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_textAllCaps = global::TheSocialGame.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_android_hint = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_android_textColorHint = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_counterEnabled = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_counterMaxLength = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_counterTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_errorEnabled = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_errorTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_hintEnabled = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_hintTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_passwordToggleTint = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::TheSocialGame.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar = global::TheSocialGame.Droid.Resource.Styleable.Toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_android_gravity = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_android_minHeight = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_buttonGravity = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_collapseContentDescription = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_collapseIcon = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetEnd = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetLeft = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetRight = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetStart = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_logo = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_logo;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_logoDescription = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_maxButtonHeight = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_navigationContentDescription = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_navigationIcon = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_popupTheme = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_subtitle = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_subtitleTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_subtitleTextColor = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_title = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMargin = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMarginBottom = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMarginEnd = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMarginStart = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMarginTop = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMargins = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleTextAppearance = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleTextColor = global::TheSocialGame.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View = global::TheSocialGame.Droid.Resource.Styleable.View;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View_android_focusable = global::TheSocialGame.Droid.Resource.Styleable.View_android_focusable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View_android_theme = global::TheSocialGame.Droid.Resource.Styleable.View_android_theme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View_paddingEnd = global::TheSocialGame.Droid.Resource.Styleable.View_paddingEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View_paddingStart = global::TheSocialGame.Droid.Resource.Styleable.View_paddingStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View_theme = global::TheSocialGame.Droid.Resource.Styleable.View_theme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewBackgroundHelper = global::TheSocialGame.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewBackgroundHelper_android_background = global::TheSocialGame.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::TheSocialGame.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::TheSocialGame.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewStubCompat = global::TheSocialGame.Droid.Resource.Styleable.ViewStubCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewStubCompat_android_id = global::TheSocialGame.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewStubCompat_android_inflatedId = global::TheSocialGame.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewStubCompat_android_layout = global::TheSocialGame.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::PCLStorage.Resource.String.ApplicationName = global::TheSocialGame.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::TheSocialGame.Droid.Resource.String.Hello;
 			global::ProgressRingControl.Forms.Plugin.Android.Resource.Animation.abc_fade_in = global::TheSocialGame.Droid.Resource.Animation.abc_fade_in;
 			global::ProgressRingControl.Forms.Plugin.Android.Resource.Animation.abc_fade_out = global::TheSocialGame.Droid.Resource.Animation.abc_fade_out;
 			global::ProgressRingControl.Forms.Plugin.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::TheSocialGame.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -20895,362 +22801,368 @@ namespace TheSocialGame.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7F0E0000
-			public const int abc_action_bar_home_description = 2131623936;
-			
-			// aapt resource value: 0x7F0E0001
-			public const int abc_action_bar_up_description = 2131623937;
-			
 			// aapt resource value: 0x7F0E0002
-			public const int abc_action_menu_overflow_description = 2131623938;
+			public const int abc_action_bar_home_description = 2131623938;
 			
 			// aapt resource value: 0x7F0E0003
-			public const int abc_action_mode_done = 2131623939;
-			
-			// aapt resource value: 0x7F0E0005
-			public const int abc_activitychooserview_choose_application = 2131623941;
+			public const int abc_action_bar_up_description = 2131623939;
 			
 			// aapt resource value: 0x7F0E0004
-			public const int abc_activity_chooser_view_see_all = 2131623940;
+			public const int abc_action_menu_overflow_description = 2131623940;
 			
-			// aapt resource value: 0x7F0E0006
-			public const int abc_capital_off = 2131623942;
+			// aapt resource value: 0x7F0E0005
+			public const int abc_action_mode_done = 2131623941;
 			
 			// aapt resource value: 0x7F0E0007
-			public const int abc_capital_on = 2131623943;
+			public const int abc_activitychooserview_choose_application = 2131623943;
+			
+			// aapt resource value: 0x7F0E0006
+			public const int abc_activity_chooser_view_see_all = 2131623942;
 			
 			// aapt resource value: 0x7F0E0008
-			public const int abc_menu_alt_shortcut_label = 2131623944;
+			public const int abc_capital_off = 2131623944;
 			
 			// aapt resource value: 0x7F0E0009
-			public const int abc_menu_ctrl_shortcut_label = 2131623945;
+			public const int abc_capital_on = 2131623945;
 			
 			// aapt resource value: 0x7F0E000A
-			public const int abc_menu_delete_shortcut_label = 2131623946;
+			public const int abc_menu_alt_shortcut_label = 2131623946;
 			
 			// aapt resource value: 0x7F0E000B
-			public const int abc_menu_enter_shortcut_label = 2131623947;
+			public const int abc_menu_ctrl_shortcut_label = 2131623947;
 			
 			// aapt resource value: 0x7F0E000C
-			public const int abc_menu_function_shortcut_label = 2131623948;
+			public const int abc_menu_delete_shortcut_label = 2131623948;
 			
 			// aapt resource value: 0x7F0E000D
-			public const int abc_menu_meta_shortcut_label = 2131623949;
+			public const int abc_menu_enter_shortcut_label = 2131623949;
 			
 			// aapt resource value: 0x7F0E000E
-			public const int abc_menu_shift_shortcut_label = 2131623950;
+			public const int abc_menu_function_shortcut_label = 2131623950;
 			
 			// aapt resource value: 0x7F0E000F
-			public const int abc_menu_space_shortcut_label = 2131623951;
+			public const int abc_menu_meta_shortcut_label = 2131623951;
 			
 			// aapt resource value: 0x7F0E0010
-			public const int abc_menu_sym_shortcut_label = 2131623952;
+			public const int abc_menu_shift_shortcut_label = 2131623952;
 			
 			// aapt resource value: 0x7F0E0011
-			public const int abc_prepend_shortcut_label = 2131623953;
-			
-			// aapt resource value: 0x7F0E0013
-			public const int abc_searchview_description_clear = 2131623955;
-			
-			// aapt resource value: 0x7F0E0014
-			public const int abc_searchview_description_query = 2131623956;
-			
-			// aapt resource value: 0x7F0E0015
-			public const int abc_searchview_description_search = 2131623957;
-			
-			// aapt resource value: 0x7F0E0016
-			public const int abc_searchview_description_submit = 2131623958;
-			
-			// aapt resource value: 0x7F0E0017
-			public const int abc_searchview_description_voice = 2131623959;
+			public const int abc_menu_space_shortcut_label = 2131623953;
 			
 			// aapt resource value: 0x7F0E0012
-			public const int abc_search_hint = 2131623954;
+			public const int abc_menu_sym_shortcut_label = 2131623954;
+			
+			// aapt resource value: 0x7F0E0013
+			public const int abc_prepend_shortcut_label = 2131623955;
+			
+			// aapt resource value: 0x7F0E0015
+			public const int abc_searchview_description_clear = 2131623957;
+			
+			// aapt resource value: 0x7F0E0016
+			public const int abc_searchview_description_query = 2131623958;
+			
+			// aapt resource value: 0x7F0E0017
+			public const int abc_searchview_description_search = 2131623959;
 			
 			// aapt resource value: 0x7F0E0018
-			public const int abc_shareactionprovider_share_with = 2131623960;
+			public const int abc_searchview_description_submit = 2131623960;
 			
 			// aapt resource value: 0x7F0E0019
-			public const int abc_shareactionprovider_share_with_application = 2131623961;
+			public const int abc_searchview_description_voice = 2131623961;
+			
+			// aapt resource value: 0x7F0E0014
+			public const int abc_search_hint = 2131623956;
 			
 			// aapt resource value: 0x7F0E001A
-			public const int abc_toolbar_collapse_description = 2131623962;
+			public const int abc_shareactionprovider_share_with = 2131623962;
 			
 			// aapt resource value: 0x7F0E001B
-			public const int appbar_scrolling_view_behavior = 2131623963;
-			
-			// aapt resource value: 0x7F0E001D
-			public const int bottomsheet_action_expand_halfway = 2131623965;
+			public const int abc_shareactionprovider_share_with_application = 2131623963;
 			
 			// aapt resource value: 0x7F0E001C
-			public const int bottom_sheet_behavior = 2131623964;
+			public const int abc_toolbar_collapse_description = 2131623964;
 			
-			// aapt resource value: 0x7F0E001E
-			public const int character_counter_content_description = 2131623966;
+			// aapt resource value: 0x7F0E001D
+			public const int appbar_scrolling_view_behavior = 2131623965;
+			
+			// aapt resource value: 0x7F0E0000
+			public const int ApplicationName = 2131623936;
 			
 			// aapt resource value: 0x7F0E001F
-			public const int character_counter_overflowed_content_description = 2131623967;
+			public const int bottomsheet_action_expand_halfway = 2131623967;
+			
+			// aapt resource value: 0x7F0E001E
+			public const int bottom_sheet_behavior = 2131623966;
 			
 			// aapt resource value: 0x7F0E0020
-			public const int character_counter_pattern = 2131623968;
+			public const int character_counter_content_description = 2131623968;
 			
 			// aapt resource value: 0x7F0E0021
-			public const int chip_text = 2131623969;
+			public const int character_counter_overflowed_content_description = 2131623969;
 			
 			// aapt resource value: 0x7F0E0022
-			public const int clear_text_end_icon_content_description = 2131623970;
+			public const int character_counter_pattern = 2131623970;
 			
 			// aapt resource value: 0x7F0E0023
-			public const int copy = 2131623971;
+			public const int chip_text = 2131623971;
 			
 			// aapt resource value: 0x7F0E0024
-			public const int copy_toast_msg = 2131623972;
+			public const int clear_text_end_icon_content_description = 2131623972;
 			
 			// aapt resource value: 0x7F0E0025
-			public const int error_icon_content_description = 2131623973;
+			public const int copy = 2131623973;
 			
 			// aapt resource value: 0x7F0E0026
-			public const int expand_button_title = 2131623974;
+			public const int copy_toast_msg = 2131623974;
 			
 			// aapt resource value: 0x7F0E0027
-			public const int exposed_dropdown_menu_content_description = 2131623975;
+			public const int error_icon_content_description = 2131623975;
 			
 			// aapt resource value: 0x7F0E0028
-			public const int fab_transformation_scrim_behavior = 2131623976;
+			public const int expand_button_title = 2131623976;
 			
 			// aapt resource value: 0x7F0E0029
-			public const int fab_transformation_sheet_behavior = 2131623977;
+			public const int exposed_dropdown_menu_content_description = 2131623977;
 			
 			// aapt resource value: 0x7F0E002A
-			public const int fallback_menu_item_copy_link = 2131623978;
+			public const int fab_transformation_scrim_behavior = 2131623978;
 			
 			// aapt resource value: 0x7F0E002B
-			public const int fallback_menu_item_open_in_browser = 2131623979;
+			public const int fab_transformation_sheet_behavior = 2131623979;
 			
 			// aapt resource value: 0x7F0E002C
-			public const int fallback_menu_item_share_link = 2131623980;
+			public const int fallback_menu_item_copy_link = 2131623980;
 			
 			// aapt resource value: 0x7F0E002D
-			public const int hide_bottom_view_on_scroll_behavior = 2131623981;
+			public const int fallback_menu_item_open_in_browser = 2131623981;
 			
 			// aapt resource value: 0x7F0E002E
-			public const int icon_content_description = 2131623982;
+			public const int fallback_menu_item_share_link = 2131623982;
+			
+			// aapt resource value: 0x7F0E0001
+			public const int Hello = 2131623937;
 			
 			// aapt resource value: 0x7F0E002F
-			public const int item_view_role_description = 2131623983;
+			public const int hide_bottom_view_on_scroll_behavior = 2131623983;
 			
 			// aapt resource value: 0x7F0E0030
-			public const int library_name = 2131623984;
+			public const int icon_content_description = 2131623984;
 			
 			// aapt resource value: 0x7F0E0031
-			public const int material_clock_display_divider = 2131623985;
+			public const int item_view_role_description = 2131623985;
 			
 			// aapt resource value: 0x7F0E0032
-			public const int material_clock_toggle_content_description = 2131623986;
+			public const int library_name = 2131623986;
 			
 			// aapt resource value: 0x7F0E0033
-			public const int material_hour_selection = 2131623987;
+			public const int material_clock_display_divider = 2131623987;
 			
 			// aapt resource value: 0x7F0E0034
-			public const int material_hour_suffix = 2131623988;
+			public const int material_clock_toggle_content_description = 2131623988;
 			
 			// aapt resource value: 0x7F0E0035
-			public const int material_minute_selection = 2131623989;
+			public const int material_hour_selection = 2131623989;
 			
 			// aapt resource value: 0x7F0E0036
-			public const int material_minute_suffix = 2131623990;
+			public const int material_hour_suffix = 2131623990;
 			
 			// aapt resource value: 0x7F0E0037
-			public const int material_motion_easing_accelerated = 2131623991;
+			public const int material_minute_selection = 2131623991;
 			
 			// aapt resource value: 0x7F0E0038
-			public const int material_motion_easing_decelerated = 2131623992;
+			public const int material_minute_suffix = 2131623992;
 			
 			// aapt resource value: 0x7F0E0039
-			public const int material_motion_easing_emphasized = 2131623993;
+			public const int material_motion_easing_accelerated = 2131623993;
 			
 			// aapt resource value: 0x7F0E003A
-			public const int material_motion_easing_linear = 2131623994;
+			public const int material_motion_easing_decelerated = 2131623994;
 			
 			// aapt resource value: 0x7F0E003B
-			public const int material_motion_easing_standard = 2131623995;
+			public const int material_motion_easing_emphasized = 2131623995;
 			
 			// aapt resource value: 0x7F0E003C
-			public const int material_slider_range_end = 2131623996;
+			public const int material_motion_easing_linear = 2131623996;
 			
 			// aapt resource value: 0x7F0E003D
-			public const int material_slider_range_start = 2131623997;
+			public const int material_motion_easing_standard = 2131623997;
 			
 			// aapt resource value: 0x7F0E003E
-			public const int material_timepicker_am = 2131623998;
+			public const int material_slider_range_end = 2131623998;
 			
 			// aapt resource value: 0x7F0E003F
-			public const int material_timepicker_clock_mode_description = 2131623999;
+			public const int material_slider_range_start = 2131623999;
 			
 			// aapt resource value: 0x7F0E0040
-			public const int material_timepicker_hour = 2131624000;
+			public const int material_timepicker_am = 2131624000;
 			
 			// aapt resource value: 0x7F0E0041
-			public const int material_timepicker_minute = 2131624001;
+			public const int material_timepicker_clock_mode_description = 2131624001;
 			
 			// aapt resource value: 0x7F0E0042
-			public const int material_timepicker_pm = 2131624002;
+			public const int material_timepicker_hour = 2131624002;
 			
 			// aapt resource value: 0x7F0E0043
-			public const int material_timepicker_select_time = 2131624003;
+			public const int material_timepicker_minute = 2131624003;
 			
 			// aapt resource value: 0x7F0E0044
-			public const int material_timepicker_text_input_mode_description = 2131624004;
+			public const int material_timepicker_pm = 2131624004;
 			
 			// aapt resource value: 0x7F0E0045
-			public const int mtrl_badge_numberless_content_description = 2131624005;
+			public const int material_timepicker_select_time = 2131624005;
 			
 			// aapt resource value: 0x7F0E0046
-			public const int mtrl_chip_close_icon_content_description = 2131624006;
+			public const int material_timepicker_text_input_mode_description = 2131624006;
 			
 			// aapt resource value: 0x7F0E0047
-			public const int mtrl_exceed_max_badge_number_content_description = 2131624007;
+			public const int mtrl_badge_numberless_content_description = 2131624007;
 			
 			// aapt resource value: 0x7F0E0048
-			public const int mtrl_exceed_max_badge_number_suffix = 2131624008;
+			public const int mtrl_chip_close_icon_content_description = 2131624008;
 			
 			// aapt resource value: 0x7F0E0049
-			public const int mtrl_picker_a11y_next_month = 2131624009;
+			public const int mtrl_exceed_max_badge_number_content_description = 2131624009;
 			
 			// aapt resource value: 0x7F0E004A
-			public const int mtrl_picker_a11y_prev_month = 2131624010;
+			public const int mtrl_exceed_max_badge_number_suffix = 2131624010;
 			
 			// aapt resource value: 0x7F0E004B
-			public const int mtrl_picker_announce_current_selection = 2131624011;
+			public const int mtrl_picker_a11y_next_month = 2131624011;
 			
 			// aapt resource value: 0x7F0E004C
-			public const int mtrl_picker_cancel = 2131624012;
+			public const int mtrl_picker_a11y_prev_month = 2131624012;
 			
 			// aapt resource value: 0x7F0E004D
-			public const int mtrl_picker_confirm = 2131624013;
+			public const int mtrl_picker_announce_current_selection = 2131624013;
 			
 			// aapt resource value: 0x7F0E004E
-			public const int mtrl_picker_date_header_selected = 2131624014;
+			public const int mtrl_picker_cancel = 2131624014;
 			
 			// aapt resource value: 0x7F0E004F
-			public const int mtrl_picker_date_header_title = 2131624015;
+			public const int mtrl_picker_confirm = 2131624015;
 			
 			// aapt resource value: 0x7F0E0050
-			public const int mtrl_picker_date_header_unselected = 2131624016;
+			public const int mtrl_picker_date_header_selected = 2131624016;
 			
 			// aapt resource value: 0x7F0E0051
-			public const int mtrl_picker_day_of_week_column_header = 2131624017;
+			public const int mtrl_picker_date_header_title = 2131624017;
 			
 			// aapt resource value: 0x7F0E0052
-			public const int mtrl_picker_invalid_format = 2131624018;
+			public const int mtrl_picker_date_header_unselected = 2131624018;
 			
 			// aapt resource value: 0x7F0E0053
-			public const int mtrl_picker_invalid_format_example = 2131624019;
+			public const int mtrl_picker_day_of_week_column_header = 2131624019;
 			
 			// aapt resource value: 0x7F0E0054
-			public const int mtrl_picker_invalid_format_use = 2131624020;
+			public const int mtrl_picker_invalid_format = 2131624020;
 			
 			// aapt resource value: 0x7F0E0055
-			public const int mtrl_picker_invalid_range = 2131624021;
+			public const int mtrl_picker_invalid_format_example = 2131624021;
 			
 			// aapt resource value: 0x7F0E0056
-			public const int mtrl_picker_navigate_to_year_description = 2131624022;
+			public const int mtrl_picker_invalid_format_use = 2131624022;
 			
 			// aapt resource value: 0x7F0E0057
-			public const int mtrl_picker_out_of_range = 2131624023;
+			public const int mtrl_picker_invalid_range = 2131624023;
 			
 			// aapt resource value: 0x7F0E0058
-			public const int mtrl_picker_range_header_only_end_selected = 2131624024;
+			public const int mtrl_picker_navigate_to_year_description = 2131624024;
 			
 			// aapt resource value: 0x7F0E0059
-			public const int mtrl_picker_range_header_only_start_selected = 2131624025;
+			public const int mtrl_picker_out_of_range = 2131624025;
 			
 			// aapt resource value: 0x7F0E005A
-			public const int mtrl_picker_range_header_selected = 2131624026;
+			public const int mtrl_picker_range_header_only_end_selected = 2131624026;
 			
 			// aapt resource value: 0x7F0E005B
-			public const int mtrl_picker_range_header_title = 2131624027;
+			public const int mtrl_picker_range_header_only_start_selected = 2131624027;
 			
 			// aapt resource value: 0x7F0E005C
-			public const int mtrl_picker_range_header_unselected = 2131624028;
+			public const int mtrl_picker_range_header_selected = 2131624028;
 			
 			// aapt resource value: 0x7F0E005D
-			public const int mtrl_picker_save = 2131624029;
+			public const int mtrl_picker_range_header_title = 2131624029;
 			
 			// aapt resource value: 0x7F0E005E
-			public const int mtrl_picker_text_input_date_hint = 2131624030;
+			public const int mtrl_picker_range_header_unselected = 2131624030;
 			
 			// aapt resource value: 0x7F0E005F
-			public const int mtrl_picker_text_input_date_range_end_hint = 2131624031;
+			public const int mtrl_picker_save = 2131624031;
 			
 			// aapt resource value: 0x7F0E0060
-			public const int mtrl_picker_text_input_date_range_start_hint = 2131624032;
+			public const int mtrl_picker_text_input_date_hint = 2131624032;
 			
 			// aapt resource value: 0x7F0E0061
-			public const int mtrl_picker_text_input_day_abbr = 2131624033;
+			public const int mtrl_picker_text_input_date_range_end_hint = 2131624033;
 			
 			// aapt resource value: 0x7F0E0062
-			public const int mtrl_picker_text_input_month_abbr = 2131624034;
+			public const int mtrl_picker_text_input_date_range_start_hint = 2131624034;
 			
 			// aapt resource value: 0x7F0E0063
-			public const int mtrl_picker_text_input_year_abbr = 2131624035;
+			public const int mtrl_picker_text_input_day_abbr = 2131624035;
 			
 			// aapt resource value: 0x7F0E0064
-			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624036;
+			public const int mtrl_picker_text_input_month_abbr = 2131624036;
 			
 			// aapt resource value: 0x7F0E0065
-			public const int mtrl_picker_toggle_to_day_selection = 2131624037;
+			public const int mtrl_picker_text_input_year_abbr = 2131624037;
 			
 			// aapt resource value: 0x7F0E0066
-			public const int mtrl_picker_toggle_to_text_input_mode = 2131624038;
+			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624038;
 			
 			// aapt resource value: 0x7F0E0067
-			public const int mtrl_picker_toggle_to_year_selection = 2131624039;
+			public const int mtrl_picker_toggle_to_day_selection = 2131624039;
 			
 			// aapt resource value: 0x7F0E0068
-			public const int nav_app_bar_navigate_up_description = 2131624040;
+			public const int mtrl_picker_toggle_to_text_input_mode = 2131624040;
 			
 			// aapt resource value: 0x7F0E0069
-			public const int nav_app_bar_open_drawer_description = 2131624041;
+			public const int mtrl_picker_toggle_to_year_selection = 2131624041;
 			
 			// aapt resource value: 0x7F0E006A
-			public const int not_set = 2131624042;
+			public const int nav_app_bar_navigate_up_description = 2131624042;
 			
 			// aapt resource value: 0x7F0E006B
-			public const int overflow_tab_title = 2131624043;
+			public const int nav_app_bar_open_drawer_description = 2131624043;
 			
 			// aapt resource value: 0x7F0E006C
-			public const int password_toggle_content_description = 2131624044;
+			public const int not_set = 2131624044;
 			
 			// aapt resource value: 0x7F0E006D
-			public const int path_password_eye = 2131624045;
+			public const int overflow_tab_title = 2131624045;
 			
 			// aapt resource value: 0x7F0E006E
-			public const int path_password_eye_mask_strike_through = 2131624046;
+			public const int password_toggle_content_description = 2131624046;
 			
 			// aapt resource value: 0x7F0E006F
-			public const int path_password_eye_mask_visible = 2131624047;
+			public const int path_password_eye = 2131624047;
 			
 			// aapt resource value: 0x7F0E0070
-			public const int path_password_strike_through = 2131624048;
+			public const int path_password_eye_mask_strike_through = 2131624048;
 			
 			// aapt resource value: 0x7F0E0071
-			public const int preference_copied = 2131624049;
+			public const int path_password_eye_mask_visible = 2131624049;
 			
 			// aapt resource value: 0x7F0E0072
-			public const int search_menu_title = 2131624050;
+			public const int path_password_strike_through = 2131624050;
 			
 			// aapt resource value: 0x7F0E0073
-			public const int status_bar_notification_info_overflow = 2131624051;
+			public const int preference_copied = 2131624051;
 			
 			// aapt resource value: 0x7F0E0074
-			public const int summary_collapsed_preference_list = 2131624052;
+			public const int search_menu_title = 2131624052;
 			
 			// aapt resource value: 0x7F0E0075
-			public const int v7_preference_off = 2131624053;
+			public const int status_bar_notification_info_overflow = 2131624053;
 			
 			// aapt resource value: 0x7F0E0076
-			public const int v7_preference_on = 2131624054;
+			public const int summary_collapsed_preference_list = 2131624054;
+			
+			// aapt resource value: 0x7F0E0077
+			public const int v7_preference_off = 2131624055;
+			
+			// aapt resource value: 0x7F0E0078
+			public const int v7_preference_on = 2131624056;
 			
 			static String()
 			{

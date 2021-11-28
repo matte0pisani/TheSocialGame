@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCLAppConfig;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,7 +10,7 @@ namespace TheSocialGame
         public App()
         {
             InitializeComponent();
-
+            ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
             MainPage = new NavigationPage(new DBtestPage());
         }
 
