@@ -16,28 +16,24 @@ namespace TheSocialGame
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            string settings = ConfigurationManager.AppSettings["connectString"];
+            string connectString = ConfigurationManager.AppSettings["connectString"];
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 
-            if (null != settings)
+            if (null != connectString)
             {
-                string connectString = settings;
-                System.Diagnostics.Debug.Print("Modified: {0}", connectString);
-
+                System.Diagnostics.Debug.Print("Connection string: {0}", connectString);
                 builder.ConnectionString = connectString;
-
-                builder.Password = "";
-                System.Diagnostics.Debug.Print("Modified: {0}", builder.ConnectionString);
             }
             else
+            {
+                System.Diagnostics.Debug.Print("Connection string is null");
                 return;
+            }
 
             string queryString =
                 "SELECT * FROM prova_db.dbo.tabella_prova "
                     + "WHERE nome='pippo' "
-                    + "ORDER BY id;";
-
-            // Provare una query con dei parametri esterni
+                    + "ORDER BY id;";   // Provare una query con dei parametri esterni
 
             using (SqlConnection connection =
                 new SqlConnection(builder.ConnectionString))
