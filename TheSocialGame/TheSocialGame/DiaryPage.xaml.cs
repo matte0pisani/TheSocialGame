@@ -41,22 +41,28 @@ namespace TheSocialGame
 
                     Button b = new Button();
                     b.BackgroundColor = Color.Transparent;
-                    b.Clicked += apriEsperienza;
+                    b.BorderWidth = 2;
+                    b.BorderColor = Color.Black;
+                    b.Clicked += async (sender, args) =>
+                    { 
+                        await Navigation.PushAsync(new VisualizzaEsperienzaPage(user, e));
+                       
+                    };
                     Frame f = new Frame();
                     f.BackgroundColor = Color.Black;
                     f.BorderColor = Color.Black;
                     Image im = new Image();
                     im.Source = ImageSource.FromFile(e.Copertina);
+                    im.Aspect = Aspect.AspectFill;
                     f.HasShadow = false;
-                    im.Scale = 2;
+                    im.Scale = 1.8;
                     f.IsClippedToBounds = true;
                     f.Content = im;
                     if (e.copertinaLiveIOS) im.Rotation = 90;
                     if (e.live)
                     {
-
-                        f.BorderColor = Color.LimeGreen;
-                       
+                        b.BorderWidth = 3;
+                        b.BorderColor = Color.LimeGreen;
                     }
                     else
                     {
@@ -102,11 +108,7 @@ namespace TheSocialGame
 
         /* Bottoni di Navigazione */
         
-       async void apriEsperienza(Object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new VisualizzaEsperienzaPage());
-            Navigation.RemovePage(this);
-        }
+      
 
         async void NotificationClicked(Object sender, EventArgs e)
         {
@@ -140,8 +142,7 @@ namespace TheSocialGame
 
         async void BackClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ProfilePage(user));
-            Navigation.RemovePage(this);
+            await Navigation.PopAsync();
         }
     }
 }

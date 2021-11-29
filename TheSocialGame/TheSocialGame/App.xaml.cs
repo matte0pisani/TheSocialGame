@@ -10,7 +10,7 @@ namespace TheSocialGame
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new DBtestPage());
+            MainPage = new NavigationPage(new WelcomePage());
         }
 
         protected override void OnStart()

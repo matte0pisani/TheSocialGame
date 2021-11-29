@@ -23,7 +23,7 @@
              <OnPlatform x:Key="iconaNotifiche"
                         x:TypeArguments="FileImageSource"
                         Android="notification.png"
-                        iOS ="search.png" />
+                        iOS ="notification.png" />
              <OnPlatform x:Key="iconaAggiungi"
                         x:TypeArguments="FileImageSource"
                         Android="plus.png"
@@ -91,12 +91,13 @@
             <OnPlatform x:Key="iconaAggiungiNero"
                          x:TypeArguments="FileImageSource"
                         Android="add.png"
-                        iOS ="add.png" />
+                        iOS ="add.png"/>
+
             <Color x:Key="FirstColor">Orange</Color>
             <Color x:Key="SecondColor">Yellow</Color>
             <Color x:Key="BackgroundColor">BlanchedAlmond</Color>
 
-
+           
 
             <!--DISTINTIVI-->
             <OnPlatform x:Key="ViaggioMare1"
