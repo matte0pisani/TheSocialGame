@@ -364,8 +364,8 @@ namespace TheSocialGame
 
         async void SettingClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SettingPage());
-            Navigation.RemovePage(this);
+            await Navigation.PushAsync(new SettingPage( user));
+           
         }
 
         async void DiaryClicked(Object sender, EventArgs e)

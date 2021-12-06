@@ -80,6 +80,24 @@
                  RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.06}"
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.12', iOS='0.13'}}"/>
 
+             <Button Text="Modifica" TextColor="white" Opacity="0.3" FontAttributes="Bold" FontSize="16"  BackgroundColor="Black" Clicked="modificaClicked"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.24}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.75}"                 
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.09}"  
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.19}" />
+             <Button x:Name="importaCopertina" Text="Importa" TextColor="Black" FontAttributes="Bold" FontSize="16"  BackgroundColor="LightGray" Clicked="cambiaCopertina"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.24}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.75}"                 
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.09}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.28}" />
+             <Button x:Name="eliminaCompertina" Text="Elimina" TextColor="black"  FontAttributes="Bold" FontSize="16"  BackgroundColor="LightGray" Clicked="eliminaCopertina"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.24}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.75}"                 
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.09}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.37}" />
+
+
+
              <ScrollView 
                  RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                  RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor={OnPlatform Android='0.735', iOS='0.9'}}"
@@ -91,7 +109,7 @@
               <Frame BackgroundColor="{StaticResource BackgroundColor}"  BorderColor="{StaticResource FirstColor}" CornerRadius="30" 
                      Grid.Row="1" Grid.Column="1" >
                   <StackLayout>
-                      <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="apriPartecipanti" />
+                      <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="partecipantiClicked" />
                       <Label Text="Partecipanti" TextColor="Black" TranslationY="-140" FontSize="Large" FontAttributes="Bold" TextDecorations="Underline" />
                       <Label x:Name="righePartecipanti" TextColor="SlateGray" TranslationY="{OnPlatform Android='-150', iOS='-145'}" FontSize="Medium" />
                   </StackLayout>
@@ -180,13 +198,15 @@
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}">
                  <ScrollView IsClippedToBounds="True" Margin="-20">
                  
-                 <Grid x:Name="layout"  Margin="-3" RowDefinitions="60, 10, 50" RowSpacing="0" ColumnDefinitions="50, 300" >
+                 <Grid x:Name="layout"  Margin="-3" RowDefinitions="{OnPlatform iOS='60, 10, 50', Android='60, 10, 65'}" RowSpacing="0" ColumnDefinitions="{OnPlatform iOS='50, 130, 105', Android='60, 140, 115'}" >
+
                      <Label x:Name="nomeschermata"  Margin="15" FontAttributes="{OnPlatform Android='Bold'}"  TextColor="Black"  FontSize="Title" TextDecorations="Underline" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10"/>
-                     <ImageButton x:Name="Esci"  Source="{StaticResource iconaX}" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" TranslationX="{OnPlatform Android='30'}"  Margin="130, 10, 5, 5" Scale="0.5" Clicked="Chiudi"/>
-                     <Label x:Name="EmptyList" Text="Ancora nessun elemento" TextColor="Black" FontSize="Title" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Margin="10" TranslationY="130"/>
-                     <ImageButton x:Name="Aggiungi" BackgroundColor="{StaticResource FirstColor}" BorderColor="Black" BorderWidth="2" TranslationX="170" TranslationY="-5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" WidthRequest="4" HeightRequest="1" Margin="0, 20, 300, 5" CornerRadius="18" Source="{StaticResource iconaAggiungi}" IsVisible="true"/>
-                    
-                    </Grid>
+                     <ImageButton x:Name="Esci"  Source="{StaticResource iconaX}" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2"   Margin="50, 10, 5, 5" Scale="0.5" Clicked="Chiudi"/>
+                     <Label x:Name="EmptyList" Text="Ancora nessun elemento" TextColor="Black" FontSize="Title" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Margin="{OnPlatform iOS='10', Android='35'}" TranslationY="130" />
+                     <ImageButton x:Name="Aggiungi" BackgroundColor="{StaticResource FirstColor}" BorderColor="Black" BorderWidth="2" TranslationX="190" TranslationY="-5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" WidthRequest="4" HeightRequest="1" Margin="{OnPlatform Android='-10, 20, 270, 5', iOS='-30, 20, 265, 5'}" CornerRadius="18" Source="{StaticResource iconaAggiungi}" IsVisible="true" Clicked="AggiungiInLista"/>
+                     <Entry x:Name="AggiungiElemento" Grid.Column="0" MaxLength="150"  BackgroundColor="Transparent" TextColor="Black" Placeholder="Nuovo elemento" Margin="6,10,-120,10" FontSize="Large" PlaceholderColor="{StaticResource FirstColor}" Completed="MettiInLista" />
+    
+                 </Grid>
                </ScrollView>
               </Frame>
 
@@ -196,22 +216,22 @@
                  RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1.5}"
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}">
                 <ScrollView IsClippedToBounds="True" Margin="-20">
-                  <Grid  x:Name="layoutGalleria"  Margin="-3" RowDefinitions="60, 10, 100" RowSpacing="0" ColumnSpacing="0" ColumnDefinitions="101, 101, 100" >
+                  <Grid  x:Name="layoutGalleria"  Margin="-3" RowDefinitions="60, 10, 100" RowSpacing="0" ColumnSpacing="0" ColumnDefinitions="{OnPlatform iOS='101, 101, 100', Android='111, 111, 110'}" >
                      <Label x:Name="TitoloGalleria" Text="Galleria" Margin="15" FontAttributes="{OnPlatform Android='Bold'}"  TextColor="Black"  FontSize="Title" TextDecorations="Underline" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10"/>
-                     <ImageButton x:Name="EsciGalleria" Source="{StaticResource iconaX}" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" TranslationX="{OnPlatform Android='30'}"  Margin="50, 10, 5, 5" Scale="0.5" Clicked="Chiudi"/>
-                     <Label x:Name="Empty" Text="Ancora nessun elemento" TextColor="Black" FontSize="Title" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Margin="10" TranslationY="80" />
-                     <ImageButton x:Name="AggiungiFoto" BackgroundColor="{StaticResource FirstColor}" BorderColor="Black" BorderWidth="2" TranslationX="170" TranslationY="-5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" WidthRequest="4" HeightRequest="1" Margin="0, 20, 230, 5" CornerRadius="18" Source="{StaticResource iconaAggiungi}" Clicked="importa"/>
+                     <ImageButton x:Name="EsciGalleria" Source="{StaticResource iconaX}" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" TranslationX="{OnPlatform Android='10'}"  Margin="50, 10, 5, 5" Scale="0.5" Clicked="Chiudi"/>
+                     <Label x:Name="Empty" Text="Ancora nessun elemento" TextColor="Black" FontSize="Title" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Margin="{OnPlatform iOS='10', Android='34'}" TranslationY="80" />
+                     <ImageButton x:Name="AggiungiFoto" BackgroundColor="{StaticResource FirstColor}" BorderColor="Black" BorderWidth="2" TranslationX="170" TranslationY="-5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" WidthRequest="4" HeightRequest="1" Margin="{OnPlatform iOS='0, 20, 230, 5', Android='10, 20, 230, 5'}" CornerRadius="18" Source="{StaticResource iconaAggiungi}" Clicked="importa"/>
                     
                  </Grid>
                 </ScrollView>
               </Frame>
 
-             <Frame x:Name="foto"
+             <Frame x:Name="foto" BackgroundColor="Black"
                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
                  RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                  RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1.8}"
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}" >
-                  <RelativeLayout >
+                  <RelativeLayout>
                       <BoxView  Color="{StaticResource FirstColor}" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=-20}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=1}"
@@ -222,15 +242,15 @@
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.07}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.07}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=-0.005}"/>
-                    <Button Text="Elimina" TextColor="Black" FontSize="Large" Clicked="EliminaFoto"
-                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.45}"
+                    <Button x:Name="EliminaDaGalleria" Text="Elimina" TextColor="Black" FontSize="Large" Clicked="EliminaFoto" BackgroundColor="Transparent"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={OnPlatform iOS='0.45', Android='0.4'}}"
                      />
-                 <ScrollView x:Name="scrolling" Orientation="Horizontal" Margin="-20" 
-                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}"
+                 <ScrollView x:Name="scrolling" Orientation="Horizontal" Margin="{OnPlatform iOS='-20', Android='-5'}" BackgroundColor="Black"
+                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={OnPlatform iOS='0.3', Android='0.25'}}"
                              RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                             RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.5}"                    >
                  
-                    <StackLayout x:Name="scroll" Orientation="Horizontal" Spacing="0" 
+                    <StackLayout x:Name="scroll" Orientation="Horizontal" Spacing="0" BackgroundColor="Black"
                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}" >
                         
                     </StackLayout>

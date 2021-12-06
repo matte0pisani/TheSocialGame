@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace TheSocialGame
 {
     public partial class VisualizzaEsperienzaPage : ContentPage
     {
+      
+
         public Utente user { get; set; }
         public Esperienza exp { get; set; }
 
@@ -28,6 +32,8 @@ namespace TheSocialGame
             Galleria.IsVisible = false;
             foto.IsVisible = false;
             EmptyList.IsVisible = false;
+            importaCopertina.IsVisible = false;
+            eliminaCompertina.IsVisible = false;
 
         }
 
@@ -85,6 +91,57 @@ namespace TheSocialGame
 
         }
 
+        
+        void modificaClicked(Object sender, EventArgs e)
+        {
+            if (importaCopertina.IsVisible)
+            {
+                importaCopertina.TranslateTo(0, -40);
+                eliminaCompertina.TranslateTo(0, -75);
+                importaCopertina.IsVisible = false;
+                eliminaCompertina.IsVisible = false;
+            }
+            else
+            {
+                importaCopertina.TranslationY = -40;
+                importaCopertina.IsVisible = true;
+                importaCopertina.TranslateTo(0, 0);
+                if (exp.Copertina != null)
+                {
+                    eliminaCompertina.TranslationY = -75;
+                    eliminaCompertina.IsVisible = true;
+                    eliminaCompertina.TranslateTo(0, 0);
+                }
+            }
+                
+        }
+
+        async void cambiaCopertina(Object sender, EventArgs e)
+        {
+            exp.Copertina = null;
+
+            var foto = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+            {
+                Title = "Aggiungi foto"
+            });
+
+            if (foto != null)
+            {
+
+                exp.Copertina = foto.FullPath;
+                await Navigation.PushAsync(new VisualizzaEsperienzaPage(user, exp));
+                Navigation.RemovePage(this);
+
+
+            }
+        }
+
+        async void eliminaCopertina(Object sender, EventArgs e)
+        {
+            exp.Copertina = null;
+            await Navigation.PushAsync(new VisualizzaEsperienzaPage(user, exp));
+            Navigation.RemovePage(this);
+        }
 
         async void NotificationClicked(Object sender, EventArgs e)
         {
@@ -119,7 +176,8 @@ namespace TheSocialGame
         async void BackClicked(Object sender, EventArgs e)
         {
 
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(new DiaryPage(user));
+            Navigation.RemovePage(this);
 
         }
 
@@ -143,13 +201,19 @@ namespace TheSocialGame
             inizializzaScorrimentoFoto();
         }
 
-        void apriPartecipanti(Object sender, EventArgs e)
+
+        void partecipantiClicked(Object sender, EventArgs e)
         {
             EmptyList.IsVisible = false;
             Visualizza.Scale = 0;
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Partecipanti";
+            apriPartecipanti();
+        }
+
+        void apriPartecipanti()
+        {
             int x = 2;
             foreach (Utente u in exp.ListaPartecipanti)
             {
@@ -173,12 +237,43 @@ namespace TheSocialGame
                 l.HorizontalOptions = LayoutOptions.StartAndExpand;
                 l.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
                 l.Margin = new Thickness(13);
+                Button b = new Button();
+                b.Text = "Rimuovi";
+                b.TextColor = Color.Black;
+                b.BackgroundColor = Color.Orange;
+                b.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
+                b.Margin = new Thickness(100, 10);
+                b.TranslationX = 30;
+                b.Clicked += async (sender, args) =>
+                {
+                    if (exp.ListaPartecipanti.Count > 2)
+                    {
+                        layout.Children.Clear();
+                        layout.Children.Add(nomeschermata);
+                        layout.Children.Add(Esci);
+                        layout.Children.Add(EmptyList);
+                        layout.Children.Add(Aggiungi);
+                        layout.Children.Add(AggiungiElemento);
+                        Aggiungi.IsVisible = true;
+                        exp.ListaPartecipanti.Remove(u);
+                        u.esperienze.Remove(exp);
+                        apriPartecipanti();
+                    }
+                    else
+                    {
+                        await DisplayAlert("Attenzione", "Un'esperienza non può avere meno di due partecipanti!", "OK");
+
+                    }
+                };
                 layout.Children.Add(f);
                 layout.Children.Add(l);
+                layout.Children.Add(b);
                 Grid.SetColumn(f, 0);
                 Grid.SetColumn(l, 1);
                 Grid.SetRow(f, x);
                 Grid.SetRow(l, x);
+                Grid.SetRow(b, x);
+                Grid.SetColumn(b, 1);
                 RowDefinition riga = new RowDefinition();
                 riga.Height = 50;
                 layout.RowDefinitions.Add(riga);
@@ -186,6 +281,8 @@ namespace TheSocialGame
 
 
             }
+            Grid.SetRow(AggiungiElemento, x);
+            AggiungiElemento.IsVisible = false;
         }
 
         async void Chiudi(Object sender, EventArgs e)
@@ -203,42 +300,157 @@ namespace TheSocialGame
                 layout.Children.Add(Esci);
                 layout.Children.Add(EmptyList);
                 layout.Children.Add(Aggiungi);
+                layout.Children.Add(AggiungiElemento);
                 Visualizza.IsVisible = false;
             }
             costruisciGriglia();
 
         }
 
+        void AggiungiInLista(Object sender, EventArgs e)
+        {
+            AggiungiElemento.IsVisible = true;
+            Aggiungi.IsVisible = false;
+        }
+
+        void MettiInLista(Object sender, EventArgs e)
+        {
+            Aggiungi.IsVisible = true;
+            if (nomeschermata.Text.Equals("Luoghi"))
+            {
+                exp.luoghi.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.luoghi);
+            } else if (nomeschermata.Text.Equals("Slogan"))
+            {
+                exp.slogan.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.slogan);
+            } else if (nomeschermata.Text.Equals("Fun Facts"))
+            {
+                
+                exp.funfacts.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.funfacts);
+            } else if (nomeschermata.Text.Equals("Playlist"))
+            {
+                exp.playlist.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.playlist);
+            } else if (nomeschermata.Text.Equals("Recensioni"))
+            {
+               
+                exp.recensioni.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.recensioni);
+            } else if (nomeschermata.Text.Equals("Altro"))
+            {
+               
+                exp.altro.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.altro);
+            } else if (nomeschermata.Text.Equals("Partecipanti"))
+            {
+                Utente u = new Utente();
+                u.username = AggiungiElemento.Text;
+                exp.ListaPartecipanti.Add(u);
+                apriPartecipanti();
+            }
+            AggiungiElemento.Text = null;
+
+        }
+
 
         void apriListaSemplice(List<string> list)
         {
+            layout.Children.Clear();
+            layout.Children.Add(nomeschermata);
+            layout.Children.Add(Esci);
+            layout.Children.Add(EmptyList);
+            layout.Children.Add(Aggiungi);
+            layout.Children.Add(AggiungiElemento);
             if (list.Count == 0)
             {
                 EmptyList.IsVisible = true;
+                Grid.SetRow(AggiungiElemento, 2);
+                AggiungiElemento.IsVisible = false;
+               
                
             }
             else
             {
                 EmptyList.IsVisible = false;
                 int x = 2;
-                foreach (string s in list)
-                {
-                    Label l = new Label();
-                    l.Text = s;
-                    l.TextColor = Color.Black;
-                    l.HorizontalOptions = LayoutOptions.CenterAndExpand;
-                    l.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
-                    l.Margin = new Thickness(13);
-                    if (x % 2 == 0) l.BackgroundColor = Color.WhiteSmoke;
-                    layout.Children.Add(l);
-                    Grid.SetColumn(l, 0);
-                    Grid.SetRow(l, x);
-                    Grid.SetColumnSpan(l, 300);
+                foreach (string s in list) {
+                    ScrollView scr = new ScrollView();
+                        Label l = new Label();
+                        l.Text = (x - 1).ToString() + ". " + s;
+                        l.TextColor = Color.Black;
+                        l.WidthRequest = Visualizza.Width;
+                        l.Margin = new Thickness(13);
+                        l.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
+                        
+                    scr.Content = l;
+                    layout.Children.Add(scr);
+                    Button b = new Button();
+                    b.Text = "Rimuovi";
+                    b.TextColor = Color.Black;
+                    b.Margin = new Thickness(0, 10);
+                    b.CornerRadius = 10;
+                    b.BackgroundColor = Color.Orange;
+                    b.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
+                    b.Clicked += async (sender, args) =>
+                    {
+                        layout.Children.Clear();
+                        layout.Children.Add(nomeschermata);
+                        layout.Children.Add(Esci);
+                        layout.Children.Add(EmptyList);
+                        layout.Children.Add(Aggiungi);
+                        layout.Children.Add(AggiungiElemento);
+                        Aggiungi.IsVisible = true;
+                        if (nomeschermata.Text.Equals("Luoghi"))
+                        {
+                            exp.luoghi.Remove(s);
+                            apriListaSemplice(exp.luoghi);
+                        }
+                        else if (nomeschermata.Text.Equals("Slogan"))
+                        {
+                            exp.slogan.Remove(s);
+                            apriListaSemplice(exp.slogan);
+                        }
+                        else if (nomeschermata.Text.Equals("Fun Facts"))
+                        {
+                            exp.funfacts.Remove(s);
+                            apriListaSemplice(exp.funfacts);
+                        }
+                        else if (nomeschermata.Text.Equals("Playlist"))
+                        {
+                            exp.playlist.Remove(s);
+                            apriListaSemplice(exp.playlist);
+                        }
+                        else if (nomeschermata.Text.Equals("Recensioni"))
+                        {
+                            exp.recensioni.Remove(s);
+                            apriListaSemplice(exp.recensioni);
+                        }
+                        else if (nomeschermata.Text.Equals("Altro"))
+                        {
+                            exp.altro.Remove(s);
+                            apriListaSemplice(exp.altro);
+                        }
+
+                    };
+                    layout.Children.Add(b);
+                    Grid.SetColumn(scr, 0);
+                    Grid.SetRow(scr, x);
+                    Grid.SetColumnSpan(scr, 2);
+                    Grid.SetRow(b, x);
+                    Grid.SetColumn(b, 2);
                     RowDefinition riga = new RowDefinition();
-                    riga.Height = 50;
+                    if (Device.RuntimePlatform == Device.iOS)
+                        riga.Height = 50;
+                    else
+                        riga.Height = 65;
                     layout.RowDefinitions.Add(riga);
                     x++;
                 }
+                Grid.SetRow(AggiungiElemento, x);
+                AggiungiElemento.IsVisible = false;
+               
                
             }
         }
@@ -258,7 +470,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Slogan";
-            apriListaSemplice(exp.luoghi);
+            apriListaSemplice(exp.slogan);
         }
 
         void FunClicked(Object sender, EventArgs e)
@@ -267,7 +479,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Fun Facts";
-            apriListaSemplice(exp.luoghi);
+            apriListaSemplice(exp.funfacts);
         }
 
         void PlaylistClicked(Object sender, EventArgs e)
@@ -276,7 +488,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Playlist";
-            apriListaSemplice(exp.luoghi);
+            apriListaSemplice(exp.playlist);
         }
 
         void RecensioniClicked(Object sender, EventArgs e)
@@ -285,7 +497,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Recensioni";
-            apriListaSemplice(exp.luoghi);
+            apriListaSemplice(exp.recensioni);
         }
 
         void AltroClicked(Object sender, EventArgs e)
@@ -294,7 +506,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Altro";
-            apriListaSemplice(exp.luoghi);
+            apriListaSemplice(exp.altro);
         }
 
         async void GalleriaClicked(Object sender, EventArgs e)
@@ -308,11 +520,16 @@ namespace TheSocialGame
 
         void inizializzaScorrimentoFoto()
         {
-           
+            if (exp.Galleria.Count == 0) EliminaDaGalleria.IsVisible = false;
+            else EliminaDaGalleria.IsVisible = true;
+
             foreach (String s in exp.Galleria)
             {
                 Frame f = new Frame();
-                f.WidthRequest = 340;
+                if (Device.RuntimePlatform == Device.iOS)
+                    f.WidthRequest = 340;
+                else
+                    f.WidthRequest = 370;
                 f.BackgroundColor = Color.Black;
                 Image im = new Image();
                 im.Source = ImageSource.FromFile(s);
@@ -387,23 +604,21 @@ namespace TheSocialGame
             }
         }
 
-        void ForzaFoto(Object sender, EventArgs e)
+        void EliminaFoto(Object sender, EventArgs e)
         {
-            double resto = scrolling.ScrollX % scroll.Children[0].Width;
-            if(resto != 0)
-            {
-                if (resto < (scroll.Children[0].Width / 2))
-                {
-                    scrolling.ScrollToAsync((scrolling.ScrollX / scroll.Children[0].Width) * scroll.Children[0].Width, 0, false);
-                } else
-                {
-                    scrolling.ScrollToAsync(((scrolling.ScrollX / scroll.Children[0].Width) + 1) * scroll.Children[0].Width, 0, false);
+            int indice = (int)(scrolling.ScrollX / scroll.Children[0].Width);
+            exp.Galleria.RemoveAt(indice);
+            scroll.Children.Clear();
+            inizializzaScorrimentoFoto();
+            layoutGalleria.Children.Clear();
+            layoutGalleria.Children.Add(TitoloGalleria);
+            layoutGalleria.Children.Add(EsciGalleria);
+            layoutGalleria.Children.Add(Empty);
+            layoutGalleria.Children.Add(AggiungiFoto);
+            inizializzaGalleria();
 
-                }
-            } else return;
         }
 
 
-        
     }
 }
