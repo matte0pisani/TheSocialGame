@@ -113,29 +113,32 @@ namespace TheSocialGame
             await SocialPointBar.ProgressTo((double)(user.puntiSocial % 10) / 10, 3000, Easing.Linear);
         }
 
-        async void RiempiPersonalityBar()
+        void RiempiPersonalityBar()
         {
             int puntiTotali = user.personalita1 + user.personalita2 + user.personalita3 + user.personalita4 + user.personalita5 + user.personalita6 + user.personalita7 + user.personalita8 + user.personalita9 + user.personalita10;
-            await Tipo1.ProgressTo((double) user.personalita1/puntiTotali, 500, Easing.Linear);
+            
+                Tipo1.ProgressTo((double)user.personalita1 / puntiTotali, 2000, Easing.Linear);
+                Tipo2.ProgressTo((double)user.personalita2 / puntiTotali, 2000, Easing.Linear);
+                 Tipo3.ProgressTo((double)user.personalita3 / puntiTotali, 2000, Easing.Linear);
+                 Tipo4.ProgressTo((double)user.personalita4 / puntiTotali, 2000, Easing.Linear);
+                Tipo5.ProgressTo((double)user.personalita5 / puntiTotali, 2000, Easing.Linear);
+                 Tipo6.ProgressTo((double)user.personalita6 / puntiTotali, 2000, Easing.Linear);
+                Tipo7.ProgressTo((double)user.personalita6 / puntiTotali, 2000, Easing.Linear);
+                 Tipo8.ProgressTo((double)user.personalita8 / puntiTotali, 2000, Easing.Linear);
+                Tipo9.ProgressTo((double)user.personalita9 / puntiTotali, 2000, Easing.Linear);
+                Tipo10.ProgressTo((double)user.personalita10 / puntiTotali, 2000, Easing.Linear);
+
             PercentualeTipo1.Text = Convert.ToString(user.personalita1 * 100 / puntiTotali) + "%";
-            await Tipo2.ProgressTo((double)user.personalita2 / puntiTotali, 500, Easing.Linear);
             PercentualeTipo2.Text = Convert.ToString(user.personalita2 * 100 / puntiTotali) + "%";
-            await Tipo3.ProgressTo((double)user.personalita3 / puntiTotali, 500, Easing.Linear);
             PercentualeTipo3.Text = Convert.ToString(user.personalita3 * 100 / puntiTotali) + "%";
-            await Tipo4.ProgressTo((double)user.personalita4 / puntiTotali, 500, Easing.Linear);
             PercentualeTipo4.Text = Convert.ToString(user.personalita4 * 100 / puntiTotali) + "%";
-            await Tipo5.ProgressTo((double)user.personalita5 / puntiTotali, 500, Easing.Linear);
             PercentualeTipo5.Text = Convert.ToString(user.personalita5 * 100 / puntiTotali) + "%";
-            await Tipo6.ProgressTo((double)user.personalita6 / puntiTotali, 500, Easing.Linear);
             PercentualeTipo6.Text = Convert.ToString(user.personalita1 * 100 / puntiTotali) + "%";
-            await Tipo7.ProgressTo((double)user.personalita6 / puntiTotali, 500, Easing.Linear);
             PercentualeTipo7.Text = Convert.ToString(user.personalita7 * 100 / puntiTotali) + "%";
-            await Tipo8.ProgressTo((double)user.personalita8 / puntiTotali, 500, Easing.Linear);
             PercentualeTipo8.Text = Convert.ToString(user.personalita8 * 100 / puntiTotali) + "%";
-            await Tipo9.ProgressTo((double)user.personalita9 / puntiTotali, 500, Easing.Linear);
             PercentualeTipo9.Text = Convert.ToString(user.personalita9 * 100 / puntiTotali) + "%";
-            await Tipo10.ProgressTo((double)user.personalita10 / puntiTotali, 500, Easing.Linear);
             PercentualeTipo10.Text = Convert.ToString(user.personalita10 * 100 / puntiTotali) + "%";
+            
         }
 
         /*inizializza indicatori personalità, necessario per far avvenire animazione ogni volta che viene aperto il menu */
@@ -234,11 +237,12 @@ namespace TheSocialGame
                 ProfilePicFrame.IsVisible = true;
                 ChangeProfilePicButton.IsVisible = true;
                 ProfilePic.Source = newFile;
-                if(Device.iOS != null)
+                switch (Device.RuntimePlatform)
                 {
-                    user.fotoLiveiOS = true;
-                    ProfilePic.Rotation = 90;
-
+                    case Device.iOS:
+                        user.fotoLiveiOS = true;
+                        ProfilePic.Rotation = 90;
+                        break;
                 }
             }
         }
@@ -294,7 +298,7 @@ namespace TheSocialGame
             TriangoloChiudi.IsVisible = true;
             TriangoloApri.IsVisible = false;
             MenuPersonalita.IsVisible = true;
-            BestFriendsFrame.TranslationY = 335;
+            BestFriendsFrame.TranslateTo(0, 335);
             Scrolling.HeightRequest = 1000;
             RiempiPersonalityBar();
         }
@@ -304,7 +308,7 @@ namespace TheSocialGame
             TriangoloChiudi.IsVisible = false;
             TriangoloApri.IsVisible = true;
             MenuPersonalita.IsVisible = false;
-            BestFriendsFrame.TranslationY = 0;
+            BestFriendsFrame.TranslateTo(0, 0);
             Scrolling.HeightRequest = 650;
             SvuotaPersonalityBar();
         }
@@ -343,7 +347,7 @@ namespace TheSocialGame
         async void AddClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddExperiencePage(user));
-            Navigation.RemovePage(this);
+            
         }
 
         async void SearchClicked(Object sender, EventArgs e)
@@ -360,14 +364,14 @@ namespace TheSocialGame
 
         async void SettingClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SettingPage());
-            Navigation.RemovePage(this);
+            await Navigation.PushAsync(new SettingPage( user));
+           
         }
 
         async void DiaryClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new DiaryPage(user));
-            Navigation.RemovePage(this);
+           
         }
 
         async void FriendsClicked(Object sender, EventArgs e)

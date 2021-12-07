@@ -78,8 +78,7 @@ namespace TheSocialGame
         async void ConfermaClicked(Object sender, EventArgs e)
         {
             EsciSenzaSalvareFrame.IsVisible = false;
-            await Navigation.PushAsync(prossima);
-            Navigation.RemovePage(this);
+            await Navigation.PopAsync();
         }
 
         void TitoloCopertina(Object sender, EventArgs e)
@@ -111,10 +110,13 @@ namespace TheSocialGame
                 Fotocamera.IsVisible = false;
                 Galleria.IsVisible = false;
                 Copertina.Source = newFile;
-                if (Device.iOS != null)
+
+                switch (Device.RuntimePlatform)
                 {
-                    nuova.copertinaLiveIOS = true;
-                    Copertina.Rotation = 90;
+                    case Device.iOS:
+                        nuova.copertinaLiveIOS = true;
+                        Copertina.Rotation = 90;
+                   break;
                 }
             }
         }
@@ -215,8 +217,8 @@ namespace TheSocialGame
         //DA CAPIRE come gestire amicizie
        async void Salva(Object sender, EventArgs e)
         {
-            if (nuova.DataInizio == null) nuova.DataInizio = DataInizio.Date;
-            if (nuova.DataFine == null) nuova.DataFine = DataFine.Date;
+            if (nuova.DataInizio.Equals(new DateTime())) nuova.DataInizio = DataInizio.Date;
+            if (nuova.DataFine.Equals(new DateTime())) nuova.DataFine = DataFine.Date;
 
             if (nuova.Titolo == null ||  nuova.Tipologia == null || nuova.ListaPartecipanti.Count == 0)
             {

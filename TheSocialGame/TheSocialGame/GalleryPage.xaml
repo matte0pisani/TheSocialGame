@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="Black"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="TheSocialGame.GalleryPage">
+    <ContentPage.Content>
+       <RelativeLayout >
+        <ImageButton BackgroundColor="White" Source="{StaticResource iconaX}" TranslationX="90" TranslationY="10" Margin="200, -20, 60, 70" Scale="0.2" />
+        <CarouselView x:Name="view" BackgroundColor="Black" Margin="0, 60" >
+            
+        </CarouselView>
+       </RelativeLayout>
+           
+    </ContentPage.Content>
+</ContentPage>

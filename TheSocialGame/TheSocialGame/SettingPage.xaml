@@ -2,9 +2,114 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="{StaticResource BackgroundColor}"
     x:Class="TheSocialGame.SettingPage">
     <ContentPage.Content>
-        <Label Text="Impostazioni" TextColor="{DynamicResource SecondColor}" BackgroundColor="{DynamicResource FirstColor}" FontFamily="{DynamicResource StandardFont}" HorizontalOptions="Center" VerticalOptions="Center" />
-   
+       <RelativeLayout>
+
+             <!--LAYOUT DI PAGINA-->
+
+            <BoxView  Color="{StaticResource FirstColor}"  
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"  />
+
+            <Label Text="Impostazioni" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform Android='35', iOS='28'}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.09}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.036', iOS='0.07'}}"/>
+               
+            <BoxView Color="{StaticResource FirstColor}" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}" />
+
+            <ImageButton x:Name="NotificationButton" Source="{StaticResource iconaNotifiche}"  BackgroundColor="Transparent" Clicked="NotificationClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.048}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+           
+            <ImageButton x:Name="HomeButton" Source="{StaticResource iconaHome}" BackgroundColor="Transparent" Clicked="HomeClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.045}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+
+            <ImageButton x:Name="SearchButton" Source="{StaticResource iconaCerca}"  BackgroundColor="Transparent" Clicked="SearchClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.055}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.945}"/>
+           
+            <ImageButton x:Name="RankingButton" Source="{StaticResource iconaClassifiche}"  BackgroundColor="Transparent" Clicked="RankingClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.047}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+
+              <ImageButton x:Name="AddExperienceButton" Source="{StaticResource iconaAggiungi}"   BackgroundColor="Transparent" Clicked="AddClicked" BorderColor="Black" BorderWidth="3" CornerRadius="10" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.945}"/>
+           
+            <ImageButton x:Name="BackButton" BackgroundColor="Transparent" Source="{StaticResource iconaIndietro}"  Clicked="BackClicked" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.015}"/>
+
+           <ScrollView  HeightRequest="{OnPlatform Android='549', iOS='563'}" 
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                <AbsoluteLayout>
+                    <Frame AbsoluteLayout.LayoutBounds="0,0,420,180" HasShadow="True" BackgroundColor="{StaticResource BackgroundColor}"/>
+                    <Label Text="Generali" TextColor="{StaticResource FirstColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,10,400,30" />
+                    <Label Text="Username:" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,60,400,30" />
+                    <Entry x:Name="Username" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" PlaceholderColor="Black" TextColor="Black" Placeholder="Titolo" AbsoluteLayout.LayoutBounds="150,57,200,40" TextChanged="TitoloCopertina"  />
+                    <Label Text="Password:" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,120,400,30" />
+                    <Entry x:Name="Password" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" PlaceholderColor="Black" TextColor="Black" Placeholder="Titolo" AbsoluteLayout.LayoutBounds="150,117,200,40" IsPassword="True" TextChanged="TitoloCopertina"  />
+                    <Frame AbsoluteLayout.LayoutBounds="0,181,420,180" HasShadow="True" BackgroundColor="{StaticResource BackgroundColor}"/>
+                    <Label Text="Privacy" TextColor="{StaticResource FirstColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,200,400,30" />
+                    <Label Text="Profilo privato" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,250,400,30" />
+                    <Switch x:Name="Privacy" AbsoluteLayout.LayoutBounds="250,250,50,30" OnColor="DarkOrange" ThumbColor="{StaticResource FirstColor}" Scale="{OnPlatform Android='1.2'}" Toggled="LiveChanged" TranslationX="{OnPlatform iOS='110'}" />
+                    <Label Text="Impostando il profilo come privato per partecipare alle esperienze di utenti non presenti tra i tuoi amici dovrai accettare l'invito" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,280,393,55', iOS='20,280,350,55'}" />
+                    <Frame AbsoluteLayout.LayoutBounds="0,362,420,380" HasShadow="True" BackgroundColor="{StaticResource BackgroundColor}" />
+                    <Label Text="Tema" TextColor="{StaticResource FirstColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,380,400,30" />
+                    <Label Text="Sfondo" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,430,400,30" />
+                    <Button BackgroundColor="LemonChiffon" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="20,480,30,30"  />
+                    <Button BackgroundColor="AntiqueWhite" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="70,480,30,30"  />
+                    <Button BackgroundColor="Bisque" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="120,480,30,30"  />
+                    <Button BackgroundColor="LavenderBlush" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="170,480,30,30"  />
+                    <Button BackgroundColor="Lavender" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="220,480,30,30"  />
+                    <Button BackgroundColor="Azure" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="270,480,30,30"  />
+                    <Button BackgroundColor="Honeydew" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="320,480,30,30"  />
+                    <Button BackgroundColor="GhostWhite" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="370,480,30,30"  />
+                    <Label Text="Colore Primario" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,530,400,30" />
+                    <Button BackgroundColor="Yellow" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="20,590,30,30"  />
+                    <Button BackgroundColor="Orange" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="70,590,30,30"  />
+                    <Button BackgroundColor="Red" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="120,590,30,30"  />
+                    <Button BackgroundColor="Pink" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="170,590,30,30"  />
+                    <Button BackgroundColor="MediumPurple" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="220,590,30,30"  />
+                    <Button BackgroundColor="Cyan" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="270,590,30,30"  />
+                    <Button BackgroundColor="GreenYellow" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="320,590,30,30"  />
+                    <Button BackgroundColor="LightGray" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="370,590,30,30"  />
+                    <Label Text="Colore Secondario" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,640,400,30" />
+                    <Button BackgroundColor="PaleGoldenrod" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="20,700,30,30"  />
+                    <Button BackgroundColor="NavajoWhite" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="70,700,30,30"  />
+                    <Button BackgroundColor="LightSalmon" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="120,700,30,30"  />
+                    <Button BackgroundColor="MistyRose" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="170,700,30,30"  />
+                    <Button BackgroundColor="Thistle" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="220,700,30,30"  />
+                    <Button BackgroundColor="PaleTurquoise" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="270,700,30,30"  />
+                    <Button BackgroundColor="PaleGreen" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="320,700,30,30"  />
+                    <Button BackgroundColor="WhiteSmoke" BorderWidth="2" BorderColor="Black"   CornerRadius="100" AbsoluteLayout.LayoutBounds="370,700,30,30"  />
+                    
+                    
+                </AbsoluteLayout>
+            </ScrollView>
+           </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
