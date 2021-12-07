@@ -69,13 +69,14 @@
                     <Frame AbsoluteLayout.LayoutBounds="0,0,420,180" HasShadow="True" BackgroundColor="{StaticResource BackgroundColor}"/>
                     <Label Text="Generali" TextColor="{StaticResource FirstColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,10,400,30" />
                     <Label Text="Username:" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,60,400,30" />
-                    <Entry x:Name="Username" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" PlaceholderColor="Black" TextColor="Black" Placeholder="Titolo" AbsoluteLayout.LayoutBounds="150,57,200,40" TextChanged="TitoloCopertina"  />
+                    <Entry x:Name="Username" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" PlaceholderColor="Black" TextColor="Black" Placeholder="Titolo" AbsoluteLayout.LayoutBounds="150,57,200,40"/> <!-- c'era un TextChanged= TitoloCopertina che però non esiste nel file .cs -->
                     <Label Text="Password:" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,120,400,30" />
-                    <Entry x:Name="Password" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" PlaceholderColor="Black" TextColor="Black" Placeholder="Titolo" AbsoluteLayout.LayoutBounds="150,117,200,40" IsPassword="True" TextChanged="TitoloCopertina"  />
+                    <Entry x:Name="Password" BackgroundColor="{OnPlatform iOS='NavajoWhite'}" PlaceholderColor="Black" TextColor="Black" Placeholder="Titolo" AbsoluteLayout.LayoutBounds="150,117,200,40" IsPassword="True"  />
+                    <!-- c'era un TextChanged= TitoloCopertina che però non esiste nel file .cs -->
                     <Frame AbsoluteLayout.LayoutBounds="0,181,420,180" HasShadow="True" BackgroundColor="{StaticResource BackgroundColor}"/>
                     <Label Text="Privacy" TextColor="{StaticResource FirstColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,200,400,30" />
                     <Label Text="Profilo privato" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,250,400,30" />
-                    <Switch x:Name="Privacy" AbsoluteLayout.LayoutBounds="250,250,50,30" OnColor="DarkOrange" ThumbColor="{StaticResource FirstColor}" Scale="{OnPlatform Android='1.2'}" Toggled="LiveChanged" TranslationX="{OnPlatform iOS='110'}" />
+                    <Switch x:Name="Privacy" AbsoluteLayout.LayoutBounds="250,250,50,30" OnColor="DarkOrange" ThumbColor="{StaticResource FirstColor}" Scale="{OnPlatform Android='1.2'}" Toggled="LiveChanged" TranslationX="{OnPlatform iOS='110'}" /> <!-- manca metodo LiveChanged-->
                     <Label Text="Impostando il profilo come privato per partecipare alle esperienze di utenti non presenti tra i tuoi amici dovrai accettare l'invito" TextColor="{StaticResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,280,393,55', iOS='20,280,350,55'}" />
                     <Frame AbsoluteLayout.LayoutBounds="0,362,420,380" HasShadow="True" BackgroundColor="{StaticResource BackgroundColor}" />
                     <Label Text="Tema" TextColor="{StaticResource FirstColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,380,400,30" />

@@ -53,7 +53,7 @@ namespace TheSocialGame
                     while (reader.Read())
                     {
                         System.Diagnostics.Debug.Print("\t{0}\t{1}\t{2}",
-                            reader[0], reader[1], reader[2]);
+                            reader.GetString(0), reader.GetString(1), reader.GetString(2));
                     }
 
                     reader.NextResult();
