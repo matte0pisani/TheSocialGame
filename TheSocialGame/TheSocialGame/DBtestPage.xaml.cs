@@ -32,24 +32,36 @@ namespace TheSocialGame
 
             string queryString =
                 "SELECT * FROM prova_db.dbo.tabella_prova "
-                    + "WHERE nome='pippo' "
-                    + "ORDER BY id;";   // Provare una query con dei parametri esterni
+                    + "WHERE nome= @nome "
+                    + "ORDER BY id;" +
+                "SELECT COUNT(*) AS totale FROM prova_db.dbo.tabella_prova "
+                    + "WHERE nome = @nome ";
 
             using (SqlConnection connection =
                 new SqlConnection(builder.ConnectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.AddWithValue("@nome", NomeQuery.Text);
 
                 try
                 {
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
+
+                    Console.WriteLine("\t\t{0}\t{1}\t{2}", reader.GetName(0), reader.GetName(1), reader.GetName(2));
+
                     while (reader.Read())
                     {
                         System.Diagnostics.Debug.Print("\t{0}\t{1}\t{2}",
                             reader[0], reader[1], reader[2]);
                     }
+
+                    reader.NextResult();
+                    reader.Read();
+                    System.Diagnostics.Debug.Print("Number of items: {0}\n", reader[0]);
+
                     reader.Close();
+
                 }
                 catch (Exception ex)
                 {
