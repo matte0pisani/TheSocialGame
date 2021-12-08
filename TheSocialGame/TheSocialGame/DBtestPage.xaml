@@ -4,16 +4,29 @@
              x:Class="TheSocialGame.DBtestPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="DB test"
+            <Label x:Name="ResultLabel"
+                Text="DB test"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Entry Placeholder="Scrivi"
                    BackgroundColor="AliceBlue"
                    x:Name="NomeQuery"
                    />
-            <Button Text="CLICK (compilare prima entry)"
+            <Button Text="SELECT (compilare prima entry)"
+                    BackgroundColor="CornflowerBlue"
+                    Clicked="Button_Clicked_Sel"
+                    />
+            <Button Text="INSERT (compilare prima entry)"
+                    BackgroundColor="ForestGreen"
+                    Clicked="Button_Clicked_Ins"
+                    />
+            <Button Text="DELETE (compilare prima entry)"
                     BackgroundColor="Red"
-                    Clicked="Button_Clicked"
+                    Clicked="Button_Clicked_Del"
+                    />
+            <Button Text="UPDATE (compilare prima entry)"
+                    BackgroundColor="Yellow"
+                    Clicked="Button_Clicked_Upd"
                     />
         </StackLayout>
     </ContentPage.Content>
