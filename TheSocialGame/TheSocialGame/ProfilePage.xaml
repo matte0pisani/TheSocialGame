@@ -4,19 +4,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
     x:Class="TheSocialGame.ProfilePage"
     NavigationPage.HasNavigationBar="False"
-    BackgroundColor="{StaticResource BackgroundColor}">
+    BackgroundColor="{DynamicResource BackgroundColor}">
+    <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
     <ContentPage.Content >
-
+        
         <RelativeLayout x:Name="RelativeLayout">
 
             <!--INIZIO E FINE PAGINA-->
-            <BoxView x:Name="UpperBound" Color="{StaticResource FirstColor}" Opacity="0.7" 
+            <BoxView x:Name="UpperBound" Color="{DynamicResource FirstColor}" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"  />
 
-            <BoxView Color="{StaticResource FirstColor}" Opacity="0.7"
+            <BoxView Color="{DynamicResource FirstColor}" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
@@ -94,83 +97,83 @@
                                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.147}" >
                         <AbsoluteLayout >
               
-                         <Line    Stroke="Orange" StrokeThickness="8"
+                         <Line    Stroke="{DynamicResource SecondColor}" StrokeThickness="8"
                                     X1="12"  X2="{OnPlatform Android='1300', iOS='1300'}"
                                    AbsoluteLayout.LayoutBounds="{OnPlatform Android='-12, 28, 1300, 5', iOS='-12, 28, 1300, 5'}" >
                              
                          </Line>
                          
-                         <ImageButton Source="{StaticResource ViaggioMare1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" IsOpaque="True" 
+                         <ImageButton Source="{StaticResource ViaggioMare1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" IsOpaque="True" 
                                       Clicked="Mare1Clicked" AbsoluteLayout.LayoutBounds="5,5,50,50" />
                             <BoxView x:Name="ViaggioMare1" AbsoluteLayout.LayoutBounds="5,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Ristorante1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Ristorante1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                      Clicked="Ristorante1Clicked"  AbsoluteLayout.LayoutBounds="65,5,50,50"/>
                             <BoxView x:Name="Ristorante1" AbsoluteLayout.LayoutBounds="65,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Sport1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Sport1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       Clicked="Sport1Clicked" AbsoluteLayout.LayoutBounds="125,5,50,50"/>
                             <BoxView x:Name="Sport1" AbsoluteLayout.LayoutBounds="125,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Discoteca1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Discoteca1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       Clicked="Disco1Clicked" AbsoluteLayout.LayoutBounds="185,5,50,50"/>
                             <BoxView x:Name="Discoteca1" AbsoluteLayout.LayoutBounds="185,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Compleanno1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Compleanno1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       Clicked="Compleanno1Clicked" AbsoluteLayout.LayoutBounds="245,5,50,50"/>
                             <BoxView x:Name="Compleanno1" AbsoluteLayout.LayoutBounds="245,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource ViaggioMontagna1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource ViaggioMontagna1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       Clicked="Montagna1Clicked" AbsoluteLayout.LayoutBounds="305,5,50,50"/>
                             <BoxView x:Name="ViaggioMontagna1" AbsoluteLayout.LayoutBounds="305,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource ViaggioCitta1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource ViaggioCitta1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       Clicked="Citta1Clicked" AbsoluteLayout.LayoutBounds="365,5,50,50"/>
                             <BoxView x:Name="ViaggioCitta1" AbsoluteLayout.LayoutBounds="365,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Cultura1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Cultura1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       Clicked="Cultura1Clicked" AbsoluteLayout.LayoutBounds="425,5,50,50"/>
                             <BoxView x:Name="Cultura1" AbsoluteLayout.LayoutBounds="425,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Aperitivo1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Aperitivo1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       Clicked="Cocktail1Clicked" AbsoluteLayout.LayoutBounds="485,5,50,50"/>
                             <BoxView x:Name="Cocktail1" AbsoluteLayout.LayoutBounds="485,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Maschera1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Maschera1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       Clicked="Maschera1Clicked" AbsoluteLayout.LayoutBounds="545,5,50,50"/>
                             <BoxView x:Name="Maschera1" AbsoluteLayout.LayoutBounds="545,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Casa1}" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Casa1}" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       Clicked="Casa1Clicked" AbsoluteLayout.LayoutBounds="605,5,50,50"/>
                             <BoxView x:Name="Casa1" AbsoluteLayout.LayoutBounds="605,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource ViaggioMare2}" Clicked="Mare2Clicked" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource ViaggioMare2}" Clicked="Mare2Clicked" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="665,5,50,50"/>
                             <BoxView x:Name="ViaggioMare2" AbsoluteLayout.LayoutBounds="665,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Ristorante2}" Clicked="Ristorante2Clicked" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Ristorante2}" Clicked="Ristorante2Clicked" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="725,5,50,50"/>
                             <BoxView x:Name="Ristorante2" AbsoluteLayout.LayoutBounds="725,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Sport2}" Clicked="Sport2Clicked" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Sport2}" Clicked="Sport2Clicked" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="785,5,50,50"/>
                             <BoxView x:Name="Sport2" AbsoluteLayout.LayoutBounds="785,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Discoteca2}" Clicked="Disco2Clicked"  BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Discoteca2}" Clicked="Disco2Clicked"  BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="845,5,50,50"/>
                             <BoxView x:Name="Disco2"  AbsoluteLayout.LayoutBounds="845,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Compleanno2}" Clicked="Compleanno2Clicked" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Compleanno2}" Clicked="Compleanno2Clicked" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="905,5,50,50"/>
                             <BoxView x:Name="Compleanno2" AbsoluteLayout.LayoutBounds="905,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource ViaggioMontagna2}" Clicked="Montagna2Clicked" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource ViaggioMontagna2}" Clicked="Montagna2Clicked" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="965,5,50,50"/>
                             <BoxView x:Name="Montagna2" AbsoluteLayout.LayoutBounds="965,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource ViaggioCitta2}" Clicked="Citta2Clicked" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource ViaggioCitta2}" Clicked="Citta2Clicked" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="1025,5,50,50"/>
                             <BoxView x:Name="Citta2" AbsoluteLayout.LayoutBounds="1025,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Cultura2}" Clicked="Cultura2Clicked" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Cultura2}" Clicked="Cultura2Clicked" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="1085,5,50,50"/>
                             <BoxView x:Name="Cultura2" AbsoluteLayout.LayoutBounds="1085,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Aperitivo2}" Clicked="Cocktail2Clicked" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Aperitivo2}" Clicked="Cocktail2Clicked" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="1145,5,50,50"/>
                             <BoxView x:Name="Cocktail2" AbsoluteLayout.LayoutBounds="1145,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Maschera2}" Clicked="Maschera2Clicked" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Maschera2}" Clicked="Maschera2Clicked" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="1205,5,50,50"/>
                             <BoxView x:Name="Maschera2" AbsoluteLayout.LayoutBounds="1205,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
-                            <ImageButton Source="{StaticResource Casa2}" Clicked="Casa2Clicked" BackgroundColor="{StaticResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
+                            <ImageButton Source="{StaticResource Casa2}" Clicked="Casa2Clicked" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="{OnPlatform Android='100', iOS='25'}" BorderColor="Black" BorderWidth="1" 
                                       AbsoluteLayout.LayoutBounds="1265,5,50,50"/>
                             <BoxView x:Name="Casa2" AbsoluteLayout.LayoutBounds="1265,5,50,50" HeightRequest="50" BackgroundColor="LightGray" CornerRadius="{OnPlatform Android='100', iOS='25'}" Opacity="0.8" />
 
-                            <Frame x:Name="DescriptionFrame" BackgroundColor="WhiteSmoke" BorderColor= "{StaticResource FirstColor}" CornerRadius="5" Padding="3" Margin="60, 0, 20, 10" HeightRequest="70" HasShadow="True" IsVisible="false">
+                            <Frame x:Name="DescriptionFrame" BackgroundColor="WhiteSmoke" BorderColor= "{DynamicResource FirstColor}" CornerRadius="5" Padding="3" Margin="60, 0, 20, 10" HeightRequest="70" HasShadow="True" IsVisible="false">
                                 <StackLayout>
-                                    <Label x:Name="TitoloDistintivo"  TextColor="{StaticResource FirstColor}" FontSize="Medium" FontAttributes="Bold" />
-                                    <BoxView Color="{StaticResource FirstColor}" HeightRequest="2"  HorizontalOptions="Fill" />
+                                    <Label x:Name="TitoloDistintivo"  TextColor="{DynamicResource FirstColor}" FontSize="Medium" FontAttributes="Bold" />
+                                    <BoxView Color="{DynamicResource FirstColor}" HeightRequest="2"  HorizontalOptions="Fill" />
                                     <Label x:Name="DescrizioneDistintivo" TextColor="Black"   Text="Hai completato almeno 3 esperienze nella &#10; categoria Viaggio al Mare" />
                                 </StackLayout>
                             </Frame>
@@ -180,7 +183,7 @@
 
 
                     <!--BARRA PUNTI SOCIAL-->
-                    <control:ProgressRing x:Name="SocialPointBar" RingThickness="9"  RingBaseColor="{StaticResource FirstColor}" RingProgressColor="{StaticResource SecondColor}" Rotation="180" 
+                    <control:ProgressRing x:Name="SocialPointBar" RingThickness="9"  RingBaseColor="{DynamicResource FirstColor}" RingProgressColor="{DynamicResource SecondColor}" Rotation="180" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.6}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.215}"
@@ -192,7 +195,7 @@
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.61}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.21}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.21}" />
-                    <Ellipse Stroke="Black" StrokeThickness="3" Fill="NavajoWhite"
+                    <Ellipse Stroke="Black" StrokeThickness="3" Fill="{DynamicResource SecondColor}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.557}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.557}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.237}"
@@ -212,12 +215,12 @@
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.321}"  />
 
                     <!--COLLEGAMENTI A DIARIO E LISTA AMICI-->
-                    <ImageButton Source="{StaticResource iconaDiario}" BackgroundColor="NavajoWhite" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="DiaryClicked"
+                    <ImageButton Source="{StaticResource iconaDiario}" BackgroundColor="{DynamicResource SecondColor}" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="DiaryClicked"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.795}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.18}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.661}"  />
-                    <ImageButton Source="{StaticResource iconaAmici}" BackgroundColor="NavajoWhite" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="FriendsClicked"
+                    <ImageButton Source="{StaticResource iconaAmici}" BackgroundColor="{DynamicResource SecondColor}" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="FriendsClicked"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.05}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.18}"
@@ -252,7 +255,7 @@
 
 
 
-                    <Frame x:Name="AddPhotoFrame" CornerRadius="20" BackgroundColor="BlanchedAlmond" Padding="8" HasShadow="True" BorderColor="{StaticResource FirstColor}"
+                    <Frame x:Name="AddPhotoFrame" CornerRadius="20" BackgroundColor="{DynamicResource SecondColor}" Padding="8" HasShadow="True" BorderColor="{DynamicResource FirstColor}"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.05}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.9}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.57}"
@@ -289,7 +292,7 @@
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.93}"/>
 
 
-                            <Button x:Name="CameraButton" Text="SCATTA ORA" FontAttributes="Bold"   CornerRadius="15" BackgroundColor="{StaticResource FirstColor}"  BorderWidth="3" TextColor="Black"
+                            <Button x:Name="CameraButton" Text="SCATTA ORA" FontAttributes="Bold"   CornerRadius="15" BackgroundColor="{DynamicResource FirstColor}"  BorderWidth="3" TextColor="Black"
                                      Clicked="CameraClicked"
                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.4}"
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.84}"
@@ -298,7 +301,7 @@
                                     <OnPlatform x:TypeArguments="x:Double" Android="25" iOS="23"/>
                                 </Button.FontSize>
                             </Button>
-                            <Button x:Name="FromGalleryButton" Text="IMPORTA DA GALLERIA" FontAttributes="Bold" CornerRadius="15"  BackgroundColor="{StaticResource FirstColor}"  BorderWidth="3" TextColor="Black"
+                            <Button x:Name="FromGalleryButton" Text="IMPORTA DA GALLERIA" FontAttributes="Bold" CornerRadius="15"  BackgroundColor="{DynamicResource FirstColor}"  BorderWidth="3" TextColor="Black"
                                      Clicked="FromGalleryClicked" 
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.84}"
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
@@ -311,7 +314,7 @@
                         </RelativeLayout>
                     </Frame>
 
-                    <Frame x:Name="ConfermaEliminazioneFrame" CornerRadius="20" BackgroundColor="BlanchedAlmond" Padding="8" HasShadow="True" BorderColor="{StaticResource FirstColor}"
+                    <Frame x:Name="ConfermaEliminazioneFrame" CornerRadius="20" BackgroundColor="{DynamicResource SecondColor}" Padding="8" HasShadow="True" BorderColor="{StaticResource FirstColor}"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.05}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.9}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.57}"
@@ -325,13 +328,13 @@
                             <Label Text="Sei sicuro di voler eliminare la tua foto profilo?" TextColor="Black" FontSize="17"
                                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.33}"/>
 
-                            <Button x:Name="Elimina" BackgroundColor="{StaticResource FirstColor}" Text="CONFERMA" FontSize="20" TextColor="Black" FontAttributes="Bold" CornerRadius="15"
+                            <Button x:Name="Elimina" BackgroundColor="{DynamicResource FirstColor}" Text="CONFERMA" FontSize="20" TextColor="Black" FontAttributes="Bold" CornerRadius="15"
                                     Clicked="EliminaFoto"
                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.65}"
                                     RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.54}"
                                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.4}"/>
 
-                            <Button x:Name="Annulla" BackgroundColor="{StaticResource FirstColor}" Text="ANNULLA" FontSize="20" TextColor="Black" FontAttributes="Bold" CornerRadius="15"
+                            <Button x:Name="Annulla" BackgroundColor="{DynamicResource FirstColor}" Text="ANNULLA" FontSize="20" TextColor="Black" FontAttributes="Bold" CornerRadius="15"
                                     Clicked="AnnullaElimina"
                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.65}"
                                     RelativeLayout.XConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.05}"
@@ -402,18 +405,18 @@
 
 
                     <!--VISUALIZZAZIONE MIGLIORI AMICI-->
-                    <Frame x:Name="BestFriendsFrame"  BackgroundColor="{StaticResource BackgroundColor}" HasShadow="False" BorderColor="Transparent"
+                    <Frame x:Name="BestFriendsFrame"  BackgroundColor="{DynamicResource BackgroundColor}" HasShadow="False" BorderColor="Transparent"
                             RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0}"
                             RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                             RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.8}"
                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.01}" >
                         <AbsoluteLayout>
-                            <BoxView BackgroundColor="NavajoWhite" Opacity="0.35" 
+                            <BoxView BackgroundColor="{DynamicResource SecondColor}" Opacity="0.35" 
                                    AbsoluteLayout.LayoutBounds="{OnPlatform Android='40, 45, 320, 170', iOS='40, 45, 320, 170'} "/>
-                            <Line    Stroke="Orange" StrokeThickness="4"
+                            <Line    Stroke="{DynamicResource FirstColor}" StrokeThickness="4"
                                     X1="24"  X2="{OnPlatform Android='300', iOS='300'}"
                                    AbsoluteLayout.LayoutBounds="{OnPlatform Android='30,105, 400, 50', iOS='30,105, 400, 50'}" />
-                            <Line    Stroke="Orange" StrokeThickness="4"
+                            <Line    Stroke="{DynamicResource FirstColor}" StrokeThickness="4"
                                     X1="24"  X2="{OnPlatform Android='300', iOS='300'}"
                                    AbsoluteLayout.LayoutBounds="{OnPlatform Android='30,155, 400, 50', iOS='30,155, 400, 50'}" />
                             <Label Text="Best Friends:" TextDecorations="Underline" FontAttributes="Bold" TextColor="Black" FontSize="{OnPlatform  Android='25', iOS='21'}"
@@ -445,7 +448,7 @@
                     </Frame>
 
                     <!--INDICATORI DI PERSONALITA-->
-                    <Frame x:Name="MenuPersonalita" BackgroundColor="Bisque" HasShadow="false" 
+                    <Frame x:Name="MenuPersonalita" BackgroundColor="{DynamicResource SecondColor}" HasShadow="false" 
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.8}"
@@ -458,25 +461,25 @@
 
                             </Line>
 
-                            <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            <ProgressBar   ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                               AbsoluteLayout.LayoutBounds="{OnPlatform Android='-72, 147, 200, 5', iOS='-72, 147, 200, 5'} "/>
-                            <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            <ProgressBar   ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                               AbsoluteLayout.LayoutBounds="{OnPlatform Android='-37, 147, 200, 5', iOS='-39, 147, 200, 5'} "/>
-                            <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270"  ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            <ProgressBar   ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270"  ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='-2, 147, 200, 5', iOS='-6, 147, 200, 5'} "/>
-                            <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            <ProgressBar   ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='33, 147, 200, 5', iOS='27, 147, 200, 5'} "/>
-                            <ProgressBar  ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            <ProgressBar  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='68, 147, 200, 5', iOS='60, 147, 200, 5'} "/>
-                            <ProgressBar  ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            <ProgressBar  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='103, 147, 200, 5', iOS='93, 147, 200, 5'} "/>
-                            <ProgressBar  ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            <ProgressBar  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='138, 147, 200, 5', iOS='126, 147, 200, 5'} "/>
-                            <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            <ProgressBar   ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='173, 147, 200, 5', iOS='159, 147, 200, 5'} "/>
-                            <ProgressBar  ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            <ProgressBar  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='208, 147, 200, 5', iOS='192, 147, 200, 5'} "/>
-                            <ProgressBar   ProgressColor="NavajoWhite" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
+                            <ProgressBar   ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='243, 147, 200, 5', iOS='225, 147, 200, 5'} "/>
 
 
@@ -484,25 +487,25 @@
 
 
 
-                            <ProgressBar x:Name="Tipo1"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                            <ProgressBar x:Name="Tipo1"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='-72, 147, 200, 5', iOS='-72, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo2"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                            <ProgressBar x:Name="Tipo2"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='-37, 147, 200, 5', iOS='-39, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo3"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270"  ScaleY="4"
+                            <ProgressBar x:Name="Tipo3"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270"  ScaleY="4"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='-2, 147, 200, 5', iOS='-6, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo4"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                            <ProgressBar x:Name="Tipo4"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='33, 147, 200, 5', iOS='27, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo5"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
+                            <ProgressBar x:Name="Tipo5"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='68, 147, 200, 5', iOS='60, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo6"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                            <ProgressBar x:Name="Tipo6"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='103, 147, 200, 5', iOS='93, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo7"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
+                            <ProgressBar x:Name="Tipo7"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='138, 147, 200, 5', iOS='126, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo8"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                            <ProgressBar x:Name="Tipo8"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='173, 147, 200, 5', iOS='159, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo9"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
+                            <ProgressBar x:Name="Tipo9"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='208, 147, 200, 5', iOS='192, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo10"  ProgressColor="{StaticResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
+                            <ProgressBar x:Name="Tipo10"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='243, 147, 200, 5', iOS='225, 147, 200, 5'} "/>
 
                             <Label Text="Competitivo" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='18', iOS='16'}" FontAttributes="Bold" 

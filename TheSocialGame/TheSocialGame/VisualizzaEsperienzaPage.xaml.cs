@@ -18,6 +18,10 @@ namespace TheSocialGame
         {
             InitializeComponent();
             user = u;
+            App.Current.Resources["BackgroundColor"] = user.sfondo;
+            App.Current.Resources["FirstColor"] = user.primario;
+            App.Current.Resources["SecondColor"] = user.secondario;
+
             exp = e;
             Titolo.Text = exp.Titolo;
             Copertina.Source = exp.Copertina;

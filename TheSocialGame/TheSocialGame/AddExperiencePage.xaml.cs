@@ -10,14 +10,16 @@ namespace TheSocialGame
     public partial class AddExperiencePage : ContentPage
     {
         Utente user;
-        Page prossima; //prossima pagina da aprire
+        Page prossima;
         Esperienza nuova;
         public AddExperiencePage(Utente us)
         {
             InitializeComponent();
             user = us;
             nuova = new Esperienza();
-
+            App.Current.Resources["BackgroundColor"] = user.sfondo;
+            App.Current.Resources["FirstColor"] = user.primario;
+            App.Current.Resources["SecondColor"] = user.secondario;
             nuova.ListaPartecipanti.Add(user);
             EsciSenzaSalvareFrame.IsVisible = false;
             CopertinaFrame.IsVisible = false;

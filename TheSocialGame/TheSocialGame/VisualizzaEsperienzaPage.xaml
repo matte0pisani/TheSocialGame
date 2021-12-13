@@ -4,13 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TheSocialGame.VisualizzaEsperienzaPage"
     NavigationPage.HasNavigationBar="False"
-    BackgroundColor="WhiteSmoke">
+    BackgroundColor="{DynamicResource BackgroundColor}">
+     <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
     <ContentPage.Content>
          <RelativeLayout>
 
              <!--LAYOUT DI PAGINA-->
 
-            <BoxView  Color="{StaticResource FirstColor}" Opacity="0.7" 
+            <BoxView  Color="{DynamicResource FirstColor}" Opacity="0.7" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
@@ -20,7 +23,7 @@
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.09}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.028', iOS='0.05'}}"/>
                
-            <BoxView Color="{StaticResource FirstColor}" Opacity="0.7"
+            <BoxView Color="{DynamicResource FirstColor}" Opacity="0.7"
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
@@ -70,7 +73,7 @@
 
             <Image x:Name="Copertina" Aspect="AspectFill" Scale="1.2" />
             </Frame>
-             <Label x:Name="Data" BackgroundColor="WhiteSmoke" TextColor="Black" FontSize="Medium" Opacity="0.8"
+             <Label x:Name="Data" BackgroundColor="{DynamicResource BackgroundColor}" TextColor="Black" FontSize="Medium" Opacity="0.8"
                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.02}"
                  RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.06}"
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"/>
@@ -106,7 +109,7 @@
 
             <Grid RowDefinitions="1, 165, 165, 165, 165, 165" ColumnDefinitions="5, *, *, 5" ColumnSpacing="5" RowSpacing="5">
 
-              <Frame BackgroundColor="{StaticResource BackgroundColor}"  BorderColor="{StaticResource FirstColor}" CornerRadius="30" 
+              <Frame BackgroundColor="{DynamicResource BackgroundColor}"  BorderColor="{DynamicResource FirstColor}" CornerRadius="30" 
                      Grid.Row="1" Grid.Column="1" >
                   <StackLayout>
                       <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="partecipantiClicked" />
@@ -114,7 +117,7 @@
                       <Label x:Name="righePartecipanti" TextColor="SlateGray" TranslationY="{OnPlatform Android='-150', iOS='-145'}" FontSize="Medium" />
                   </StackLayout>
               </Frame>    
-              <Frame BackgroundColor="{StaticResource FirstColor}"  BorderColor="{StaticResource BackgroundColor}" CornerRadius="30" 
+              <Frame BackgroundColor="{DynamicResource FirstColor}"  BorderColor="{DynamicResource BackgroundColor}" CornerRadius="30" 
                       Grid.Row="1" Grid.Column="2">
                    <StackLayout>
                       <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="LuoghiClicked" />
@@ -122,7 +125,7 @@
                       <Label x:Name="righeLuoghi" TextColor="SlateGray" TranslationY="{OnPlatform Android='-150', iOS='-145'}" FontSize="Medium" />
                   </StackLayout>
               </Frame>    
-              <Frame x:Name="fotoUno" BackgroundColor="{StaticResource FirstColor}" BorderColor="{StaticResource BackgroundColor}" CornerRadius="30"
+              <Frame x:Name="fotoUno" BackgroundColor="{DynamicResource FirstColor}" BorderColor="{DynamicResource BackgroundColor}" CornerRadius="30"
                       Grid.Row="2" Grid.Column="1">
                    <StackLayout x:Name="sostituibileUno">
                       <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="GalleriaClicked"/>
@@ -130,7 +133,7 @@
                       <Label x:Name="righeGalleria" TextColor="SlateGray" TranslationY="{OnPlatform Android='-150', iOS='-145'}" FontSize="Medium" />
                   </StackLayout>
               </Frame>    
-              <Frame BackgroundColor="{StaticResource BackgroundColor}"  BorderColor="{StaticResource FirstColor}" CornerRadius="30"
+              <Frame BackgroundColor="{DynamicResource BackgroundColor}"  BorderColor="{DynamicResource FirstColor}" CornerRadius="30"
                       Grid.Row="2" Grid.Column="2">
                    <StackLayout>
                       <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="SloganClicked" />
@@ -138,7 +141,7 @@
                       <Label x:Name="righeSlogan" TextColor="SlateGray" TranslationY="{OnPlatform Android='-150', iOS='-145'}" FontSize="Medium" />
                   </StackLayout>
               </Frame>    
-              <Frame BackgroundColor="{StaticResource FirstColor}"  BorderColor="{StaticResource BackgroundColor}" CornerRadius="30"
+              <Frame BackgroundColor="{DynamicResource FirstColor}"  BorderColor="{DynamicResource BackgroundColor}" CornerRadius="30"
                       Grid.Row="3" Grid.Column="1">
                    <StackLayout>
                       <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="FunClicked" />
@@ -146,7 +149,7 @@
                       <Label x:Name="righeFun" TextColor="SlateGray" TranslationY="{OnPlatform Android='-150', iOS='-145'}" FontSize="Medium" />
                   </StackLayout>
               </Frame>    
-              <Frame BackgroundColor="{StaticResource BackgroundColor}"  BorderColor="{StaticResource FirstColor}" CornerRadius="30"
+              <Frame BackgroundColor="{DynamicResource BackgroundColor}"  BorderColor="{DynamicResource FirstColor}" CornerRadius="30"
                       Grid.Row="3" Grid.Column="2">
                    <StackLayout>
                       <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="PlaylistClicked"/>
@@ -154,7 +157,7 @@
                       <Label x:Name="righePlaylist" TextColor="SlateGray" TranslationY="{OnPlatform Android='-150', iOS='-145'}" FontSize="Medium" />
                   </StackLayout>
               </Frame>    
-              <Frame BackgroundColor="{StaticResource BackgroundColor}" BorderColor="{StaticResource FirstColor}" CornerRadius="30"
+              <Frame BackgroundColor="{DynamicResource BackgroundColor}" BorderColor="{DynamicResource FirstColor}" CornerRadius="30"
                       Grid.Row="4" Grid.Column="1">
                    <StackLayout>
                       <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="RecensioniClicked" />
@@ -162,7 +165,7 @@
                       <Label x:Name="righeRecensioni" TextColor="SlateGray" TranslationY="{OnPlatform Android='-150', iOS='-145'}" FontSize="Medium" />
                   </StackLayout>
               </Frame>    
-              <Frame x:Name="fotoDue" BackgroundColor="{StaticResource FirstColor}"  BorderColor="{StaticResource BackgroundColor}" CornerRadius="30"
+              <Frame x:Name="fotoDue" BackgroundColor="{DynamicResource FirstColor}"  BorderColor="{DynamicResource BackgroundColor}" CornerRadius="30"
                       Grid.Row="4" Grid.Column="2">
                    <StackLayout x:Name="sostituibileDue">
                       <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="AltroClicked" />
@@ -170,7 +173,7 @@
                       <Label x:Name="righeAltro" TextColor="SlateGray" TranslationY="{OnPlatform Android='-150', iOS='-145'}" FontSize="Medium" />
                   </StackLayout>
               </Frame>    
-              <Frame x:Name="SecondariaUno" BackgroundColor="{StaticResource FirstColor}" BorderColor="{StaticResource BackgroundColor}" CornerRadius="30"
+              <Frame x:Name="SecondariaUno" BackgroundColor="{DynamicResource FirstColor}" BorderColor="{DynamicResource BackgroundColor}" CornerRadius="30"
                       Grid.Row="5" Grid.Column="1">
                    <StackLayout>
                       <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="GalleriaClicked"/>
@@ -178,7 +181,7 @@
                       <Label x:Name="righeGalleriasec" TextColor="SlateGray" TranslationY="{OnPlatform Android='-150', iOS='-145'}" FontSize="Medium" />
                   </StackLayout>
               </Frame>    
-              <Frame x:Name="SecondariaDue" BackgroundColor="{StaticResource FirstColor}"  BorderColor="{StaticResource BackgroundColor}" CornerRadius="30"
+              <Frame x:Name="SecondariaDue" BackgroundColor="{DynamicResource FirstColor}"  BorderColor="{DynamicResource BackgroundColor}" CornerRadius="30"
                       Grid.Row="5" Grid.Column="2">
                    <StackLayout>
                       <Button  HeightRequest="130" BackgroundColor="Transparent" Clicked="AltroClicked" />
@@ -191,7 +194,7 @@
               
              </Grid>
             </ScrollView>
-             <Frame x:Name="Visualizza" BackgroundColor="{StaticResource BackgroundColor}" BorderColor="{StaticResource FirstColor}"
+             <Frame x:Name="Visualizza" BackgroundColor="{DynamicResource BackgroundColor}" BorderColor="{DynamicResource FirstColor}"
                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
                  RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.8}"
                  RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1.5}"
@@ -203,14 +206,14 @@
                      <Label x:Name="nomeschermata"  Margin="15" FontAttributes="{OnPlatform Android='Bold'}"  TextColor="Black"  FontSize="Title" TextDecorations="Underline" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10"/>
                      <ImageButton x:Name="Esci"  Source="{StaticResource iconaX}" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2"   Margin="50, 10, 5, 5" Scale="0.5" Clicked="Chiudi"/>
                      <Label x:Name="EmptyList" Text="Ancora nessun elemento" TextColor="Black" FontSize="Title" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Margin="{OnPlatform iOS='10', Android='35'}" TranslationY="130" />
-                     <ImageButton x:Name="Aggiungi" BackgroundColor="{StaticResource FirstColor}" BorderColor="Black" BorderWidth="2" TranslationX="190" TranslationY="-5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" WidthRequest="4" HeightRequest="1" Margin="{OnPlatform Android='-10, 20, 270, 5', iOS='-30, 20, 265, 5'}" CornerRadius="18" Source="{StaticResource iconaAggiungi}" IsVisible="true" Clicked="AggiungiInLista"/>
-                     <Entry x:Name="AggiungiElemento" Grid.Column="0" MaxLength="150"  BackgroundColor="Transparent" TextColor="Black" Placeholder="Nuovo elemento" Margin="6,10,-120,10" FontSize="Large" PlaceholderColor="{StaticResource FirstColor}" Completed="MettiInLista" />
+                     <ImageButton x:Name="Aggiungi" BackgroundColor="{DynamicResource FirstColor}" BorderColor="Black" BorderWidth="2" TranslationX="190" TranslationY="-5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" WidthRequest="4" HeightRequest="1" Margin="{OnPlatform Android='-10, 20, 270, 5', iOS='-30, 20, 265, 5'}" CornerRadius="18" Source="{StaticResource iconaAggiungi}" IsVisible="true" Clicked="AggiungiInLista"/>
+                     <Entry x:Name="AggiungiElemento" Grid.Column="0" MaxLength="150"  BackgroundColor="Transparent" TextColor="Black" Placeholder="Nuovo elemento" Margin="6,10,-120,10" FontSize="Large" PlaceholderColor="{DynamicResource FirstColor}" Completed="MettiInLista" />
     
                  </Grid>
                </ScrollView>
               </Frame>
 
-              <Frame x:Name="Galleria" IsClippedToBounds="True" BackgroundColor="{StaticResource BackgroundColor}" BorderColor="{StaticResource FirstColor}"
+              <Frame x:Name="Galleria" IsClippedToBounds="True" BackgroundColor="{DynamicResource BackgroundColor}" BorderColor="{DynamicResource FirstColor}"
                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
                  RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.8}"
                  RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1.5}"
@@ -220,7 +223,7 @@
                      <Label x:Name="TitoloGalleria" Text="Galleria" Margin="15" FontAttributes="{OnPlatform Android='Bold'}"  TextColor="Black"  FontSize="Title" TextDecorations="Underline" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10"/>
                      <ImageButton x:Name="EsciGalleria" Source="{StaticResource iconaX}" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" TranslationX="{OnPlatform Android='10'}"  Margin="50, 10, 5, 5" Scale="0.5" Clicked="Chiudi"/>
                      <Label x:Name="Empty" Text="Ancora nessun elemento" TextColor="Black" FontSize="Title" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Margin="{OnPlatform iOS='10', Android='34'}" TranslationY="80" />
-                     <ImageButton x:Name="AggiungiFoto" BackgroundColor="{StaticResource FirstColor}" BorderColor="Black" BorderWidth="2" TranslationX="170" TranslationY="-5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" WidthRequest="4" HeightRequest="1" Margin="{OnPlatform iOS='0, 20, 230, 5', Android='10, 20, 230, 5'}" CornerRadius="18" Source="{StaticResource iconaAggiungi}" Clicked="importa"/>
+                     <ImageButton x:Name="AggiungiFoto" BackgroundColor="{DynamicResource FirstColor}" BorderColor="Black" BorderWidth="2" TranslationX="170" TranslationY="-5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" WidthRequest="4" HeightRequest="1" Margin="{OnPlatform iOS='0, 20, 230, 5', Android='10, 20, 230, 5'}" CornerRadius="18" Source="{StaticResource iconaAggiungi}" Clicked="importa"/>
                     
                  </Grid>
                 </ScrollView>
@@ -232,7 +235,7 @@
                  RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1.8}"
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}" >
                   <RelativeLayout>
-                      <BoxView  Color="{StaticResource FirstColor}" 
+                      <BoxView  Color="{DynamicResource FirstColor}" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=-20}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"

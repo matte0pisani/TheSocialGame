@@ -4,13 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TheSocialGame.DiaryPage"
     NavigationPage.HasNavigationBar="False"
-    BackgroundColor="{StaticResource BackgroundColor}">
+    BackgroundColor="{DynamicResource BackgroundColor}">
+     <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <RelativeLayout>
 
              <!--LAYOUT DI PAGINA-->
 
-            <BoxView  Color="{StaticResource FirstColor}" Opacity="0.7" 
+            <BoxView  Color="{DynamicResource FirstColor}"  
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
@@ -20,7 +23,7 @@
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.09}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.036', iOS='0.07'}}"/>
                
-            <BoxView Color="{StaticResource FirstColor}" Opacity="0.7"
+            <BoxView Color="{DynamicResource FirstColor}" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"

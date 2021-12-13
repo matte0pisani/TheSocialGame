@@ -16,9 +16,11 @@ namespace TheSocialGame
         {
             InitializeComponent();
            
-
-            
             user = us;
+            App.Current.Resources["BackgroundColor"] = user.sfondo;
+            App.Current.Resources["FirstColor"] = user.primario;
+            App.Current.Resources["SecondColor"] = user.secondario;
+
 
             creaUtenteFake();
 

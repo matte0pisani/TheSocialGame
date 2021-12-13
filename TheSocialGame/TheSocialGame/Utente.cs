@@ -35,14 +35,22 @@ namespace TheSocialGame
 
         public Dictionary<string, (int, Dictionary<int, bool>)> listaDistintivi { get; set; }
         public List<Esperienza> esperienze { get; set; }
+        public Color sfondo { get; set; }
+        public Color primario { get; set; }
+        public Color secondario { get; set; }
+        public bool privato { get; set; }
 
 
 
         public Utente()
         {
            this.listaDistintivi = inizializzaListaDistintivi();
+            this.sfondo = Color.GhostWhite;
+            this.sfondo = Color.LightGray;
+            this.sfondo = Color.WhiteSmoke;
             esperienze = new List<Esperienza>();
             fotoLiveiOS = false;
+            privato = false;
         }
 
 
