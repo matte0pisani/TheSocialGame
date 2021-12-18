@@ -15,7 +15,6 @@
     <PackageReference Include="AWSSDK.SimpleEmail" Version="3.7.0.103" />
     <PackageReference Include="PCLAppConfig" Version="1.0.1" />
     <PackageReference Include="PCLStorage" Version="1.0.2" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2244" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
