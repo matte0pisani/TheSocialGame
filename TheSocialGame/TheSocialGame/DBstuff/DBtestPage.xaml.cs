@@ -3,6 +3,8 @@ using PCLAppConfig;
 using System.Data.SqlClient;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.Generic;
+using TheSocialGame.DBstuff;
 using System.Text;
 
 namespace TheSocialGame
@@ -15,71 +17,23 @@ namespace TheSocialGame
             InitializeComponent();
         }
 
-        private void Button_Clicked_Sel(object sender, EventArgs e)
+        private async void Button_Clicked_Sel(object sender, EventArgs e)
         {
-            string connectString = ConfigurationManager.AppSettings["connectString"];
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            List<UserSimple> result = new List<UserSimple>();
+            DBcaller caller = new DBcaller();
+            ResultLabel.Text = "Waiting...";
+            await caller.GetAllUsers(NomeQuery.Text, result);
 
-            if (null != connectString)
+            StringBuilder sbuild = new StringBuilder();
+            sbuild.AppendLine(string.Format("Number of users: {0}", result.Count));
+            foreach (UserSimple u in result)
             {
-                System.Diagnostics.Debug.Print("Connection string: {0}", connectString);
-                builder.ConnectionString = connectString;
+                sbuild.AppendLine(string.Format("{0} {1} {2} {3} {4}", u.ID, u.Username, u.Password, u.PuntiSocial, u.Livello));
             }
-            else
-            {
-                System.Diagnostics.Debug.Print("Connection string is null");
-                return;
-            }
-
-            string queryString =
-                "SELECT * FROM prova_db.dbo.tabella_prova "
-                    + "WHERE nome= @nome "
-                    + "ORDER BY id;" +
-                "SELECT COUNT(*) AS totale FROM prova_db.dbo.tabella_prova "
-                    + "WHERE nome = @nome ";
-
-            StringBuilder resultString = new StringBuilder();
-            string s;
-
-            using (SqlConnection connection =
-                new SqlConnection(builder.ConnectionString))
-            {
-                SqlCommand command = new SqlCommand(queryString, connection);
-                command.Parameters.AddWithValue("@nome", NomeQuery.Text);
-
-                try
-                {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    s = string.Format("\t\t{0}\t{1}\t{2}", reader.GetName(0), reader.GetName(1), reader.GetName(2));
-                    Console.WriteLine(s);
-                    resultString.AppendLine(s);
-
-                    while (reader.Read())
-                    {
-                        s = string.Format("\t{0}\t{1}\t{2}", reader[0], reader[1], reader[2]);
-                        System.Diagnostics.Debug.Print(s);
-                        resultString.AppendLine(s);
-                    }
-
-                    reader.NextResult();
-                    reader.Read();
-                    s = string.Format("\tNumber of items: {0}\n", reader[0]);
-                    System.Diagnostics.Debug.Print(s);
-                    resultString.AppendLine(s);
-                    ResultLabel.Text = resultString.ToString();
-
-                    reader.Close();
-
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.Print(ex.Message);
-                }
-                System.Diagnostics.Debug.Print("\n");
-            }
+            ResultLabel.Text = sbuild.ToString();
         }
+
+        // questi altri metodi al momento non funzionano più; da aggiornare
 
         private async void Button_Clicked_Ins(object sender, EventArgs e)
         {

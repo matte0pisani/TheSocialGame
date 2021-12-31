@@ -11,7 +11,7 @@ namespace TheSocialGame
         {
             InitializeComponent();
             ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
-            MainPage = new NavigationPage(new WelcomePage());
+            MainPage = new NavigationPage(new DBtestPage());
         }
 
         protected override void OnStart()
