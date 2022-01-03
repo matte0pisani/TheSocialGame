@@ -20,14 +20,17 @@ namespace TheSocialGame.DBstuff
             response = new HttpResponseMessage();
         }
 
+        /** 
+         * Adds all the userse with a given @name inside the list @result
+         */
         public async Task GetAllUsers(string name, List<UserSimple> result)
         {
             string url = String.Format(ConfigurationManager.AppSettings["selectAPI"], name);
             System.Diagnostics.Debug.Print("Selecting all users with name '{0}'\n", name);
 
             response = await client.GetAsync(url);
-            System.Diagnostics.Debug.Print("Response received from API\n");
-            if (!response.IsSuccessStatusCode) throw new Exception("The API failed to respond correctly");
+            System.Diagnostics.Debug.Print("Response received from selectAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("The selectAPI failed to respond correctly");
 
             string jsonString = await response.Content.ReadAsStringAsync();
             System.Diagnostics.Debug.Print("Response: {0}\n", jsonString);
@@ -36,27 +39,29 @@ namespace TheSocialGame.DBstuff
             System.Diagnostics.Debug.Print("Array: {0}\n", jsonUsers.ToString());
 
             List<UserSimple> users = JsonConvert.DeserializeObject<List<UserSimple>>(jsonUsers.ToString());
-            System.Diagnostics.Debug.Print("API response converted to a user list\n");
+            System.Diagnostics.Debug.Print("selectAPI response converted to a user list\n");
             System.Diagnostics.Debug.Print("Number of users: {0}\n", users.Count);
-            System.Diagnostics.Debug.Print("Printing the users...\n{0}\n", users.ToString());
 
             result.AddRange(users);
             System.Diagnostics.Debug.Print("Result stored in list parameter\n");
         }
-
+        
+        /**
+         * Inserts the user @usr inside the db
+         */
         public async Task InsertUser(UserSimple usr)
         {
-            string url = ConfigurationManager.AppSettings["selectAPI"];
+            string url = ConfigurationManager.AppSettings["insertAPI"];
             System.Diagnostics.Debug.Print("Inserting in DB user {0} {1} {2} {3} {4}\n", usr.ID, usr.Username, usr.Password, usr.PuntiSocial, usr.Livello);
             // assumiamo che, dati i costruttori di UserSimple, tutte le proprietà di usr siano inizializzate. ID verrà aggiornata correttamente all'inserimento
 
             string jusr = JsonConvert.SerializeObject(usr);
-            var body = new StringContent(jusr, Encoding.UTF8, "application/json");  // "application/json" corretto?
+            var body = new StringContent(jusr, Encoding.UTF8, "application/json");
             System.Diagnostics.Debug.Print("POST body created\n");
 
             response = await client.PostAsync(url, body);
-            System.Diagnostics.Debug.Print("Response received from API\n");
-            if (!response.IsSuccessStatusCode) throw new Exception("The API failed to respond correctly");
+            System.Diagnostics.Debug.Print("Response received from insertAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("The insertAPI failed to respond correctly");
 
             string resultString = await response.Content.ReadAsStringAsync();
             if (!Int32.TryParse(resultString, out int newId)) System.Diagnostics.Debug.Print("Error while converting response string to int\n");
@@ -64,6 +69,34 @@ namespace TheSocialGame.DBstuff
 
             usr.ID = newId;
             System.Diagnostics.Debug.Print("Returning user with right ID: {0}\n", newId);
+        }
+
+        /**
+         * Removes all the users in the db with a given @name and saves the deleted users in @deleted
+         */
+        public async Task<int> DeleteAllUsers(string name, List<UserSimple> deleted)
+        {
+            string url = String.Format(ConfigurationManager.AppSettings["deleteAPI"], name);
+            System.Diagnostics.Debug.Print("Deleting all users with name '{0}'\n", name);
+
+            response = await client.GetAsync(url);
+            System.Diagnostics.Debug.Print("Response received from deleteAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("The deleteAPI failed to respond correctly");
+
+            string jsonString = await response.Content.ReadAsStringAsync();
+            System.Diagnostics.Debug.Print("Response: {0}\n", jsonString);
+            JObject json = JObject.Parse(jsonString);
+            JArray deletedUsers = (JArray)json["result"];
+            System.Diagnostics.Debug.Print("Deleted users array: {0}\n", deletedUsers.ToString());
+
+            List<UserSimple> users = JsonConvert.DeserializeObject<List<UserSimple>>(deletedUsers.ToString());
+            System.Diagnostics.Debug.Print("Deleted users array converted to a user list\n");
+            System.Diagnostics.Debug.Print("Checking correct number of deleted users: {0}={1}\n", (int)json["number"], users.Count);
+
+            deleted.AddRange(users);
+            System.Diagnostics.Debug.Print("Result stored in list parameter\n");
+
+            return (int)json["number"]; // metodi asincroni possono ritornare valori, se il metodo chiamante ne attende l'esecuzione con un await
         }
     }
 }

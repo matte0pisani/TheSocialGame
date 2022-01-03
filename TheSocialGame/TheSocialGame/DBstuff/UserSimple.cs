@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Newtonsoft.Json;
+using Xamarin.Forms.Internals;
 
 namespace TheSocialGame.DBstuff
 {
     class UserSimple
     {
+        [Preserve]
+        [JsonConstructor]
         public UserSimple(int id, string name, string password, int puntiSocial, int livello) : this(name, password, puntiSocial, livello)
         {
             ID = id;
