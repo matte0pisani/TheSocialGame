@@ -62,48 +62,16 @@ namespace TheSocialGame
 
         }
 
-        // questi altri metodi al momento non funzionano più; da aggiornare
 
-        private void Button_Clicked_Upd(object sender, EventArgs e)
+        private async void Button_Clicked_Upd(object sender, EventArgs e)
         {
-            string connectString = ConfigurationManager.AppSettings["connectString"];
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-
-            if (null != connectString)
-            {
-                System.Diagnostics.Debug.Print("Connection string: {0}", connectString);
-                builder.ConnectionString = connectString;
-            }
+            UserSimple dummyUsr = new UserSimple(4, NomeQuery.Text, "dummy", 0, 0);     // andiamo sempre a modificare, in questo esempio, la quarta riga
+            ResultLabel.Text = "Waiting...";
+            bool result = await caller.UpdateUser(dummyUsr);
+            if (result)
+                ResultLabel.Text = "User #4 updated successfully\n";
             else
-            {
-                System.Diagnostics.Debug.Print("Connection string is null");
-                return;
-            }
-
-            string queryString =
-                "UPDATE prova_db.dbo.tabella_prova SET password = @pwd WHERE nome = @nome";
-
-            using (SqlConnection connection =
-                new SqlConnection(builder.ConnectionString))
-            {
-                SqlCommand command = new SqlCommand(queryString, connection);
-                command.Parameters.AddWithValue("@nome", NomeQuery.Text);
-                command.Parameters.AddWithValue("@pwd", "not null");
-
-                try
-                {
-                    connection.Open();
-                    int result = command.ExecuteNonQuery();
-
-                    ResultLabel.Text = string.Format("\tNumber of modified rows: {0}", result);
-
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.Print(ex.Message);
-                }
-                System.Diagnostics.Debug.Print("\n");
-            }
+                ResultLabel.Text = "Some error occurred while trying to update the user\n";
         }
     }
 }

@@ -21,7 +21,7 @@ namespace TheSocialGame.DBstuff
         }
 
         /** 
-         * Adds all the userse with a given @name inside the list @result
+         * Adds all the users in the db with a given @name inside the list @result
          */
         public async Task GetAllUsers(string name, List<UserSimple> result)
         {
@@ -47,7 +47,7 @@ namespace TheSocialGame.DBstuff
         }
         
         /**
-         * Inserts the user @usr inside the db
+         * Inserts the user @usr inside the db, modifying @usr 's ID field according to his ID in the db
          */
         public async Task InsertUser(UserSimple usr)
         {
@@ -56,6 +56,8 @@ namespace TheSocialGame.DBstuff
             // assumiamo che, dati i costruttori di UserSimple, tutte le proprietà di usr siano inizializzate. ID verrà aggiornata correttamente all'inserimento
 
             string jusr = JsonConvert.SerializeObject(usr);
+            System.Diagnostics.Debug.Print("JSON created from method input: {0}\n", jusr);
+
             var body = new StringContent(jusr, Encoding.UTF8, "application/json");
             System.Diagnostics.Debug.Print("POST body created\n");
 
@@ -72,7 +74,7 @@ namespace TheSocialGame.DBstuff
         }
 
         /**
-         * Removes all the users in the db with a given @name and saves the deleted users in @deleted
+         * Removes all the users in the db with a given @name and saves the deleted users in @deleted. Returns the number of users deleted
          */
         public async Task<int> DeleteAllUsers(string name, List<UserSimple> deleted)
         {
@@ -97,6 +99,32 @@ namespace TheSocialGame.DBstuff
             System.Diagnostics.Debug.Print("Result stored in list parameter\n");
 
             return (int)json["number"]; // metodi asincroni possono ritornare valori, se il metodo chiamante ne attende l'esecuzione con un await
+        }
+
+        /**
+         * Updates the user in the db with @usr 's ID: his new Username, Password, PuntiSocial and Livello are those of @usr.
+         * Return true if the update is successfull, false otherwise
+         */
+        public async Task<bool> UpdateUser(UserSimple usr)
+        {
+            string url = ConfigurationManager.AppSettings["updateAPI"];
+            System.Diagnostics.Debug.Print("Updating in DB user {0} {1} {2} {3} {4}\n", usr.ID, usr.Username, usr.Password, usr.PuntiSocial, usr.Livello);
+
+            string jusr = JsonConvert.SerializeObject(usr);
+            System.Diagnostics.Debug.Print("JSON created from method input: {0}\n", jusr);
+
+            var body = new StringContent(jusr, Encoding.UTF8, "application/json");
+            System.Diagnostics.Debug.Print("POST body created\n");
+
+            response = await client.PostAsync(url, body);
+            System.Diagnostics.Debug.Print("Response received from updateAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("The updateAPI failed to respond correctly");
+
+            string resultString = await response.Content.ReadAsStringAsync();
+            UserSimple result = JsonConvert.DeserializeObject<UserSimple>(resultString);
+            return result.Equals(usr);
+            // non trovato modo per far tornare dalla chiamata a tsg-db-update-api il vecchio utente
+            // serve implementare una lambda che faccia select nel db in base all'id e non al nome
         }
     }
 }

@@ -32,5 +32,20 @@ namespace TheSocialGame.DBstuff
         public string Password { get; set; }
         public int PuntiSocial { get; set; }
         public int Livello { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() != this.GetType()) return false;
+            UserSimple that = (UserSimple)obj;
+            if (this.ID == that.ID && this.Username == that.Username && this.Password == that.Password 
+                && this.PuntiSocial == that.PuntiSocial && this.Livello == that.Livello)
+                return true;
+            else return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return GetType().GetHashCode() + 17 * ID + Username.GetHashCode() + Password.GetHashCode() + PuntiSocial + Livello;
+        }
     }
 }
