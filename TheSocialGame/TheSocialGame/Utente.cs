@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Amazon.Runtime.Internal.Transform;
 using Xamarin.Forms;
 
 
@@ -8,9 +10,12 @@ namespace TheSocialGame
 {
     public class Utente
     {
+        public int ID { get; set; }
         public string username { get; set; }
         public string password { get; set; }
+        public string mail { get; set; }
         public int puntiSocial { get; set; }
+        public int puntiEsperienza { get; set; }
         public int livello { get; set; }
         public string pathFotoProfilo { get; set; }
         public bool fotoLiveiOS { get; set; }
@@ -27,14 +32,11 @@ namespace TheSocialGame
         public int personalita9 { get; set; }
         public int personalita10 { get; set; }
 
-        /* MIGLIORI AMICI */
-        public Utente BestFriend1 { get; set; }
-        public Utente BestFriend2 { get; set; }
-        public Utente BestFriend3 { get; set; }
-
+       
 
         public Dictionary<string, (int, Dictionary<int, bool>)> listaDistintivi { get; set; }
         public List<Esperienza> esperienze { get; set; }
+        public Dictionary<Utente, int> amici { get; set; }
         public Color sfondo { get; set; }
         public Color primario { get; set; }
         public Color secondario { get; set; }
@@ -49,8 +51,12 @@ namespace TheSocialGame
             this.sfondo = Color.LightGray;
             this.sfondo = Color.WhiteSmoke;
             esperienze = new List<Esperienza>();
+            amici = new Dictionary<Utente, int>();
             fotoLiveiOS = false;
             privato = false;
+            puntiEsperienza = 0;
+            puntiFake();
+            
         }
 
 
@@ -100,6 +106,118 @@ namespace TheSocialGame
             mappa.Add("Casa", (0, livelliCasa));
             return mappa;
         }
+
+
+
+        public Dictionary<Utente, int> ClassificaEsperienze()
+        {
+
+
+            Dictionary<Utente, int> classifica = new Dictionary<Utente, int>();
+            classifica.Add(this, this.puntiEsperienza);
+            foreach (Utente u in this.amici.Keys)
+            {
+                classifica.Add(u, u.puntiEsperienza);
+            }
+
+            Dictionary<Utente, int> ordinata = new Dictionary<Utente, int>();
+            foreach (KeyValuePair< Utente, int> coppia in classifica.OrderByDescending(key => key.Value))
+            {
+                ordinata.Add(coppia);
+            }
+
+            return ordinata;
+        }
+
+        public Dictionary<Utente, int> ClassificaGenerale()
+        {
+            Dictionary<Utente, int> classifica = new Dictionary<Utente, int>();
+            classifica.Add(this, this.puntiEsperienza+this.livello+this.personalita1+this.personalita2+this.personalita3+this.personalita4+this.personalita5+this.personalita6+this.personalita7+this.personalita8+this.personalita9+this.personalita10);
+
+            foreach (Utente u in this.amici.Keys)
+            {
+                int punteggio = u.puntiEsperienza + u.livello +u.personalita1 +u.personalita2 + u.personalita3 + u.personalita4 + u.personalita5 + u.personalita6 + u.personalita7 + u.personalita8 + u.personalita9 + u.personalita10;
+                classifica.Add(u, punteggio);
+            }
+            Dictionary<Utente, int> ordinata = new Dictionary<Utente, int>();
+            foreach (KeyValuePair<Utente, int> coppia in classifica.OrderByDescending(key => key.Value))
+            {
+                ordinata.Add(coppia);
+            }
+
+            return ordinata;
+        }
+
+
+        public void aggiungiAmici(List<Utente> partecipanti)
+        {
+            foreach (Utente u in partecipanti)
+            {
+                if (!(u == this))
+                {
+
+                    if (this.amici.Keys.Contains(u)) this.amici[u]++;
+                    else this.amici.Add(u, 1);
+                }
+              
+            }
+        }
+
+        public void decrementaAmici(List<Utente> partecipanti)
+        {
+            foreach (Utente u in partecipanti)
+            {
+                if (this.amici.ContainsKey(u))
+                {
+                    if (this.amici[u] == 1)
+                        this.amici.Remove(u);
+                    else this.amici[u]--;
+                }
+            }
+        }
+
+
+        public Dictionary<Utente, int> getBestFriends()
+        {
+            Dictionary<Utente, int> best = new Dictionary<Utente, int>();
+            foreach (KeyValuePair<Utente, int> coppia in amici.OrderByDescending(key => key.Value).Take(3))
+            {
+                best.Add(coppia);
+            }
+            return best;
+        }
+
+        public void elimina()
+        {
+            // da implementare eliminazione da database
+            return;
+        }
+
+        public void puntiFake()
+        {
+            this.puntiSocial = new Random().Next(100);
+            this.livello = (this.puntiSocial / 10) + 1;
+            this.personalita1 = new Random().Next(100);
+            this.personalita2 = new Random().Next(100);
+            this.personalita3 = new Random().Next(100);
+            this.personalita4 = new Random().Next(100);
+            this.personalita5 = new Random().Next(100);
+            this.personalita6 = new Random().Next(100);
+            this.personalita7 = new Random().Next(100);
+            this.personalita8 = new Random().Next(100);
+            this.personalita9 = new Random().Next(100);
+            this.personalita10 = new Random().Next(100);
+
+        }
+
+
+
+
+
+
+
+
+
 
     }
 

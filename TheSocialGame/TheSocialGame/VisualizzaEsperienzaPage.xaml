@@ -19,10 +19,17 @@
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"  />
 
-            <Label x:Name="Titolo" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform Android='35', iOS='28'}"
+            <Label x:Name="Titolo" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform Android='35', iOS='28'}" 
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.09}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.028', iOS='0.05'}}"/>
-               
+
+            <ImageButton Source="{StaticResource iconaCestino}" BackgroundColor="Transparent" Clicked="eliminaEsperienza"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.88}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.015', iOS='0.02'}}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.12}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.15}" />
+                   
+
             <BoxView Color="{DynamicResource FirstColor}" Opacity="0.7"
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
@@ -193,6 +200,7 @@
                       
               
              </Grid>
+            
             </ScrollView>
              <Frame x:Name="Visualizza" BackgroundColor="{DynamicResource BackgroundColor}" BorderColor="{DynamicResource FirstColor}"
                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"

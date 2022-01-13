@@ -2,9 +2,32 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="TheSocialGame.FriendsPage">
+    x:Class="TheSocialGame.FriendsPage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="{DynamicResource BackgroundColor}">
     <ContentPage.Content>
-        
-        <Label Text="Amici" TextColor="{DynamicResource SecondColor}" BackgroundColor="{DynamicResource FirstColor}" FontFamily="{DynamicResource StandardFont}" HorizontalOptions="Center" VerticalOptions="Center" />
-    </ContentPage.Content>
+        <RelativeLayout>
+     <BoxView  Color="{DynamicResource FirstColor}"  
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"  />
+
+      <Label Text="Amici" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform Android='35', iOS='28'}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.09}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.036', iOS='0.07'}}"/>
+
+      <ImageButton x:Name="BackButton" BackgroundColor="Transparent" Source="{StaticResource iconaIndietro}"  Clicked="BackClicked" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.015}"/>
+
+    <ScrollView  Margin="0, 75" WidthRequest="411" HeightRequest="584">
+                 <Grid x:Name="Griglia"  RowSpacing="0"  RowDefinitions="90" ColumnDefinitions="90">
+                
+                  </Grid>
+    </ScrollView>
+        </RelativeLayout>
+      </ContentPage.Content>
 </ContentPage>

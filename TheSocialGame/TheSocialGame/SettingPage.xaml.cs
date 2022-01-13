@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace TheSocialGame
@@ -64,7 +64,7 @@ namespace TheSocialGame
 
         async void RankingClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RankingPage());
+            await Navigation.PushAsync(new RankingPage(user));
             Navigation.RemovePage(this);
         }
 
@@ -284,6 +284,22 @@ namespace TheSocialGame
             user.secondario = Color.FromHex((string)sec.SelectedItem);
             Navigation.PushAsync(new SettingPage(user));
             Navigation.RemovePage(this);
+        }
+
+        async void elimina(Object sender, EventArgs e)
+        {
+          bool answer = await DisplayAlert("Attenzione", "Eliminando l'account perderai tutti i contenuti ad esso associati", "CONFERMA", "ANNULLA");
+            if (answer)
+            {
+                user.elimina();
+                await Navigation.PushAsync(new LoginPage());
+            }
+           
+        }
+
+        async void esci(Object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
         }
     }
 }

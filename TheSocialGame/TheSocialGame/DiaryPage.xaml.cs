@@ -47,8 +47,9 @@ namespace TheSocialGame
                     b.BorderWidth = 2;
                     b.BorderColor = Color.Black;
                     b.Clicked += async (sender, args) =>
-                    { 
+                    {
                         await Navigation.PushAsync(new VisualizzaEsperienzaPage(user, e));
+                              Navigation.RemovePage(this);
                        
                     };
                     Frame f = new Frame();
@@ -133,7 +134,7 @@ namespace TheSocialGame
 
         async void RankingClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RankingPage());
+            await Navigation.PushAsync(new RankingPage(user));
             Navigation.RemovePage(this);
         }
 

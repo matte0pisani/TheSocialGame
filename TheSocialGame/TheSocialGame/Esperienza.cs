@@ -41,5 +41,15 @@ namespace TheSocialGame
 
 
         }
+
+        public void elimina()
+        {
+            foreach (Utente u in this.ListaPartecipanti)
+            {
+                u.esperienze.Remove(this);
+                foreach (Utente us in this.ListaPartecipanti)
+                    u.decrementaAmici(this.ListaPartecipanti);
+            }
+        }
     }
 }

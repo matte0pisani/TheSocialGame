@@ -23,8 +23,15 @@ namespace TheSocialGame
             {
                 Utente usr = new Utente();
                 usr.username = UsernameEntry.Text;
+                usr.mail = Mail.Text;
+                usr.password = passwordEntry.Text;
                 await Navigation.PushAsync(new ProfilePage(usr));
             }
+        }
+
+        async void BackClicked(Object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

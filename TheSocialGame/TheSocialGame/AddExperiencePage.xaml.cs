@@ -63,7 +63,7 @@ namespace TheSocialGame
         void RankingClicked(Object sender, EventArgs e)
         {
             EsciSenzaSalvareFrame.IsVisible = true;
-            prossima = new RankingPage();
+            prossima = new RankingPage(user);
         }
 
          void BackClicked(Object sender, EventArgs e)
@@ -216,7 +216,7 @@ namespace TheSocialGame
         }
 
 
-        //DA CAPIRE come gestire amicizie
+       
        async void Salva(Object sender, EventArgs e)
         {
             if (nuova.DataInizio.Equals(new DateTime())) nuova.DataInizio = DataInizio.Date;
@@ -240,8 +240,11 @@ namespace TheSocialGame
                     Dictionary<int, bool> diz = u.listaDistintivi[nuova.Tipologia].Item2;
                     x++;
                     u.listaDistintivi[nuova.Tipologia] = (x, diz);
+                    u.puntiEsperienza++;
+                    u.aggiungiAmici(nuova.ListaPartecipanti);
                 }
-                await Navigation.PushAsync(new DiaryPage(user));
+                
+                await Navigation.PushAsync(new ProfilePage(user));
                 Navigation.RemovePage(this);
             }
         }

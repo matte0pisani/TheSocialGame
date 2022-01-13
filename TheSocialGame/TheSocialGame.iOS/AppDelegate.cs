@@ -28,7 +28,7 @@ namespace TheSocialGame.iOS
             ProgressRingRenderer.Init();
         //    ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
             LoadApplication(new App());
-
+            ObjCRuntime.Class.ThrowOnInitFailure = false;
             return base.FinishedLaunching(app, options);
         }
     }

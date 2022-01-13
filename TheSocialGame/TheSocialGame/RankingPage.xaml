@@ -2,9 +2,81 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="{DynamicResource BackgroundColor}"
     x:Class="TheSocialGame.RankingPage">
     <ContentPage.Content>
-         <Label Text="Classifiche" TextColor="{DynamicResource SecondColor}" BackgroundColor="{DynamicResource FirstColor}" FontFamily="{DynamicResource StandardFont}" HorizontalOptions="Center" VerticalOptions="Center" />
-   
+        <RelativeLayout>
+           <BoxView x:Name="UpperBound" Color="{DynamicResource FirstColor}" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"  />
+
+            <BoxView Color="{DynamicResource FirstColor}" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}" />
+
+
+            <!--TASTI DI NAVIGAZIONE-->
+            <ImageButton x:Name="NotificationButton" Source="{StaticResource iconaNotifiche}"  BackgroundColor="Transparent" Clicked="NotificationClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.048}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+
+            <ImageButton x:Name="HomeButton" Source="{StaticResource iconaHome}" BackgroundColor="Transparent" Clicked="HomeClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.045}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+
+            <ImageButton x:Name="AddExperienceButton" Source="{StaticResource iconaAggiungi}"   BackgroundColor="Transparent" Clicked="AddClicked" BorderColor="Black" BorderWidth="3" CornerRadius="10" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.945}"/>
+
+            <ImageButton x:Name="SearchButton" Source="{StaticResource iconaCerca}"  BackgroundColor="Transparent" Clicked="SearchClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.055}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.945}"/>
+
+            <ImageButton x:Name="RankingButton" Source="{StaticResource iconaClassifiche}"  BackgroundColor="Transparent" Clicked="RankingClicked"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.047}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
+
+            <ImageButton x:Name="BackButton" BackgroundColor="Transparent" Source="{StaticResource iconaIndietro}"  Clicked="BackClicked" 
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.01}"/>
+
+             <Label Text="Classifiche" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform Android='35', iOS='28'}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.09}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.036', iOS='0.07'}}"/>
+
+             <Button x:Name="generali" Text="Generale" FontSize="{OnPlatform Android='28', iOS='20'}" FontAttributes="Bold" Clicked="generaliClicked"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.52}"/>
+             <Button x:Name="esperienze" Text="Esperienze" FontSize="{OnPlatform Android='28', iOS='20'}" FontAttributes="Bold" Clicked="esperienzeClicked"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.52}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.52}"/>
+
+              <ScrollView  Margin="0,126" WidthRequest="411" HeightRequest="498">
+                  <Grid x:Name="Griglia"  RowSpacing="0"  RowDefinitions="70" ColumnDefinitions="100, 210, 100">
+                  
+
+                  </Grid>
+              </ScrollView>
+
+           </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

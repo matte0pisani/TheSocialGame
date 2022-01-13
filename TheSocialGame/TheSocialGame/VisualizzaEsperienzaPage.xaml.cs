@@ -167,7 +167,7 @@ namespace TheSocialGame
 
         async void RankingClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RankingPage());
+            await Navigation.PushAsync(new RankingPage(user));
             Navigation.RemovePage(this);
         }
 
@@ -244,7 +244,7 @@ namespace TheSocialGame
                 Button b = new Button();
                 b.Text = "Rimuovi";
                 b.TextColor = Color.Black;
-                b.BackgroundColor = Color.Orange;
+                b.BackgroundColor = this.user.secondario;
                 b.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
                 b.Margin = new Thickness(100, 10);
                 b.TranslationX = 30;
@@ -395,7 +395,7 @@ namespace TheSocialGame
                     b.TextColor = Color.Black;
                     b.Margin = new Thickness(0, 10);
                     b.CornerRadius = 10;
-                    b.BackgroundColor = Color.Orange;
+                    b.BackgroundColor = this.user.secondario;
                     b.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
                     b.Clicked += async (sender, args) =>
                     {
@@ -622,6 +622,18 @@ namespace TheSocialGame
             inizializzaGalleria();
 
         }
+
+      async  void eliminaEsperienza(Object sender, EventArgs e)
+        {
+            bool answer = await DisplayAlert("Attenzione", "Eliminando questa esperienza la cancellerai dal diario di tutti i partecipanti", "CONFERMA", "ANNULLA");
+            if(answer)
+            {
+                this.exp.elimina();
+                await Navigation.PushAsync(new ProfilePage(user));
+                Navigation.RemovePage(this);
+            }
+        }      
+
 
 
     }

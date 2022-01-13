@@ -19,7 +19,8 @@
             <Label Text="Impostazioni" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform Android='35', iOS='28'}"
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.09}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.036', iOS='0.07'}}"/>
-               
+
+         
             <BoxView Color="{DynamicResource FirstColor}" 
                      RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
@@ -118,7 +119,12 @@
                     <Button BackgroundColor="PaleGreen" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='320,700,30,30', iOS='290,700,27,27'}" Clicked="cambiaSecondario" />
                     <Button BackgroundColor="WhiteSmoke" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='370,700,30,30', iOS='335,700,27,27'}" Clicked="cambiaSecondario" />
                     -->
-                    
+                    <Frame AbsoluteLayout.LayoutBounds="0,745,420,180" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}"/>
+                    <Label Text="Gestione account" TextColor="{DynamicResource SecondColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,760,400,30" />
+                    <Button Text="Elimina Account" TextColor="{DynamicResource FirstColor}" FontSize="20" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="100,820,200,60"  Clicked="elimina" />
+                    <Button Text="Esci" FontSize="20" TextColor="{DynamicResource FirstColor}" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="100,870,200,60"  Clicked="esci" />
+                   
+                   
                 </AbsoluteLayout>
             </ScrollView>
            </RelativeLayout>

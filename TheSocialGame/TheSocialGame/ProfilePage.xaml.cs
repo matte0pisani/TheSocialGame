@@ -21,8 +21,8 @@ namespace TheSocialGame
             App.Current.Resources["FirstColor"] = user.primario;
             App.Current.Resources["SecondColor"] = user.secondario;
 
-
             creaUtenteFake();
+           
 
             if (user.pathFotoProfilo == null)
             {
@@ -57,56 +57,29 @@ namespace TheSocialGame
         /* Mostra i tre "migliori amici", ordinati per numero di esperienze condivise, inserendo il loro username come testo degli appositi label*/
         void MostraAmici()
         {
-            BF1.Text ="@"+user.BestFriend1.username;
-            BF2.Text ="@" + user.BestFriend2.username;
-            BF3.Text ="@" + user.BestFriend3.username;
-
-            //provvisorio, bisognerà accedere ad esperienze in comune
-            int x, y, z;
-            x = new Random().Next(1000);
-            y = new Random().Next(1000);
-            z = new Random().Next(1000);
-
-            if( x > y && x > z)
-            {
-                EspBF1.Text = Convert.ToString(x) + " esperienze insieme";
-                if(y> z)
+            Dictionary<Utente, int> best = user.getBestFriends();
+          
+                int i = 1;
+               foreach( KeyValuePair< Utente, int> coppia in best)
                 {
-                    EspBF2.Text = Convert.ToString(y) + " esperienze insieme";
-                    EspBF3.Text = Convert.ToString(z) + " esperienze insieme";
-                } else
-                {
-                    EspBF2.Text = Convert.ToString(z) + " esperienze insieme";
-                    EspBF3.Text = Convert.ToString(y) + " esperienze insieme";
+                    if (i == 1)
+                    {
+                        BF1.Text = "@" + coppia.Key.username;
+                        EspBF1.Text = coppia.Value.ToString() + " esperienze insieme";
+                        i++;
+                    }
+                    else if (i == 2)
+                    {
+                        BF2.Text = "@" + coppia.Key.username;
+                        EspBF2.Text = coppia.Value.ToString() + " esperienze insieme";
+                        i++;
+                    } else if( i == 3)
+                    {
+                        BF3.Text = "@" + coppia.Key.username;
+                        EspBF3.Text = coppia.Value.ToString() + " esperienze insieme";
+                        i++;
+                    }
                 }
-            } else if(y>x && y> z)
-            {
-                EspBF1.Text = Convert.ToString(y) + " esperienze insieme";
-                if (x > z)
-                {
-                    EspBF2.Text = Convert.ToString(x) + " esperienze insieme";
-                    EspBF3.Text = Convert.ToString(z) + " esperienze insieme";
-                }
-                else
-                {
-                    EspBF2.Text = Convert.ToString(z) + " esperienze insieme";
-                    EspBF3.Text = Convert.ToString(x) + " esperienze insieme";
-                }
-            }
-            else
-            {
-                EspBF1.Text = Convert.ToString(z) + " esperienze insieme";
-                if (x > y)
-                {
-                    EspBF2.Text = Convert.ToString(x) + " esperienze insieme";
-                    EspBF3.Text = Convert.ToString(y) + " esperienze insieme";
-                }
-                else
-                {
-                    EspBF2.Text = Convert.ToString(z) + " esperienze insieme";
-                    EspBF3.Text = Convert.ToString(y) + " esperienze insieme";
-                }
-            }
 
         }
         
@@ -349,6 +322,7 @@ namespace TheSocialGame
         async void AddClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddExperiencePage(user));
+                 Navigation.RemovePage(this); 
             
         }
 
@@ -360,8 +334,8 @@ namespace TheSocialGame
 
         async void RankingClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RankingPage());
-            Navigation.RemovePage(this);
+            await Navigation.PushAsync(new RankingPage(user));
+          
         }
 
         async void SettingClicked(Object sender, EventArgs e)
@@ -378,58 +352,10 @@ namespace TheSocialGame
 
         async void FriendsClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new FriendsPage());
-            Navigation.RemovePage(this);
+            await Navigation.PushAsync(new FriendsPage(user));
+          
         }
 
-        void creaUtenteFake()
-        {
-            user.puntiSocial = new Random().Next(100);
-            user.livello = (user.puntiSocial / 10) + 1;
-            user.personalita1 = new Random().Next(100);
-            user.personalita2 = new Random().Next(100);
-            user.personalita3 = new Random().Next(100);
-            user.personalita4 = new Random().Next(100);
-            user.personalita5 = new Random().Next(100);
-            user.personalita6 = new Random().Next(100);
-            user.personalita7 = new Random().Next(100);
-            user.personalita8 = new Random().Next(100);
-            user.personalita9 = new Random().Next(100);
-            user.personalita10 = new Random().Next(100);
-
-            user.BestFriend1 = new Utente();
-            user.BestFriend2 = new Utente();
-            user.BestFriend3 = new Utente();
-            user.BestFriend1.username = "BestFriend1";
-            user.BestFriend2.username = "BestFriend2";
-            user.BestFriend3.username = "BestFriend3";
-
-
-           
-            user.listaDistintivi["ViaggioMare"].Item2[1] = new Random().Next(0,2) > 0;
-            user.listaDistintivi["Ristorante"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Sport"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Compleanno"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Maschera"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["ViaggioMontagna"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["ViaggioCitta"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Cultura"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Cocktail"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Casa"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["ViaggioMare"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Ristorante"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Sport"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Compleanno"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Maschera"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["ViaggioMontagna"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["ViaggioCitta"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Cultura"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Cocktail"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Casa"].Item2[2] = new Random().Next(0, 2) > 0;
-
-
-
-        }
 
         async void Mare1Clicked(System.Object sender, System.EventArgs e)
         {
@@ -651,6 +577,37 @@ namespace TheSocialGame
             DescriptionFrame.IsVisible = false;
         }
 
+
+
+        private void creaUtenteFake()
+        {
+           
+         
+
+
+            user.listaDistintivi["ViaggioMare"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Ristorante"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Sport"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Compleanno"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Maschera"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["ViaggioMontagna"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["ViaggioCitta"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Cultura"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Cocktail"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Casa"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["ViaggioMare"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Ristorante"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Sport"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Compleanno"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Maschera"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["ViaggioMontagna"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Cultura"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Cocktail"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.listaDistintivi["Casa"].Item2[2] = new Random().Next(0, 2) > 0;
+
+
+
+        }
 
 
     }

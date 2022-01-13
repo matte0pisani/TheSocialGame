@@ -195,7 +195,7 @@
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.61}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.21}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.21}" />
-                    <Ellipse Stroke="Black" StrokeThickness="3" Fill="{DynamicResource SecondColor}"
+                    <Ellipse Stroke="Black" StrokeThickness="3" Fill="{DynamicResource SecondColor}" Opacity="0.25"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.557}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.557}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.237}"
@@ -215,24 +215,18 @@
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.321}"  />
 
                     <!--COLLEGAMENTI A DIARIO E LISTA AMICI-->
-                    <ImageButton Source="{StaticResource iconaDiario}" BackgroundColor="{DynamicResource SecondColor}" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="DiaryClicked"
+                    <ImageButton Source="{StaticResource iconaDiario}" CornerRadius="35" BackgroundColor="Transparent" BorderColor="{DynamicResource FirstColor}" BorderWidth="2" Clicked="DiaryClicked"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.795}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.18}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.661}"  />
-                    <ImageButton Source="{StaticResource iconaAmici}" BackgroundColor="{DynamicResource SecondColor}" CornerRadius="35" BorderColor="{StaticResource FirstColor}" BorderWidth="2" Clicked="FriendsClicked"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.721}"  />
+                    <ImageButton Source="{StaticResource iconaAmici}" CornerRadius="35" BackgroundColor="Transparent"  BorderColor="{DynamicResource FirstColor}" BorderWidth="2" Clicked="FriendsClicked"
                         RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.05}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.18}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.661}"  />
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.731}"  />
 
-                    <Label Text="Diario" TextColor="Black" FontAttributes="Bold" FontSize="21"
-                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.813}"
-                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.831}"  />
-                    <Label Text="Amici" TextColor="Black" FontAttributes="Bold" FontSize="21"
-                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.06}"
-                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.831}"  />
-
+                  
                     <!--FOTO PROFILO e GESTIONE-->
                     <Frame  x:Name="ProfilePicFrame" BorderColor="Black" BackgroundColor="Black" IsClippedToBounds="True" Padding="0" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.55}"
@@ -374,7 +368,7 @@
 
 
                     <!--GESTIONE MENU PERSONALITA-->
-                    <Label Text="Personalità" TextColor="Black" FontAttributes="Bold" TextDecorations="Underline"
+                    <Label Text="Personalità" TextColor="Black" FontAttributes="Bold" 
                          RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent,  Factor=0.05}"
                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Factor=0.931}">
 
@@ -419,7 +413,7 @@
                             <Line    Stroke="{DynamicResource FirstColor}" StrokeThickness="4"
                                     X1="24"  X2="{OnPlatform Android='300', iOS='300'}"
                                    AbsoluteLayout.LayoutBounds="{OnPlatform Android='30,155, 400, 50', iOS='30,155, 400, 50'}" />
-                            <Label Text="Best Friends:" TextDecorations="Underline" FontAttributes="Bold" TextColor="Black" FontSize="{OnPlatform  Android='25', iOS='21'}"
+                            <Label Text="Best Friends:"  FontAttributes="Bold" TextColor="Black" FontSize="{OnPlatform  Android='25', iOS='21'}"
                                     AbsoluteLayout.LayoutBounds="{OnPlatform Android='-2, 0, 160, 40', iOS='-2, 0, 160, 40'} "/>
                             <Label Text="1" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform  Android='30', iOS='27'}"
                                  AbsoluteLayout.LayoutBounds="{OnPlatform Android='10, 60, 160, 40', iOS='10, 60, 160, 40'}" />
