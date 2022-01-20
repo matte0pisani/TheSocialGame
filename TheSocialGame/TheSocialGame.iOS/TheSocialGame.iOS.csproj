@@ -71,6 +71,7 @@
       <Link>App.config</Link>
     </None>
     <None Include="Info.plist" />
+    <Compile Include="AuthiOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -149,6 +150,12 @@
     <PackageReference Include="AWSSDK.RDS">
       <Version>3.7.8</Version>
     </PackageReference>
+    <PackageReference Include="Plugin.FirebasePushNotification">
+      <Version>3.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.Auth">
+      <Version>6.9.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -205,5 +212,6 @@
     <BundleResource Include="Resources\triangle.png" />
     <BundleResource Include="Resources\Uptriangle.png" />
     <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="GoogleService-Info.plist" />
   </ItemGroup>
 </Project>

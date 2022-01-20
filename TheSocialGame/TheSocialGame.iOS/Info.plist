@@ -50,5 +50,9 @@
 	<array>
 		<string>mailto</string>
 	</array>
+	<key>FairebaseAppDelegateProxyEnabled</key>
+	<false/>
+	<key>UIBackgroundModes</key>
+	<true/>
 </dict>
 </plist>

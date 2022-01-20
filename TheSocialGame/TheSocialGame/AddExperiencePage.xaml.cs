@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using Plugin.FirebasePushNotification;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using FirebaseAdmin;
+using FirebaseAdmin.Messaging;
+
+
 
 namespace TheSocialGame
 {
@@ -242,6 +247,7 @@ namespace TheSocialGame
                     u.listaDistintivi[nuova.Tipologia] = (x, diz);
                     u.puntiEsperienza++;
                     u.aggiungiAmici(nuova.ListaPartecipanti);
+                  
                 }
                 
                 await Navigation.PushAsync(new ProfilePage(user));

@@ -5,6 +5,8 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using PCLAppConfig;
+using Plugin.FirebasePushNotification;
+using Firebase;
 
 namespace TheSocialGame.Droid
 {
@@ -15,10 +17,15 @@ namespace TheSocialGame.Droid
         {
             base.OnCreate(savedInstanceState);
 
+            FirebaseApp.InitializeApp(Application.Context);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
           //  ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
             LoadApplication(new App());
+
+
+            FirebasePushNotificationManager.ProcessIntent(this, Intent);
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

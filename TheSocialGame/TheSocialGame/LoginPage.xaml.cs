@@ -13,41 +13,52 @@ namespace TheSocialGame
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-
-        public bool IsUsernameSet { get; set; }
+        IAuth auth;
+        public bool IsEmailSet { get; set; }
         public bool IsPasswordSet { get; set; }
 
         public LoginPage()
         {
             InitializeComponent();
+            auth = DependencyService.Get<IAuth>();
             StarImage.IsVisible = false;
-            IsUsernameSet = false;
+            IsEmailSet = false;
             IsPasswordSet = false;
         }
 
         private bool IsUserValid()
         {
-            return IsUsernameSet && IsPasswordSet;
+            return IsEmailSet && IsPasswordSet;
         }
 
         private void RefreshStarVisibility()
         {
-            StarImage.IsVisible = IsUsernameSet && IsPasswordSet;
+            StarImage.IsVisible = IsEmailSet && IsPasswordSet;
         }
 
         private async void Star_Tapped(object sender, EventArgs e)
         {
-            if (IsUserValid())
+
+            string token = await auth.LoginWithEmailAndPassword(MailEntry.Text, PasswordEntry.Text);
+            if(token != string.Empty)
             {
                 Utente usr = new Utente();
-                usr.username = UsernameEntry.Text;
                 await Navigation.PushAsync(new ProfilePage(usr));
+            } else
+            {
+                await DisplayAlert("AUTENTICAZIONE FALLITA", "L'email o la password non sono corrette, per favore riprova", "OK");
             }
+
+
+
+
+
+          
         }
 
         private void UsernameEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            IsUsernameSet = UsernameEntry.Text.Length > 0;
+            IsEmailSet = MailEntry.Text.Length > 0;
             RefreshStarVisibility();
         }
 
@@ -58,6 +69,8 @@ namespace TheSocialGame
         }
         private async void SignUpLabel_Tapped(object sender, EventArgs e)
         {
+            var signout = auth.SignOut();
+            if(signout)
             await Navigation.PushAsync(new SignUpPage());
         }
 

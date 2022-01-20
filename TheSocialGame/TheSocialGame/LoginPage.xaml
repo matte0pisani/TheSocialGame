@@ -15,8 +15,8 @@
         <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.28}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.80}">
-            <Entry  x:Name="UsernameEntry"
-                    Placeholder="il tuo username"
+            <Entry  x:Name="MailEntry"
+                    Placeholder="la tua email"
                     PlaceholderColor="Black"
                     TextColor="Black"
                     BackgroundColor="{StaticResource FirstColor}"

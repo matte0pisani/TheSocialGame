@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using PCLAppConfig;
+using Plugin.FirebasePushNotification;
 using ProgressRingControl.Forms.Plugin.iOS;
 using UIKit;
 
@@ -25,11 +26,41 @@ namespace TheSocialGame.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Firebase.Core.App.Configure();
             ProgressRingRenderer.Init();
-        //    ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
+            //    ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
             LoadApplication(new App());
             ObjCRuntime.Class.ThrowOnInitFailure = false;
+            FirebasePushNotificationManager.Initialize(options, true);
             return base.FinishedLaunching(app, options);
         }
+
+        public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
+        {
+            FirebasePushNotificationManager.DidRegisterRemoteNotifications(deviceToken);
+        }
+
+        public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
+        {
+            FirebasePushNotificationManager.RemoteNotificationRegistrationFailed(error);
+
+        }
+        // To receive notifications in foregroung on iOS 9 and below.
+        // To receive notifications in background in any iOS version
+        public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
+        {
+            // If you are receiving a notification message while your app is in the background,
+            // this callback will not be fired 'till the user taps on the notification launching the application.
+
+            // If you disable method swizzling, you'll need to call this method. 
+            // This lets FCM track message delivery and analytics, which is performed
+            // automatically with method swizzling enabled.
+            FirebasePushNotificationManager.DidReceiveMessage(userInfo);
+            // Do your magic to handle the notification data
+            System.Console.WriteLine(userInfo);
+
+            completionHandler(UIBackgroundFetchResult.NewData);
+
+        }
     }
-}
+    }

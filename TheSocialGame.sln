@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSocialGame.iOS", "TheSoc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSocialGame", "TheSocialGame\TheSocialGame\TheSocialGame.csproj", "{0D8E7BC3-8B0B-4120-9697-98C7814C7A99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PushNotification.Send", "PushNotification.Send\PushNotification.Send.csproj", "{1C6459D2-D692-4B2E-A9F6-99DB30C16212}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,18 @@ Global
 		{0D8E7BC3-8B0B-4120-9697-98C7814C7A99}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{0D8E7BC3-8B0B-4120-9697-98C7814C7A99}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{0D8E7BC3-8B0B-4120-9697-98C7814C7A99}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Release|iPhone.Build.0 = Release|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{1C6459D2-D692-4B2E-A9F6-99DB30C16212}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

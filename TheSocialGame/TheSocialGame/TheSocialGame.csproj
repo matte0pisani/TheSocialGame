@@ -22,6 +22,8 @@
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing" Version="0.1.2" />
     <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.3.0.55" />
     <PackageReference Include="AWSSDK.RDS" Version="3.7.8" />
+    <PackageReference Include="Plugin.FirebasePushNotification" Version="3.4.1" />
+    <PackageReference Include="FirebaseAdmin" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,5 +51,7 @@
     <None Remove="Syncfusion.Xamarin.SfProgressBar" />
     <None Remove="AWSSDK.RDS" />
     <None Remove="Npgsql" />
+    <None Remove="Plugin.FirebasePushNotification" />
+    <None Remove="FirebaseAdmin" />
   </ItemGroup>
 </Project>

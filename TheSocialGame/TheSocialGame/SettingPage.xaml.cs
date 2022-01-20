@@ -9,11 +9,13 @@ namespace TheSocialGame
     public partial class SettingPage : ContentPage
     {
         Utente user { get; set; }
+        IAuth auth;
 
         public SettingPage(Utente u)
         {
             user = u;
             InitializeComponent();
+            auth = DependencyService.Get<IAuth>();
             App.Current.Resources["BackgroundColor"] = user.sfondo;
             App.Current.Resources["FirstColor"] = user.primario;
             App.Current.Resources["SecondColor"] = user.secondario;
@@ -299,6 +301,8 @@ namespace TheSocialGame
 
         async void esci(Object sender, EventArgs e)
         {
+            var signout = auth.SignOut();
+            if(signout)
             await Navigation.PushAsync(new LoginPage());
         }
     }
