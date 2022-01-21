@@ -17,7 +17,7 @@ namespace TheSocialGame
         public int puntiSocial { get; set; }
         public int puntiEsperienza { get; set; }
         public int livello { get; set; }
-        public string pathFotoProfilo { get; set; }
+        public byte[] fotoBytes { get; set; }
         public bool fotoLiveiOS { get; set; }
 
         /* PERSONALITA*/

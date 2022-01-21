@@ -24,7 +24,7 @@ namespace TheSocialGame
             creaUtenteFake();
            
 
-            if (user.pathFotoProfilo == null)
+            if (user.fotoBytes == null)
             {
                 ProfilePicFrame.IsVisible = false;
                 ChangeProfilePicButton.IsVisible = false;
@@ -32,7 +32,10 @@ namespace TheSocialGame
             } else
             {
                 if (user.fotoLiveiOS) ProfilePic.Rotation = 90;
-                ProfilePic.Source = ImageSource.FromFile(user.pathFotoProfilo);
+                ProfilePic.Source = ImageSource.FromStream(() =>
+                {
+                    return new MemoryStream(user.fotoBytes);
+                });
                 ChangeProfilePicButton.IsVisible = true;
                
             }
@@ -199,19 +202,21 @@ namespace TheSocialGame
 
             if (foto != null)
             {
-                
-                var newFile = Path.Combine(FileSystem.CacheDirectory, foto.FileName);
                 using (var stream = await foto.OpenReadAsync())
-                using (var newStream = File.OpenWrite(newFile))
-                await stream.CopyToAsync(newStream);
-
-                
-
-                user.pathFotoProfilo = newFile;
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        stream.CopyTo(ms);
+                        user.fotoBytes = ms.ToArray();
+                    }
+                }
                 
                 ProfilePicFrame.IsVisible = true;
                 ChangeProfilePicButton.IsVisible = true;
-                ProfilePic.Source = newFile;
+                ProfilePic.Source = ImageSource.FromStream(() =>
+                {
+                    return new MemoryStream(user.fotoBytes);
+                }); 
                 switch (Device.RuntimePlatform)
                 {
                     case Device.iOS:
@@ -240,10 +245,20 @@ namespace TheSocialGame
             {
                 ProfilePic.Rotation = 0;
                 user.fotoLiveiOS = false;
-                user.pathFotoProfilo = foto.FullPath;
+                using (var stream = await foto.OpenReadAsync())
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        stream.CopyTo(ms);
+                        user.fotoBytes = ms.ToArray();
+                    }
+                }
                 ProfilePicFrame.IsVisible = true;
                 ChangeProfilePicButton.IsVisible = true;
-                ProfilePic.Source = foto.FullPath;
+                ProfilePic.Source = ImageSource.FromStream(() =>
+                {
+                    return new MemoryStream(user.fotoBytes);
+                });
             }
          }
 
@@ -256,7 +271,8 @@ namespace TheSocialGame
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         void EliminaFoto(Object sender, EventArgs e)
         {
-            user.pathFotoProfilo = null;
+            // non so se l'immagine rimane "pendente" nella memoria del processo, in tal caso andrebbe liberata la memoria
+            user.fotoBytes = null;
             ProfilePicFrame.IsVisible = false;
             ChangeProfilePicButton.IsVisible = false;
             ConfermaEliminazioneFrame.IsVisible = false;
@@ -292,7 +308,7 @@ namespace TheSocialGame
         void AddPhoto(Object sender, EventArgs e)
         {
             AddPhotoFrame.IsVisible = true;
-            if (user.pathFotoProfilo != null)
+            if (user.fotoBytes != null)
                 EliminaButton.IsVisible = true;
             else
                 EliminaButton.IsVisible = false;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -222,10 +223,13 @@ namespace TheSocialGame
             foreach (Utente u in exp.ListaPartecipanti)
             {
                 Frame f = new Frame();
-                if (u.pathFotoProfilo != null)
+                if (u.fotoBytes != null)
                 {
                     Image im = new Image();
-                    im.Source = ImageSource.FromFile(u.pathFotoProfilo);
+                    im.Source = ImageSource.FromStream(() =>
+                    {
+                        return new MemoryStream(u.fotoBytes);
+                    });
                     im.Aspect = Aspect.AspectFill;
                     im.Scale = 5;
                     f.Content = im;
