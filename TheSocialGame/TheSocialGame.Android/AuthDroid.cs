@@ -19,6 +19,9 @@ namespace TheSocialGame.Droid
             {
                 var user = await Firebase.Auth.FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
                 var token = user.User.GetIdToken(false);
+              
+             
+                System.Diagnostics.Debug.WriteLine("token: " + user.User.Uid);
                 return (string)  token;
             }
             catch (FirebaseAuthInvalidUserException e)
@@ -58,6 +61,7 @@ namespace TheSocialGame.Droid
             {
                 var newUser = await Firebase.Auth.FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(email, password);
                 var token = newUser.User.GetIdToken(false);
+                System.Diagnostics.Debug.WriteLine("token: " + newUser.User.Uid);
                 return (string)token;
             }
             catch (FirebaseAuthInvalidUserException e)

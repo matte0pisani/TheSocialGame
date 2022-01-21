@@ -2,6 +2,7 @@
 using Android.App;
 using Android.OS;
 using Android.Runtime;
+using Firebase;
 using Plugin.FirebasePushNotification;
 
 
@@ -18,7 +19,7 @@ namespace TheSocialGame.Droid
         public override void OnCreate()
         {
             base.OnCreate();
-
+            FirebaseApp.InitializeApp(Context);
             //Set the default notification channel for your app when running Android Oreo
             if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.O)
             {
