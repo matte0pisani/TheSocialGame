@@ -216,7 +216,7 @@ namespace TheSocialGame
                 ProfilePic.Source = ImageSource.FromStream(() =>
                 {
                     return new MemoryStream(user.fotoBytes);
-                }); 
+                });
                 switch (Device.RuntimePlatform)
                 {
                     case Device.iOS:

@@ -25,7 +25,10 @@ namespace TheSocialGame
 
             exp = e;
             Titolo.Text = exp.Titolo;
-            Copertina.Source = exp.Copertina;
+            Copertina.Source = ImageSource.FromStream(() =>
+            {
+                return new MemoryStream(exp.Copertina);
+            }); ;
             if (exp.copertinaLiveIOS) Copertina.Rotation = 90;
             if (exp.DataInizio.Equals(exp.DataFine)) Data.Text = exp.DataInizio.ToString("d MMM yyyy");
             else Data.Text = exp.DataInizio.ToString("d MMM yyyy") + "-" + exp.DataFine.ToString("d MMM yyyy");
@@ -132,12 +135,21 @@ namespace TheSocialGame
 
             if (foto != null)
             {
+                if (foto != null)
+                {
+                    using (var stream = await foto.OpenReadAsync())
+                    {
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            stream.CopyTo(ms);
+                            exp.Copertina = ms.ToArray();
+                        }
+                    }
+                    await Navigation.PushAsync(new VisualizzaEsperienzaPage(user, exp));
+                    Navigation.RemovePage(this);
 
-                exp.Copertina = foto.FullPath;
-                await Navigation.PushAsync(new VisualizzaEsperienzaPage(user, exp));
-                Navigation.RemovePage(this);
 
-
+                }
             }
         }
 
@@ -401,7 +413,7 @@ namespace TheSocialGame
                     b.CornerRadius = 10;
                     b.BackgroundColor = this.user.secondario;
                     b.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
-                    b.Clicked += async (sender, args) =>
+                    b.Clicked += (sender, args) =>
                     {
                         layout.Children.Clear();
                         layout.Children.Add(nomeschermata);
@@ -574,7 +586,7 @@ namespace TheSocialGame
                     b.BackgroundColor = Color.Transparent;
                     b.BorderWidth = 1.5;
                     b.BorderColor = Color.Black;
-                    b.Clicked += async (sender, args) =>
+                    b.Clicked += (sender, args) =>
                     {
                         foto.IsVisible = true;
                         scrolling.ScrollToAsync(exp.Galleria.IndexOf(s) * scroll.Children[0].Width, 0, false);
