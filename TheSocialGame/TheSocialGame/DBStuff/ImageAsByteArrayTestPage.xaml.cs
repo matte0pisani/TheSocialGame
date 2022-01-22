@@ -12,7 +12,7 @@ namespace TheSocialGame
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ImageAsByteArrayTestPage : ContentPage
     {
-        private static readonly string connStr = "User ID=tsg_read_write; Data Source=tcp:3.68.133.230,1433; Password=uesl1sn4iDER";
+        private static readonly string connStr = "";    // non caricare connection string effettiva
         private static readonly string insertQueryStr = "INSERT INTO tsg.dbo.test_image VALUES (@bytes)";
         private static readonly string selectQueryStr = "SELECT bytes FROM tsg.dbo.test_image WHERE id = @id";
         public byte[] ImageBytes { get; set; }
