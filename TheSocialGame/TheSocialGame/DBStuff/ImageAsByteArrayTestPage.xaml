@@ -1,20 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TheSocialGame.ImageAsByteArrayTestPage">
+             x:Class="TheSocialGame.ImageAsByteArrayTestPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Image as byte array, test" />
+            <Entry x:Name="ImageId"
+                   Placeholder="Insert the image id you want to upload" 
+                   FontSize="Small" />
             <Label x:Name="InfoLabel" />
-            <Button Text="UPLOAD"
-                    Clicked="ImageFromGallery" />
-            <Button Text="CAPTURE"
-                    Clicked="ImageFromCamera" />
-            <Button Text="SHOW"
-                    Clicked="ShowFromBytes" />
-            <Image x:Name="ImageFromBytes" 
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand"/>
+            <Grid>
+                <Button Text="GALLERY"
+                        Clicked="ImageFromGallery" 
+                        Grid.Row="0" Grid.Column ="0" />
+                <Button Text="CAPTURE"
+                        Clicked="ImageFromCamera" 
+                        Grid.Row="0" Grid.Column ="1"/>
+                <Button Text="SHOW"
+                        Clicked="ShowFromBytes" 
+                        Grid.Row="1" Grid.Column ="0"/>
+                <Button Text="DELETE"
+                        Clicked="DeleteArray" 
+                        Grid.Row="1" Grid.Column ="1"/>
+                <Button Text="UPLOAD"
+                        Clicked="UploadInDb" 
+                        Grid.Row="2" Grid.Column ="0"/>
+                <Button Text="DOWNLOAD"
+                        Clicked="DownloadFromDb" 
+                        Grid.Row="2" Grid.Column ="1"/>
+            </Grid>
+            <Image x:Name="ImageFromBytes"
+                       VerticalOptions="End" 
+                       HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
