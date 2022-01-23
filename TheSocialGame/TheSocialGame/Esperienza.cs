@@ -6,6 +6,7 @@ namespace TheSocialGame
 {
     public class Esperienza
     {
+        public int ID { get; set; }
         public string Titolo { get; set; }
         public byte[] Copertina { get; set; }
         public DateTime DataInizio { get; set; }

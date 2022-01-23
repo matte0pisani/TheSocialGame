@@ -10,7 +10,7 @@ namespace TheSocialGame
 {
     public class Utente
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string username { get; set; }
         public string password { get; set; }
         public string mail { get; set; }
