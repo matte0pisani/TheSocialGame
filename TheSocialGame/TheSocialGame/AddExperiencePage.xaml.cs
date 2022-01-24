@@ -98,32 +98,41 @@ namespace TheSocialGame
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         async void CameraClicked(Object sender, EventArgs e)
         {
-          
+
 
             var foto = await MediaPicker.CapturePhotoAsync();
 
             if (foto != null)
             {
-                
-                var newFile = Path.Combine(FileSystem.CacheDirectory, foto.FileName);
-                using (var stream = await foto.OpenReadAsync())
-                using (var newStream = File.OpenWrite(newFile))
-                await stream.CopyToAsync(newStream);
-                
-                nuova.Copertina = newFile;
-                CopertinaFrame.IsVisible = true;
-                AvvisoCopertina.IsVisible = false;
-                Rimuovi.IsVisible = true;
-                Fotocamera.IsVisible = false;
-                Galleria.IsVisible = false;
-                Copertina.Source = newFile;
 
-                switch (Device.RuntimePlatform)
+                if (foto != null)
                 {
-                    case Device.iOS:
-                        nuova.copertinaLiveIOS = true;
-                        Copertina.Rotation = 90;
-                   break;
+                    using (var stream = await foto.OpenReadAsync())
+                    {
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            stream.CopyTo(ms);
+                            nuova.Copertina = ms.ToArray();
+                        }
+                    }
+
+                    CopertinaFrame.IsVisible = true;
+                    AvvisoCopertina.IsVisible = false;
+                    Rimuovi.IsVisible = true;
+                    Fotocamera.IsVisible = false;
+                    Galleria.IsVisible = false;
+                    Copertina.Source = ImageSource.FromStream(() =>
+                    {
+                        return new MemoryStream(nuova.Copertina);
+                    });
+
+                    switch (Device.RuntimePlatform)
+                    {
+                        case Device.iOS:
+                            nuova.copertinaLiveIOS = true;
+                            Copertina.Rotation = 90;
+                            break;
+                    }
                 }
             }
         }
@@ -139,22 +148,31 @@ namespace TheSocialGame
             });
 
             if (foto != null)
-            {                
-
-                nuova.Copertina = foto.FullPath;
+            {
+                using (var stream = await foto.OpenReadAsync())
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        stream.CopyTo(ms);
+                        nuova.Copertina = ms.ToArray();
+                    }
+                }
                 CopertinaFrame.IsVisible = true;
                 AvvisoCopertina.IsVisible = false;
                 Rimuovi.IsVisible = true;
                 Fotocamera.IsVisible = false;
                 Galleria.IsVisible = false;
-                Copertina.Source = foto.FullPath;
-                
+                Copertina.Source = ImageSource.FromStream(() =>
+                {
+                    return new MemoryStream(nuova.Copertina);
+                });
+
             }
         }
 
          void RimuoviClicked(Object sender, EventArgs e)
         {
-            nuova.Copertina = null;
+            nuova.Copertina = null; // simile problema che con immagine profilo, forse spreco spazio e peggioramento prestazioni
             CopertinaFrame.IsVisible = false;
             AvvisoCopertina.IsVisible = true;
             Rimuovi.IsVisible = false;

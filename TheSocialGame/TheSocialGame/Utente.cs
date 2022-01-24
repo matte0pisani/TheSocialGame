@@ -10,12 +10,12 @@ namespace TheSocialGame
 {
     public class Utente
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string username { get; set; }
         public int puntiSocial { get; set; }
         public int puntiEsperienza { get; set; }
         public int livello { get; set; }
-        public string pathFotoProfilo { get; set; }
+        public byte[] fotoBytes { get; set; }
         public bool fotoLiveiOS { get; set; }
 
         /* PERSONALITA*/

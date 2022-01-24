@@ -6,8 +6,9 @@ namespace TheSocialGame
 {
     public class Esperienza
     {
+        public int ID { get; set; }
         public string Titolo { get; set; }
-        public string Copertina { get; set; }
+        public byte[] Copertina { get; set; }
         public DateTime DataInizio { get; set; }
         public DateTime DataFine { get; set; }
         public string Tipologia { get; set; }
@@ -15,7 +16,7 @@ namespace TheSocialGame
         public bool privata { get; set; }
         public bool copertinaLiveIOS { get; set; }
         public bool live { get; set; }
-        public List<string> Galleria { get; set; }
+        public List<byte[]> Galleria { get; set; }  // probabilmente dovrà diventare una lista di byte[]/Image
         public List<string> luoghi { get; set; }
         public List<string> slogan { get; set; }
         public List<string> funfacts { get; set; }
@@ -26,7 +27,7 @@ namespace TheSocialGame
         public Esperienza()
         {
             ListaPartecipanti = new List<Utente>();
-            Galleria = new List<string>();
+            Galleria = new List<byte[]>();
             luoghi = new List<string>();
             privata = false;
             copertinaLiveIOS = false;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -24,7 +25,10 @@ namespace TheSocialGame
 
             exp = e;
             Titolo.Text = exp.Titolo;
-            Copertina.Source = exp.Copertina;
+            Copertina.Source = ImageSource.FromStream(() =>
+            {
+                return new MemoryStream(exp.Copertina);
+            }); ;
             if (exp.copertinaLiveIOS) Copertina.Rotation = 90;
             if (exp.DataInizio.Equals(exp.DataFine)) Data.Text = exp.DataInizio.ToString("d MMM yyyy");
             else Data.Text = exp.DataInizio.ToString("d MMM yyyy") + "-" + exp.DataFine.ToString("d MMM yyyy");
@@ -52,13 +56,13 @@ namespace TheSocialGame
                 SecondariaUno.IsVisible = true;
                 SecondariaUno.IsVisible = true;
                 Image im = new Image();
-                im.Source = ImageSource.FromFile(exp.Galleria[primo]);
+                im.Source = ImageSource.FromStream(() => { return new MemoryStream(exp.Galleria[primo]); });
                 im.Aspect = Aspect.AspectFill;
                 im.Scale = 1.5;
                 fotoUno.IsClippedToBounds = true;
                 fotoUno.Content = im;
                 Image imdue = new Image();
-                imdue.Source = ImageSource.FromFile(exp.Galleria[secondo]);
+                imdue.Source = ImageSource.FromStream(() => { return new MemoryStream(exp.Galleria[secondo]); });
                 imdue.Aspect = Aspect.AspectFill;
                 imdue.Scale = 1.5;
                 fotoDue.IsClippedToBounds = true;
@@ -70,7 +74,7 @@ namespace TheSocialGame
                 SecondariaDue.IsVisible = false;
                 sostituibileUno.IsVisible = false;
                 Image im = new Image();
-                im.Source = ImageSource.FromFile(exp.Galleria[0]);
+                im.Source = ImageSource.FromStream(() => { return new MemoryStream(exp.Galleria[0]); });
                 im.Aspect = Aspect.AspectFill;
                 im.Scale = 1.5;
                 fotoUno.IsClippedToBounds = true;
@@ -131,12 +135,21 @@ namespace TheSocialGame
 
             if (foto != null)
             {
+                if (foto != null)
+                {
+                    using (var stream = await foto.OpenReadAsync())
+                    {
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            stream.CopyTo(ms);
+                            exp.Copertina = ms.ToArray();
+                        }
+                    }
+                    await Navigation.PushAsync(new VisualizzaEsperienzaPage(user, exp));
+                    Navigation.RemovePage(this);
 
-                exp.Copertina = foto.FullPath;
-                await Navigation.PushAsync(new VisualizzaEsperienzaPage(user, exp));
-                Navigation.RemovePage(this);
 
-
+                }
             }
         }
 
@@ -195,10 +208,14 @@ namespace TheSocialGame
 
             if (foto != null)
             {
-
-                exp.Galleria.Add(foto.FullPath);
-
-
+                using (Stream stream = await foto.OpenReadAsync())
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        stream.CopyTo(ms);
+                        exp.Galleria.Add(ms.ToArray());
+                    }
+                }
             }
             inizializzaGalleria();
             scroll.Children.Clear();
@@ -222,10 +239,13 @@ namespace TheSocialGame
             foreach (Utente u in exp.ListaPartecipanti)
             {
                 Frame f = new Frame();
-                if (u.pathFotoProfilo != null)
+                if (u.fotoBytes != null)
                 {
                     Image im = new Image();
-                    im.Source = ImageSource.FromFile(u.pathFotoProfilo);
+                    im.Source = ImageSource.FromStream(() =>
+                    {
+                        return new MemoryStream(u.fotoBytes);
+                    });
                     im.Aspect = Aspect.AspectFill;
                     im.Scale = 5;
                     f.Content = im;
@@ -397,7 +417,7 @@ namespace TheSocialGame
                     b.CornerRadius = 10;
                     b.BackgroundColor = this.user.secondario;
                     b.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
-                    b.Clicked += async (sender, args) =>
+                    b.Clicked += (sender, args) =>
                     {
                         layout.Children.Clear();
                         layout.Children.Add(nomeschermata);
@@ -527,7 +547,7 @@ namespace TheSocialGame
             if (exp.Galleria.Count == 0) EliminaDaGalleria.IsVisible = false;
             else EliminaDaGalleria.IsVisible = true;
 
-            foreach (String s in exp.Galleria)
+            foreach (byte[] ba in exp.Galleria)
             {
                 Frame f = new Frame();
                 if (Device.RuntimePlatform == Device.iOS)
@@ -536,7 +556,7 @@ namespace TheSocialGame
                     f.WidthRequest = 370;
                 f.BackgroundColor = Color.Black;
                 Image im = new Image();
-                im.Source = ImageSource.FromFile(s);
+                im.Source = ImageSource.FromStream(() => { return new MemoryStream(ba); });
                 im.Aspect = Aspect.AspectFit;
                 f.HasShadow = false;
                 im.Scale = 1;
@@ -563,23 +583,23 @@ namespace TheSocialGame
                 Empty.IsVisible = false;
                 int col = 0;
                 int rig = 2;
-                foreach (String s in exp.Galleria)
+                foreach (byte[] ba in exp.Galleria)
                 {
 
                     Button b = new Button();
                     b.BackgroundColor = Color.Transparent;
                     b.BorderWidth = 1.5;
                     b.BorderColor = Color.Black;
-                    b.Clicked += async (sender, args) =>
+                    b.Clicked += (sender, args) =>
                     {
                         foto.IsVisible = true;
-                        scrolling.ScrollToAsync(exp.Galleria.IndexOf(s) * scroll.Children[0].Width, 0, false);
+                        scrolling.ScrollToAsync(exp.Galleria.IndexOf(ba) * scroll.Children[0].Width, 0, false);
                   };
                     Frame f = new Frame();
                     f.BackgroundColor = Color.Black;
                     f.BorderColor = Color.Black;
                     Image im = new Image();
-                    im.Source = ImageSource.FromFile(s);
+                    im.Source = ImageSource.FromStream(() => { return new MemoryStream(ba); });
                     im.Aspect = Aspect.AspectFill;
                     f.HasShadow = false;
                     im.Scale = 1.8;
@@ -593,15 +613,12 @@ namespace TheSocialGame
                     Grid.SetRow(b, rig);
                     if (col == 2)
                     {
-
                         RowDefinition prima = new RowDefinition();
                         RowDefinition seconda = new RowDefinition();
                         prima.Height = 100;
                         layoutGalleria.RowDefinitions.Add(prima);
                         rig++;
                         col = 0;
-
-
                     }
                     else col++;
                 }

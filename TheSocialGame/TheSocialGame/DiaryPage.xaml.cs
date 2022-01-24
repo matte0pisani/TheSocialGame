@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.IO;
 using Xamarin.Forms;
 
 namespace TheSocialGame
@@ -56,7 +56,10 @@ namespace TheSocialGame
                     f.BackgroundColor = Color.Black;
                     f.BorderColor = Color.Black;
                     Image im = new Image();
-                    im.Source = ImageSource.FromFile(e.Copertina);
+                    im.Source = ImageSource.FromStream(() =>
+                    {
+                        return new MemoryStream(e.Copertina);
+                    }); ;
                     im.Aspect = Aspect.AspectFill;
                     f.HasShadow = false;
                     im.Scale = 1.8;
@@ -71,7 +74,6 @@ namespace TheSocialGame
                     else
                     {
                         b.BorderWidth = 1;
-                        
                     }
 
                     Label l = new Label();
