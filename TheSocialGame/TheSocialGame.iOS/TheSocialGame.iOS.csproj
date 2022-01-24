@@ -213,4 +213,7 @@
     <BundleResource Include="Resources\Uptriangle.png" />
     <BundleResource Include="Resources\user.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GoogleService-Info.plist" />
+  </ItemGroup>
 </Project>
