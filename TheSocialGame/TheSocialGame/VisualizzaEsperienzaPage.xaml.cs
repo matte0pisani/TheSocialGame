@@ -56,13 +56,13 @@ namespace TheSocialGame
                 SecondariaUno.IsVisible = true;
                 SecondariaUno.IsVisible = true;
                 Image im = new Image();
-                im.Source = ImageSource.FromFile(exp.Galleria[primo]);
+                im.Source = ImageSource.FromStream(() => { return new MemoryStream(exp.Galleria[primo]); });
                 im.Aspect = Aspect.AspectFill;
                 im.Scale = 1.5;
                 fotoUno.IsClippedToBounds = true;
                 fotoUno.Content = im;
                 Image imdue = new Image();
-                imdue.Source = ImageSource.FromFile(exp.Galleria[secondo]);
+                imdue.Source = ImageSource.FromStream(() => { return new MemoryStream(exp.Galleria[secondo]); });
                 imdue.Aspect = Aspect.AspectFill;
                 imdue.Scale = 1.5;
                 fotoDue.IsClippedToBounds = true;
@@ -74,7 +74,7 @@ namespace TheSocialGame
                 SecondariaDue.IsVisible = false;
                 sostituibileUno.IsVisible = false;
                 Image im = new Image();
-                im.Source = ImageSource.FromFile(exp.Galleria[0]);
+                im.Source = ImageSource.FromStream(() => { return new MemoryStream(exp.Galleria[0]); });
                 im.Aspect = Aspect.AspectFill;
                 im.Scale = 1.5;
                 fotoUno.IsClippedToBounds = true;
@@ -208,10 +208,14 @@ namespace TheSocialGame
 
             if (foto != null)
             {
-
-                exp.Galleria.Add(foto.FullPath);
-
-
+                using (Stream stream = await foto.OpenReadAsync())
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        stream.CopyTo(ms);
+                        exp.Galleria.Add(ms.ToArray());
+                    }
+                }
             }
             inizializzaGalleria();
             scroll.Children.Clear();
@@ -543,7 +547,7 @@ namespace TheSocialGame
             if (exp.Galleria.Count == 0) EliminaDaGalleria.IsVisible = false;
             else EliminaDaGalleria.IsVisible = true;
 
-            foreach (String s in exp.Galleria)
+            foreach (byte[] ba in exp.Galleria)
             {
                 Frame f = new Frame();
                 if (Device.RuntimePlatform == Device.iOS)
@@ -552,7 +556,7 @@ namespace TheSocialGame
                     f.WidthRequest = 370;
                 f.BackgroundColor = Color.Black;
                 Image im = new Image();
-                im.Source = ImageSource.FromFile(s);
+                im.Source = ImageSource.FromStream(() => { return new MemoryStream(ba); });
                 im.Aspect = Aspect.AspectFit;
                 f.HasShadow = false;
                 im.Scale = 1;
@@ -579,7 +583,7 @@ namespace TheSocialGame
                 Empty.IsVisible = false;
                 int col = 0;
                 int rig = 2;
-                foreach (String s in exp.Galleria)
+                foreach (byte[] ba in exp.Galleria)
                 {
 
                     Button b = new Button();
@@ -589,13 +593,13 @@ namespace TheSocialGame
                     b.Clicked += (sender, args) =>
                     {
                         foto.IsVisible = true;
-                        scrolling.ScrollToAsync(exp.Galleria.IndexOf(s) * scroll.Children[0].Width, 0, false);
+                        scrolling.ScrollToAsync(exp.Galleria.IndexOf(ba) * scroll.Children[0].Width, 0, false);
                   };
                     Frame f = new Frame();
                     f.BackgroundColor = Color.Black;
                     f.BorderColor = Color.Black;
                     Image im = new Image();
-                    im.Source = ImageSource.FromFile(s);
+                    im.Source = ImageSource.FromStream(() => { return new MemoryStream(ba); });
                     im.Aspect = Aspect.AspectFill;
                     f.HasShadow = false;
                     im.Scale = 1.8;
@@ -609,15 +613,12 @@ namespace TheSocialGame
                     Grid.SetRow(b, rig);
                     if (col == 2)
                     {
-
                         RowDefinition prima = new RowDefinition();
                         RowDefinition seconda = new RowDefinition();
                         prima.Height = 100;
                         layoutGalleria.RowDefinitions.Add(prima);
                         rig++;
                         col = 0;
-
-
                     }
                     else col++;
                 }
