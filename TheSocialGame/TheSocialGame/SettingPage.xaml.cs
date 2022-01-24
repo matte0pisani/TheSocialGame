@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using FirebaseAdmin;
+using FirebaseAdmin.Auth;
 
 namespace TheSocialGame
 {
@@ -20,7 +22,7 @@ namespace TheSocialGame
             App.Current.Resources["FirstColor"] = user.primario;
             App.Current.Resources["SecondColor"] = user.secondario;
             Username.Text = user.username;
-            Password.Text = user.password;
+            Email.Text = auth.GetEmail();
             colori();
             back.Title = user.sfondo.ToHex();
             prim.Title = user.primario.ToHex();
@@ -31,11 +33,13 @@ namespace TheSocialGame
         void cambiaUsername(Object sender, EventArgs e)
         {
             user.username = Username.Text;
+            
         }
 
-        void cambiaPassword(Object sender, EventArgs e)
+        void cambiaMail(Object sender, EventArgs e)
         {
-            user.password = Password.Text;
+            auth.ChangeEmail(Email.Text);
+
         }
 
         void cambiaPrivacy(Object sender, EventArgs e)
@@ -44,6 +48,29 @@ namespace TheSocialGame
                 user.privato = true;
             else
                 user.privato = false;
+        }
+
+        async void cambiaPassword(Object sender, EventArgs e)
+        {
+            string vecchia = await DisplayPromptAsync("CAMBIA PASSWORD", "Inserisci la tua vecchia password");
+            if (auth.ValidPassword(vecchia))
+            {
+                string nuova = await DisplayPromptAsync("CAMBIA PASSWORD", "Inserisci la nuova password");
+                string conferma = await DisplayPromptAsync("CAMBIA PASSWORD", "Inserisci di nuovo la nuova password");
+                if (nuova.Equals(conferma))
+                {
+                    if (auth.ChangePassword(nuova))
+                    {
+                        await DisplayAlert("SUCCESSO", "La tua password è stata modificata con successo!", "OK");
+
+                    }
+                    else
+                        await DisplayAlert("ERRORE", "Qualcosa è andato storto: le password non corrispondono", "OK");
+
+                } else await DisplayAlert("ERRORE", "Qualcosa è andato storto: la password è errata", "OK");
+
+
+            }
         }
 
         async void NotificationClicked(Object sender, EventArgs e)
@@ -290,13 +317,24 @@ namespace TheSocialGame
 
         async void elimina(Object sender, EventArgs e)
         {
-          bool answer = await DisplayAlert("Attenzione", "Eliminando l'account perderai tutti i contenuti ad esso associati", "CONFERMA", "ANNULLA");
-            if (answer)
-            {
-                user.elimina();
-                await Navigation.PushAsync(new LoginPage());
-            }
+            string result = await DisplayPromptAsync("ELIMINAZIONE", "Inserisci la password per confermare");
            
+                
+                bool aut = auth.DeleteUser(result);
+                if (aut) 
+                {
+                user.elimina();
+                await DisplayAlert("SUCCESSO", "Il tuo account è stato eliminato con successo", "OK");
+                await Navigation.PushAsync(new LoginPage());
+                } else
+            {
+                await DisplayAlert("ERRORE", "password errata", "OK");
+
+            }
+
+
+
+
         }
 
         async void esci(Object sender, EventArgs e)

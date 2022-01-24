@@ -46,7 +46,7 @@ namespace TheSocialGame
                 await Navigation.PushAsync(new ProfilePage(usr));
             } else
             {
-                await DisplayAlert("AUTENTICAZIONE FALLITA", "L'email o la password non sono corrette, per favore riprova", "OK");
+                await DisplayAlert("AUTENTICAZIONE FALLITA", "L' email o la password non sono corrette, per favore riprova", "OK");
             }
 
 

@@ -19,10 +19,10 @@ namespace TheSocialGame.Droid
             {
                 var user = await Firebase.Auth.FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
                 var token = user.User.GetIdToken(false);
-              
-             
+
+
                 System.Diagnostics.Debug.WriteLine("token: " + user.User.Uid);
-                return (string)  token;
+                return (string)token;
             }
             catch (FirebaseAuthInvalidUserException e)
             {
@@ -49,7 +49,8 @@ namespace TheSocialGame.Droid
                 Firebase.Auth.FirebaseAuth.Instance.SignOut();
                 return true;
 
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return false;
             }
@@ -73,6 +74,79 @@ namespace TheSocialGame.Droid
             {
                 e.PrintStackTrace();
                 return string.Empty;
+            }
+        }
+
+        public bool DeleteUser(string password)
+        {
+
+
+            FirebaseUser us = FirebaseAuth.Instance.CurrentUser;
+            try
+            {
+                Firebase.Auth.FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(us.Email, password); ;
+                us.DeleteAsync();
+                return true;
+
+            }
+            catch (FirebaseAuthInvalidUserException e)
+            {
+
+                return false;
+            }
+            catch (FirebaseAuthInvalidCredentialsException e)
+            {
+
+                return false;
+            }
+        }
+
+        public string GetEmail()
+        {
+            FirebaseUser us = FirebaseAuth.Instance.CurrentUser;
+            return us.Email;
+        }
+
+        public void ChangeEmail(string mail)
+        {
+            FirebaseUser us = FirebaseAuth.Instance.CurrentUser;
+            us.UpdateEmailAsync(mail);
+        }
+
+        public bool ValidPassword(string password)
+        {
+            FirebaseUser us = FirebaseAuth.Instance.CurrentUser;
+            try
+            {
+                Firebase.Auth.FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(us.Email, password); ;
+
+
+                return true;
+
+            }
+            catch (FirebaseAuthInvalidUserException e)
+            {
+
+                return false;
+            }
+            catch (FirebaseAuthInvalidCredentialsException e)
+            {
+
+                return false;
+            }
+        }
+
+        bool ChangePassword(string password)
+        {
+            FirebaseUser us = FirebaseAuth.Instance.CurrentUser;
+            try
+            {
+                us.UpdatePasswordAsync(password);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
             }
         }
     }

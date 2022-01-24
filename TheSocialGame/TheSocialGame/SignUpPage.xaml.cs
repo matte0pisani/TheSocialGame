@@ -22,7 +22,7 @@ namespace TheSocialGame
         private async void Button_Clicked(object sender, EventArgs e)
         {
             var user = auth.SignUpWithEmailAndPassword(Mail.Text, passwordEntry.Text);
-
+            
 
 
 
