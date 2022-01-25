@@ -342,6 +342,7 @@ namespace TheSocialGame
             var signout = auth.SignOut();
             if(signout)
             await Navigation.PushAsync(new LoginPage());
+            Navigation.RemovePage(this);
         }
     }
 }

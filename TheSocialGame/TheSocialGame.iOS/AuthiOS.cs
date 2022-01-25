@@ -19,7 +19,7 @@ namespace TheSocialGame.iOS
             try
             {
                 var user = await Auth.DefaultInstance.SignInWithPasswordAsync(email, password);
-                System.Diagnostics.Debug.WriteLine("token: " + newUser.User.Uid);
+                System.Diagnostics.Debug.WriteLine("token: " + user.User.Uid);
 
                 return await user.User.GetIdTokenAsync();
             }
@@ -41,7 +41,8 @@ namespace TheSocialGame.iOS
             {
                 _ = Auth.DefaultInstance.SignOut(out NSError error);
                 return error == null;
-            }catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return false;
             }
@@ -53,10 +54,11 @@ namespace TheSocialGame.iOS
             {
                 var newUser = await Auth.DefaultInstance.CreateUserAsync(email, password);
                 System.Diagnostics.Debug.WriteLine("token: " + newUser.User.Uid);
-
+                await newUser.User.SendEmailVerificationAsync();
                 return await newUser.User.GetIdTokenAsync();
-                
-            } catch (Exception e)
+
+            }
+            catch (Exception e)
             {
                 return string.Empty;
             }
@@ -66,7 +68,7 @@ namespace TheSocialGame.iOS
         public bool DeleteUser(string password)
         {
 
-           
+
             var us = Auth.DefaultInstance.CurrentUser;
             try
             {
@@ -80,7 +82,7 @@ namespace TheSocialGame.iOS
 
                 return false;
             }
-           
+
         }
 
         public string GetEmail()
@@ -93,15 +95,16 @@ namespace TheSocialGame.iOS
         {
             var us = Auth.DefaultInstance.CurrentUser;
             us.UpdateEmailAsync(mail);
+            us.SendEmailVerificationAsync();
         }
 
-        bool ValidPassword(string password)
+        public bool ValidPassword(string password)
         {
             var us = Auth.DefaultInstance.CurrentUser;
             try
             {
                 Auth.DefaultInstance.SignInWithPasswordAsync(us.Email, password);
-                
+
                 return true;
 
             }
@@ -112,16 +115,35 @@ namespace TheSocialGame.iOS
             }
         }
 
-        bool ChangePassword(string password)
+        public bool ChangePassword(string password)
         {
             var us = Auth.DefaultInstance.CurrentUser;
             try
             {
                 us.UpdatePasswordAsync(password);
-                return true
-            } catch(Exception e)
+                return true;
+            }
+            catch (Exception e)
             {
                 return false;
             }
+        }
+
+        public bool MailVerificata()
+        {
+            return Auth.DefaultInstance.CurrentUser.IsEmailVerified;
+        }
+
+        public bool PasswordDimenticata(string mail)
+        {
+            try
+            {
+                Auth.DefaultInstance.SendPasswordResetAsync(mail);
+                return true;
+            } catch (Exception e)
+            {
+                return false;
+            }
+        }
     }
 }

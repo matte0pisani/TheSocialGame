@@ -13,6 +13,7 @@ namespace TheSocialGame
         public MainPage()
         {
             InitializeComponent();
+            Navigation.PushAsync(new WelcomePage());
         }
     }
 }

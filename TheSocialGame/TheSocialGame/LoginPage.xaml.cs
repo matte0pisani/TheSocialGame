@@ -42,8 +42,14 @@ namespace TheSocialGame
             string token = await auth.LoginWithEmailAndPassword(MailEntry.Text, PasswordEntry.Text);
             if(token != string.Empty)
             {
-                Utente usr = new Utente();
-                await Navigation.PushAsync(new ProfilePage(usr));
+                if (auth.MailVerificata())
+                {
+                    Utente usr = new Utente();
+                    await Navigation.PushAsync(new ProfilePage(usr));
+                } else
+                {
+                    await DisplayAlert("AUTENTICAZIONE FALLITA", "Verifica la tua mail e riprova!", "OK");
+                }
             } else
             {
                 await DisplayAlert("AUTENTICAZIONE FALLITA", "L' email o la password non sono corrette, per favore riprova", "OK");
@@ -77,7 +83,7 @@ namespace TheSocialGame
         private async void ForgottenPasswordLabel_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ForgottenPasswordPage());
-            Navigation.RemovePage(this);
+          
         }
 
     }

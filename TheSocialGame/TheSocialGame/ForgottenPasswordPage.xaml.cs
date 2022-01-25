@@ -11,16 +11,30 @@ namespace TheSocialGame
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ForgottenPasswordPage : ContentPage
     {
+        IAuth auth;
+
         public ForgottenPasswordPage()
         {
             InitializeComponent();
+            auth = DependencyService.Get<IAuth>();
         }
 
 
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            if (EmailEntry.Text != null && EmailEntry.Text.Length > 0)
+            if (auth.PasswordDimenticata(EmailEntry.Text))
+            {
+                await DisplayAlert("RESET PASSWORD", "Ti abbiamo inviato una mail per reimpostare la tua password", "OK");
+                await Navigation.PopAsync();
+            }
+            else
+            {
+                await DisplayAlert("ERRORE", "Qualcosa è andato storto, ritenta!", "OK");
+
+            }
+
+            /*if (EmailEntry.Text != null && EmailEntry.Text.Length > 0)
             {
                 var client = new AmazonSimpleEmailServiceClient("", "", RegionEndpoint.EUSouth1);
                 SendEmailRequest sendRequest = GenerateDefaultEmailRequest("matteo.pisani.roma@gmail.com", EmailEntry.Text);
@@ -36,9 +50,19 @@ namespace TheSocialGame
                     System.Diagnostics.Debug.Print("Error message: " + ex.Message);
 
                 }
-            }
+            }*/
+
+
         }
 
+
+
+        async void BackClicked(Object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+        /*
         private SendEmailRequest GenerateDefaultEmailRequest(string senderAddress, string receiverAddress)
         {
             string subject = "Recupero password account TheSocialGame";
@@ -83,6 +107,6 @@ namespace TheSocialGame
             };
 
             return sendRequest;
-        }
+        }*/
     }
 }

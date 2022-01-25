@@ -24,13 +24,7 @@ namespace TheSocialGame
         public int personalita3 { get; set; }
         public int personalita4 { get; set; }
         public int personalita5 { get; set; }
-        public int personalita6 { get; set; }
-        public int personalita7 { get; set; }
-        public int personalita8 { get; set; }
-        public int personalita9 { get; set; }
-        public int personalita10 { get; set; }
-
-       
+        
 
         public Dictionary<string, (int, Dictionary<int, bool>)> listaDistintivi { get; set; }
         public List<Esperienza> esperienze { get; set; }
@@ -130,11 +124,11 @@ namespace TheSocialGame
         public Dictionary<Utente, int> ClassificaGenerale()
         {
             Dictionary<Utente, int> classifica = new Dictionary<Utente, int>();
-            classifica.Add(this, this.puntiEsperienza+this.livello+this.personalita1+this.personalita2+this.personalita3+this.personalita4+this.personalita5+this.personalita6+this.personalita7+this.personalita8+this.personalita9+this.personalita10);
+            classifica.Add(this, this.puntiEsperienza+this.livello+this.personalita1+this.personalita2+this.personalita3+this.personalita4+this.personalita5);
 
             foreach (Utente u in this.amici.Keys)
             {
-                int punteggio = u.puntiEsperienza + u.livello +u.personalita1 +u.personalita2 + u.personalita3 + u.personalita4 + u.personalita5 + u.personalita6 + u.personalita7 + u.personalita8 + u.personalita9 + u.personalita10;
+                int punteggio = u.puntiEsperienza + u.livello +u.personalita1 +u.personalita2 + u.personalita3 + u.personalita4 + u.personalita5;
                 classifica.Add(u, punteggio);
             }
             Dictionary<Utente, int> ordinata = new Dictionary<Utente, int>();
@@ -200,11 +194,7 @@ namespace TheSocialGame
             this.personalita3 = new Random().Next(100);
             this.personalita4 = new Random().Next(100);
             this.personalita5 = new Random().Next(100);
-            this.personalita6 = new Random().Next(100);
-            this.personalita7 = new Random().Next(100);
-            this.personalita8 = new Random().Next(100);
-            this.personalita9 = new Random().Next(100);
-            this.personalita10 = new Random().Next(100);
+           
 
         }
 

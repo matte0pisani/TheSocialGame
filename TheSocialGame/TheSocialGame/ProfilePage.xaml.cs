@@ -93,29 +93,19 @@ namespace TheSocialGame
 
         void RiempiPersonalityBar()
         {
-            int puntiTotali = user.personalita1 + user.personalita2 + user.personalita3 + user.personalita4 + user.personalita5 + user.personalita6 + user.personalita7 + user.personalita8 + user.personalita9 + user.personalita10;
+            int puntiTotali = user.personalita1 + user.personalita2 + user.personalita3 + user.personalita4 + user.personalita5;
             
                 Tipo1.ProgressTo((double)user.personalita1 / puntiTotali, 2000, Easing.Linear);
                 Tipo2.ProgressTo((double)user.personalita2 / puntiTotali, 2000, Easing.Linear);
                  Tipo3.ProgressTo((double)user.personalita3 / puntiTotali, 2000, Easing.Linear);
                  Tipo4.ProgressTo((double)user.personalita4 / puntiTotali, 2000, Easing.Linear);
                 Tipo5.ProgressTo((double)user.personalita5 / puntiTotali, 2000, Easing.Linear);
-                 Tipo6.ProgressTo((double)user.personalita6 / puntiTotali, 2000, Easing.Linear);
-                Tipo7.ProgressTo((double)user.personalita6 / puntiTotali, 2000, Easing.Linear);
-                 Tipo8.ProgressTo((double)user.personalita8 / puntiTotali, 2000, Easing.Linear);
-                Tipo9.ProgressTo((double)user.personalita9 / puntiTotali, 2000, Easing.Linear);
-                Tipo10.ProgressTo((double)user.personalita10 / puntiTotali, 2000, Easing.Linear);
-
+                
             PercentualeTipo1.Text = Convert.ToString(user.personalita1 * 100 / puntiTotali) + "%";
             PercentualeTipo2.Text = Convert.ToString(user.personalita2 * 100 / puntiTotali) + "%";
             PercentualeTipo3.Text = Convert.ToString(user.personalita3 * 100 / puntiTotali) + "%";
             PercentualeTipo4.Text = Convert.ToString(user.personalita4 * 100 / puntiTotali) + "%";
             PercentualeTipo5.Text = Convert.ToString(user.personalita5 * 100 / puntiTotali) + "%";
-            PercentualeTipo6.Text = Convert.ToString(user.personalita1 * 100 / puntiTotali) + "%";
-            PercentualeTipo7.Text = Convert.ToString(user.personalita7 * 100 / puntiTotali) + "%";
-            PercentualeTipo8.Text = Convert.ToString(user.personalita8 * 100 / puntiTotali) + "%";
-            PercentualeTipo9.Text = Convert.ToString(user.personalita9 * 100 / puntiTotali) + "%";
-            PercentualeTipo10.Text = Convert.ToString(user.personalita10 * 100 / puntiTotali) + "%";
             
         }
 
@@ -132,16 +122,7 @@ namespace TheSocialGame
             PercentualeTipo4.Text="";
             Tipo5.Progress = 0;
             PercentualeTipo5.Text="";
-            Tipo6.Progress = 0;
-            PercentualeTipo6.Text="";
-            Tipo7.Progress = 0;
-            PercentualeTipo7.Text="";
-            Tipo8.Progress = 0;
-            PercentualeTipo8.Text="";
-            Tipo9.Progress = 0;
-            PercentualeTipo9.Text="";
-            Tipo10.Progress = 0;
-            PercentualeTipo10.Text="";
+            
         }
 
         /* abilita i distintivi ottenuti */

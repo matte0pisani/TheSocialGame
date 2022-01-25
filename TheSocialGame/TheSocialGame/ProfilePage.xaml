@@ -465,19 +465,7 @@
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='33, 147, 200, 5', iOS='27, 147, 200, 5'} "/>
                             <ProgressBar  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='68, 147, 200, 5', iOS='60, 147, 200, 5'} "/>
-                            <ProgressBar  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
-                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='103, 147, 200, 5', iOS='93, 147, 200, 5'} "/>
-                            <ProgressBar  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
-                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='138, 147, 200, 5', iOS='126, 147, 200, 5'} "/>
-                            <ProgressBar   ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
-                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='173, 147, 200, 5', iOS='159, 147, 200, 5'} "/>
-                            <ProgressBar  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
-                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='208, 147, 200, 5', iOS='192, 147, 200, 5'} "/>
-                            <ProgressBar   ProgressColor="{DynamicResource FirstColor}" BackgroundColor="NavajoWhite"  Rotation="270" ScaleY="4" Progress="1" IsVisible="{OnPlatform Android=false, iOS=true}"
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='243, 147, 200, 5', iOS='225, 147, 200, 5'} "/>
-
-
-
+                           
 
 
 
@@ -491,17 +479,7 @@
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='33, 147, 200, 5', iOS='27, 147, 200, 5'} "/>
                             <ProgressBar x:Name="Tipo5"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
                              AbsoluteLayout.LayoutBounds="{OnPlatform Android='68, 147, 200, 5', iOS='60, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo6"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
-                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='103, 147, 200, 5', iOS='93, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo7"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='138, 147, 200, 5', iOS='126, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo8"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
-                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='173, 147, 200, 5', iOS='159, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo9"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4"
-                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='208, 147, 200, 5', iOS='192, 147, 200, 5'} "/>
-                            <ProgressBar x:Name="Tipo10"  ProgressColor="{DynamicResource FirstColor}" BackgroundColor="Transparent"  Rotation="270" ScaleY="4" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='243, 147, 200, 5', iOS='225, 147, 200, 5'} "/>
-
+                           
                             <Label Text="Competitivo" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='18', iOS='16'}" FontAttributes="Bold" 
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='52, 10, 100, 180', iOS='54, 10, 100, 180'} "/>
                             <Label Text="Propositivo" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='18', iOS='16'}" FontAttributes="Bold" 
@@ -512,17 +490,7 @@
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='157, 10, 100, 180', iOS='153, 10, 100, 180'} "/>
                             <Label Text="Serio" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='192, 10, 100, 180', iOS='186, 10, 100, 180'} "/>
-                            <Label Text="Divertente" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
-                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='227, 10, 100, 180', iOS='219, 10, 100, 180'} "/>
-                            <Label Text="Maldestro" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='262, 10, 100, 180', iOS='252, 10, 100, 180'} "/>
-                            <Label Text="Mediatore" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='297, 10, 100, 180', iOS='285, 10, 100, 180'} "/>
-                            <Label Text="Saggio" TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='332, 10, 100, 180', iOS='318, 10, 100, 180'} "/>
-                            <Label Text="Amante del rischio" FontAttributes="Bold"  TextColor="Black" Rotation="270" FontSize="{OnPlatform Android='20', iOS='18'}" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='367, 10, 100, 180', iOS='351, 10, 100, 180'} "/>
-
+                          
 
                             <Label x:Name="PercentualeTipo1" TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='14, 17, 100, 180', iOS='16, 20, 100, 184'}"/>
@@ -534,17 +502,7 @@
                             AbsoluteLayout.LayoutBounds="{OnPlatform Android='125, 17, 100, 180', iOS='115, 20, 100, 180'} "/>
                             <Label x:Name="PercentualeTipo5"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='155, 17, 100, 180', iOS='150, 20, 100, 180'} "/>
-                            <Label x:Name="PercentualeTipo6"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                           AbsoluteLayout.LayoutBounds="{OnPlatform Android='192, 17, 100, 180', iOS='180, 20, 100, 180'} "/>
-                            <Label x:Name="PercentualeTipo7"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='228, 17, 100, 180', iOS='216, 20, 100, 180'} "/>
-                            <Label x:Name="PercentualeTipo8"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='266, 17, 100, 180', iOS='247, 20, 100, 180'} "/>
-                            <Label x:Name="PercentualeTipo9" TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" FontAttributes="Bold" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='295, 17, 100, 180', iOS='279, 20, 100, 180'} "/>
-                            <Label x:Name="PercentualeTipo10"  FontAttributes="Bold"  TextColor="Black"  FontSize="{OnPlatform Android='16', iOS='14'}" 
-                            AbsoluteLayout.LayoutBounds="{OnPlatform Android='334, 17, 100, 180', iOS='312, 20, 100, 180'} "/>
-
+                           
                         </AbsoluteLayout>
                     </Frame>
 

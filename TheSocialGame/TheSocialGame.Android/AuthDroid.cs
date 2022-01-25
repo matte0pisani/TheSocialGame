@@ -63,6 +63,7 @@ namespace TheSocialGame.Droid
                 var newUser = await Firebase.Auth.FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(email, password);
                 var token = newUser.User.GetIdToken(false);
                 System.Diagnostics.Debug.WriteLine("token: " + newUser.User.Uid);
+                newUser.User.SendEmailVerification();
                 return (string)token;
             }
             catch (FirebaseAuthInvalidUserException e)
@@ -111,6 +112,8 @@ namespace TheSocialGame.Droid
         {
             FirebaseUser us = FirebaseAuth.Instance.CurrentUser;
             us.UpdateEmailAsync(mail);
+            us.SendEmailVerification();
+          
         }
 
         public bool ValidPassword(string password)
@@ -136,12 +139,30 @@ namespace TheSocialGame.Droid
             }
         }
 
-        bool ChangePassword(string password)
+       public bool ChangePassword(string password)
         {
             FirebaseUser us = FirebaseAuth.Instance.CurrentUser;
             try
             {
                 us.UpdatePasswordAsync(password);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool MailVerificata()
+        {
+            return FirebaseAuth.Instance.CurrentUser.IsEmailVerified;
+        }
+
+        public bool PasswordDimenticata(string mail)
+        {
+            try
+            {
+                FirebaseAuth.Instance.SendPasswordResetEmail(mail);
                 return true;
             }
             catch (Exception e)

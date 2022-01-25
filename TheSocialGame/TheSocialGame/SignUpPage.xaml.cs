@@ -34,9 +34,8 @@ namespace TheSocialGame
                 {
                     Utente usr = new Utente();
                     usr.username = UsernameEntry.Text;
-                    usr.mail = Mail.Text;
-                    usr.password = passwordEntry.Text;
-                    await Navigation.PushAsync(new ProfilePage(usr));
+                    await DisplayAlert("SUCCESSO", "Il tuo account è stato creato, verifica la tua mail per completare la registrazione!", "OK");
+                    await Navigation.PushAsync(new LoginPage());
                 } 
 
                 

@@ -31,12 +31,12 @@ namespace TheSocialGame.iOS
             //    ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
             LoadApplication(new App());
             ObjCRuntime.Class.ThrowOnInitFailure = false;
-            FirebasePushNotificationManager.Initialize(options, true);
+            //FirebasePushNotificationManager.Initialize(options, true);
             return base.FinishedLaunching(app, options);
         }
 
-        public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
-        {
+        //public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
+       /* {
             FirebasePushNotificationManager.DidRegisterRemoteNotifications(deviceToken);
         }
 
@@ -61,6 +61,6 @@ namespace TheSocialGame.iOS
 
             completionHandler(UIBackgroundFetchResult.NewData);
 
-        }
+        }*/
     }
     }

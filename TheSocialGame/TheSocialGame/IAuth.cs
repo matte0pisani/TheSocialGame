@@ -24,6 +24,10 @@ namespace TheSocialGame
 
             bool ChangePassword(string password);
 
+            bool MailVerificata();
+
+            bool PasswordDimenticata(string mail);
+
 
     }
 
