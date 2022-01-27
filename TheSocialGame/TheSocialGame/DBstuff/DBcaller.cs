@@ -25,7 +25,7 @@ namespace TheSocialGame.DBstuff
          */
         public async Task GetAllUsers(string name, List<UserSimple> result)
         {
-            string url = String.Format(ConfigurationManager.AppSettings["selectAPI"], name);
+            string url = String.Format(ConfigurationManager.AppSettings["selectAPItest"], name);
             System.Diagnostics.Debug.Print("Selecting all users with name '{0}'\n", name);
 
             response = await client.GetAsync(url);
@@ -51,7 +51,7 @@ namespace TheSocialGame.DBstuff
          */
         public async Task InsertUser(UserSimple usr)
         {
-            string url = ConfigurationManager.AppSettings["insertAPI"];
+            string url = ConfigurationManager.AppSettings["insertAPItest"];
             System.Diagnostics.Debug.Print("Inserting in DB user {0} {1} {2} {3} {4}\n", usr.ID, usr.Username, usr.Password, usr.PuntiSocial, usr.Livello);
             // assumiamo che, dati i costruttori di UserSimple, tutte le proprietà di usr siano inizializzate. ID verrà aggiornata correttamente all'inserimento
 
@@ -78,7 +78,7 @@ namespace TheSocialGame.DBstuff
          */
         public async Task<int> DeleteAllUsers(string name, List<UserSimple> deleted)
         {
-            string url = String.Format(ConfigurationManager.AppSettings["deleteAPI"], name);
+            string url = String.Format(ConfigurationManager.AppSettings["deleteAPItest"], name);
             System.Diagnostics.Debug.Print("Deleting all users with name '{0}'\n", name);
 
             response = await client.GetAsync(url);
@@ -107,7 +107,7 @@ namespace TheSocialGame.DBstuff
          */
         public async Task<bool> UpdateUser(UserSimple usr)
         {
-            string url = ConfigurationManager.AppSettings["updateAPI"];
+            string url = ConfigurationManager.AppSettings["updateAPItest"];
             System.Diagnostics.Debug.Print("Updating in DB user {0} {1} {2} {3} {4}\n", usr.ID, usr.Username, usr.Password, usr.PuntiSocial, usr.Livello);
 
             string jusr = JsonConvert.SerializeObject(usr);

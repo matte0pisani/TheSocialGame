@@ -13,13 +13,13 @@ namespace TheSocialGame
         {
             InitializeComponent();
             user = us;
-            App.Current.Resources["BackgroundColor"] = user.sfondo;
-            App.Current.Resources["FirstColor"] = user.primario;
-            App.Current.Resources["SecondColor"] = user.secondario;
+            App.Current.Resources["BackgroundColor"] = user.Sfondo;
+            App.Current.Resources["FirstColor"] = user.Primario;
+            App.Current.Resources["SecondColor"] = user.Secondario;
 
-            generali.BackgroundColor = user.sfondo;
+            generali.BackgroundColor = user.Sfondo;
             generali.TextColor = Color.Black;
-            esperienze.BackgroundColor = user.secondario;
+            esperienze.BackgroundColor = user.Secondario;
             esperienze.Opacity = 0.4;
             esperienze.TextColor = Color.DarkGray;
             inizializzaGriglia();
@@ -40,9 +40,9 @@ namespace TheSocialGame
                 num.FontSize = 30;
                 num.Margin = 10;
                 Label name = new Label();
-                name.Text = "@" + u.username;
-                if (u == user) name.TextColor = user.primario;
-                else name.TextColor = user.secondario;
+                name.Text = "@" + u.Username;
+                if (u == user) name.TextColor = user.Primario;
+                else name.TextColor = user.Secondario;
                 name.FontAttributes = FontAttributes.Bold;
                 name.FontSize = 30;
                 switch (Device.RuntimePlatform)
@@ -129,9 +129,9 @@ namespace TheSocialGame
 
         void generaliClicked(Object sender, EventArgs e)
         {
-            generali.BackgroundColor = user.sfondo;
+            generali.BackgroundColor = user.Sfondo;
             generali.TextColor = Color.Black;
-            esperienze.BackgroundColor = user.secondario;
+            esperienze.BackgroundColor = user.Secondario;
             esperienze.Opacity = 0.4;
             generali.Opacity = 100;
             esperienze.BackgroundColor = Color.LightGray;
@@ -148,9 +148,9 @@ namespace TheSocialGame
                 num.FontSize = 30;
                 num.Margin = 10;
                 Label name = new Label();
-                name.Text = "@" + u.username;
-                if (u==user) name.TextColor = user.primario;
-                else name.TextColor = user.secondario;
+                name.Text = "@" + u.Username;
+                if (u==user) name.TextColor = user.Primario;
+                else name.TextColor = user.Secondario;
                 name.FontAttributes = FontAttributes.Bold;
                 name.FontSize = 30;
                 name.Margin = 10;
@@ -177,9 +177,9 @@ namespace TheSocialGame
 
         void esperienzeClicked(Object sender, EventArgs e)
         {
-           esperienze.BackgroundColor = user.sfondo;
+           esperienze.BackgroundColor = user.Sfondo;
             esperienze.TextColor = Color.Black;
-            generali.BackgroundColor = user.secondario;
+            generali.BackgroundColor = user.Secondario;
             generali.Opacity = 0.4;
             generali.BackgroundColor = Color.LightGray;
             generali.TextColor = Color.DarkGray;
@@ -196,9 +196,9 @@ namespace TheSocialGame
                 num.FontSize = 30;
                 num.Margin = 10;
                 Label name = new Label();
-                name.Text = "@" + u.username;
-                if (u==user) name.TextColor = user.primario;
-                else name.TextColor = user.secondario;
+                name.Text = "@" + u.Username;
+                if (u==user) name.TextColor = user.Primario;
+                else name.TextColor = user.Secondario;
                 name.FontAttributes = FontAttributes.Bold;
                 name.FontSize = 30;
                 name.Margin = 10;

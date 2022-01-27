@@ -28,7 +28,7 @@ namespace TheSocialGame.iOS
             global::Xamarin.Forms.Forms.Init();
             Firebase.Core.App.Configure();
             ProgressRingRenderer.Init();
-            //    ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
+            ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
             LoadApplication(new App());
             ObjCRuntime.Class.ThrowOnInitFailure = false;
             //FirebasePushNotificationManager.Initialize(options, true);

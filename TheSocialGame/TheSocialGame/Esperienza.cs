@@ -16,7 +16,7 @@ namespace TheSocialGame
         public bool privata { get; set; }
         public bool copertinaLiveIOS { get; set; }
         public bool live { get; set; }
-        public List<byte[]> Galleria { get; set; }  // probabilmente dovrà diventare una lista di byte[]/Image
+        public List<byte[]> Galleria { get; set; }
         public List<string> luoghi { get; set; }
         public List<string> slogan { get; set; }
         public List<string> funfacts { get; set; }
@@ -47,7 +47,7 @@ namespace TheSocialGame
         {
             foreach (Utente u in this.ListaPartecipanti)
             {
-                u.esperienze.Remove(this);
+                u.Esperienze.Remove(this);
                 foreach (Utente us in this.ListaPartecipanti)
                     u.decrementaAmici(this.ListaPartecipanti);
             }

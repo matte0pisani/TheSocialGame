@@ -19,9 +19,9 @@ namespace TheSocialGame
         {
             InitializeComponent();
             user = u;
-            App.Current.Resources["BackgroundColor"] = user.sfondo;
-            App.Current.Resources["FirstColor"] = user.primario;
-            App.Current.Resources["SecondColor"] = user.secondario;
+            App.Current.Resources["BackgroundColor"] = user.Sfondo;
+            App.Current.Resources["FirstColor"] = user.Primario;
+            App.Current.Resources["SecondColor"] = user.Secondario;
 
             exp = e;
             Titolo.Text = exp.Titolo;
@@ -239,24 +239,24 @@ namespace TheSocialGame
             foreach (Utente u in exp.ListaPartecipanti)
             {
                 Frame f = new Frame();
-                if (u.fotoBytes != null)
+                if (u.FotoBytes != null)
                 {
                     Image im = new Image();
                     im.Source = ImageSource.FromStream(() =>
                     {
-                        return new MemoryStream(u.fotoBytes);
+                        return new MemoryStream(u.FotoBytes);
                     });
                     im.Aspect = Aspect.AspectFill;
                     im.Scale = 5;
                     f.Content = im;
-                    if (u.fotoLiveiOS) im.Rotation = 90;
+                    if (u.FotoLiveiOS) im.Rotation = 90;
                 }
                 f.BackgroundColor = Color.Orange;
                 f.HasShadow = false;
                 f.IsClippedToBounds = true;
                 f.BorderColor = Color.Black;
                 Label l = new Label();
-                l.Text = "@" + u.username;
+                l.Text = "@" + u.Username;
                 l.TextColor = Color.Black;
                 l.HorizontalOptions = LayoutOptions.StartAndExpand;
                 l.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
@@ -264,7 +264,7 @@ namespace TheSocialGame
                 Button b = new Button();
                 b.Text = "Rimuovi";
                 b.TextColor = Color.Black;
-                b.BackgroundColor = this.user.secondario;
+                b.BackgroundColor = this.user.Secondario;
                 b.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
                 b.Margin = new Thickness(100, 10);
                 b.TranslationX = 30;
@@ -280,7 +280,7 @@ namespace TheSocialGame
                         layout.Children.Add(AggiungiElemento);
                         Aggiungi.IsVisible = true;
                         exp.ListaPartecipanti.Remove(u);
-                        u.esperienze.Remove(exp);
+                        u.Esperienze.Remove(exp);
                         apriPartecipanti();
                     }
                     else
@@ -370,7 +370,7 @@ namespace TheSocialGame
             } else if (nomeschermata.Text.Equals("Partecipanti"))
             {
                 Utente u = new Utente();
-                u.username = AggiungiElemento.Text;
+                u.Username = AggiungiElemento.Text;
                 exp.ListaPartecipanti.Add(u);
                 apriPartecipanti();
             }
@@ -415,7 +415,7 @@ namespace TheSocialGame
                     b.TextColor = Color.Black;
                     b.Margin = new Thickness(0, 10);
                     b.CornerRadius = 10;
-                    b.BackgroundColor = this.user.secondario;
+                    b.BackgroundColor = this.user.Secondario;
                     b.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
                     b.Clicked += (sender, args) =>
                     {

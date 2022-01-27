@@ -20,7 +20,7 @@ namespace TheSocialGame.Droid
             FirebaseApp.InitializeApp(Application.Context);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-          //  ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
+            ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
             LoadApplication(new App());
 
 

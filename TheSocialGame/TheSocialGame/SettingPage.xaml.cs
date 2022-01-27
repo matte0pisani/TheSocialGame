@@ -18,21 +18,21 @@ namespace TheSocialGame
             user = u;
             InitializeComponent();
             auth = DependencyService.Get<IAuth>();
-            App.Current.Resources["BackgroundColor"] = user.sfondo;
-            App.Current.Resources["FirstColor"] = user.primario;
-            App.Current.Resources["SecondColor"] = user.secondario;
-            Username.Text = user.username;
+            App.Current.Resources["BackgroundColor"] = user.Sfondo;
+            App.Current.Resources["FirstColor"] = user.Primario;
+            App.Current.Resources["SecondColor"] = user.Secondario;
+            Username.Text = user.Username;
             Email.Text = auth.GetEmail();
             colori();
-            back.Title = user.sfondo.ToHex();
-            prim.Title = user.primario.ToHex();
-            sec.Title = user.secondario.ToHex();
+            back.Title = user.Sfondo.ToHex();
+            prim.Title = user.Primario.ToHex();
+            sec.Title = user.Secondario.ToHex();
 
         }
 
         void cambiaUsername(Object sender, EventArgs e)
         {
-            user.username = Username.Text;
+            user.Username = Username.Text;
             
         }
 
@@ -45,9 +45,9 @@ namespace TheSocialGame
         void cambiaPrivacy(Object sender, EventArgs e)
         {
             if (Privacy.IsToggled)
-                user.privato = true;
+                user.Privato = true;
             else
-                user.privato = false;
+                user.Privato = false;
         }
 
         async void cambiaPassword(Object sender, EventArgs e)
@@ -111,7 +111,7 @@ namespace TheSocialGame
         void cambiaSfondo(Object sender, EventArgs e)
         {
             var button = (Button)sender;
-            user.sfondo = button.BackgroundColor;
+            user.Sfondo = button.BackgroundColor;
             Navigation.PushAsync(new SettingPage(user));
             Navigation.RemovePage(this);
 
@@ -120,7 +120,7 @@ namespace TheSocialGame
         void cambiaPrimario(Object sender, EventArgs e)
         {
             var button = (Button)sender;
-            user.primario = button.BackgroundColor;
+            user.Primario = button.BackgroundColor;
             Navigation.PushAsync(new SettingPage(user));
             Navigation.RemovePage(this);
         }
@@ -128,7 +128,7 @@ namespace TheSocialGame
         void cambiaSecondario(Object sender, EventArgs e)
         {
             var button = (Button)sender;
-            user.secondario = button.BackgroundColor;
+            user.Secondario = button.BackgroundColor;
             Navigation.PushAsync(new SettingPage(user));
             Navigation.RemovePage(this);
         }
@@ -294,7 +294,7 @@ namespace TheSocialGame
         {
           
             
-            user.sfondo = Color.FromHex((string)back.SelectedItem);
+            user.Sfondo = Color.FromHex((string)back.SelectedItem);
             Navigation.PushAsync(new SettingPage(user));
             Navigation.RemovePage(this);
         }
@@ -302,7 +302,7 @@ namespace TheSocialGame
         void primario(Object sender, EventArgs e)
         {
            
-            user.primario = Color.FromHex((string)prim.SelectedItem);
+            user.Primario = Color.FromHex((string)prim.SelectedItem);
             Navigation.PushAsync(new SettingPage(user));
             Navigation.RemovePage(this);
         }
@@ -310,7 +310,7 @@ namespace TheSocialGame
         void secondario(Object sender, EventArgs e)
         {
            
-            user.secondario = Color.FromHex((string)sec.SelectedItem);
+            user.Secondario = Color.FromHex((string)sec.SelectedItem);
             Navigation.PushAsync(new SettingPage(user));
             Navigation.RemovePage(this);
         }

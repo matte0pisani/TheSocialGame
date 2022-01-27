@@ -2,53 +2,57 @@
 using System.Collections.Generic;
 using System.Linq;
 using Amazon.Runtime.Internal.Transform;
+using Newtonsoft.Json;
 using Xamarin.Forms;
-
-
+using Xamarin.Forms.Internals;
 
 namespace TheSocialGame
 {
     public class Utente
     {
         public string ID { get; set; }
-        public string username { get; set; }
-        public int puntiSocial { get; set; }
-        public int puntiEsperienza { get; set; }
-        public int livello { get; set; }
-        public byte[] fotoBytes { get; set; }
-        public bool fotoLiveiOS { get; set; }
+        public string Username { get; set; }
+        public int PuntiSocial { get; set; }
+        public int PuntiEsperienza { get; set; }
+        public int Livello { get; set; }
+        public byte[] FotoBytes { get; set; }
+        public bool FotoLiveiOS { get; set; }
 
         /* PERSONALITA*/
-        public int personalita1 {get; set;}
-        public int personalita2 { get; set; }
-        public int personalita3 { get; set; }
-        public int personalita4 { get; set; }
-        public int personalita5 { get; set; }
+        public int Personalita1 {get; set;}
+        public int Personalita2 { get; set; }
+        public int Personalita3 { get; set; }
+        public int Personalita4 { get; set; }
+        public int Personalita5 { get; set; }
         
 
-        public Dictionary<string, (int, Dictionary<int, bool>)> listaDistintivi { get; set; }
-        public List<Esperienza> esperienze { get; set; }
-        public Dictionary<Utente, int> amici { get; set; }
-        public Color sfondo { get; set; }
-        public Color primario { get; set; }
-        public Color secondario { get; set; }
-        public bool privato { get; set; }
+        public Dictionary<string, (int, Dictionary<int, bool>)> ListaDistintivi { get; set; }
+        public List<Esperienza> Esperienze { get; set; }
+        public Dictionary<Utente, int> Amici { get; set; }
+        public Color Sfondo { get; set; }
+        public Color Primario { get; set; }
+        public Color Secondario { get; set; }
+        public bool Privato { get; set; }
 
 
-
+        [Preserve]
+        [JsonConstructor]
         public Utente()
         {
-           this.listaDistintivi = inizializzaListaDistintivi();
-            this.sfondo = Color.GhostWhite;
-            this.sfondo = Color.LightGray;
-            this.sfondo = Color.WhiteSmoke;
-            esperienze = new List<Esperienza>();
-            amici = new Dictionary<Utente, int>();
-            fotoLiveiOS = false;
-            privato = false;
-            puntiEsperienza = 0;
-            puntiFake();
-            
+            ID = "dummy";
+            Username = "dummy";
+            PuntiSocial = PuntiEsperienza = Livello = 0;
+            FotoBytes = null;
+            FotoLiveiOS = false;
+            Personalita1 = Personalita2 = Personalita3 = Personalita4 = Personalita5 = 1;
+            ListaDistintivi = inizializzaListaDistintivi();
+            Esperienze = new List<Esperienza>();
+            Amici = new Dictionary<Utente, int>();
+            Sfondo = Color.GhostWhite;
+            Primario = Color.LightGray;
+            Secondario = Color.WhiteSmoke;
+            Privato = false;
+            // puntiFake();
         }
 
 
@@ -106,10 +110,10 @@ namespace TheSocialGame
 
 
             Dictionary<Utente, int> classifica = new Dictionary<Utente, int>();
-            classifica.Add(this, this.puntiEsperienza);
-            foreach (Utente u in this.amici.Keys)
+            classifica.Add(this, this.PuntiEsperienza);
+            foreach (Utente u in this.Amici.Keys)
             {
-                classifica.Add(u, u.puntiEsperienza);
+                classifica.Add(u, u.PuntiEsperienza);
             }
 
             Dictionary<Utente, int> ordinata = new Dictionary<Utente, int>();
@@ -124,11 +128,11 @@ namespace TheSocialGame
         public Dictionary<Utente, int> ClassificaGenerale()
         {
             Dictionary<Utente, int> classifica = new Dictionary<Utente, int>();
-            classifica.Add(this, this.puntiEsperienza+this.livello+this.personalita1+this.personalita2+this.personalita3+this.personalita4+this.personalita5);
+            classifica.Add(this, this.PuntiEsperienza+this.Livello+this.Personalita1+this.Personalita2+this.Personalita3+this.Personalita4+this.Personalita5);
 
-            foreach (Utente u in this.amici.Keys)
+            foreach (Utente u in this.Amici.Keys)
             {
-                int punteggio = u.puntiEsperienza + u.livello +u.personalita1 +u.personalita2 + u.personalita3 + u.personalita4 + u.personalita5;
+                int punteggio = u.PuntiEsperienza + u.Livello +u.Personalita1 +u.Personalita2 + u.Personalita3 + u.Personalita4 + u.Personalita5;
                 classifica.Add(u, punteggio);
             }
             Dictionary<Utente, int> ordinata = new Dictionary<Utente, int>();
@@ -148,8 +152,8 @@ namespace TheSocialGame
                 if (!(u == this))
                 {
 
-                    if (this.amici.Keys.Contains(u)) this.amici[u]++;
-                    else this.amici.Add(u, 1);
+                    if (this.Amici.Keys.Contains(u)) this.Amici[u]++;
+                    else this.Amici.Add(u, 1);
                 }
               
             }
@@ -159,11 +163,11 @@ namespace TheSocialGame
         {
             foreach (Utente u in partecipanti)
             {
-                if (this.amici.ContainsKey(u))
+                if (this.Amici.ContainsKey(u))
                 {
-                    if (this.amici[u] == 1)
-                        this.amici.Remove(u);
-                    else this.amici[u]--;
+                    if (this.Amici[u] == 1)
+                        this.Amici.Remove(u);
+                    else this.Amici[u]--;
                 }
             }
         }
@@ -172,7 +176,7 @@ namespace TheSocialGame
         public Dictionary<Utente, int> getBestFriends()
         {
             Dictionary<Utente, int> best = new Dictionary<Utente, int>();
-            foreach (KeyValuePair<Utente, int> coppia in amici.OrderByDescending(key => key.Value).Take(3))
+            foreach (KeyValuePair<Utente, int> coppia in Amici.OrderByDescending(key => key.Value).Take(3))
             {
                 best.Add(coppia);
             }
@@ -187,13 +191,13 @@ namespace TheSocialGame
 
         public void puntiFake()
         {
-            this.puntiSocial = new Random().Next(100);
-            this.livello = (this.puntiSocial / 10) + 1;
-            this.personalita1 = new Random().Next(100);
-            this.personalita2 = new Random().Next(100);
-            this.personalita3 = new Random().Next(100);
-            this.personalita4 = new Random().Next(100);
-            this.personalita5 = new Random().Next(100);
+            this.PuntiSocial = new Random().Next(100);
+            this.Livello = (this.PuntiSocial / 10) + 1;
+            this.Personalita1 = new Random().Next(100);
+            this.Personalita2 = new Random().Next(100);
+            this.Personalita3 = new Random().Next(100);
+            this.Personalita4 = new Random().Next(100);
+            this.Personalita5 = new Random().Next(100);
            
 
         }

@@ -13,9 +13,9 @@ namespace TheSocialGame
         {
             InitializeComponent();
             user = us;
-            App.Current.Resources["BackgroundColor"] = user.sfondo;
-            App.Current.Resources["FirstColor"] = user.primario;
-            App.Current.Resources["SecondColor"] = user.secondario;
+            App.Current.Resources["BackgroundColor"] = user.Sfondo;
+            App.Current.Resources["FirstColor"] = user.Primario;
+            App.Current.Resources["SecondColor"] = user.Secondario;
             inserisci();
 
         }
@@ -29,32 +29,32 @@ namespace TheSocialGame
         public void inserisci()
         {
             int x = 0;
-            foreach (Utente u in user.amici.Keys)
+            foreach (Utente u in user.Amici.Keys)
             {
                 Frame f = new Frame();
-                if (u.fotoBytes != null)
+                if (u.FotoBytes != null)
                 {
                     Image im = new Image();
                     im.Source = ImageSource.FromStream(() =>
                     {
-                        return new MemoryStream(u.fotoBytes);
+                        return new MemoryStream(u.FotoBytes);
                     });
                     im.Aspect = Aspect.AspectFill;
                     im.Scale = 5;
                     f.Content = im;
-                    if (u.fotoLiveiOS) im.Rotation = 90;
+                    if (u.FotoLiveiOS) im.Rotation = 90;
                 }
-                f.BackgroundColor = user.secondario;
+                f.BackgroundColor = user.Secondario;
                 f.HasShadow = false;
                 f.IsClippedToBounds = true;
                 f.BorderColor = Color.Black;
                 Label l = new Label();
-                l.Text = "@" + u.username;
+                l.Text = "@" + u.Username;
                 l.TextColor = Color.Black;
                 l.Margin = new Thickness(20, 0);
                 l.FontSize = 25;
                 Label s = new Label();
-                s.Text = user.amici[u].ToString() + " esperienze insieme";
+                s.Text = user.Amici[u].ToString() + " esperienze insieme";
                 s.TextColor = Color.SlateGray;
                 s.FontSize = 15;
                 s.Margin = new Thickness(20, 30);

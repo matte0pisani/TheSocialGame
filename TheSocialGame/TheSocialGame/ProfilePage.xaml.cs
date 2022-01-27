@@ -17,35 +17,35 @@ namespace TheSocialGame
             InitializeComponent();
            
             user = us;
-            App.Current.Resources["BackgroundColor"] = user.sfondo;
-            App.Current.Resources["FirstColor"] = user.primario;
-            App.Current.Resources["SecondColor"] = user.secondario;
+            App.Current.Resources["BackgroundColor"] = user.Sfondo;
+            App.Current.Resources["FirstColor"] = user.Primario;
+            App.Current.Resources["SecondColor"] = user.Secondario;
 
             creaUtenteFake();
            
 
-            if (user.fotoBytes == null)
+            if (user.FotoBytes == null)
             {
                 ProfilePicFrame.IsVisible = false;
                 ChangeProfilePicButton.IsVisible = false;
                 
             } else
             {
-                if (user.fotoLiveiOS) ProfilePic.Rotation = 90;
+                if (user.FotoLiveiOS) ProfilePic.Rotation = 90;
                 ProfilePic.Source = ImageSource.FromStream(() =>
                 {
-                    return new MemoryStream(user.fotoBytes);
+                    return new MemoryStream(user.FotoBytes);
                 });
                 ChangeProfilePicButton.IsVisible = true;
                
             }
-            UsernameLabel.Text =this.user.username;
+            UsernameLabel.Text =this.user.Username;
             AbilitaDistintivi();
             MostraAmici();
             RiempiProgressBar();
-            if (user.livello < 10)
-                 LabelLevelSingle.Text = Convert.ToString(user.livello);
-            else LabelLevelDouble.Text = Convert.ToString(user.livello);
+            if (user.Livello < 10)
+                 LabelLevelSingle.Text = Convert.ToString(user.Livello);
+            else LabelLevelDouble.Text = Convert.ToString(user.Livello);
 
             Scrolling.HeightRequest = 650;
             ConfermaEliminazioneFrame.IsVisible = false;
@@ -67,18 +67,18 @@ namespace TheSocialGame
                 {
                     if (i == 1)
                     {
-                        BF1.Text = "@" + coppia.Key.username;
+                        BF1.Text = "@" + coppia.Key.Username;
                         EspBF1.Text = coppia.Value.ToString() + " esperienze insieme";
                         i++;
                     }
                     else if (i == 2)
                     {
-                        BF2.Text = "@" + coppia.Key.username;
+                        BF2.Text = "@" + coppia.Key.Username;
                         EspBF2.Text = coppia.Value.ToString() + " esperienze insieme";
                         i++;
                     } else if( i == 3)
                     {
-                        BF3.Text = "@" + coppia.Key.username;
+                        BF3.Text = "@" + coppia.Key.Username;
                         EspBF3.Text = coppia.Value.ToString() + " esperienze insieme";
                         i++;
                     }
@@ -88,24 +88,24 @@ namespace TheSocialGame
         
         /*riempimento barre fino a soglia indicata */
         async void RiempiProgressBar() {
-            await SocialPointBar.ProgressTo((double)(user.puntiSocial % 10) / 10, 3000, Easing.Linear);
+            await SocialPointBar.ProgressTo((double)(user.PuntiSocial % 10) / 10, 3000, Easing.Linear);
         }
 
         void RiempiPersonalityBar()
         {
-            int puntiTotali = user.personalita1 + user.personalita2 + user.personalita3 + user.personalita4 + user.personalita5;
+            int puntiTotali = user.Personalita1 + user.Personalita2 + user.Personalita3 + user.Personalita4 + user.Personalita5;
             
-                Tipo1.ProgressTo((double)user.personalita1 / puntiTotali, 2000, Easing.Linear);
-                Tipo2.ProgressTo((double)user.personalita2 / puntiTotali, 2000, Easing.Linear);
-                 Tipo3.ProgressTo((double)user.personalita3 / puntiTotali, 2000, Easing.Linear);
-                 Tipo4.ProgressTo((double)user.personalita4 / puntiTotali, 2000, Easing.Linear);
-                Tipo5.ProgressTo((double)user.personalita5 / puntiTotali, 2000, Easing.Linear);
+                Tipo1.ProgressTo((double)user.Personalita1 / puntiTotali, 2000, Easing.Linear);
+                Tipo2.ProgressTo((double)user.Personalita2 / puntiTotali, 2000, Easing.Linear);
+                 Tipo3.ProgressTo((double)user.Personalita3 / puntiTotali, 2000, Easing.Linear);
+                 Tipo4.ProgressTo((double)user.Personalita4 / puntiTotali, 2000, Easing.Linear);
+                Tipo5.ProgressTo((double)user.Personalita5 / puntiTotali, 2000, Easing.Linear);
                 
-            PercentualeTipo1.Text = Convert.ToString(user.personalita1 * 100 / puntiTotali) + "%";
-            PercentualeTipo2.Text = Convert.ToString(user.personalita2 * 100 / puntiTotali) + "%";
-            PercentualeTipo3.Text = Convert.ToString(user.personalita3 * 100 / puntiTotali) + "%";
-            PercentualeTipo4.Text = Convert.ToString(user.personalita4 * 100 / puntiTotali) + "%";
-            PercentualeTipo5.Text = Convert.ToString(user.personalita5 * 100 / puntiTotali) + "%";
+            PercentualeTipo1.Text = Convert.ToString(user.Personalita1 * 100 / puntiTotali) + "%";
+            PercentualeTipo2.Text = Convert.ToString(user.Personalita2 * 100 / puntiTotali) + "%";
+            PercentualeTipo3.Text = Convert.ToString(user.Personalita3 * 100 / puntiTotali) + "%";
+            PercentualeTipo4.Text = Convert.ToString(user.Personalita4 * 100 / puntiTotali) + "%";
+            PercentualeTipo5.Text = Convert.ToString(user.Personalita5 * 100 / puntiTotali) + "%";
             
         }
 
@@ -131,31 +131,31 @@ namespace TheSocialGame
             int guadagnati = 0;
 
 
-            ViaggioMare1.IsVisible = !user.listaDistintivi["ViaggioMare"].Item2[1];
-            Ristorante1.IsVisible = !user.listaDistintivi["Ristorante"].Item2[1];
-            Sport1.IsVisible = !user.listaDistintivi["Sport"].Item2[1];
-            Discoteca1.IsVisible = !user.listaDistintivi["Discoteca"].Item2[1];
-            Compleanno1.IsVisible = !user.listaDistintivi["Compleanno"].Item2[1];
-            Maschera1.IsVisible = !user.listaDistintivi["Maschera"].Item2[1];
-            ViaggioMontagna1.IsVisible = !user.listaDistintivi["ViaggioMontagna"].Item2[1];
-            ViaggioCitta1.IsVisible = !user.listaDistintivi["ViaggioCitta"].Item2[1];
-            Cultura1.IsVisible = !user.listaDistintivi["Cultura"].Item2[1];
-            Cocktail1.IsVisible = !user.listaDistintivi["Cocktail"].Item2[1];
-            Casa1.IsVisible = !user.listaDistintivi["Casa"].Item2[1];
-            ViaggioMare2.IsVisible = !user.listaDistintivi["ViaggioMare"].Item2[2];
-            Ristorante2.IsVisible = !user.listaDistintivi["Ristorante"].Item2[2];
-            Sport2.IsVisible = !user.listaDistintivi["Sport"].Item2[2];
-            Disco2.IsVisible = !user.listaDistintivi["Discoteca"].Item2[2];
-            Compleanno2.IsVisible = !user.listaDistintivi["Compleanno"].Item2[2];
-            Maschera2.IsVisible = !user.listaDistintivi["Maschera"].Item2[2];
-            Montagna2.IsVisible = !user.listaDistintivi["ViaggioMontagna"].Item2[2];
-            Citta2.IsVisible = !user.listaDistintivi["ViaggioCitta"].Item2[2];
-            Cultura2.IsVisible = !user.listaDistintivi["Cultura"].Item2[2];
-            Cocktail2.IsVisible = !user.listaDistintivi["Cocktail"].Item2[2];
-            Casa2.IsVisible = !user.listaDistintivi["Casa"].Item2[2];
+            ViaggioMare1.IsVisible = !user.ListaDistintivi["ViaggioMare"].Item2[1];
+            Ristorante1.IsVisible = !user.ListaDistintivi["Ristorante"].Item2[1];
+            Sport1.IsVisible = !user.ListaDistintivi["Sport"].Item2[1];
+            Discoteca1.IsVisible = !user.ListaDistintivi["Discoteca"].Item2[1];
+            Compleanno1.IsVisible = !user.ListaDistintivi["Compleanno"].Item2[1];
+            Maschera1.IsVisible = !user.ListaDistintivi["Maschera"].Item2[1];
+            ViaggioMontagna1.IsVisible = !user.ListaDistintivi["ViaggioMontagna"].Item2[1];
+            ViaggioCitta1.IsVisible = !user.ListaDistintivi["ViaggioCitta"].Item2[1];
+            Cultura1.IsVisible = !user.ListaDistintivi["Cultura"].Item2[1];
+            Cocktail1.IsVisible = !user.ListaDistintivi["Cocktail"].Item2[1];
+            Casa1.IsVisible = !user.ListaDistintivi["Casa"].Item2[1];
+            ViaggioMare2.IsVisible = !user.ListaDistintivi["ViaggioMare"].Item2[2];
+            Ristorante2.IsVisible = !user.ListaDistintivi["Ristorante"].Item2[2];
+            Sport2.IsVisible = !user.ListaDistintivi["Sport"].Item2[2];
+            Disco2.IsVisible = !user.ListaDistintivi["Discoteca"].Item2[2];
+            Compleanno2.IsVisible = !user.ListaDistintivi["Compleanno"].Item2[2];
+            Maschera2.IsVisible = !user.ListaDistintivi["Maschera"].Item2[2];
+            Montagna2.IsVisible = !user.ListaDistintivi["ViaggioMontagna"].Item2[2];
+            Citta2.IsVisible = !user.ListaDistintivi["ViaggioCitta"].Item2[2];
+            Cultura2.IsVisible = !user.ListaDistintivi["Cultura"].Item2[2];
+            Cocktail2.IsVisible = !user.ListaDistintivi["Cocktail"].Item2[2];
+            Casa2.IsVisible = !user.ListaDistintivi["Casa"].Item2[2];
 
 
-            Dictionary<string, (int, Dictionary<int, bool>)>.ValueCollection valori = user.listaDistintivi.Values;
+            Dictionary<string, (int, Dictionary<int, bool>)>.ValueCollection valori = user.ListaDistintivi.Values;
             foreach ((int, Dictionary<int, bool>) elem in valori)
             {
                 Dictionary<int, bool> val = elem.Item2;
@@ -188,7 +188,7 @@ namespace TheSocialGame
                     using (MemoryStream ms = new MemoryStream())
                     {
                         stream.CopyTo(ms);
-                        user.fotoBytes = ms.ToArray();
+                        user.FotoBytes = ms.ToArray();
                     }
                 }
                 
@@ -196,12 +196,12 @@ namespace TheSocialGame
                 ChangeProfilePicButton.IsVisible = true;
                 ProfilePic.Source = ImageSource.FromStream(() =>
                 {
-                    return new MemoryStream(user.fotoBytes);
+                    return new MemoryStream(user.FotoBytes);
                 });
                 switch (Device.RuntimePlatform)
                 {
                     case Device.iOS:
-                        user.fotoLiveiOS = true;
+                        user.FotoLiveiOS = true;
                         ProfilePic.Rotation = 90;
                         break;
                 }
@@ -225,20 +225,20 @@ namespace TheSocialGame
             if (foto != null)
             {
                 ProfilePic.Rotation = 0;
-                user.fotoLiveiOS = false;
+                user.FotoLiveiOS = false;
                 using (var stream = await foto.OpenReadAsync())
                 {
                     using (MemoryStream ms = new MemoryStream())
                     {
                         stream.CopyTo(ms);
-                        user.fotoBytes = ms.ToArray();
+                        user.FotoBytes = ms.ToArray();
                     }
                 }
                 ProfilePicFrame.IsVisible = true;
                 ChangeProfilePicButton.IsVisible = true;
                 ProfilePic.Source = ImageSource.FromStream(() =>
                 {
-                    return new MemoryStream(user.fotoBytes);
+                    return new MemoryStream(user.FotoBytes);
                 });
             }
          }
@@ -253,7 +253,7 @@ namespace TheSocialGame
         void EliminaFoto(Object sender, EventArgs e)
         {
             // non so se l'immagine rimane "pendente" nella memoria del processo, in tal caso andrebbe liberata la memoria
-            user.fotoBytes = null;
+            user.FotoBytes = null;
             ProfilePicFrame.IsVisible = false;
             ChangeProfilePicButton.IsVisible = false;
             ConfermaEliminazioneFrame.IsVisible = false;
@@ -289,7 +289,7 @@ namespace TheSocialGame
         void AddPhoto(Object sender, EventArgs e)
         {
             AddPhotoFrame.IsVisible = true;
-            if (user.fotoBytes != null)
+            if (user.FotoBytes != null)
                 EliminaButton.IsVisible = true;
             else
                 EliminaButton.IsVisible = false;
@@ -582,25 +582,25 @@ namespace TheSocialGame
          
 
 
-            user.listaDistintivi["ViaggioMare"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Ristorante"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Sport"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Compleanno"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Maschera"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["ViaggioMontagna"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["ViaggioCitta"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Cultura"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Cocktail"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Casa"].Item2[1] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["ViaggioMare"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Ristorante"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Sport"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Compleanno"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Maschera"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["ViaggioMontagna"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Cultura"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Cocktail"].Item2[2] = new Random().Next(0, 2) > 0;
-            user.listaDistintivi["Casa"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["ViaggioMare"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Ristorante"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Sport"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Compleanno"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Maschera"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["ViaggioMontagna"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["ViaggioCitta"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Cultura"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Cocktail"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Casa"].Item2[1] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["ViaggioMare"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Ristorante"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Sport"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Compleanno"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Maschera"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["ViaggioMontagna"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Cultura"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Cocktail"].Item2[2] = new Random().Next(0, 2) > 0;
+            user.ListaDistintivi["Casa"].Item2[2] = new Random().Next(0, 2) > 0;
 
 
 

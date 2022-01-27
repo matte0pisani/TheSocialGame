@@ -22,9 +22,9 @@ namespace TheSocialGame
             InitializeComponent();
             user = us;
             nuova = new Esperienza();
-            App.Current.Resources["BackgroundColor"] = user.sfondo;
-            App.Current.Resources["FirstColor"] = user.primario;
-            App.Current.Resources["SecondColor"] = user.secondario;
+            App.Current.Resources["BackgroundColor"] = user.Sfondo;
+            App.Current.Resources["FirstColor"] = user.Primario;
+            App.Current.Resources["SecondColor"] = user.Secondario;
             nuova.ListaPartecipanti.Add(user);
             EsciSenzaSalvareFrame.IsVisible = false;
             CopertinaFrame.IsVisible = false;
@@ -36,7 +36,7 @@ namespace TheSocialGame
             WarningPartecipanti.IsVisible = false;
             WarningTipologia.IsVisible = false;
             WarningTitolo.IsVisible = false;
-            TipiEsp.ItemsSource = new List<string>(user.listaDistintivi.Keys);
+            TipiEsp.ItemsSource = new List<string>(user.ListaDistintivi.Keys);
         }
 
         /* metodi di apertura pagine connesse */
@@ -222,11 +222,11 @@ namespace TheSocialGame
         void AggiungiPartecipanti(Object sender, EventArgs e)
         {
             Utente partecipante = new Utente();
-            partecipante.username = Partecipanti.Text;
+            partecipante.Username = Partecipanti.Text;
             if (!Partecipanti.Text.Equals(""))
             {
                 nuova.ListaPartecipanti.Add(partecipante);
-                ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + partecipante.username + "  ";
+                ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + partecipante.Username + "  ";
             }
             Partecipanti.Text=null;
         }
@@ -258,12 +258,12 @@ namespace TheSocialGame
             {
                 foreach (Utente u in nuova.ListaPartecipanti)
                 {
-                    u.esperienze.Add(nuova);
-                    int x = u.listaDistintivi[nuova.Tipologia].Item1;
-                    Dictionary<int, bool> diz = u.listaDistintivi[nuova.Tipologia].Item2;
+                    u.Esperienze.Add(nuova);
+                    int x = u.ListaDistintivi[nuova.Tipologia].Item1;
+                    Dictionary<int, bool> diz = u.ListaDistintivi[nuova.Tipologia].Item2;
                     x++;
-                    u.listaDistintivi[nuova.Tipologia] = (x, diz);
-                    u.puntiEsperienza++;
+                    u.ListaDistintivi[nuova.Tipologia] = (x, diz);
+                    u.PuntiEsperienza++;
                     u.aggiungiAmici(nuova.ListaPartecipanti);
                   
                 }

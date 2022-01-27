@@ -8,23 +8,22 @@ namespace TheSocialGame
 {
     public partial class App : Application
     {
-        IAuth auth;
+        private IAuth auth;
 
         public App()
         {
             InitializeComponent();
             auth = DependencyService.Get<IAuth>();
             if (auth.SignIn())
-             {
-
-                 Utente u = new Utente();
-                 u.username = "loggedUser";
-                 MainPage = new NavigationPage(new ProfilePage(u)); // capire come risalirea ad utente associato
-             }
-             else
-             {
-                 MainPage = new NavigationPage(new WelcomePage());
-             }
+            {
+                Utente u = new Utente();
+                u.Username = "loggedUser";
+                MainPage = new NavigationPage(new ProfilePage(u)); // capire come risalirea ad utente associato
+            }
+            else
+            {
+                MainPage = new NavigationPage(new WelcomePage());
+            }
 
            
 

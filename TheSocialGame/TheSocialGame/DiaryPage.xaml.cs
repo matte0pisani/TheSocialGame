@@ -14,10 +14,10 @@ namespace TheSocialGame
         {
             InitializeComponent();
             user = us;
-            App.Current.Resources["BackgroundColor"] = user.sfondo;
-            App.Current.Resources["FirstColor"] = user.primario;
-            App.Current.Resources["SecondColor"] = user.secondario;
-            List<Esperienza> l = new List<Esperienza>(user.esperienze);
+            App.Current.Resources["BackgroundColor"] = user.Sfondo;
+            App.Current.Resources["FirstColor"] = user.Primario;
+            App.Current.Resources["SecondColor"] = user.Secondario;
+            List<Esperienza> l = new List<Esperienza>(user.Esperienze);
             l.Reverse();
             visualizzaEsperienze(l);
            
