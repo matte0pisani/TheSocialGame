@@ -62,9 +62,10 @@ namespace TheSocialGame.Droid
             {
                 var newUser = await Firebase.Auth.FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(email, password);
                 var token = newUser.User.GetIdToken(false);
-                System.Diagnostics.Debug.WriteLine("token: " + newUser.User.Uid);
+                System.Diagnostics.Debug.WriteLine("userID: " + newUser.User.Uid);
+                System.Diagnostics.Debug.WriteLine("token: " + token);
                 newUser.User.SendEmailVerification();
-                return (string)token;
+                return newUser.User.Uid;
             }
             catch (FirebaseAuthInvalidUserException e)
             {

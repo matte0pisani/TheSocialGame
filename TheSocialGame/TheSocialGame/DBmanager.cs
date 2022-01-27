@@ -42,7 +42,7 @@ namespace TheSocialGame
 
             string resultString = await response.Content.ReadAsStringAsync();
             if (!Boolean.TryParse(resultString, out bool result)) throw new Exception("Errore nel parsing del risultato");
-            System.Diagnostics.Debug.Print("Parsing del risultato corretto\n");
+            System.Diagnostics.Debug.Print("Parsing del risultato corretto: {0}\n", result);
 
             return result;
         }

@@ -19,11 +19,11 @@ namespace TheSocialGame.iOS
             try
             {
                 var user = await Auth.DefaultInstance.SignInWithPasswordAsync(email, password);
-                System.Diagnostics.Debug.WriteLine("token: " + user.User.Uid);
-
-                return await user.User.GetIdTokenAsync();
+                System.Diagnostics.Debug.WriteLine("userID: " + user.User.Uid);
+                System.Diagnostics.Debug.WriteLine("token: " + await user.User.GetIdTokenAsync());
+                return user.User.Uid;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return string.Empty;
             }
