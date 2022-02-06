@@ -323,7 +323,7 @@ namespace TheSocialGame
                 bool aut = auth.DeleteUser(result);
                 if (aut) 
                 {
-                user.elimina();
+                user.Elimina();
                 await DisplayAlert("SUCCESSO", "Il tuo account è stato eliminato con successo", "OK");
                 await Navigation.PushAsync(new LoginPage());
                 } else

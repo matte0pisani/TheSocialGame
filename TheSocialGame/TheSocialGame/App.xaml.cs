@@ -16,6 +16,8 @@ namespace TheSocialGame
             auth = DependencyService.Get<IAuth>();
             if (auth.SignIn())
             {
+                // string userID = auth.GetCurrentUserId();
+                // Utente u = await DBmanager.GetUtente(userID);
                 Utente u = new Utente();
                 u.Username = "loggedUser";
                 MainPage = new NavigationPage(new ProfilePage(u)); // capire come risalirea ad utente associato
@@ -25,14 +27,14 @@ namespace TheSocialGame
                 MainPage = new NavigationPage(new WelcomePage());
             }
 
-           
+
 
             CrossFirebasePushNotification.Current.Subscribe("all");
             CrossFirebasePushNotification.Current.OnTokenRefresh += Current_OnTokenRefresh;
-    
-           
-        
-    }
+
+
+
+        }
 
 
         private void Current_OnTokenRefresh(object source, FirebasePushNotificationTokenEventArgs e)

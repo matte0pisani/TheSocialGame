@@ -46,9 +46,10 @@ namespace TheSocialGame
             {
                 if (auth.MailVerificata())
                 {
-                    Utente usr = new Utente();
+                    Utente usr = await DBmanager.GetUtente(userID);
                     await Navigation.PushAsync(new ProfilePage(usr));
-                } else
+                }
+                else
                 {
                     await DisplayAlert("AUTENTICAZIONE FALLITA", "Verifica la tua mail e riprova!", "OK");
                 }

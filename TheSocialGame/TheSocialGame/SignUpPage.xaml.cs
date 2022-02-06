@@ -38,7 +38,7 @@ namespace TheSocialGame
                         Username = UsernameEntry.Text
                     };
 
-                    if(!await DBmanager.InserisciNuovoUtente(usr))
+                    if(!await DBmanager.InserisciUtente(usr))
                     {
                         await DisplayAlert("ERRORE", "Qualcosa è andato storto, per favore riprova", "OK");
                         return;

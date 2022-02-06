@@ -49,7 +49,7 @@ namespace TheSocialGame
             {
                 u.Esperienze.Remove(this);
                 foreach (Utente us in this.ListaPartecipanti)
-                    u.decrementaAmici(this.ListaPartecipanti);
+                    u.DecrementaAmici(this.ListaPartecipanti);
             }
         }
     }

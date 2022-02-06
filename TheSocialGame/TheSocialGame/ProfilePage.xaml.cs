@@ -15,21 +15,21 @@ namespace TheSocialGame
         public ProfilePage(Utente us)
         {
             InitializeComponent();
-           
+
             user = us;
             App.Current.Resources["BackgroundColor"] = user.Sfondo;
             App.Current.Resources["FirstColor"] = user.Primario;
             App.Current.Resources["SecondColor"] = user.Secondario;
 
-            creaUtenteFake();
-           
+   //       creaUtenteFake();
 
             if (user.FotoBytes == null)
             {
                 ProfilePicFrame.IsVisible = false;
                 ChangeProfilePicButton.IsVisible = false;
-                
-            } else
+
+            }
+            else
             {
                 if (user.FotoLiveiOS) ProfilePic.Rotation = 90;
                 ProfilePic.Source = ImageSource.FromStream(() =>
@@ -37,14 +37,14 @@ namespace TheSocialGame
                     return new MemoryStream(user.FotoBytes);
                 });
                 ChangeProfilePicButton.IsVisible = true;
-               
+
             }
-            UsernameLabel.Text =this.user.Username;
+            UsernameLabel.Text = user.Username;
             AbilitaDistintivi();
             MostraAmici();
             RiempiProgressBar();
             if (user.Livello < 10)
-                 LabelLevelSingle.Text = Convert.ToString(user.Livello);
+                LabelLevelSingle.Text = Convert.ToString(user.Livello);
             else LabelLevelDouble.Text = Convert.ToString(user.Livello);
 
             Scrolling.HeightRequest = 650;
@@ -53,76 +53,78 @@ namespace TheSocialGame
             TriangoloChiudi.IsVisible = false;
             AddPhotoFrame.IsVisible = false;
             BindingContext = this;
-            
+
         }
 
 
         /* Mostra i tre "migliori amici", ordinati per numero di esperienze condivise, inserendo il loro username come testo degli appositi label*/
         void MostraAmici()
         {
-            Dictionary<Utente, int> best = user.getBestFriends();
-          
-                int i = 1;
-               foreach( KeyValuePair< Utente, int> coppia in best)
+            Dictionary<Utente, int> best = user.GetBestFriends();
+
+            int i = 1;
+            foreach (KeyValuePair<Utente, int> coppia in best)
+            {
+                if (i == 1)
                 {
-                    if (i == 1)
-                    {
-                        BF1.Text = "@" + coppia.Key.Username;
-                        EspBF1.Text = coppia.Value.ToString() + " esperienze insieme";
-                        i++;
-                    }
-                    else if (i == 2)
-                    {
-                        BF2.Text = "@" + coppia.Key.Username;
-                        EspBF2.Text = coppia.Value.ToString() + " esperienze insieme";
-                        i++;
-                    } else if( i == 3)
-                    {
-                        BF3.Text = "@" + coppia.Key.Username;
-                        EspBF3.Text = coppia.Value.ToString() + " esperienze insieme";
-                        i++;
-                    }
+                    BF1.Text = "@" + coppia.Key.Username;
+                    EspBF1.Text = coppia.Value.ToString() + " esperienze insieme";
+                    i++;
                 }
+                else if (i == 2)
+                {
+                    BF2.Text = "@" + coppia.Key.Username;
+                    EspBF2.Text = coppia.Value.ToString() + " esperienze insieme";
+                    i++;
+                }
+                else if (i == 3)
+                {
+                    BF3.Text = "@" + coppia.Key.Username;
+                    EspBF3.Text = coppia.Value.ToString() + " esperienze insieme";
+                    i++;
+                }
+            }
 
         }
-        
+
         /*riempimento barre fino a soglia indicata */
-        async void RiempiProgressBar() {
+        async void RiempiProgressBar()
+        {
             await SocialPointBar.ProgressTo((double)(user.PuntiSocial % 10) / 10, 3000, Easing.Linear);
         }
 
         void RiempiPersonalityBar()
         {
             int puntiTotali = user.Personalita1 + user.Personalita2 + user.Personalita3 + user.Personalita4 + user.Personalita5;
-            
-                Tipo1.ProgressTo((double)user.Personalita1 / puntiTotali, 2000, Easing.Linear);
-                Tipo2.ProgressTo((double)user.Personalita2 / puntiTotali, 2000, Easing.Linear);
-                 Tipo3.ProgressTo((double)user.Personalita3 / puntiTotali, 2000, Easing.Linear);
-                 Tipo4.ProgressTo((double)user.Personalita4 / puntiTotali, 2000, Easing.Linear);
-                Tipo5.ProgressTo((double)user.Personalita5 / puntiTotali, 2000, Easing.Linear);
-                
+
+            Tipo1.ProgressTo((double)user.Personalita1 / puntiTotali, 2000, Easing.Linear);
+            Tipo2.ProgressTo((double)user.Personalita2 / puntiTotali, 2000, Easing.Linear);
+            Tipo3.ProgressTo((double)user.Personalita3 / puntiTotali, 2000, Easing.Linear);
+            Tipo4.ProgressTo((double)user.Personalita4 / puntiTotali, 2000, Easing.Linear);
+            Tipo5.ProgressTo((double)user.Personalita5 / puntiTotali, 2000, Easing.Linear);
+
             PercentualeTipo1.Text = Convert.ToString(user.Personalita1 * 100 / puntiTotali) + "%";
             PercentualeTipo2.Text = Convert.ToString(user.Personalita2 * 100 / puntiTotali) + "%";
             PercentualeTipo3.Text = Convert.ToString(user.Personalita3 * 100 / puntiTotali) + "%";
             PercentualeTipo4.Text = Convert.ToString(user.Personalita4 * 100 / puntiTotali) + "%";
             PercentualeTipo5.Text = Convert.ToString(user.Personalita5 * 100 / puntiTotali) + "%";
-            
+
         }
 
         /*inizializza indicatori personalità, necessario per far avvenire animazione ogni volta che viene aperto il menu */
         void SvuotaPersonalityBar()
         {
             Tipo1.Progress = 0;
-            PercentualeTipo1.Text="";
+            PercentualeTipo1.Text = "";
             Tipo2.Progress = 0;
-            PercentualeTipo2.Text="";
+            PercentualeTipo2.Text = "";
             Tipo3.Progress = 0;
-            PercentualeTipo3.Text="";
+            PercentualeTipo3.Text = "";
             Tipo4.Progress = 0;
-            PercentualeTipo4.Text="";
+            PercentualeTipo4.Text = "";
             Tipo5.Progress = 0;
-            PercentualeTipo5.Text="";
-            
+            PercentualeTipo5.Text = "";
+
         }
 
         /* abilita i distintivi ottenuti */
@@ -178,8 +180,8 @@ namespace TheSocialGame
         async void CameraClicked(Object sender, EventArgs e)
         {
             var foto = await MediaPicker.CapturePhotoAsync();
-           
-                
+
+
 
             if (foto != null)
             {
@@ -191,7 +193,7 @@ namespace TheSocialGame
                         user.FotoBytes = ms.ToArray();
                     }
                 }
-                
+
                 ProfilePicFrame.IsVisible = true;
                 ChangeProfilePicButton.IsVisible = true;
                 ProfilePic.Source = ImageSource.FromStream(() =>
@@ -208,15 +210,15 @@ namespace TheSocialGame
             }
         }
 
-       
-        
+
+
 
 
         /* gestione foto profilo da galleria*/
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         async void FromGalleryClicked(Object sender, EventArgs e)
         {
-            ProfilePicFrame.Rotation=0;
+            ProfilePicFrame.Rotation = 0;
             var foto = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
             {
                 Title = "Scegli la tua immagine del profilo!"
@@ -241,7 +243,7 @@ namespace TheSocialGame
                     return new MemoryStream(user.FotoBytes);
                 });
             }
-         }
+        }
 
         /* eliminazione foto profilo corrente */
         void ConfermaElimina(Object sender, EventArgs e)
@@ -319,8 +321,8 @@ namespace TheSocialGame
         async void AddClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddExperiencePage(user));
-                 Navigation.RemovePage(this); 
-            
+            Navigation.RemovePage(this);
+
         }
 
         async void SearchClicked(Object sender, EventArgs e)
@@ -332,25 +334,25 @@ namespace TheSocialGame
         async void RankingClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new RankingPage(user));
-          
+
         }
 
         async void SettingClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SettingPage( user));
-           
+            await Navigation.PushAsync(new SettingPage(user));
+
         }
 
         async void DiaryClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new DiaryPage(user));
-           
+
         }
 
         async void FriendsClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new FriendsPage(user));
-          
+
         }
 
 
@@ -578,10 +580,6 @@ namespace TheSocialGame
 
         private void creaUtenteFake()
         {
-           
-         
-
-
             user.ListaDistintivi["ViaggioMare"].Item2[1] = new Random().Next(0, 2) > 0;
             user.ListaDistintivi["Ristorante"].Item2[1] = new Random().Next(0, 2) > 0;
             user.ListaDistintivi["Sport"].Item2[1] = new Random().Next(0, 2) > 0;
@@ -601,9 +599,6 @@ namespace TheSocialGame
             user.ListaDistintivi["Cultura"].Item2[2] = new Random().Next(0, 2) > 0;
             user.ListaDistintivi["Cocktail"].Item2[2] = new Random().Next(0, 2) > 0;
             user.ListaDistintivi["Casa"].Item2[2] = new Random().Next(0, 2) > 0;
-
-
-
         }
 
 

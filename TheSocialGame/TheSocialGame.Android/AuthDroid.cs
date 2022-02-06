@@ -36,8 +36,13 @@ namespace TheSocialGame.Droid
 
         public bool SignIn()
         {
-            var user = Firebase.Auth.FirebaseAuth.Instance.CurrentUser;
+            var user = FirebaseAuth.Instance.CurrentUser;
             return user != null;
+        }
+
+        public string GetCurrentUserId()
+        {
+            return FirebaseAuth.Instance.CurrentUser.Uid;
         }
 
         public bool SignOut()

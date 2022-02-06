@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Forms;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace TheSocialGame
 {
     public static class DBmanager
     {
-        static async public Task<bool> InserisciNuovoUtente(Utente usr)
+        public static async Task<bool> InserisciUtente(Utente usr)
         {
             string url = ConfigurationManager.AppSettings["insertUserAPI"];
             System.Diagnostics.Debug.Print("Inserisco in DB utente {0} {1}\n", usr.ID, usr.Username);
@@ -25,7 +26,7 @@ namespace TheSocialGame
             json["Sfondo"] = usr.Sfondo.ToHex();
             json["Primario"] = usr.Primario.ToHex();
             json["Secondario"] = usr.Secondario.ToHex();
-            if(usr.FotoBytes != null)
+            if (usr.FotoBytes != null)
             {
                 json["FotoBytes"] = Convert.ToBase64String(usr.FotoBytes);
             }
@@ -38,13 +39,54 @@ namespace TheSocialGame
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.PostAsync(url, body);
             System.Diagnostics.Debug.Print("Risposta ricevuta da insertUserAPI\n");
-            if (!response.IsSuccessStatusCode) throw new Exception("L'API non ha risposto correttamente");
+            if (!response.IsSuccessStatusCode) throw new Exception("La insertUserAPI non ha risposto correttamente");
 
             string resultString = await response.Content.ReadAsStringAsync();
             if (!Boolean.TryParse(resultString, out bool result)) throw new Exception("Errore nel parsing del risultato");
             System.Diagnostics.Debug.Print("Parsing del risultato corretto: {0}\n", result);
 
             return result;
+        }
+
+        /**
+        * Per ora inizializza soltanto le proprietà "semplici" dell'utente, quindi no distintivi/amici/esperienze
+        */
+        public static async Task<Utente> GetUtente(string userID)
+        {
+            string url = string.Format(ConfigurationManager.AppSettings["selectUserAPI"], userID);
+            System.Diagnostics.Debug.Print("Prendo l'utente con ID: '{0}'\n", userID);
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(url);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da selectUserAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La selectUserAPI non ha risposto correttamente");
+
+            string jsonString = await response.Content.ReadAsStringAsync();
+            System.Diagnostics.Debug.Print("Risposta: {0}\n", jsonString);
+
+            JObject jres = JObject.Parse(jsonString);
+            Utente res = new Utente
+            {
+                ID = jres["ID"].ToString(),
+                Username = jres["Username"].ToString(),
+                PuntiSocial = (int)jres["PuntiSocial"],
+                PuntiEsperienza = (int)jres["PuntiEsperienza"],
+                Livello = (int)jres["Livello"],
+                FotoBytes = Convert.FromBase64String(jres["FotoBytes"].ToString()),
+                FotoLiveiOS = (bool)jres["FotoLiveiOS"],
+                Personalita1 = (int)jres["Personalita1"],
+                Personalita2 = (int)jres["Personalita2"],
+                Personalita3 = (int)jres["Personalita3"],
+                Personalita4 = (int)jres["Personalita4"],
+                Personalita5 = (int)jres["Personalita5"],
+                Sfondo = Color.FromHex(jres["Sfondo"].ToString()),
+                Primario = Color.FromHex(jres["Primario"].ToString()),
+                Secondario = Color.FromHex(jres["Secondario"].ToString()),
+                Privato = (bool)jres["Privato"]
+            };
+            System.Diagnostics.Debug.Print("Utente creato:\n{0}", res.ToString());
+
+            return res;
         }
     }
 }

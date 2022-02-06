@@ -35,6 +35,11 @@ namespace TheSocialGame.iOS
             return user != null;
         }
 
+        public string GetCurrentUserId()
+        {
+            return Auth.DefaultInstance.CurrentUser.Uid;
+        }
+
         public bool SignOut()
         {
             try

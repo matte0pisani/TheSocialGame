@@ -70,7 +70,6 @@
     <None Include="..\TheSocialGame\App.config">
       <Link>App.config</Link>
     </None>
-    <EmbeddedResource Include="GoogleService-Info.plist" />
     <None Include="Info.plist" />
     <Compile Include="AuthiOS.cs" />
   </ItemGroup>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Amazon.Runtime.Internal.Transform;
 using Newtonsoft.Json;
 using Xamarin.Forms;
@@ -45,7 +46,7 @@ namespace TheSocialGame
             FotoBytes = null;
             FotoLiveiOS = false;
             Personalita1 = Personalita2 = Personalita3 = Personalita4 = Personalita5 = 1;
-            ListaDistintivi = inizializzaListaDistintivi();
+            ListaDistintivi = InizializzaListaDistintivi();
             Esperienze = new List<Esperienza>();
             Amici = new Dictionary<Utente, int>();
             Sfondo = Color.GhostWhite;
@@ -56,7 +57,7 @@ namespace TheSocialGame
         }
 
 
-        private Dictionary<string, (int, Dictionary<int, bool>)> inizializzaListaDistintivi()
+        private Dictionary<string, (int, Dictionary<int, bool>)> InizializzaListaDistintivi()
         {
             int livelloMax;
             livelloMax = 2;
@@ -145,7 +146,7 @@ namespace TheSocialGame
         }
 
 
-        public void aggiungiAmici(List<Utente> partecipanti)
+        public void AggiungiAmici(List<Utente> partecipanti)
         {
             foreach (Utente u in partecipanti)
             {
@@ -159,7 +160,7 @@ namespace TheSocialGame
             }
         }
 
-        public void decrementaAmici(List<Utente> partecipanti)
+        public void DecrementaAmici(List<Utente> partecipanti)
         {
             foreach (Utente u in partecipanti)
             {
@@ -173,7 +174,7 @@ namespace TheSocialGame
         }
 
 
-        public Dictionary<Utente, int> getBestFriends()
+        public Dictionary<Utente, int> GetBestFriends()
         {
             Dictionary<Utente, int> best = new Dictionary<Utente, int>();
             foreach (KeyValuePair<Utente, int> coppia in Amici.OrderByDescending(key => key.Value).Take(3))
@@ -183,13 +184,13 @@ namespace TheSocialGame
             return best;
         }
 
-        public void elimina()
+        public void Elimina()
         {
             // da implementare eliminazione da database
             return;
         }
 
-        public void puntiFake()
+        public void PuntiFake()
         {
             this.PuntiSocial = new Random().Next(100);
             this.Livello = (this.PuntiSocial / 10) + 1;
@@ -198,20 +199,8 @@ namespace TheSocialGame
             this.Personalita3 = new Random().Next(100);
             this.Personalita4 = new Random().Next(100);
             this.Personalita5 = new Random().Next(100);
-           
-
         }
-
-
-
-
-
-
-
-
-
 
     }
 
-   
 }

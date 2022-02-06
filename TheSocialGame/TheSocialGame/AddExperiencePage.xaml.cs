@@ -264,7 +264,7 @@ namespace TheSocialGame
                     x++;
                     u.ListaDistintivi[nuova.Tipologia] = (x, diz);
                     u.PuntiEsperienza++;
-                    u.aggiungiAmici(nuova.ListaPartecipanti);
+                    u.AggiungiAmici(nuova.ListaPartecipanti);
                   
                 }
                 
