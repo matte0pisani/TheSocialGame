@@ -20,7 +20,7 @@ namespace TheSocialGame.iOS
             {
                 var user = await Auth.DefaultInstance.SignInWithPasswordAsync(email, password);
                 System.Diagnostics.Debug.WriteLine("userID: " + user.User.Uid);
-                System.Diagnostics.Debug.WriteLine("token: " + await user.User.GetIdTokenAsync());
+      //        System.Diagnostics.Debug.WriteLine("token: " + await user.User.GetIdTokenAsync());
                 return user.User.Uid;
             }
             catch (Exception)
@@ -53,12 +53,12 @@ namespace TheSocialGame.iOS
             try
             {
                 var newUser = await Auth.DefaultInstance.CreateUserAsync(email, password);
-                System.Diagnostics.Debug.WriteLine("token: " + newUser.User.Uid);
+                System.Diagnostics.Debug.WriteLine("user ID: " + newUser.User.Uid);
                 await newUser.User.SendEmailVerificationAsync();
-                return await newUser.User.GetIdTokenAsync();
+                return newUser.User.Uid;    // non ho testato su iOS che questa riga sia corretta, ma dovrebbe esserlo
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return string.Empty;
             }

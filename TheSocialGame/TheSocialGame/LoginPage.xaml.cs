@@ -26,10 +26,12 @@ namespace TheSocialGame
             IsPasswordSet = false;
         }
 
+        /**
         private bool IsUserValid()
         {
             return IsEmailSet && IsPasswordSet;
         }
+        */
 
         private void RefreshStarVisibility()
         {
@@ -39,8 +41,8 @@ namespace TheSocialGame
         private async void Star_Tapped(object sender, EventArgs e)
         {
 
-            string token = await auth.LoginWithEmailAndPassword(MailEntry.Text, PasswordEntry.Text);
-            if(token != string.Empty)
+            string userID = await auth.LoginWithEmailAndPassword(MailEntry.Text, PasswordEntry.Text);
+            if(userID != string.Empty)
             {
                 if (auth.MailVerificata())
                 {

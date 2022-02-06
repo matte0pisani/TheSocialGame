@@ -15,6 +15,7 @@ namespace TheSocialGame
             password = string.Empty;
             confermaPassword = string.Empty;
             errorLabel = string.Empty;
+            isInfoValid = false;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -103,16 +104,45 @@ namespace TheSocialGame
             }
         }
 
+        private bool isInfoValid;
+
+        public bool IsInfoValid
+        {
+            get => isInfoValid;
+
+            set
+            {
+                if (isInfoValid != value)
+                {
+                    isInfoValid = value;
+                    OnPropertyChanged("IsInfoValid");
+                }
+            }
+        }
+
         private void CheckValid()
         {
             if (UsernameNotValid())
+            {
                 ErrorLabel = "Username non valido";
+                IsInfoValid = false;
+            }
             else if (EmailNotValid())
+            {
                 ErrorLabel = "Email non valida";
+                IsInfoValid = false;
+            }
             else if (PasswordNotValid())
+            {
                 ErrorLabel = "Le password non coincidono";
+                IsInfoValid = false;
+            }
             else
+            {
                 ErrorLabel = string.Empty;
+                IsInfoValid = true;
+            }
+
 
         }
 
@@ -128,7 +158,7 @@ namespace TheSocialGame
 
         private bool PasswordNotValid()
         {
-            return !password.Equals(confermaPassword);
+            return password == string.Empty || !password.Equals(confermaPassword);
         }
 
         protected virtual void OnPropertyChanged(string propertyName)

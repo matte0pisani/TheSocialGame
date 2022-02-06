@@ -18,11 +18,9 @@ namespace TheSocialGame.Droid
             try
             {
                 var user = await Firebase.Auth.FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
-                var token = user.User.GetIdToken(false);
-
-
+       //       var token = user.User.GetIdToken(false);
                 System.Diagnostics.Debug.WriteLine("token: " + user.User.Uid);
-                return (string)token;
+                return user.User.Uid;
             }
             catch (FirebaseAuthInvalidUserException e)
             {
