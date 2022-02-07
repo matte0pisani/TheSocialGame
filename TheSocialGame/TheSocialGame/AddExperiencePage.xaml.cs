@@ -240,8 +240,8 @@ namespace TheSocialGame
         }
 
 
-       
-       async void Salva(Object sender, EventArgs e)
+
+       private async void Salva(object sender, EventArgs e)
         {
             if (nuova.DataInizio.Equals(new DateTime())) nuova.DataInizio = DataInizio.Date;
             if (nuova.DataFine.Equals(new DateTime())) nuova.DataFine = DataFine.Date;
@@ -253,22 +253,29 @@ namespace TheSocialGame
                 if (nuova.Titolo == null) WarningTitolo.IsVisible = true;
                 if (nuova.Tipologia == null) WarningTipologia.IsVisible = true;
                 if (nuova.ListaPartecipanti.Count == 1) WarningPartecipanti.IsVisible = true;
-                
+
             }
             else
             {
                 foreach (Utente u in nuova.ListaPartecipanti)
                 {
                     u.Esperienze.Add(nuova);
-                    int x = u.ListaDistintivi[nuova.Tipologia].Item1;
-                    Dictionary<int, bool> diz = u.ListaDistintivi[nuova.Tipologia].Item2;
-                    x++;
-                    u.ListaDistintivi[nuova.Tipologia] = (x, diz);
+                    int numExp = u.ListaDistintivi[nuova.Tipologia].Item1;
+                    Dictionary<int, bool> dictExp = u.ListaDistintivi[nuova.Tipologia].Item2;
+                    numExp++;
+                    if (numExp >= Utente.sogliaPrimoLivello)
+                    {
+                        dictExp[1] = true;      // non parametrico, in caso da re-implementare con ciclo
+                        if(numExp >= Utente.sogliaSecondoLivello)
+                        {
+                            dictExp[2] = true;
+                        }
+                    }
+                    u.ListaDistintivi[nuova.Tipologia] = (numExp, dictExp);
                     u.PuntiEsperienza++;
                     u.AggiungiAmici(nuova.ListaPartecipanti);
-                  
                 }
-                
+
                 await Navigation.PushAsync(new ProfilePage(user));
                 Navigation.RemovePage(this);
             }

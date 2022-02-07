@@ -527,7 +527,7 @@ namespace TheSocialGame
         {
             DescriptionFrame.TranslationX = 900;
             TitoloDistintivo.Text = "Lanciatore di Coriandoli";
-            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Compleanno";
+            DescrizioneDistintivo.Text = "Hai completato almeno 7 esperienze nella \n categoria Compleanno";
             DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
             DescriptionFrame.IsVisible = false;
@@ -537,7 +537,7 @@ namespace TheSocialGame
         {
             DescriptionFrame.TranslationX = 960;
             TitoloDistintivo.Text = "Avventuriero";
-            DescrizioneDistintivo.Text = "Hai completato almeno 3 esperienze nella \n categoria Viaggio in Montagna";
+            DescrizioneDistintivo.Text = "Hai completato almeno 7 esperienze nella \n categoria Viaggio in Montagna";
             DescriptionFrame.IsVisible = true;
             await Task.Delay(2500);
             DescriptionFrame.IsVisible = false;

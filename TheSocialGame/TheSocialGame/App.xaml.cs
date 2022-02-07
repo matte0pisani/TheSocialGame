@@ -20,7 +20,7 @@ namespace TheSocialGame
                 // Utente u = await DBmanager.GetUtente(userID);
                 // Utente u = new Utente();
                 // u.Username = "loggedUser";
-                MainPage = new NavigationPage(new ProfilePage(userID)); // capire come risalire a ad utente associato
+                MainPage = new NavigationPage(new ProfilePage(userID)); 
             }
             else
             {
