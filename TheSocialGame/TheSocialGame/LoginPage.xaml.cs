@@ -46,8 +46,7 @@ namespace TheSocialGame
             {
                 if (auth.MailVerificata())
                 {
-                    Utente usr = await DBmanager.GetUtente(userID);
-                    await Navigation.PushAsync(new ProfilePage(usr));
+                    await Navigation.PushAsync(new ProfilePage(userID));
                 }
                 else
                 {

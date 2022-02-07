@@ -10,18 +10,47 @@ namespace TheSocialGame
 {
     public partial class ProfilePage : ContentPage
     {
-        Utente user;
+        private string usrID;
+        public Utente user;
 
-        public ProfilePage(Utente us)
+        public ProfilePage(string id)
         {
             InitializeComponent();
+            usrID = id;
+            user = null;
 
-            user = us;
+            Scrolling.HeightRequest = 650;
+            ConfermaEliminazioneFrame.IsVisible = false;
+            MenuPersonalita.IsVisible = false;
+            TriangoloChiudi.IsVisible = false;
+            AddPhotoFrame.IsVisible = false;
+            BindingContext = this;
+        }
+
+        public ProfilePage(Utente usr)
+        {
+            InitializeComponent();
+            user = usr;
+            usrID = usr.ID;
+
+            Scrolling.HeightRequest = 650;
+            ConfermaEliminazioneFrame.IsVisible = false;
+            MenuPersonalita.IsVisible = false;
+            TriangoloChiudi.IsVisible = false;
+            AddPhotoFrame.IsVisible = false;
+            BindingContext = this;
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            if (user == null) { user = await DBmanager.GetUtente(usrID); }
+
             App.Current.Resources["BackgroundColor"] = user.Sfondo;
             App.Current.Resources["FirstColor"] = user.Primario;
             App.Current.Resources["SecondColor"] = user.Secondario;
 
-   //       creaUtenteFake();
+            //       creaUtenteFake();
 
             if (user.FotoBytes == null)
             {
@@ -37,8 +66,8 @@ namespace TheSocialGame
                     return new MemoryStream(user.FotoBytes);
                 });
                 ChangeProfilePicButton.IsVisible = true;
-
             }
+
             UsernameLabel.Text = user.Username;
             AbilitaDistintivi();
             MostraAmici();
@@ -46,14 +75,6 @@ namespace TheSocialGame
             if (user.Livello < 10)
                 LabelLevelSingle.Text = Convert.ToString(user.Livello);
             else LabelLevelDouble.Text = Convert.ToString(user.Livello);
-
-            Scrolling.HeightRequest = 650;
-            ConfermaEliminazioneFrame.IsVisible = false;
-            MenuPersonalita.IsVisible = false;
-            TriangoloChiudi.IsVisible = false;
-            AddPhotoFrame.IsVisible = false;
-            BindingContext = this;
-
         }
 
 
@@ -209,10 +230,6 @@ namespace TheSocialGame
                 }
             }
         }
-
-
-
-
 
         /* gestione foto profilo da galleria*/
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase

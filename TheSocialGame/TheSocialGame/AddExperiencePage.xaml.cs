@@ -85,7 +85,8 @@ namespace TheSocialGame
         async void ConfermaClicked(Object sender, EventArgs e)
         {
             EsciSenzaSalvareFrame.IsVisible = false;
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(prossima);
+            Navigation.RemovePage(this);
         }
 
         void TitoloCopertina(Object sender, EventArgs e)
