@@ -9,41 +9,38 @@ namespace TheSocialGame
         public int ID { get; set; }
         public string Titolo { get; set; }
         public byte[] Copertina { get; set; }
+        public bool CopertinaLiveIOS { get; set; }
         public DateTime DataInizio { get; set; }
         public DateTime DataFine { get; set; }
         public string Tipologia { get; set; }
+        public bool Privata { get; set; }
+        public bool Live { get; set; }
         public List<Utente> ListaPartecipanti { get; set; }
-        public bool privata { get; set; }
-        public bool copertinaLiveIOS { get; set; }
-        public bool live { get; set; }
         public List<byte[]> Galleria { get; set; }
-        public List<string> luoghi { get; set; }
-        public List<string> slogan { get; set; }
-        public List<string> funfacts { get; set; }
-        public List<string> playlist { get; set; }
-        public List<string> recensioni { get; set; }
-        public List<string> altro { get; set; }
+        public List<string> Luoghi { get; set; }
+        public List<string> Slogan { get; set; }
+        public List<string> Funfacts { get; set; }
+        public List<string> Playlist { get; set; }
+        public List<string> Recensioni { get; set; }
+        public List<string> Altro { get; set; }
 
         public Esperienza()
         {
             ListaPartecipanti = new List<Utente>();
             Galleria = new List<byte[]>();
-            luoghi = new List<string>();
-            privata = false;
-            copertinaLiveIOS = false;
-            live = false;
-            slogan = new List<string>();
-            funfacts = new List<string>();
-            playlist = new List<string>();
-            recensioni = new List<string>();
-            altro = new List<string>();
-            
-
-
-
+            Luoghi = new List<string>();
+            Privata = false;
+            CopertinaLiveIOS = false;
+            Live = false;
+            Slogan = new List<string>();
+            Funfacts = new List<string>();
+            Playlist = new List<string>();
+            Recensioni = new List<string>();
+            Altro = new List<string>();
         }
 
-        public void elimina()
+
+        public void Elimina()
         {
             foreach (Utente u in this.ListaPartecipanti)
             {

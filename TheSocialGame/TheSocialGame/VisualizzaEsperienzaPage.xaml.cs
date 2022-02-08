@@ -10,8 +10,6 @@ namespace TheSocialGame
 {
     public partial class VisualizzaEsperienzaPage : ContentPage
     {
-      
-
         public Utente user { get; set; }
         public Esperienza exp { get; set; }
 
@@ -29,7 +27,7 @@ namespace TheSocialGame
             {
                 return new MemoryStream(exp.Copertina);
             }); ;
-            if (exp.copertinaLiveIOS) Copertina.Rotation = 90;
+            if (exp.CopertinaLiveIOS) Copertina.Rotation = 90;
             if (exp.DataInizio.Equals(exp.DataFine)) Data.Text = exp.DataInizio.ToString("d MMM yyyy");
             else Data.Text = exp.DataInizio.ToString("d MMM yyyy") + "-" + exp.DataFine.ToString("d MMM yyyy");
             Tipologia.Text = "Tipologia: " + exp.Tipologia;
@@ -87,19 +85,19 @@ namespace TheSocialGame
             }
 
             righePartecipanti.Text = exp.ListaPartecipanti.Count.ToString() + " elementi";
-            righeLuoghi.Text = exp.luoghi.Count.ToString() + " elementi";
+            righeLuoghi.Text = exp.Luoghi.Count.ToString() + " elementi";
             righeGalleria.Text = exp.Galleria.Count.ToString() + " elementi";
-            righeSlogan.Text = exp.slogan.Count.ToString() + " elementi";
-            righeFun.Text = exp.funfacts.Count.ToString() + " elementi";
-            righePlaylist.Text = exp.playlist.Count.ToString() + " elementi";
-            righeRecensioni.Text = exp.recensioni.Count.ToString() + " elementi";
-            righeAltro.Text = exp.altro.Count.ToString() + " elementi";
+            righeSlogan.Text = exp.Slogan.Count.ToString() + " elementi";
+            righeFun.Text = exp.Funfacts.Count.ToString() + " elementi";
+            righePlaylist.Text = exp.Playlist.Count.ToString() + " elementi";
+            righeRecensioni.Text = exp.Recensioni.Count.ToString() + " elementi";
+            righeAltro.Text = exp.Altro.Count.ToString() + " elementi";
             righeGalleriasec.Text = exp.Galleria.Count.ToString() + " elementi";
-            righeAltrosec.Text = exp.altro.Count.ToString() + " elementi";
+            righeAltrosec.Text = exp.Altro.Count.ToString() + " elementi";
 
         }
 
-        
+
         void modificaClicked(Object sender, EventArgs e)
         {
             if (importaCopertina.IsVisible)
@@ -121,7 +119,7 @@ namespace TheSocialGame
                     eliminaCompertina.TranslateTo(0, 0);
                 }
             }
-                
+
         }
 
         async void cambiaCopertina(Object sender, EventArgs e)
@@ -133,24 +131,21 @@ namespace TheSocialGame
                 Title = "Aggiungi foto"
             });
 
+
             if (foto != null)
             {
-                if (foto != null)
+                using (var stream = await foto.OpenReadAsync())
                 {
-                    using (var stream = await foto.OpenReadAsync())
+                    using (MemoryStream ms = new MemoryStream())
                     {
-                        using (MemoryStream ms = new MemoryStream())
-                        {
-                            stream.CopyTo(ms);
-                            exp.Copertina = ms.ToArray();
-                        }
+                        stream.CopyTo(ms);
+                        exp.Copertina = ms.ToArray();
                     }
-                    await Navigation.PushAsync(new VisualizzaEsperienzaPage(user, exp));
-                    Navigation.RemovePage(this);
-
-
                 }
+                await Navigation.PushAsync(new VisualizzaEsperienzaPage(user, exp));
+                Navigation.RemovePage(this);
             }
+
         }
 
         async void eliminaCopertina(Object sender, EventArgs e)
@@ -217,6 +212,7 @@ namespace TheSocialGame
                     }
                 }
             }
+
             inizializzaGalleria();
             scroll.Children.Clear();
             inizializzaScorrimentoFoto();
@@ -342,32 +338,38 @@ namespace TheSocialGame
             Aggiungi.IsVisible = true;
             if (nomeschermata.Text.Equals("Luoghi"))
             {
-                exp.luoghi.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.luoghi);
-            } else if (nomeschermata.Text.Equals("Slogan"))
+                exp.Luoghi.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.Luoghi);
+            }
+            else if (nomeschermata.Text.Equals("Slogan"))
             {
-                exp.slogan.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.slogan);
-            } else if (nomeschermata.Text.Equals("Fun Facts"))
+                exp.Slogan.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.Slogan);
+            }
+            else if (nomeschermata.Text.Equals("Fun Facts"))
             {
-                
-                exp.funfacts.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.funfacts);
-            } else if (nomeschermata.Text.Equals("Playlist"))
+
+                exp.Funfacts.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.Funfacts);
+            }
+            else if (nomeschermata.Text.Equals("Playlist"))
             {
-                exp.playlist.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.playlist);
-            } else if (nomeschermata.Text.Equals("Recensioni"))
+                exp.Playlist.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.Playlist);
+            }
+            else if (nomeschermata.Text.Equals("Recensioni"))
             {
-               
-                exp.recensioni.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.recensioni);
-            } else if (nomeschermata.Text.Equals("Altro"))
+
+                exp.Recensioni.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.Recensioni);
+            }
+            else if (nomeschermata.Text.Equals("Altro"))
             {
-               
-                exp.altro.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.altro);
-            } else if (nomeschermata.Text.Equals("Partecipanti"))
+
+                exp.Altro.Add(AggiungiElemento.Text);
+                apriListaSemplice(exp.Altro);
+            }
+            else if (nomeschermata.Text.Equals("Partecipanti"))
             {
                 Utente u = new Utente();
                 u.Username = AggiungiElemento.Text;
@@ -392,22 +394,23 @@ namespace TheSocialGame
                 EmptyList.IsVisible = true;
                 Grid.SetRow(AggiungiElemento, 2);
                 AggiungiElemento.IsVisible = false;
-               
-               
+
+
             }
             else
             {
                 EmptyList.IsVisible = false;
                 int x = 2;
-                foreach (string s in list) {
+                foreach (string s in list)
+                {
                     ScrollView scr = new ScrollView();
-                        Label l = new Label();
-                        l.Text = (x - 1).ToString() + ". " + s;
-                        l.TextColor = Color.Black;
-                        l.WidthRequest = Visualizza.Width;
-                        l.Margin = new Thickness(13);
-                        l.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
-                        
+                    Label l = new Label();
+                    l.Text = (x - 1).ToString() + ". " + s;
+                    l.TextColor = Color.Black;
+                    l.WidthRequest = Visualizza.Width;
+                    l.Margin = new Thickness(13);
+                    l.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
+
                     scr.Content = l;
                     layout.Children.Add(scr);
                     Button b = new Button();
@@ -428,33 +431,33 @@ namespace TheSocialGame
                         Aggiungi.IsVisible = true;
                         if (nomeschermata.Text.Equals("Luoghi"))
                         {
-                            exp.luoghi.Remove(s);
-                            apriListaSemplice(exp.luoghi);
+                            exp.Luoghi.Remove(s);
+                            apriListaSemplice(exp.Luoghi);
                         }
                         else if (nomeschermata.Text.Equals("Slogan"))
                         {
-                            exp.slogan.Remove(s);
-                            apriListaSemplice(exp.slogan);
+                            exp.Slogan.Remove(s);
+                            apriListaSemplice(exp.Slogan);
                         }
                         else if (nomeschermata.Text.Equals("Fun Facts"))
                         {
-                            exp.funfacts.Remove(s);
-                            apriListaSemplice(exp.funfacts);
+                            exp.Funfacts.Remove(s);
+                            apriListaSemplice(exp.Funfacts);
                         }
                         else if (nomeschermata.Text.Equals("Playlist"))
                         {
-                            exp.playlist.Remove(s);
-                            apriListaSemplice(exp.playlist);
+                            exp.Playlist.Remove(s);
+                            apriListaSemplice(exp.Playlist);
                         }
                         else if (nomeschermata.Text.Equals("Recensioni"))
                         {
-                            exp.recensioni.Remove(s);
-                            apriListaSemplice(exp.recensioni);
+                            exp.Recensioni.Remove(s);
+                            apriListaSemplice(exp.Recensioni);
                         }
                         else if (nomeschermata.Text.Equals("Altro"))
                         {
-                            exp.altro.Remove(s);
-                            apriListaSemplice(exp.altro);
+                            exp.Altro.Remove(s);
+                            apriListaSemplice(exp.Altro);
                         }
 
                     };
@@ -474,8 +477,8 @@ namespace TheSocialGame
                 }
                 Grid.SetRow(AggiungiElemento, x);
                 AggiungiElemento.IsVisible = false;
-               
-               
+
+
             }
         }
 
@@ -485,7 +488,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Luoghi";
-            apriListaSemplice(exp.luoghi);
+            apriListaSemplice(exp.Luoghi);
         }
 
         void SloganClicked(Object sender, EventArgs e)
@@ -494,7 +497,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Slogan";
-            apriListaSemplice(exp.slogan);
+            apriListaSemplice(exp.Slogan);
         }
 
         void FunClicked(Object sender, EventArgs e)
@@ -503,7 +506,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Fun Facts";
-            apriListaSemplice(exp.funfacts);
+            apriListaSemplice(exp.Funfacts);
         }
 
         void PlaylistClicked(Object sender, EventArgs e)
@@ -512,7 +515,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Playlist";
-            apriListaSemplice(exp.playlist);
+            apriListaSemplice(exp.Playlist);
         }
 
         void RecensioniClicked(Object sender, EventArgs e)
@@ -521,7 +524,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Recensioni";
-            apriListaSemplice(exp.recensioni);
+            apriListaSemplice(exp.Recensioni);
         }
 
         void AltroClicked(Object sender, EventArgs e)
@@ -530,7 +533,7 @@ namespace TheSocialGame
             Visualizza.IsVisible = true;
             Visualizza.ScaleTo(1);
             nomeschermata.Text = "Altro";
-            apriListaSemplice(exp.altro);
+            apriListaSemplice(exp.Altro);
         }
 
         async void GalleriaClicked(Object sender, EventArgs e)
@@ -573,7 +576,7 @@ namespace TheSocialGame
 
         void inizializzaGalleria()
         {
-            
+
             if (exp.Galleria.Count == 0)
             {
                 Empty.IsVisible = true;
@@ -594,7 +597,7 @@ namespace TheSocialGame
                     {
                         foto.IsVisible = true;
                         scrolling.ScrollToAsync(exp.Galleria.IndexOf(ba) * scroll.Children[0].Width, 0, false);
-                  };
+                    };
                     Frame f = new Frame();
                     f.BackgroundColor = Color.Black;
                     f.BorderColor = Color.Black;
@@ -640,16 +643,16 @@ namespace TheSocialGame
 
         }
 
-      async  void eliminaEsperienza(Object sender, EventArgs e)
+        async void eliminaEsperienza(Object sender, EventArgs e)
         {
             bool answer = await DisplayAlert("Attenzione", "Eliminando questa esperienza la cancellerai dal diario di tutti i partecipanti", "CONFERMA", "ANNULLA");
-            if(answer)
+            if (answer)
             {
-                this.exp.elimina();
+                this.exp.Elimina();
                 await Navigation.PushAsync(new ProfilePage(user));
                 Navigation.RemovePage(this);
             }
-        }      
+        }
 
 
 

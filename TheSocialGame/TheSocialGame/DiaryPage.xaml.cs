@@ -65,8 +65,8 @@ namespace TheSocialGame
                     im.Scale = 1.8;
                     f.IsClippedToBounds = true;
                     f.Content = im;
-                    if (e.copertinaLiveIOS) im.Rotation = 90;
-                    if (e.live)
+                    if (e.CopertinaLiveIOS) im.Rotation = 90;
+                    if (e.Live)
                     {
                         b.BorderWidth = 3;
                         b.BorderColor = Color.LimeGreen;

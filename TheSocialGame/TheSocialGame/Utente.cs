@@ -154,7 +154,6 @@ namespace TheSocialGame
             {
                 if (!(u == this))
                 {
-
                     if (this.Amici.Keys.Contains(u)) this.Amici[u]++;
                     else this.Amici.Add(u, 1);
                 }
@@ -201,6 +200,17 @@ namespace TheSocialGame
             this.Personalita3 = new Random().Next(100);
             this.Personalita4 = new Random().Next(100);
             this.Personalita5 = new Random().Next(100);
+        }
+
+        public override bool Equals(object obj)
+        {
+            Utente that = (Utente)obj;
+            return this.Username == that.Username;
+        }
+
+        public override int GetHashCode()
+        {
+            return Username.GetHashCode();
         }
 
     }

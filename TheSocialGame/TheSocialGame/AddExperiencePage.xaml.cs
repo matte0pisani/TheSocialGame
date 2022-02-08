@@ -44,7 +44,6 @@ namespace TheSocialGame
         {
             EsciSenzaSalvareFrame.IsVisible = true;
             prossima = new NotificationPage();
-
         }
 
         void HomeClicked(Object sender, EventArgs e)
@@ -59,7 +58,7 @@ namespace TheSocialGame
             prossima = new ProfilePage(user);
         }
 
-         void SearchClicked(Object sender, EventArgs e)
+        void SearchClicked(Object sender, EventArgs e)
         {
             EsciSenzaSalvareFrame.IsVisible = true;
             prossima = new SearchPage();
@@ -71,7 +70,7 @@ namespace TheSocialGame
             prossima = new RankingPage(user);
         }
 
-         void BackClicked(Object sender, EventArgs e)
+        void BackClicked(Object sender, EventArgs e)
         {
             EsciSenzaSalvareFrame.IsVisible = true;
             prossima = new ProfilePage(user);
@@ -99,50 +98,45 @@ namespace TheSocialGame
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         async void CameraClicked(Object sender, EventArgs e)
         {
-
-
             var foto = await MediaPicker.CapturePhotoAsync();
 
             if (foto != null)
             {
-
-                if (foto != null)
+                using (var stream = await foto.OpenReadAsync())
                 {
-                    using (var stream = await foto.OpenReadAsync())
+                    using (MemoryStream ms = new MemoryStream())
                     {
-                        using (MemoryStream ms = new MemoryStream())
-                        {
-                            stream.CopyTo(ms);
-                            nuova.Copertina = ms.ToArray();
-                        }
-                    }
-
-                    CopertinaFrame.IsVisible = true;
-                    AvvisoCopertina.IsVisible = false;
-                    Rimuovi.IsVisible = true;
-                    Fotocamera.IsVisible = false;
-                    Galleria.IsVisible = false;
-                    Copertina.Source = ImageSource.FromStream(() =>
-                    {
-                        return new MemoryStream(nuova.Copertina);
-                    });
-
-                    switch (Device.RuntimePlatform)
-                    {
-                        case Device.iOS:
-                            nuova.copertinaLiveIOS = true;
-                            Copertina.Rotation = 90;
-                            break;
+                        stream.CopyTo(ms);
+                        nuova.Copertina = ms.ToArray();
                     }
                 }
+
+                CopertinaFrame.IsVisible = true;
+                AvvisoCopertina.IsVisible = false;
+                Rimuovi.IsVisible = true;
+                Fotocamera.IsVisible = false;
+                Galleria.IsVisible = false;
+                Copertina.Source = ImageSource.FromStream(() =>
+                {
+                    return new MemoryStream(nuova.Copertina);
+                });
+
+                switch (Device.RuntimePlatform)
+                {
+                    case Device.iOS:
+                        nuova.CopertinaLiveIOS = true;
+                        Copertina.Rotation = 90;
+                        break;
+                }
             }
+
         }
 
         /* gestione foto profilo da galleria*/
         //Quando avremo il database bisogna gestire l'eliminazione della vecchia foto dal daltabase
         async void FromGalleryClicked(Object sender, EventArgs e)
         {
-           
+
             var foto = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
             {
                 Title = "Scegli la tua immagine del profilo!"
@@ -171,7 +165,7 @@ namespace TheSocialGame
             }
         }
 
-         void RimuoviClicked(Object sender, EventArgs e)
+        void RimuoviClicked(Object sender, EventArgs e)
         {
             nuova.Copertina = null; // simile problema che con immagine profilo, forse spreco spazio e peggioramento prestazioni
             CopertinaFrame.IsVisible = false;
@@ -202,20 +196,21 @@ namespace TheSocialGame
                 FromTime.IsVisible = true;
                 LabelToTime.IsVisible = true;
                 ToTime.IsVisible = true;
-                nuova.live = true;
-            } else
+                nuova.Live = true;
+            }
+            else
             {
                 LabelFromTime.IsVisible = false;
                 FromTime.IsVisible = false;
                 LabelToTime.IsVisible = false;
                 ToTime.IsVisible = false;
-                nuova.live = false;
+                nuova.Live = false;
             }
         }
 
         void TipoEsperienza(Object sender, EventArgs e)
         {
-            nuova.Tipologia = (string) TipiEsp.SelectedItem;
+            nuova.Tipologia = (string)TipiEsp.SelectedItem;
         }
 
 
@@ -229,31 +224,30 @@ namespace TheSocialGame
                 nuova.ListaPartecipanti.Add(partecipante);
                 ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + partecipante.Username + "  ";
             }
-            Partecipanti.Text=null;
+            Partecipanti.Text = null;
         }
 
         void PrivataChanged(Object sender, EventArgs e)
         {
             if (Privata.IsToggled)
-                nuova.privata = true;
-            else nuova.privata = false;
+                nuova.Privata = true;
+            else nuova.Privata = false;
         }
 
 
 
-       private async void Salva(object sender, EventArgs e)
+        private async void Salva(object sender, EventArgs e)
         {
             if (nuova.DataInizio.Equals(new DateTime())) nuova.DataInizio = DataInizio.Date;
             if (nuova.DataFine.Equals(new DateTime())) nuova.DataFine = DataFine.Date;
 
-            if (nuova.Titolo == null ||  nuova.Tipologia == null || nuova.ListaPartecipanti.Count == 0)
+            if (nuova.Titolo == null || nuova.Tipologia == null || nuova.ListaPartecipanti.Count == 0)
             {
                 SavingLabel.IsVisible = false;
                 Warning.IsVisible = true;
                 if (nuova.Titolo == null) WarningTitolo.IsVisible = true;
                 if (nuova.Tipologia == null) WarningTipologia.IsVisible = true;
                 if (nuova.ListaPartecipanti.Count == 1) WarningPartecipanti.IsVisible = true;
-
             }
             else
             {
@@ -266,7 +260,7 @@ namespace TheSocialGame
                     if (numExp >= Utente.sogliaPrimoLivello)
                     {
                         dictExp[1] = true;      // non parametrico, in caso da re-implementare con ciclo
-                        if(numExp >= Utente.sogliaSecondoLivello)
+                        if (numExp >= Utente.sogliaSecondoLivello)
                         {
                             dictExp[2] = true;
                         }
