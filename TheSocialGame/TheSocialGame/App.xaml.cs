@@ -17,14 +17,11 @@ namespace TheSocialGame
             if (auth.SignIn())
             {
                 string userID = auth.GetCurrentUserId();
-                // Utente u = await DBmanager.GetUtente(userID);
-                // Utente u = new Utente();
-                // u.Username = "loggedUser";
-                MainPage = new NavigationPage(new ProfilePage(userID)); 
+                MainPage = new NavigationPage(new ProfilePage(userID));
             }
             else
             {
-                MainPage = new NavigationPage(new WelcomePage());
+                MainPage = new NavigationPage(new DBstuff.DBmanagerTestPage());
             }
 
 

@@ -50,9 +50,20 @@ namespace TheSocialGame
         }
 
         /**
-        * Per ora inizializza soltanto le proprietà "semplici" dell'utente e i distintivi, quindi no amici/esperienze
-        */
+         * Inizializza completamente un utente, quindi anche la lista degli amici (a loro volta inizializzati solo a livello "base") e delle esperienze
+         */
         public static async Task<Utente> GetUtente(string userID)
+        {
+            Utente res = await GetUtenteBase(userID);
+            res.Amici = await GetTuttiAmici(res.ID);
+            return res;
+        }
+
+        /**
+        * Inizializza soltanto le proprietà "semplici" dell'utente e i distintivi, quindi no amici/esperienze, che sono lasciate così come le inizializza
+        * Utente() (cioè vuote).
+        */
+        public static async Task<Utente> GetUtenteBase(string userID)
         {
             string url = string.Format(ConfigurationManager.AppSettings["selectUserAPI"], userID);
             System.Diagnostics.Debug.Print("Prendo l'utente con ID: '{0}'\n", userID);
@@ -87,7 +98,7 @@ namespace TheSocialGame
             };
             System.Diagnostics.Debug.Print("Utente creato\n");
 
-            if(await AggiungiDistintivi(res)) { System.Diagnostics.Debug.Print("Caricamento distintivi completato\n"); }
+            if (await AggiungiDistintivi(res)) { System.Diagnostics.Debug.Print("Caricamento distintivi completato\n"); }
             else { System.Diagnostics.Debug.Print("Errore nel caricamento dei distintivi\n"); }
 
             return res;
@@ -125,6 +136,28 @@ namespace TheSocialGame
             }
 
             return true;
+        }
+
+        public static async Task<Dictionary<Utente, int>> GetTuttiAmici(string uid)
+        {
+            Dictionary<Utente, int> result = new Dictionary<Utente, int>();
+            string url = string.Format(ConfigurationManager.AppSettings["selectFriendsAPI"], uid);
+            System.Diagnostics.Debug.Print("Prendo tutti gli amici dell'utente con ID: '{0}'\n", uid);
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(url);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da selectFriendsAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La selectFriendsAPI non ha risposto correttamente");
+
+            JArray resArray = JArray.Parse(await response.Content.ReadAsStringAsync());
+            System.Diagnostics.Debug.Print("Risposta: {0}\n", resArray.ToString());
+
+            foreach (JObject item in resArray)
+            {
+                result.Add(await GetUtenteBase(item["ID"].ToString()), (int)item["NumeroEsperienze"]);
+            }
+
+            return result;
         }
     }
 }

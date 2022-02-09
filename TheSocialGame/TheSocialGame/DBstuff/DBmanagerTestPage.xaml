@@ -17,6 +17,9 @@
             <Button Text="SelezionaUtente"
                     BackgroundColor="ForestGreen"
                     Clicked="TriggerSeleziona"/>
+            <Button Text="SelezionaAmici"
+                    BackgroundColor="Goldenrod"
+                    Clicked="TriggerAmici"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

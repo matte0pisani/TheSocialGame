@@ -33,5 +33,11 @@ namespace TheSocialGame.DBstuff
             Utente usr = await DBmanager.GetUtente(IDentry.Text);
             InfoLabel.Text = usr.ToString();
         }
+
+        private async void TriggerAmici(object sender, EventArgs e)
+        {
+            Dictionary<Utente, int> res = await DBmanager.GetTuttiAmici(IDentry.Text);
+            InfoLabel.Text = res.ToString();
+        }
     }
 }
