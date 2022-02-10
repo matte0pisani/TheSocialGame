@@ -21,7 +21,7 @@ namespace TheSocialGame
             }
             else
             {
-                MainPage = new NavigationPage(new DBstuff.DBmanagerTestPage());
+                MainPage = new NavigationPage(new WelcomePage());
             }
 
 

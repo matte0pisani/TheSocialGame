@@ -10,6 +10,7 @@
                    Placeholder="Inserisci Username"/>
             <Label x:Name="InfoLabel"
                    VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                    Text="Inserisci i dati e clicca"/>
             <Button Text="InserisciNuovoUtente"
                     BackgroundColor="Red"
@@ -18,8 +19,11 @@
                     BackgroundColor="ForestGreen"
                     Clicked="TriggerSeleziona"/>
             <Button Text="SelezionaAmici"
-                    BackgroundColor="Goldenrod"
+                    BackgroundColor="Gold"
                     Clicked="TriggerAmici"/>
+            <Button Text="SelezionaEsperienze"
+                    BackgroundColor="DodgerBlue"
+                    Clicked="TriggerEsperienze"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

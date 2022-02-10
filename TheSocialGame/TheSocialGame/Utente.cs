@@ -28,7 +28,6 @@ namespace TheSocialGame
         public int Personalita3 { get; set; }
         public int Personalita4 { get; set; }
         public int Personalita5 { get; set; }
-        
 
         public Dictionary<string, (int, Dictionary<int, bool>)> ListaDistintivi { get; set; }
         public List<Esperienza> Esperienze { get; set; }

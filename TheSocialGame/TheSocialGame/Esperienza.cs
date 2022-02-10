@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace TheSocialGame
 {
     public class Esperienza
     {
+        public bool Dirty { get; set; } // per conoscere se l'esperienza è stata creata/modificata nella sessione corrente
         public int ID { get; set; }
         public string Titolo { get; set; }
         public byte[] Copertina { get; set; }
@@ -24,14 +26,23 @@ namespace TheSocialGame
         public List<string> Recensioni { get; set; }
         public List<string> Altro { get; set; }
 
+        [Preserve]
+        [JsonConstructor]
         public Esperienza()
         {
+            Dirty = false;
+            ID = -1;
+            Titolo = "dummy";
+            Copertina = null;
+            CopertinaLiveIOS = false;
+            DataInizio = DateTime.Now;
+            DataFine = DateTime.Now;
+            Tipologia = "dummy";
+            Privata = false;
+            Live = false;
             ListaPartecipanti = new List<Utente>();
             Galleria = new List<byte[]>();
             Luoghi = new List<string>();
-            Privata = false;
-            CopertinaLiveIOS = false;
-            Live = false;
             Slogan = new List<string>();
             Funfacts = new List<string>();
             Playlist = new List<string>();

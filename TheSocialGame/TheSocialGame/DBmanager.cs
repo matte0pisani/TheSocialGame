@@ -56,6 +56,7 @@ namespace TheSocialGame
         {
             Utente res = await GetUtenteBase(userID);
             res.Amici = await GetTuttiAmici(res.ID);
+            res.Esperienze = await GetTutteEsperienze(res.ID);
             return res;
         }
 
@@ -138,7 +139,7 @@ namespace TheSocialGame
             return true;
         }
 
-        public static async Task<Dictionary<Utente, int>> GetTuttiAmici(string uid)
+        private static async Task<Dictionary<Utente, int>> GetTuttiAmici(string uid)
         {
             Dictionary<Utente, int> result = new Dictionary<Utente, int>();
             string url = string.Format(ConfigurationManager.AppSettings["selectFriendsAPI"], uid);
@@ -155,9 +156,33 @@ namespace TheSocialGame
             foreach (JObject item in resArray)
             {
                 result.Add(await GetUtenteBase(item["ID"].ToString()), (int)item["NumeroEsperienze"]);
+                System.Diagnostics.Debug.Print("Recuperato amico da DB e aggiunto a risultato");
             }
+            System.Diagnostics.Debug.Print("Calcolo risultato completato; ritorno");
 
             return result;
         }
+
+        public static async Task<List<Esperienza>> GetTutteEsperienze(string uid)
+        {
+            List<Esperienza> result = new List<Esperienza>();
+            string url = string.Format(ConfigurationManager.AppSettings["selectExperiencesAPI"], uid);
+            System.Diagnostics.Debug.Print("Prendo tutti le esperienze dell'utente con ID: '{0}'\n", uid);
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(url);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da selectExperiencesAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La selectExperiencesAPI non ha risposto correttamente");
+
+            JArray resArray = JArray.Parse(await response.Content.ReadAsStringAsync());
+            System.Diagnostics.Debug.Print("Risposta: {0}\n", resArray.ToString());
+
+            result = JsonConvert.DeserializeObject<List<Esperienza>>(resArray.ToString());
+            System.Diagnostics.Debug.Print("Conversione risposta riuscita; ritorno");
+
+            return result;
+
+        }
+
     }
 }

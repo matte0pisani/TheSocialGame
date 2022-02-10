@@ -34,10 +34,17 @@ namespace TheSocialGame.DBstuff
             InfoLabel.Text = usr.ToString();
         }
 
-        private async void TriggerAmici(object sender, EventArgs e)
+        private void TriggerAmici(object sender, EventArgs e)
         {
-            Dictionary<Utente, int> res = await DBmanager.GetTuttiAmici(IDentry.Text);
+            object res = "Il metodo è stato reso privato\n";
+         //   res = await DBmanager.GetTuttiAmici(IDentry.Text);
             InfoLabel.Text = res.ToString();
+        }
+
+        private async void TriggerEsperienze(object sender, EventArgs e)
+        {
+            List<Esperienza> res = await DBmanager.GetTutteEsperienze(IDentry.Text);
+            InfoLabel.Text = res.Count.ToString();
         }
     }
 }
