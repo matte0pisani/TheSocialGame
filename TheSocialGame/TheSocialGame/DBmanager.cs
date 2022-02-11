@@ -12,6 +12,7 @@ namespace TheSocialGame
 {
     public static class DBmanager
     {
+        private static Utente current = null;
         public static async Task<bool> InserisciUtente(Utente usr)
         {
             string url = ConfigurationManager.AppSettings["insertUserAPI"];
@@ -55,6 +56,7 @@ namespace TheSocialGame
         public static async Task<Utente> GetUtente(string userID)
         {
             Utente res = await GetUtenteBase(userID);
+            current = res;
             res.Amici = await GetTuttiAmici(res.ID);
             res.Esperienze = await GetTutteEsperienze(res.ID);
             return res;
@@ -77,32 +79,36 @@ namespace TheSocialGame
             string jsonString = await response.Content.ReadAsStringAsync();
             System.Diagnostics.Debug.Print("Risposta: {0}\n", jsonString);
 
-            JObject jres = JObject.Parse(jsonString);
-            Utente res = new Utente
-            {
-                ID = jres["ID"].ToString(),
-                Username = jres["Username"].ToString(),
-                PuntiSocial = (int)jres["PuntiSocial"],
-                PuntiEsperienza = (int)jres["PuntiEsperienza"],
-                Livello = (int)jres["Livello"],
-                FotoBytes = Convert.FromBase64String(jres["FotoBytes"].ToString()),
-                FotoLiveiOS = (bool)jres["FotoLiveiOS"],
-                Personalita1 = (int)jres["Personalita1"],
-                Personalita2 = (int)jres["Personalita2"],
-                Personalita3 = (int)jres["Personalita3"],
-                Personalita4 = (int)jres["Personalita4"],
-                Personalita5 = (int)jres["Personalita5"],
-                Sfondo = Color.FromHex(jres["Sfondo"].ToString()),
-                Primario = Color.FromHex(jres["Primario"].ToString()),
-                Secondario = Color.FromHex(jres["Secondario"].ToString()),
-                Privato = (bool)jres["Privato"]
-            };
+            Utente res = ConvertiJsonInUtente(JObject.Parse(jsonString));
             System.Diagnostics.Debug.Print("Utente creato\n");
 
             if (await AggiungiDistintivi(res)) { System.Diagnostics.Debug.Print("Caricamento distintivi completato\n"); }
             else { System.Diagnostics.Debug.Print("Errore nel caricamento dei distintivi\n"); }
 
             return res;
+        }
+
+        private static Utente ConvertiJsonInUtente(JObject json)
+        {
+            return new Utente
+            {
+                ID = json["ID"].ToString(),
+                Username = json["Username"].ToString(),
+                PuntiSocial = (int)json["PuntiSocial"],
+                PuntiEsperienza = (int)json["PuntiEsperienza"],
+                Livello = (int)json["Livello"],
+                FotoBytes = Convert.FromBase64String(json["FotoBytes"].ToString()),
+                FotoLiveiOS = (bool)json["FotoLiveiOS"],
+                Personalita1 = (int)json["Personalita1"],
+                Personalita2 = (int)json["Personalita2"],
+                Personalita3 = (int)json["Personalita3"],
+                Personalita4 = (int)json["Personalita4"],
+                Personalita5 = (int)json["Personalita5"],
+                Sfondo = Color.FromHex(json["Sfondo"].ToString()),
+                Primario = Color.FromHex(json["Primario"].ToString()),
+                Secondario = Color.FromHex(json["Secondario"].ToString()),
+                Privato = (bool)json["Privato"]
+            };
         }
 
         private static async Task<bool> AggiungiDistintivi(Utente usr)
@@ -163,11 +169,10 @@ namespace TheSocialGame
             return result;
         }
 
-        public static async Task<List<Esperienza>> GetTutteEsperienze(string uid)
+        private static async Task<List<Esperienza>> GetTutteEsperienze(string uid)
         {
-            List<Esperienza> result = new List<Esperienza>();
             string url = string.Format(ConfigurationManager.AppSettings["selectExperiencesAPI"], uid);
-            System.Diagnostics.Debug.Print("Prendo tutti le esperienze dell'utente con ID: '{0}'\n", uid);
+            System.Diagnostics.Debug.Print("Prendo tutte le esperienze dell'utente con ID: '{0}'\n", uid);
 
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync(url);
@@ -177,11 +182,55 @@ namespace TheSocialGame
             JArray resArray = JArray.Parse(await response.Content.ReadAsStringAsync());
             System.Diagnostics.Debug.Print("Risposta: {0}\n", resArray.ToString());
 
-            result = JsonConvert.DeserializeObject<List<Esperienza>>(resArray.ToString());
-            System.Diagnostics.Debug.Print("Conversione risposta riuscita; ritorno");
+            List<Esperienza> result = JsonConvert.DeserializeObject<List<Esperienza>>(resArray.ToString());
+            System.Diagnostics.Debug.Print("Conversione risposta riuscita\n");
+
+            foreach (Esperienza exp in result)
+            {
+                GetInfoEsperienza(exp, uid);    
+                // non fatto await così che dei thread separati carichino le esperienze, lavorando in parallelo; ma il thread "padre" potrebbe ritornare
+                // la lista di esperienze prima che siano "complete"
+            }
+            System.Diagnostics.Debug.Print("Caricate informazioni sulle esperienze\n");
 
             return result;
+        }
 
+        private static async void GetInfoEsperienza(Esperienza exp, string uid)
+        {
+            string url = string.Format(ConfigurationManager.AppSettings["selectExperienceInfoAPI"], exp.ID);
+            System.Diagnostics.Debug.Print("Prendo tutte le informazioni dell'esperienza con ID: '{0}'\n", exp.ID);
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(url);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da selectExperienceInfoAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La selectExperienceInfoAPI non ha risposto correttamente");
+
+            JArray resArray = JArray.Parse(await response.Content.ReadAsStringAsync());
+            System.Diagnostics.Debug.Print("Risposta: {0}\n", resArray.ToString());
+
+            JArray jmembers = JArray.Parse(resArray[0].ToString());
+            foreach (JObject mem in jmembers)
+            {
+                if (mem["ID"].ToString() == uid) { exp.ListaPartecipanti.Add(current); }
+                else { exp.ListaPartecipanti.Add(ConvertiJsonInUtente(mem)); }
+            }
+            System.Diagnostics.Debug.Print("Partecipanti caricati\n");
+
+            JArray jimages = JArray.Parse(resArray[1].ToString());
+            foreach (JValue mem in jimages)
+            {
+                exp.Galleria.Add(Convert.FromBase64String(mem.ToString()));
+            }
+            System.Diagnostics.Debug.Print("Galleria caricata\n");
+
+            exp.Luoghi = JsonConvert.DeserializeObject<List<string>>(resArray[2].ToString());
+            exp.Slogan = JsonConvert.DeserializeObject<List<string>>(resArray[3].ToString());
+            exp.Funfacts = JsonConvert.DeserializeObject<List<string>>(resArray[4].ToString());
+            exp.Playlist = JsonConvert.DeserializeObject<List<string>>(resArray[5].ToString());
+            exp.Recensioni = JsonConvert.DeserializeObject<List<string>>(resArray[6].ToString());
+            exp.Altro = JsonConvert.DeserializeObject<List<string>>(resArray[7].ToString());
+            System.Diagnostics.Debug.Print("Info rimanenti caricate\n");
         }
 
     }
