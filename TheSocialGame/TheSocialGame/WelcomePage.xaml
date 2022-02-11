@@ -29,7 +29,7 @@
         <Button Margin="80, 40, 80, 40"
                 BackgroundColor="{StaticResource FirstColor}"
                 TextColor="Black"
-                Text="Accedi"
+                Text="Inizia"
                 VerticalOptions="Start"
                 Clicked="Button_Clicked"
         />

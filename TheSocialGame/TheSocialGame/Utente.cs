@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Amazon.Runtime.Internal.Transform;
 using Newtonsoft.Json;
 using Xamarin.Forms;
@@ -10,6 +11,9 @@ namespace TheSocialGame
 {
     public class Utente
     {
+        public static int maxLivDistintivo = 2;
+        public static int sogliaPrimoLivello = 3;
+        public static int sogliaSecondoLivello = 7;
         public string ID { get; set; }
         public string Username { get; set; }
         public int PuntiSocial { get; set; }
@@ -24,7 +28,6 @@ namespace TheSocialGame
         public int Personalita3 { get; set; }
         public int Personalita4 { get; set; }
         public int Personalita5 { get; set; }
-        
 
         public Dictionary<string, (int, Dictionary<int, bool>)> ListaDistintivi { get; set; }
         public List<Esperienza> Esperienze { get; set; }
@@ -41,11 +44,12 @@ namespace TheSocialGame
         {
             ID = "dummy";
             Username = "dummy";
-            PuntiSocial = PuntiEsperienza = Livello = 0;
+            PuntiSocial = PuntiEsperienza = 0;
+            Livello = 1;    
             FotoBytes = null;
             FotoLiveiOS = false;
             Personalita1 = Personalita2 = Personalita3 = Personalita4 = Personalita5 = 1;
-            ListaDistintivi = inizializzaListaDistintivi();
+            ListaDistintivi = InizializzaListaDistintivi();
             Esperienze = new List<Esperienza>();
             Amici = new Dictionary<Utente, int>();
             Sfondo = Color.GhostWhite;
@@ -56,10 +60,9 @@ namespace TheSocialGame
         }
 
 
-        private Dictionary<string, (int, Dictionary<int, bool>)> inizializzaListaDistintivi()
+        private Dictionary<string, (int, Dictionary<int, bool>)> InizializzaListaDistintivi()
         {
-            int livelloMax;
-            livelloMax = 2;
+            int livelloMax = maxLivDistintivo;
             Dictionary<string,(int, Dictionary<int, bool>)> mappa = new Dictionary<string, (int, Dictionary<int, bool>)>();
             Dictionary<int, bool> livelliMare = new Dictionary<int, bool>();
             Dictionary<int, bool> livelliRistorante = new Dictionary<int, bool>();
@@ -145,13 +148,12 @@ namespace TheSocialGame
         }
 
 
-        public void aggiungiAmici(List<Utente> partecipanti)
+        public void AggiungiAmici(List<Utente> partecipanti)
         {
             foreach (Utente u in partecipanti)
             {
                 if (!(u == this))
                 {
-
                     if (this.Amici.Keys.Contains(u)) this.Amici[u]++;
                     else this.Amici.Add(u, 1);
                 }
@@ -159,7 +161,7 @@ namespace TheSocialGame
             }
         }
 
-        public void decrementaAmici(List<Utente> partecipanti)
+        public void DecrementaAmici(List<Utente> partecipanti)
         {
             foreach (Utente u in partecipanti)
             {
@@ -173,7 +175,7 @@ namespace TheSocialGame
         }
 
 
-        public Dictionary<Utente, int> getBestFriends()
+        public Dictionary<Utente, int> GetBestFriends()
         {
             Dictionary<Utente, int> best = new Dictionary<Utente, int>();
             foreach (KeyValuePair<Utente, int> coppia in Amici.OrderByDescending(key => key.Value).Take(3))
@@ -183,13 +185,13 @@ namespace TheSocialGame
             return best;
         }
 
-        public void elimina()
+        public void Elimina()
         {
             // da implementare eliminazione da database
             return;
         }
 
-        public void puntiFake()
+        public void PuntiFake()
         {
             this.PuntiSocial = new Random().Next(100);
             this.Livello = (this.PuntiSocial / 10) + 1;
@@ -198,20 +200,20 @@ namespace TheSocialGame
             this.Personalita3 = new Random().Next(100);
             this.Personalita4 = new Random().Next(100);
             this.Personalita5 = new Random().Next(100);
-           
-
+        }
+        
+        // forse questi equals e hash code non servono (e hanno poco senso)
+        public override bool Equals(object obj)
+        {
+            Utente that = (Utente)obj;
+            return this.Username == that.Username;
         }
 
-
-
-
-
-
-
-
-
+        public override int GetHashCode()
+        {
+            return Username.GetHashCode();
+        }
 
     }
 
-   
 }

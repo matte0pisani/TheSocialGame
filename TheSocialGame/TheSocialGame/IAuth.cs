@@ -5,32 +5,34 @@ namespace TheSocialGame
 {
     public interface IAuth
     {
-        
-            Task<string> LoginWithEmailAndPassword(string email, string password);
 
-            Task<string> SignUpWithEmailAndPassword(string email, string password);
+        Task<string> LoginWithEmailAndPassword(string email, string password);
 
-            bool SignOut();
+        Task<string> SignUpWithEmailAndPassword(string email, string password);
 
-            bool SignIn();
+        bool SignOut();
 
-            bool DeleteUser(string password);
+        bool SignIn();
 
-            string GetEmail();
+        string GetCurrentUserId();
 
-            void ChangeEmail(string mail);
+        bool DeleteUser(string password);
 
-            bool ValidPassword(string password);
+        string GetEmail();
 
-            bool ChangePassword(string password);
+        void ChangeEmail(string mail);
 
-            bool MailVerificata();
+        bool ValidPassword(string password);
 
-            bool PasswordDimenticata(string mail);
+        bool ChangePassword(string password);
+
+        bool MailVerificata();
+
+        bool PasswordDimenticata(string mail);
 
 
     }
 
-   
-    
+
+
 }

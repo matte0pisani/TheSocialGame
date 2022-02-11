@@ -96,12 +96,14 @@
                     </FlexLayout>
                 </Frame>
             </StackLayout>
-            <Button BackgroundColor="{StaticResource FirstColor}"
+            <Button x:Name="signUpButton"
+                    BackgroundColor="{StaticResource FirstColor}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Stack, Property=Width, Factor=.72}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Stack, Property=Height, Factor=1.15}"
                     Text="Sign up"
                     TextColor="DarkSlateGray"
                     CornerRadius="{OnPlatform Android='40', iOS='23'}"
+                    IsEnabled="{Binding IsInfoValid}"
                     Clicked="Button_Clicked"
                     />
             <Label  x:Name="errorLabel"

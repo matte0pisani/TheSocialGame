@@ -25,7 +25,27 @@ namespace TheSocialGame.DBstuff
                 Username = UsernameEntry.Text
             };
 
-            InfoLabel.Text = (await DBmanager.InserisciNuovoUtente(usr)).ToString();
+            InfoLabel.Text = (await DBmanager.InserisciUtente(usr)).ToString();
+        }
+
+        private async void TriggerSeleziona(object sender, EventArgs e)
+        {
+            Utente usr = await DBmanager.GetUtente(IDentry.Text);
+            InfoLabel.Text = usr.ToString();
+        }
+
+        private void TriggerAmici(object sender, EventArgs e)
+        {
+            object res = "Il metodo è stato reso privato\n";
+         //   res = await DBmanager.GetTuttiAmici(IDentry.Text);
+            InfoLabel.Text = res.ToString();
+        }
+
+        private void TriggerEsperienze(object sender, EventArgs e)
+        {
+            object res = "Il metodo è stato reso privato\n";
+            //   res = await DBmanager.GetTutteEsperienze(IDentry.Text);
+            InfoLabel.Text = res.ToString();
         }
     }
 }
