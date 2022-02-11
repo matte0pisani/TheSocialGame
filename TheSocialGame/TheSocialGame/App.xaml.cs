@@ -27,20 +27,20 @@ namespace TheSocialGame
 
            
 
-            CrossFirebasePushNotification.Current.Subscribe("all");
-            CrossFirebasePushNotification.Current.OnTokenRefresh += Current_OnTokenRefresh;
+           // CrossFirebasePushNotification.Current.Subscribe("all");
+           // CrossFirebasePushNotification.Current.OnTokenRefresh += Current_OnTokenRefresh;
     
            
         
     }
 
-
+/*
         private void Current_OnTokenRefresh(object source, FirebasePushNotificationTokenEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine($"Token: {e.Token}");
         }
 
-
+*/
 
 
 

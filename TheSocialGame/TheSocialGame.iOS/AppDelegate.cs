@@ -4,9 +4,11 @@ using System.Linq;
 
 using Foundation;
 using PCLAppConfig;
-using Plugin.FirebasePushNotification;
+
 using ProgressRingControl.Forms.Plugin.iOS;
 using UIKit;
+using Firebase.Core;
+using FirebaseAdmin;
 
 namespace TheSocialGame.iOS
 {
@@ -26,17 +28,17 @@ namespace TheSocialGame.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            Firebase.Core.App.Configure();
             ProgressRingRenderer.Init();
             ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
+            Firebase.Core.App.Configure();
             LoadApplication(new App());
             ObjCRuntime.Class.ThrowOnInitFailure = false;
             //FirebasePushNotificationManager.Initialize(options, true);
             return base.FinishedLaunching(app, options);
         }
 
-        //public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
-       /* {
+      /*  public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
+       {
             FirebasePushNotificationManager.DidRegisterRemoteNotifications(deviceToken);
         }
 
