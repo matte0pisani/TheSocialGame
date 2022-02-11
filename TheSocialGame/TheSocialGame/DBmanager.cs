@@ -88,6 +88,33 @@ namespace TheSocialGame
             return res;
         }
 
+        public static async Task<Utente> GetUtenteBasePerNome(string username)
+        {
+            string url = string.Format(ConfigurationManager.AppSettings["selectUserByNameAPI"], username);
+            System.Diagnostics.Debug.Print("Prendo l'utente con username: '{0}'\n", username);
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(url);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da selectUserByNameAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La selectUserByNameAPI non ha risposto correttamente");
+
+            string jsonString = await response.Content.ReadAsStringAsync();
+            System.Diagnostics.Debug.Print("Risposta: {0}\n", jsonString);
+
+            if (jsonString == "{}")
+            {
+                System.Diagnostics.Debug.Print("Non è stato trovato alcun utente con nome: {0}", username);
+                return null;
+            }
+            Utente res = ConvertiJsonInUtente(JObject.Parse(jsonString));
+            System.Diagnostics.Debug.Print("Utente creato\n");
+
+            if (await AggiungiDistintivi(res)) { System.Diagnostics.Debug.Print("Caricamento distintivi completato\n"); }
+            else { System.Diagnostics.Debug.Print("Errore nel caricamento dei distintivi\n"); }
+
+            return res;
+        }
+
         private static Utente ConvertiJsonInUtente(JObject json)
         {
             return new Utente

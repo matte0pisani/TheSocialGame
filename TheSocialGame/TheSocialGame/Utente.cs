@@ -44,7 +44,8 @@ namespace TheSocialGame
         {
             ID = "dummy";
             Username = "dummy";
-            PuntiSocial = PuntiEsperienza = Livello = 0;
+            PuntiSocial = PuntiEsperienza = 0;
+            Livello = 1;    
             FotoBytes = null;
             FotoLiveiOS = false;
             Personalita1 = Personalita2 = Personalita3 = Personalita4 = Personalita5 = 1;
@@ -200,7 +201,8 @@ namespace TheSocialGame
             this.Personalita4 = new Random().Next(100);
             this.Personalita5 = new Random().Next(100);
         }
-
+        
+        // forse questi equals e hash code non servono (e hanno poco senso)
         public override bool Equals(object obj)
         {
             Utente that = (Utente)obj;

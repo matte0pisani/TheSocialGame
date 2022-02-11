@@ -14,13 +14,15 @@ namespace TheSocialGame
 {
     public partial class AddExperiencePage : ContentPage
     {
-        Utente user;
-        Page prossima;
-        Esperienza nuova;
+        private Utente user;
+        private int nuoviPuntiSocial;
+        private Page prossima;
+        private Esperienza nuova;
         public AddExperiencePage(Utente us)
         {
             InitializeComponent();
             user = us;
+            nuoviPuntiSocial = 0;
             nuova = new Esperienza();
             App.Current.Resources["BackgroundColor"] = user.Sfondo;
             App.Current.Resources["FirstColor"] = user.Primario;
@@ -208,33 +210,45 @@ namespace TheSocialGame
             }
         }
 
-        void TipoEsperienza(Object sender, EventArgs e)
+        private void TipoEsperienza(Object sender, EventArgs e)
         {
             nuova.Tipologia = (string)TipiEsp.SelectedItem;
         }
 
-
-        //da rifare cercando utenti in database
-        void AggiungiPartecipanti(Object sender, EventArgs e)
+        private async void AggiungiPartecipanti(Object sender, EventArgs e)
         {
-            Utente partecipante = new Utente();
-            partecipante.Username = Partecipanti.Text;
             if (!Partecipanti.Text.Equals(""))
             {
-                nuova.ListaPartecipanti.Add(partecipante);
-                ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + partecipante.Username + "  ";
+                foreach (Utente friend in user.Amici.Keys)
+                {
+                    if (friend.Username.Equals(Partecipanti.Text))
+                    {
+                        nuova.ListaPartecipanti.Add(friend);
+                        ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + friend.Username + "  ";
+                        return;
+                    }
+                }
+
+                Utente DBfriend = await DBmanager.GetUtenteBasePerNome(Partecipanti.Text);
+                if (DBfriend != null) 
+                {
+                    nuoviPuntiSocial++;     // aumento i punti social ad ogni nuovo amico; possibile uso dei punti social, DA RIVEDERE
+                    nuova.ListaPartecipanti.Add(DBfriend);
+                    ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + DBfriend.Username + "  "; 
+                }
+                else { await DisplayAlert("Utente inesistente", "Non esiste alcun utente con il nome dato", "OK") ; }
+
+                Partecipanti.Text = null;
             }
-            Partecipanti.Text = null;
+
         }
 
-        void PrivataChanged(Object sender, EventArgs e)
+        private void PrivataChanged(Object sender, EventArgs e)
         {
             if (Privata.IsToggled)
                 nuova.Privata = true;
             else nuova.Privata = false;
         }
-
-
 
         private async void Salva(object sender, EventArgs e)
         {
@@ -267,6 +281,8 @@ namespace TheSocialGame
                     }
                     u.ListaDistintivi[nuova.Tipologia] = (numExp, dictExp);
                     u.PuntiEsperienza++;
+                    u.PuntiSocial += nuoviPuntiSocial;  // non credo sia corretto, DA RIVEDERE
+                    u.Livello = (u.PuntiSocial + u.PuntiEsperienza) / 10 + 1;       // formula presa da PuntiFake; DA RIVEDERE
                     u.AggiungiAmici(nuova.ListaPartecipanti);
                 }
 
