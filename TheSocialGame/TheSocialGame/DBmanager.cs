@@ -18,22 +18,8 @@ namespace TheSocialGame
             string url = ConfigurationManager.AppSettings["insertUserAPI"];
             System.Diagnostics.Debug.Print("Inserisco in DB utente {0} {1}\n", usr.ID, usr.Username);
 
-            string jstring = JsonConvert.SerializeObject(usr);
+            string jstring = ConvertiUtenteInJson(usr).ToString();
             System.Diagnostics.Debug.Print("Creato JSON da oggetto Utente: {0}\n", jstring);
-
-            JObject json = JObject.Parse(jstring);
-            json.Remove("ListaDistintivi");
-            json.Remove("Esperienze");
-            json.Remove("Amici");
-            json["Sfondo"] = usr.Sfondo.ToHex();
-            json["Primario"] = usr.Primario.ToHex();
-            json["Secondario"] = usr.Secondario.ToHex();
-            if (usr.FotoBytes != null)
-            {
-                json["FotoBytes"] = Convert.ToBase64String(usr.FotoBytes);
-            }
-            jstring = json.ToString();
-            System.Diagnostics.Debug.Print("JSON modificato: {0}\n", jstring);
 
             var body = new StringContent(jstring, Encoding.UTF8, "application/json");
             System.Diagnostics.Debug.Print("POST body creato\n");
@@ -138,6 +124,29 @@ namespace TheSocialGame
             };
         }
 
+        private static JObject ConvertiUtenteInJson(Utente usr)
+        {
+            JObject res = new JObject();
+            res.Add("ID", usr.ID);
+            res.Add("Username", usr.Username);
+            res.Add("PuntiSocial", usr.PuntiSocial);
+            res.Add("PuntiEsperienza", usr.PuntiEsperienza);
+            res.Add("Livello", usr.Livello);
+            if (usr.FotoBytes != null) { res.Add("FotoBytes", Convert.ToBase64String(usr.FotoBytes)); }
+            else { res.Add("FotoBytes", null); }
+            res.Add("FotoLiveiOS", usr.FotoLiveiOS);
+            res.Add("Personalita1", usr.Personalita1);
+            res.Add("Personalita2", usr.Personalita2);
+            res.Add("Personalita3", usr.Personalita3);
+            res.Add("Personalita4", usr.Personalita4);
+            res.Add("Personalita5", usr.Personalita5);
+            res.Add("Sfondo", usr.Sfondo.ToHex());
+            res.Add("Primario", usr.Primario.ToHex());
+            res.Add("Secondario", usr.Secondario.ToHex());
+            res.Add("Privato", usr.Privato);
+            return res;
+        }
+
         private static async Task<bool> AggiungiDistintivi(Utente usr)
         {
             string url = string.Format(ConfigurationManager.AppSettings["selectBadgesAPI"], usr.ID);
@@ -157,7 +166,7 @@ namespace TheSocialGame
                 int livMax = (int)item["LivMax"];
                 int numExp = (int)item["NumeroExp"]; 
                 Dictionary<int, bool> badges = new Dictionary<int, bool>();
-                for(int i = 1; i <= Utente.maxLivDistintivo; i++)
+                for(int i = 1; i <= Constants.maxLivDistintivo; i++)
                 {
                     badges[i] = false;
                 }
