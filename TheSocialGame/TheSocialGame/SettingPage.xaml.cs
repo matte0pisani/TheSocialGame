@@ -12,7 +12,7 @@ namespace TheSocialGame
     {
         public Utente User { get; set; }
         private IAuth auth;
-        private bool dirty;
+        public bool Dirty { get; set; }
 
         public SettingPage(Utente u)
         {
@@ -29,6 +29,7 @@ namespace TheSocialGame
             prim.Title = User.Primario.ToHex();
             sec.Title = User.Secondario.ToHex();
             Privacy.IsToggled = User.Privato;
+            Dirty = false;
 
         }
 
@@ -52,7 +53,7 @@ namespace TheSocialGame
                 User.Privato = true;
             else
                 User.Privato = false;
-            dirty = true;
+            Dirty = true;
         }
 
         private async void CambiaPassword(Object sender, EventArgs e)
@@ -84,42 +85,42 @@ namespace TheSocialGame
 
         private async void NotificationClicked(Object sender, EventArgs e)
         {
-            DBmanager.AggiornaUtenteInfoNonExp(User);
+            if (Dirty) DBmanager.AggiornaUtenteInfoNonExp(User);
             await Navigation.PushAsync(new NotificationPage());
             Navigation.RemovePage(this);
         }
 
         private async void HomeClicked(Object sender, EventArgs e)
         {
-            DBmanager.AggiornaUtenteInfoNonExp(User);
+            if (Dirty) DBmanager.AggiornaUtenteInfoNonExp(User);
             await Navigation.PushAsync(new HomePage());
             Navigation.RemovePage(this);
         }
 
         private async void SearchClicked(Object sender, EventArgs e)
         {
-            DBmanager.AggiornaUtenteInfoNonExp(User);
+            if (Dirty) DBmanager.AggiornaUtenteInfoNonExp(User);
             await Navigation.PushAsync(new SearchPage());
             Navigation.RemovePage(this);
         }
 
         private async void RankingClicked(Object sender, EventArgs e)
         {
-            DBmanager.AggiornaUtenteInfoNonExp(User);
+            if (Dirty) DBmanager.AggiornaUtenteInfoNonExp(User);
             await Navigation.PushAsync(new RankingPage(User));
             Navigation.RemovePage(this);
         }
 
         private async void AddClicked(Object sender, EventArgs e)
         {
-            DBmanager.AggiornaUtenteInfoNonExp(User);
+            if (Dirty)  DBmanager.AggiornaUtenteInfoNonExp(User);
             await Navigation.PushAsync(new AddExperiencePage(User));
             Navigation.RemovePage(this);
         }
 
         private async void BackClicked(Object sender, EventArgs e)
         {
-            DBmanager.AggiornaUtenteInfoNonExp(User);
+            if (Dirty)  DBmanager.AggiornaUtenteInfoNonExp(User);
             await Navigation.PopAsync();
         }
 
@@ -308,24 +309,27 @@ namespace TheSocialGame
         private void Sfondo(Object sender, EventArgs e)
         {
             User.Sfondo = Color.FromHex((string)back.SelectedItem);
-            dirty = true;
-            Navigation.PushAsync(new SettingPage(User));
+            SettingPage page = new SettingPage(User);
+            page.Dirty = true;
+            Navigation.PushAsync(page);
             Navigation.RemovePage(this);
         }
 
         private void Primario(Object sender, EventArgs e)
         {
             User.Primario = Color.FromHex((string)prim.SelectedItem);
-            dirty = true;
-            Navigation.PushAsync(new SettingPage(User));
+            SettingPage page = new SettingPage(User);
+            page.Dirty = true;
+            Navigation.PushAsync(page);
             Navigation.RemovePage(this);
         }
 
         private void Secondario(Object sender, EventArgs e)
         {
             User.Secondario = Color.FromHex((string)sec.SelectedItem);
-            dirty = true;
-            Navigation.PushAsync(new SettingPage(User));
+            SettingPage page = new SettingPage(User);
+            page.Dirty = true;
+            Navigation.PushAsync(page);
             Navigation.RemovePage(this);
         }
 
