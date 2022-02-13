@@ -107,7 +107,7 @@
                     <Label Text="Se l'esperienza è privata solo i partecipanti potranno visualizzarla" TextColor="{StaticResource SecondColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="205,610,180,55" />
                     <Label x:Name="SavingLabel" Text="Salvando l'esperienza sarà aggiunta al diario di tutti i partecipanti ed ognuno potrà modificarne il contenuto " TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='40,685,390,55', iOS='20,675,350,55'}" />     
                     <Label x:Name="Warning" Text="Devi completare tutti i campi!" TextColor="{DynamicResource FirstColor}" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='40,685,390,55', iOS='100,700,350,55'}" IsVisible="False"/>    
-                    <Button Text="SALVA" TextColor="Black" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,730,250,40" Clicked="Salva" />
+                    <Button x:Name="SaveButton" Text="SALVA" TextColor="Black" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,730,250,40" Clicked="Salva" />
                     <BoxView Color="Transparent" AbsoluteLayout.LayoutBounds="70,760,250,40" />
                     
                     

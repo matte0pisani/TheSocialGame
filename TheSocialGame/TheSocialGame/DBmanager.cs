@@ -282,5 +282,28 @@ namespace TheSocialGame
             System.Diagnostics.Debug.Print("Inviata query di eliminazione via deleteUserAPI\n");
         }
 
+        public static async Task<bool> AggiornaUtenteInfoNonExp(Utente usr)
+        {
+            string url = ConfigurationManager.AppSettings["updateUserInfoNonExpAPI"];
+            System.Diagnostics.Debug.Print("Aggiorno campi non-esperienziali di utente {0}\n", usr.ID);
+
+            string jstring = ConvertiUtenteInJson(usr).ToString();
+            System.Diagnostics.Debug.Print("Creato JSON da oggetto Utente: {0}\n", jstring);
+
+            var body = new StringContent(jstring, Encoding.UTF8, "application/json");
+            System.Diagnostics.Debug.Print("POST body creato\n");
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.PostAsync(url, body);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da updateUserInfoNonExpAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La updateUserInfoNonExpAPI non ha risposto correttamente");
+
+            string resultString = await response.Content.ReadAsStringAsync();
+            if (!Boolean.TryParse(resultString, out bool result)) throw new Exception("Errore nel parsing del risultato");
+            System.Diagnostics.Debug.Print("Parsing del risultato corretto: {0}\n", result);
+
+            return result;
+        }
+
     }
 }

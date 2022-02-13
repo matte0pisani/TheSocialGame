@@ -217,6 +217,8 @@ namespace TheSocialGame
 
         private async void AggiungiPartecipanti(Object sender, EventArgs e)
         {
+            SaveButton.IsEnabled = false;
+
             if (!Partecipanti.Text.Equals(""))
             {
                 foreach (Utente friend in user.Amici.Keys)
@@ -230,7 +232,7 @@ namespace TheSocialGame
                 }
 
                 Utente DBfriend = await DBmanager.GetUtenteBasePerNome(Partecipanti.Text);
-                if (DBfriend != null) 
+                if (DBfriend != null)
                 {
                     nuoviPuntiSocial++;     // aumento i punti social ad ogni nuovo amico; possibile uso dei punti social, DA RIVEDERE
                     nuova.ListaPartecipanti.Add(DBfriend);
@@ -241,6 +243,7 @@ namespace TheSocialGame
                 Partecipanti.Text = null;
             }
 
+            SaveButton.IsEnabled = true;
         }
 
         private void PrivataChanged(Object sender, EventArgs e)

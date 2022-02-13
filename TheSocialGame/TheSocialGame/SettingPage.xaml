@@ -70,21 +70,21 @@
                     <Frame AbsoluteLayout.LayoutBounds="0,0,420,220" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}"/>
                     <Label Text="Generali" TextColor="{DynamicResource SecondColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,10,400,30" />
                     <Label Text="Username:" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,60,400,30"  />
-                    <Entry x:Name="Username"  PlaceholderColor="Black" TextColor="Black" Completed="cambiaUsername" AbsoluteLayout.LayoutBounds="150,57,200,40" BackgroundColor="Transparent" />
+                    <Entry x:Name="Username"  PlaceholderColor="Black" TextColor="Black" Completed="CambiaUsername" AbsoluteLayout.LayoutBounds="150,57,200,40" BackgroundColor="Transparent" />
                     <Label Text="Email:" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,120,400,30" />
-                    <Entry x:Name="Email"  PlaceholderColor="Black" TextColor="Black" Completed="cambiaMail" AbsoluteLayout.LayoutBounds="150,117,200,40"  BackgroundColor="Transparent" />
-                    <Button Text="Cambia Password" FontAttributes="Bold" TextColor="{DynamicResource FirstColor}" FontSize="20"  BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="-90,167,400,45" Clicked="cambiaPassword" />
+                    <Entry x:Name="Email"  PlaceholderColor="Black" TextColor="Black" Completed="CambiaMail" AbsoluteLayout.LayoutBounds="150,117,200,40"  BackgroundColor="Transparent" />
+                    <Button Text="Cambia Password" FontAttributes="Bold" TextColor="{DynamicResource FirstColor}" FontSize="20"  BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="-90,167,400,45" Clicked="CambiaPassword" />
                    
                     <Frame AbsoluteLayout.LayoutBounds="0,221,420,180" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}"/>
                     <Label Text="Privacy" TextColor="{DynamicResource SecondColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,240,400,30" />
                     <Label Text="Profilo privato" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,290,400,30" />
-                    <Switch x:Name="Privacy" Toggled="cambiaPrivacy" AbsoluteLayout.LayoutBounds="250,290,50,30" OnColor="{DynamicResource SecondColor}" ThumbColor="{DynamicResource FirstColor}" Scale="{OnPlatform Android='1.2', iOS='0.8'}"   />
+                    <Switch x:Name="Privacy" Toggled="CambiaPrivacy" AbsoluteLayout.LayoutBounds="250,290,50,30" OnColor="{DynamicResource SecondColor}" ThumbColor="{DynamicResource FirstColor}" Scale="{OnPlatform Android='1.2', iOS='0.8'}"   />
                     <Label Text="Impostando il profilo come privato per partecipare alle esperienze di utenti non presenti tra i tuoi amici dovrai accettare l'invito" TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,320,393,55', iOS='20,290,350,58'}" />
                     <Frame AbsoluteLayout.LayoutBounds="0,402,420,380" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}" />
                     <Label Text="Tema" TextColor="{DynamicResource SecondColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,420,400,30" />
 
                     <Label Text="Sfondo" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,470,400,30" />
-                    <Picker x:Name="back"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,520,300,30', iOS='20,520,307,37'}" BackgroundColor="Transparent"  TitleColor="Black" SelectedIndexChanged="sfondo" />
+                    <Picker x:Name="back"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,520,300,30', iOS='20,520,307,37'}" BackgroundColor="Transparent"  TitleColor="Black" SelectedIndexChanged="Sfondo" />
                     <!--
                     <Button BackgroundColor="LemonChiffon" BorderWidth="2" BorderColor="Black" CornerRadius="{OnPlatform Android='100', iOS='13'}"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,520,30,30', iOS='20,520,27,27'}" Clicked="cambiaSfondo"  />
                     <Button BackgroundColor="AntiqueWhite" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='70,520,30,30', iOS='65,520,27,27'}" Clicked="cambiaSfondo"  />
@@ -96,7 +96,7 @@
                     <Button BackgroundColor="GhostWhite" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='370,520,30,30', iOS='335,520,27,27'}" Clicked="cambiaSfondo" />
                     -->
                     <Label Text="Colore Primario" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,570,400,30" />
-                    <Picker x:Name="prim"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,630,300,30', iOS='20,590,307,27'}" BackgroundColor="Transparent"  TitleColor="Black" SelectedIndexChanged="primario" />
+                    <Picker x:Name="prim"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,630,300,30', iOS='20,590,307,27'}" BackgroundColor="Transparent"  TitleColor="Black" SelectedIndexChanged="Primario" />
                     
                     <!--
                     <Button BackgroundColor="Yellow" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,630,30,30', iOS='20,630,27,27'}" Clicked="cambiaPrimario" />
@@ -109,7 +109,7 @@
                     <Button BackgroundColor="LightGray" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='370,630,30,30', iOS='335,630,27,27'}" Clicked="cambiaPrimario" />
                     -->
                     <Label Text="Colore Secondario" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,680,400,30" />
-                    <Picker x:Name="sec"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,740,300,30', iOS='20,740,307,27'}" BackgroundColor="Transparent"  TitleColor="Black" SelectedIndexChanged="secondario"  />
+                    <Picker x:Name="sec"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,740,300,30', iOS='20,740,307,27'}" BackgroundColor="Transparent"  TitleColor="Black" SelectedIndexChanged="Secondario"  />
                     
                     <!--
                     <Button BackgroundColor="PaleGoldenrod" BorderWidth="2" BorderColor="Black"  CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,740,30,30', iOS='20,740,27,27'}" Clicked="cambiaSecondario" />
@@ -123,8 +123,8 @@
                     -->
                     <Frame AbsoluteLayout.LayoutBounds="0,785,420,180" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}"/>
                     <Label Text="Gestione account" TextColor="{DynamicResource SecondColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,800,400,30" />
-                    <Button Text="Elimina Account" FontAttributes="Bold" TextColor="{DynamicResource FirstColor}" FontSize="20" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="100,860,200,60"  Clicked="elimina" />
-                    <Button Text="Esci" FontSize="20" FontAttributes="Bold" TextColor="{DynamicResource FirstColor}" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="100,910,200,60"  Clicked="esci" />
+                    <Button Text="Elimina Account" FontAttributes="Bold" TextColor="{DynamicResource FirstColor}" FontSize="20" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="100,860,200,60"  Clicked="Elimina" />
+                    <Button Text="Esci" FontSize="20" FontAttributes="Bold" TextColor="{DynamicResource FirstColor}" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="100,910,200,60"  Clicked="Esci" />
                    
                    
                 </AbsoluteLayout>
