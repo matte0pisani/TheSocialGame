@@ -24,6 +24,10 @@
             <Button Text="SelezionaEsperienze"
                     BackgroundColor="DodgerBlue"
                     Clicked="TriggerEsperienze"/>
+            <Button Text="EliminaUtente"
+                    TextColor="White"
+                    BackgroundColor="Black"
+                    Clicked="TriggerEliminaUtente"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -19,7 +19,7 @@ namespace TheSocialGame
             string userID;
             try
             {
-               userID = await auth.SignUpWithEmailAndPassword(Mail.Text, passwordEntry.Text);
+               userID = await auth.SignUpWithEmailAndPassword(Mail.Text, passwordEntry.Text);   // ritorna vuota se alcuni tipi di errori
             }
             catch(Exception)
             {
@@ -27,7 +27,7 @@ namespace TheSocialGame
                 return;
             }
 
-            if (errorLabel.Text.Length == 0 && passwordEntry.Text.Length != 0 && userID != null)
+            if (errorLabel.Text.Length == 0 && passwordEntry.Text.Length != 0 && userID != null && userID != string.Empty)
             {
                 var signOut = auth.SignOut();
                 if (signOut)
@@ -40,7 +40,8 @@ namespace TheSocialGame
 
                     if(!await DBmanager.InserisciUtente(usr))
                     {
-                        await DisplayAlert("ERRORE", "Qualcosa è andato storto, per favore riprova", "OK");
+                        if (auth.GetCurrentUserId() == userID) { auth.DeleteUser(passwordEntry.Text); }
+                        await DisplayAlert("ERRORE", "Il nome selezionato è già stato scelto da un altro utente, per favore riprova", "OK");
                         return;
                     }
 
@@ -50,7 +51,8 @@ namespace TheSocialGame
             }
             else
             {
-                await DisplayAlert("ERRORE", "Qualcosa è andato storto, per favore riprova", "OK");
+                if(userID == string.Empty) await DisplayAlert("ERRORE", "La password deve contenere almeno 6 caratteri!", "OK");
+                else await DisplayAlert("ERRORE", "Qualcosa è andato storto, per favore riprova", "OK");
             }
         }
 

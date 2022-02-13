@@ -61,10 +61,7 @@ namespace TheSocialGame
             else
             {
                 if (user.FotoLiveiOS) ProfilePic.Rotation = 90;
-                ProfilePic.Source = ImageSource.FromStream(() =>
-                {
-                    return new MemoryStream(user.FotoBytes);
-                });
+                ProfilePic.Source = ImageSource.FromStream(() =>  new MemoryStream(user.FotoBytes));    // modificato; ma probabilmente uguale a prima
                 ChangeProfilePicButton.IsVisible = true;
             }
 

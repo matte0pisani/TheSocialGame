@@ -271,10 +271,10 @@ namespace TheSocialGame
                     int numExp = u.ListaDistintivi[nuova.Tipologia].Item1;
                     Dictionary<int, bool> dictExp = u.ListaDistintivi[nuova.Tipologia].Item2;
                     numExp++;
-                    if (numExp >= Utente.sogliaPrimoLivello)
+                    if (numExp >= Constants.sogliaPrimoLivello)
                     {
                         dictExp[1] = true;      // non parametrico, in caso da re-implementare con ciclo
-                        if (numExp >= Utente.sogliaSecondoLivello)
+                        if (numExp >= Constants.sogliaSecondoLivello)
                         {
                             dictExp[2] = true;
                         }

@@ -11,15 +11,13 @@ namespace TheSocialGame
 {
     public class Utente
     {
-        public static int maxLivDistintivo = 2;
-        public static int sogliaPrimoLivello = 3;
-        public static int sogliaSecondoLivello = 7;
         public string ID { get; set; }
         public string Username { get; set; }
         public int PuntiSocial { get; set; }
         public int PuntiEsperienza { get; set; }
         public int Livello { get; set; }
-        public byte[] FotoBytes { get; set; }
+        public byte[] FotoBytes { get; 
+            set; }
         public bool FotoLiveiOS { get; set; }
 
         /* PERSONALITA*/
@@ -62,7 +60,7 @@ namespace TheSocialGame
 
         private Dictionary<string, (int, Dictionary<int, bool>)> InizializzaListaDistintivi()
         {
-            int livelloMax = maxLivDistintivo;
+            int livelloMax = Constants.maxLivDistintivo;
             Dictionary<string,(int, Dictionary<int, bool>)> mappa = new Dictionary<string, (int, Dictionary<int, bool>)>();
             Dictionary<int, bool> livelliMare = new Dictionary<int, bool>();
             Dictionary<int, bool> livelliRistorante = new Dictionary<int, bool>();
@@ -183,12 +181,6 @@ namespace TheSocialGame
                 best.Add(coppia);
             }
             return best;
-        }
-
-        public void Elimina()
-        {
-            // da implementare eliminazione da database
-            return;
         }
 
         public void PuntiFake()
