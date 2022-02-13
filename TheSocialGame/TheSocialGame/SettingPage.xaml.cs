@@ -53,25 +53,28 @@ namespace TheSocialGame
         async void cambiaPassword(Object sender, EventArgs e)
         {
             string vecchia = await DisplayPromptAsync("CAMBIA PASSWORD", "Inserisci la tua vecchia password");
+            if (vecchia == null) { return; }
+
             if (auth.ValidPassword(vecchia))
             {
                 string nuova = await DisplayPromptAsync("CAMBIA PASSWORD", "Inserisci la nuova password");
+                if (nuova == null) { return; }
                 string conferma = await DisplayPromptAsync("CAMBIA PASSWORD", "Inserisci di nuovo la nuova password");
+                if (conferma == null) { return; }
+
                 if (nuova.Equals(conferma))
                 {
                     if (auth.ChangePassword(nuova))
                     {
                         await DisplayAlert("SUCCESSO", "La tua password è stata modificata con successo!", "OK");
-
                     }
                     else
-                        await DisplayAlert("ERRORE", "Qualcosa è andato storto: le password non corrispondono", "OK");
-
+                        await DisplayAlert("ERRORE", "Qualcosa è andato storto", "OK");
                 }
-                else await DisplayAlert("ERRORE", "Qualcosa è andato storto: la password è errata", "OK");
-
-
+                else
+                    await DisplayAlert("ERRORE", "Qualcosa è andato storto: le password non corrispondono", "OK");
             }
+            else await DisplayAlert("ERRORE", "Qualcosa è andato storto: la password è errata", "OK");
         }
 
         async void NotificationClicked(Object sender, EventArgs e)

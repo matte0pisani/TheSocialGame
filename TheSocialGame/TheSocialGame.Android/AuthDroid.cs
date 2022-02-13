@@ -125,18 +125,10 @@ namespace TheSocialGame.Droid
             FirebaseUser us = FirebaseAuth.Instance.CurrentUser;
             try
             {
-                Firebase.Auth.FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(us.Email, password); ;
-
-
-                return true;
-
+                var x = Firebase.Auth.FirebaseAuth.Instance.SignInWithEmailAndPassword(us.Email, password);
+                return x.Result != null;    // x.User.Uid
             }
-            catch (FirebaseAuthInvalidUserException e)
-            {
-
-                return false;
-            }
-            catch (FirebaseAuthInvalidCredentialsException e)
+            catch (Exception)
             {
 
                 return false;

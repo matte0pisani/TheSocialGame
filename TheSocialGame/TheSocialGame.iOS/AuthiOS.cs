@@ -108,9 +108,8 @@ namespace TheSocialGame.iOS
             var us = Auth.DefaultInstance.CurrentUser;
             try
             {
-                Auth.DefaultInstance.SignInWithPasswordAsync(us.Email, password);
-
-                return true;
+                var x = Auth.DefaultInstance.SignInWithPasswordAsync(us.Email, password);
+                return x.Result != null;
 
             }
             catch (Exception e)
