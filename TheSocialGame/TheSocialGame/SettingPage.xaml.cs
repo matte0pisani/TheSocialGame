@@ -33,7 +33,7 @@ namespace TheSocialGame
         void cambiaUsername(Object sender, EventArgs e)
         {
             user.Username = Username.Text;
-            
+
         }
 
         void cambiaMail(Object sender, EventArgs e)
@@ -67,7 +67,8 @@ namespace TheSocialGame
                     else
                         await DisplayAlert("ERRORE", "Qualcosa è andato storto: le password non corrispondono", "OK");
 
-                } else await DisplayAlert("ERRORE", "Qualcosa è andato storto: la password è errata", "OK");
+                }
+                else await DisplayAlert("ERRORE", "Qualcosa è andato storto: la password è errata", "OK");
 
 
             }
@@ -137,7 +138,7 @@ namespace TheSocialGame
         void colori()
         {
             List<String> col = new List<String>();
-            
+
             col.Add(Color.AliceBlue.ToHex());
             col.Add(Color.AntiqueWhite.ToHex());
             col.Add(Color.Aqua.ToHex());
@@ -279,7 +280,7 @@ namespace TheSocialGame
             col.Add(Color.WhiteSmoke.ToHex());
             col.Add(Color.Yellow.ToHex());
             col.Add(Color.YellowGreen.ToHex());
-            
+
             back.ItemsSource = col;
             prim.ItemsSource = col;
             sec.ItemsSource = col;
@@ -292,8 +293,8 @@ namespace TheSocialGame
 
         void sfondo(Object sender, EventArgs e)
         {
-          
-            
+
+
             user.Sfondo = Color.FromHex((string)back.SelectedItem);
             Navigation.PushAsync(new SettingPage(user));
             Navigation.RemovePage(this);
@@ -301,7 +302,7 @@ namespace TheSocialGame
 
         void primario(Object sender, EventArgs e)
         {
-           
+
             user.Primario = Color.FromHex((string)prim.SelectedItem);
             Navigation.PushAsync(new SettingPage(user));
             Navigation.RemovePage(this);
@@ -309,7 +310,7 @@ namespace TheSocialGame
 
         void secondario(Object sender, EventArgs e)
         {
-           
+
             user.Secondario = Color.FromHex((string)sec.SelectedItem);
             Navigation.PushAsync(new SettingPage(user));
             Navigation.RemovePage(this);
@@ -318,18 +319,18 @@ namespace TheSocialGame
         async void elimina(Object sender, EventArgs e)
         {
             string result = await DisplayPromptAsync("ELIMINAZIONE", "Inserisci la password per confermare");
-           
-                
-                bool aut = auth.DeleteUser(result);
-                if (aut) 
-                {
-                user.Elimina();
+
+            string uid = user.ID;
+            bool aut = auth.DeleteUser(result);
+            if (aut)
+            {
+                DBmanager.EliminaUtente(uid);
                 await DisplayAlert("SUCCESSO", "Il tuo account è stato eliminato con successo", "OK");
                 await Navigation.PushAsync(new LoginPage());
-                } else
+            }
+            else
             {
                 await DisplayAlert("ERRORE", "password errata", "OK");
-
             }
 
 
@@ -340,8 +341,8 @@ namespace TheSocialGame
         async void esci(Object sender, EventArgs e)
         {
             var signout = auth.SignOut();
-            if(signout)
-            await Navigation.PushAsync(new LoginPage());
+            if (signout)
+                await Navigation.PushAsync(new LoginPage());
             Navigation.RemovePage(this);
         }
     }

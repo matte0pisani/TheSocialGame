@@ -16,7 +16,8 @@ namespace TheSocialGame
         public int PuntiSocial { get; set; }
         public int PuntiEsperienza { get; set; }
         public int Livello { get; set; }
-        public byte[] FotoBytes { get; set; }
+        public byte[] FotoBytes { get; 
+            set; }
         public bool FotoLiveiOS { get; set; }
 
         /* PERSONALITA*/
@@ -180,12 +181,6 @@ namespace TheSocialGame
                 best.Add(coppia);
             }
             return best;
-        }
-
-        public void Elimina()
-        {
-            // da implementare eliminazione da database
-            return;
         }
 
         public void PuntiFake()

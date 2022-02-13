@@ -47,5 +47,11 @@ namespace TheSocialGame.DBstuff
             //   res = await DBmanager.GetTutteEsperienze(IDentry.Text);
             InfoLabel.Text = res.ToString();
         }
+
+        private void TriggerEliminaUtente(object sender, EventArgs e)
+        {
+            DBmanager.EliminaUtente(IDentry.Text);
+            InfoLabel.Text = "Deleted\n";
+        }
     }
 }

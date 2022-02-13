@@ -269,5 +269,18 @@ namespace TheSocialGame
             System.Diagnostics.Debug.Print("Info rimanenti caricate\n");
         }
 
+        public static void EliminaUtente(string uid)
+        {
+            string url = ConfigurationManager.AppSettings["deleteUserAPI"];
+            System.Diagnostics.Debug.Print("Elimino da DB utente {0}\n", uid);
+
+            var body = new StringContent(uid, Encoding.UTF8, "application/json");
+            System.Diagnostics.Debug.Print("POST body creato\n");
+
+            HttpClient client = new HttpClient();
+            client.PostAsync(url, body);    // per maggiore velocità, non attendo che ritorni il risultato ma proseguo con l'esecuzione 
+            System.Diagnostics.Debug.Print("Inviata query di eliminazione via deleteUserAPI\n");
+        }
+
     }
 }

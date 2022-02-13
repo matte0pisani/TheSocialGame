@@ -11,17 +11,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.Core" Version="3.7.5.2" />
+    <PackageReference Include="AWSSDK.Core" Version="3.7.7" />
     <PackageReference Include="AWSSDK.SimpleEmail" Version="3.7.0.103" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="PCLAppConfig" Version="1.0.1" />
     <PackageReference Include="PCLStorage" Version="1.0.2" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing" Version="0.1.2" />
-    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.3.0.55" />
-    <PackageReference Include="AWSSDK.RDS" Version="3.7.8" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.4.0.50" />
+    <PackageReference Include="AWSSDK.RDS" Version="3.7.9.9" />
     <PackageReference Include="Plugin.FirebasePushNotification" Version="3.4.1" />
     <PackageReference Include="FirebaseAdmin" Version="2.2.0" />
   </ItemGroup>
