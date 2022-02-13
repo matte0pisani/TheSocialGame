@@ -104,7 +104,6 @@
     <AndroidAsset Include="..\TheSocialGame\App.config">
       <Link>App.config</Link>
     </AndroidAsset>
-    <GoogleServicesJson Include="google-services.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -413,6 +412,9 @@
       <Project>{0D8E7BC3-8B0B-4120-9697-98C7814C7A99}</Project>
       <Name>TheSocialGame</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
