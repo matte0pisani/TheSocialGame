@@ -199,8 +199,6 @@ namespace TheSocialGame
         {
             var foto = await MediaPicker.CapturePhotoAsync();
 
-
-
             if (foto != null)
             {
                 using (var stream = await foto.OpenReadAsync())
@@ -226,6 +224,8 @@ namespace TheSocialGame
                         break;
                 }
             }
+
+            DBmanager.AggiornaUtenteInfoNonExp(user);
         }
 
         /* gestione foto profilo da galleria*/
@@ -250,6 +250,7 @@ namespace TheSocialGame
                         user.FotoBytes = ms.ToArray();
                     }
                 }
+                DBmanager.AggiornaUtenteInfoNonExp(user);
                 ProfilePicFrame.IsVisible = true;
                 ChangeProfilePicButton.IsVisible = true;
                 ProfilePic.Source = ImageSource.FromStream(() =>
@@ -270,6 +271,7 @@ namespace TheSocialGame
         {
             // non so se l'immagine rimane "pendente" nella memoria del processo, in tal caso andrebbe liberata la memoria
             user.FotoBytes = null;
+            DBmanager.AggiornaUtenteInfoNonExp(user);
             ProfilePicFrame.IsVisible = false;
             ChangeProfilePicButton.IsVisible = false;
             ConfermaEliminazioneFrame.IsVisible = false;

@@ -10,47 +10,52 @@ namespace TheSocialGame
 {
     public partial class SettingPage : ContentPage
     {
-        Utente user { get; set; }
-        IAuth auth;
+        public Utente User { get; set; }
+        private IAuth auth;
+        private bool dirty;
 
         public SettingPage(Utente u)
         {
-            user = u;
+            User = u;
             InitializeComponent();
             auth = DependencyService.Get<IAuth>();
-            App.Current.Resources["BackgroundColor"] = user.Sfondo;
-            App.Current.Resources["FirstColor"] = user.Primario;
-            App.Current.Resources["SecondColor"] = user.Secondario;
-            Username.Text = user.Username;
+            App.Current.Resources["BackgroundColor"] = User.Sfondo;
+            App.Current.Resources["FirstColor"] = User.Primario;
+            App.Current.Resources["SecondColor"] = User.Secondario;
+            Username.Text = User.Username;
             Email.Text = auth.GetEmail();
-            colori();
-            back.Title = user.Sfondo.ToHex();
-            prim.Title = user.Primario.ToHex();
-            sec.Title = user.Secondario.ToHex();
+            Colori();
+            back.Title = User.Sfondo.ToHex();
+            prim.Title = User.Primario.ToHex();
+            sec.Title = User.Secondario.ToHex();
+            Privacy.IsToggled = User.Privato;
 
         }
 
-        void cambiaUsername(Object sender, EventArgs e)
+        private async void CambiaUsername(Object sender, EventArgs e)
         {
-            user.Username = Username.Text;
-
+            User.Username = Username.Text;
+            if (!await DBmanager.AggiornaUtenteInfoNonExp(User))
+            {
+                await DisplayAlert("ERRORE", "Questo username è già associato ad un account e non può essere utilizzato!", "OK");
+            }
         }
 
-        void cambiaMail(Object sender, EventArgs e)
+        private void CambiaMail(Object sender, EventArgs e)
         {
             auth.ChangeEmail(Email.Text);
-
         }
 
-        void cambiaPrivacy(Object sender, EventArgs e)
+        private void CambiaPrivacy(Object sender, EventArgs e)
         {
             if (Privacy.IsToggled)
-                user.Privato = true;
+                User.Privato = true;
             else
-                user.Privato = false;
+                User.Privato = false;
+            dirty = true;
         }
 
-        async void cambiaPassword(Object sender, EventArgs e)
+        private async void CambiaPassword(Object sender, EventArgs e)
         {
             string vecchia = await DisplayPromptAsync("CAMBIA PASSWORD", "Inserisci la tua vecchia password");
             if (vecchia == null) { return; }
@@ -77,68 +82,74 @@ namespace TheSocialGame
             else await DisplayAlert("ERRORE", "Qualcosa è andato storto: la password è errata", "OK");
         }
 
-        async void NotificationClicked(Object sender, EventArgs e)
+        private async void NotificationClicked(Object sender, EventArgs e)
         {
+            DBmanager.AggiornaUtenteInfoNonExp(User);
             await Navigation.PushAsync(new NotificationPage());
             Navigation.RemovePage(this);
         }
 
-        async void HomeClicked(Object sender, EventArgs e)
+        private async void HomeClicked(Object sender, EventArgs e)
         {
+            DBmanager.AggiornaUtenteInfoNonExp(User);
             await Navigation.PushAsync(new HomePage());
             Navigation.RemovePage(this);
         }
 
-        async void SearchClicked(Object sender, EventArgs e)
+        private async void SearchClicked(Object sender, EventArgs e)
         {
+            DBmanager.AggiornaUtenteInfoNonExp(User);
             await Navigation.PushAsync(new SearchPage());
             Navigation.RemovePage(this);
         }
 
-        async void RankingClicked(Object sender, EventArgs e)
+        private async void RankingClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RankingPage(user));
+            DBmanager.AggiornaUtenteInfoNonExp(User);
+            await Navigation.PushAsync(new RankingPage(User));
             Navigation.RemovePage(this);
         }
 
-        async void AddClicked(Object sender, EventArgs e)
+        private async void AddClicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddExperiencePage(user));
+            DBmanager.AggiornaUtenteInfoNonExp(User);
+            await Navigation.PushAsync(new AddExperiencePage(User));
             Navigation.RemovePage(this);
         }
 
-        async void BackClicked(Object sender, EventArgs e)
+        private async void BackClicked(Object sender, EventArgs e)
         {
+            DBmanager.AggiornaUtenteInfoNonExp(User);
             await Navigation.PopAsync();
         }
 
-        void cambiaSfondo(Object sender, EventArgs e)
+        private void CambiaSfondo(Object sender, EventArgs e)
         {
             var button = (Button)sender;
-            user.Sfondo = button.BackgroundColor;
-            Navigation.PushAsync(new SettingPage(user));
+            User.Sfondo = button.BackgroundColor;
+            Navigation.PushAsync(new SettingPage(User));
             Navigation.RemovePage(this);
 
         }
 
-        void cambiaPrimario(Object sender, EventArgs e)
+        private void CambiaPrimario(Object sender, EventArgs e)
         {
             var button = (Button)sender;
-            user.Primario = button.BackgroundColor;
-            Navigation.PushAsync(new SettingPage(user));
+            User.Primario = button.BackgroundColor;
+            Navigation.PushAsync(new SettingPage(User));
             Navigation.RemovePage(this);
         }
 
-        void cambiaSecondario(Object sender, EventArgs e)
+        private void CambiaSecondario(Object sender, EventArgs e)
         {
             var button = (Button)sender;
-            user.Secondario = button.BackgroundColor;
-            Navigation.PushAsync(new SettingPage(user));
+            User.Secondario = button.BackgroundColor;
+            Navigation.PushAsync(new SettingPage(User));
             Navigation.RemovePage(this);
         }
 
 
-        void colori()
+        private void Colori()
         {
             List<String> col = new List<String>();
 
@@ -294,36 +305,35 @@ namespace TheSocialGame
 
         }
 
-        void sfondo(Object sender, EventArgs e)
+        private void Sfondo(Object sender, EventArgs e)
         {
-
-
-            user.Sfondo = Color.FromHex((string)back.SelectedItem);
-            Navigation.PushAsync(new SettingPage(user));
+            User.Sfondo = Color.FromHex((string)back.SelectedItem);
+            dirty = true;
+            Navigation.PushAsync(new SettingPage(User));
             Navigation.RemovePage(this);
         }
 
-        void primario(Object sender, EventArgs e)
+        private void Primario(Object sender, EventArgs e)
         {
-
-            user.Primario = Color.FromHex((string)prim.SelectedItem);
-            Navigation.PushAsync(new SettingPage(user));
+            User.Primario = Color.FromHex((string)prim.SelectedItem);
+            dirty = true;
+            Navigation.PushAsync(new SettingPage(User));
             Navigation.RemovePage(this);
         }
 
-        void secondario(Object sender, EventArgs e)
+        private void Secondario(Object sender, EventArgs e)
         {
-
-            user.Secondario = Color.FromHex((string)sec.SelectedItem);
-            Navigation.PushAsync(new SettingPage(user));
+            User.Secondario = Color.FromHex((string)sec.SelectedItem);
+            dirty = true;
+            Navigation.PushAsync(new SettingPage(User));
             Navigation.RemovePage(this);
         }
 
-        async void elimina(Object sender, EventArgs e)
+        private async void Elimina(Object sender, EventArgs e)
         {
             string result = await DisplayPromptAsync("ELIMINAZIONE", "Inserisci la password per confermare");
 
-            string uid = user.ID;
+            string uid = User.ID;
             bool aut = auth.DeleteUser(result);
             if (aut)
             {
@@ -341,7 +351,7 @@ namespace TheSocialGame
 
         }
 
-        async void esci(Object sender, EventArgs e)
+        private async void Esci(Object sender, EventArgs e)
         {
             var signout = auth.SignOut();
             if (signout)
