@@ -289,10 +289,16 @@ namespace TheSocialGame
                     u.AggiungiAmici(nuova.ListaPartecipanti);
                 }
 
+                SalvaInDB();
+
                 await Navigation.PushAsync(new ProfilePage(user));
                 Navigation.RemovePage(this);
             }
         }
 
+        private void SalvaInDB()
+        {
+            DBmanager.AggiornaUtentiInfoExp(nuova.ListaPartecipanti, nuova.Tipologia);
+        }
     }
 }

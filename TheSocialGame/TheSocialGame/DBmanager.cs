@@ -305,5 +305,38 @@ namespace TheSocialGame
             return result;
         }
 
+        public static async Task<bool> AggiornaUtentiInfoExp(List<Utente> users, string tipoExp)
+        {
+            string url = ConfigurationManager.AppSettings["updateUserInfoExpAPI"];
+            System.Diagnostics.Debug.Print("Aggiorno campi esperienziali di utenti della nuova esperienza\n");
+
+            JArray jbody = new JArray();
+            foreach (Utente usr in users)
+            {
+                JObject jusr = ConvertiUtenteInJson(usr);
+                int nexps = usr.ListaDistintivi[tipoExp].Item1;
+                int levmax = 0;
+                if (nexps >= Constants.sogliaSecondoLivello) { levmax = 2; }
+                else if (nexps >= Constants.sogliaPrimoLivello) { levmax = 1; }
+                jusr.Add("Distintivo", new JArray(tipoExp, levmax, nexps));
+                jbody.Add(jusr);
+                System.Diagnostics.Debug.Print("Creato JSON da oggetto Utente: {0}\n", jusr);
+            }
+
+            var body = new StringContent(jbody.ToString(), Encoding.UTF8, "application/json");
+            System.Diagnostics.Debug.Print("POST body creato\n");
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.PostAsync(url, body);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da updateUserInfoExpAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La updateUserInfoExpAPI non ha risposto correttamente");
+
+            string resultString = await response.Content.ReadAsStringAsync();
+            if (!Boolean.TryParse(resultString, out bool result)) throw new Exception("Errore nel parsing del risultato");
+            System.Diagnostics.Debug.Print("Parsing del risultato corretto: {0}\n", result);
+
+            return result;
+        }
+
     }
 }
