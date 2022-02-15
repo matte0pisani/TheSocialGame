@@ -134,7 +134,7 @@ namespace TheSocialGame
             Utente res = await GetUtenteBase(userID);
             current = res;
             res.Amici = await GetTuttiAmici(res.ID);
-            res.Esperienze = await GetTutteEsperienze(res.ID);
+            GetTutteEsperienze(res.ID, res.Esperienze);
             return res;
         }
 
@@ -249,7 +249,7 @@ namespace TheSocialGame
             return result;
         }
 
-        private static async Task<List<Esperienza>> GetTutteEsperienze(string uid)
+        private static async void GetTutteEsperienze(string uid, List<Esperienza> uexps)
         {
             string url = string.Format(ConfigurationManager.AppSettings["selectExperiencesAPI"], uid);
             System.Diagnostics.Debug.Print("Prendo tutte le esperienze dell'utente con ID: '{0}'\n", uid);
@@ -273,7 +273,7 @@ namespace TheSocialGame
             }
             System.Diagnostics.Debug.Print("Caricate informazioni sulle esperienze\n");
 
-            return result;
+            uexps.AddRange(result);
         }
 
         private static async void GetInfoEsperienza(Esperienza exp, string uid)

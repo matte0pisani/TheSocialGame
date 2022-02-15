@@ -1,10 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Amazon;
-using Amazon.SimpleEmail;
-using Amazon.SimpleEmail.Model;
-using System.Collections.Generic;
 
 namespace TheSocialGame
 {

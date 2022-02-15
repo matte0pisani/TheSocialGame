@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Amazon.Runtime.Internal.Transform;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -119,7 +117,7 @@ namespace TheSocialGame
             Dictionary<Utente, int> ordinata = new Dictionary<Utente, int>();
             foreach (KeyValuePair< Utente, int> coppia in classifica.OrderByDescending(key => key.Value))
             {
-                ordinata.Add(coppia);
+                ordinata.Add(coppia.Key, coppia.Value);
             }
 
             return ordinata;
@@ -138,7 +136,7 @@ namespace TheSocialGame
             Dictionary<Utente, int> ordinata = new Dictionary<Utente, int>();
             foreach (KeyValuePair<Utente, int> coppia in classifica.OrderByDescending(key => key.Value))
             {
-                ordinata.Add(coppia);
+                ordinata.Add(coppia.Key, coppia.Value);
             }
 
             return ordinata;
@@ -186,7 +184,7 @@ namespace TheSocialGame
             Dictionary<Utente, int> best = new Dictionary<Utente, int>();
             foreach (KeyValuePair<Utente, int> coppia in Amici.OrderByDescending(key => key.Value).Take(3))
             {
-                best.Add(coppia);
+                best.Add(coppia.Key, coppia.Value);
             }
             return best;
         }
