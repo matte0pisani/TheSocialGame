@@ -53,11 +53,18 @@ namespace TheSocialGame.DBstuff
             InfoLabel.Text = usr.ToString();
         }
 
-        private void TriggerAmici(object sender, EventArgs e)
+        private void TriggerAmicizie(object sender, EventArgs e)
         {
-            object res = "Il metodo è stato reso privato\n";
-         //   res = await DBmanager.GetTuttiAmici(IDentry.Text);
-            InfoLabel.Text = res.ToString();
+            Utente u1 = new Utente() { ID = "asdfghjkl" };
+            Utente u2 = new Utente() { ID = "bhujmn" };
+            Utente u3 = new Utente() { ID = "deleteme" };
+            List<Utente> membs = new List<Utente>();
+            membs.Add(u1);
+            membs.Add(u2);
+            membs.Add(u3);
+
+            DBmanager.AggiornaAmicizie(membs, u1);
+
         }
 
         private void TriggerEsperienze(object sender, EventArgs e)

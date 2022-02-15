@@ -300,6 +300,7 @@ namespace TheSocialGame
         {
             DBmanager.AggiornaUtentiInfoExp(nuova.ListaPartecipanti, nuova.Tipologia);
             DBmanager.InserisciEsperienza(nuova);
+            DBmanager.AggiornaAmicizie(nuova.ListaPartecipanti);
         }
     }
 }

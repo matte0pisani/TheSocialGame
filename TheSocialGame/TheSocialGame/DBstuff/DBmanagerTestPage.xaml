@@ -18,9 +18,9 @@
             <Button Text="SelezionaUtente"
                     BackgroundColor="ForestGreen"
                     Clicked="TriggerSeleziona"/>
-            <Button Text="SelezionaAmici"
+            <Button Text="AggiornaAmicizie"
                     BackgroundColor="Gold"
-                    Clicked="TriggerAmici"/>
+                    Clicked="TriggerAmicizie"/>
             <Button Text="SelezionaEsperienze"
                     BackgroundColor="DodgerBlue"
                     Clicked="TriggerEsperienze"/>

@@ -385,5 +385,49 @@ namespace TheSocialGame
             return result;
         }
 
+        public static async void AggiornaAmicizie(List<Utente> users)
+        {
+            string url = ConfigurationManager.AppSettings["updateFriendshipsAPI"];
+            System.Diagnostics.Debug.Print("Aggiorno le amicizie di utenti della nuova esperienza\n");
+
+            JArray juids = new JArray();
+            foreach (Utente u in users) { juids.Add(u.ID); }
+            var body = new StringContent(new JArray(true, juids).ToString(), Encoding.UTF8, "application/json");
+            System.Diagnostics.Debug.Print("POST body creato\n");
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.PostAsync(url, body);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da updateFriendshipsAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La updateFriendshipsAPI non ha risposto correttamente");
+
+            string resultString = await response.Content.ReadAsStringAsync();
+            if (!Int32.TryParse(resultString, out int result)) throw new Exception("Errore nel parsing del risultato di updateFriendshipsAPI");
+            System.Diagnostics.Debug.Print("Parsing del risultato corretto di updateFriendshipsAPI: {0}\n", result);
+        }
+
+        public static async void AggiornaAmicizie(List<Utente> users, Utente current)
+        {
+            string url = ConfigurationManager.AppSettings["updateFriendshipsAPI"];
+            System.Diagnostics.Debug.Print("Aggiorno le amicizie di utenti della nuova esperienza\n");
+
+            JArray juids = new JArray();
+            juids.Add(current.ID);
+            foreach (Utente u in users)
+            {
+                if (u.ID != current.ID) { juids.Add(u.ID); }
+            }
+            var body = new StringContent(new JArray(false, juids).ToString(), Encoding.UTF8, "application/json");
+            System.Diagnostics.Debug.Print("POST body creato\n");
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.PostAsync(url, body);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da updateFriendshipsAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La updateFriendshipsAPI non ha risposto correttamente");
+
+            string resultString = await response.Content.ReadAsStringAsync();
+            if (!Int32.TryParse(resultString, out int result)) throw new Exception("Errore nel parsing del risultato di updateFriendshipsAPI");
+            System.Diagnostics.Debug.Print("Parsing del risultato corretto di updateFriendshipsAPI: {0}\n", result);
+        }
+
     }
 }
