@@ -42,29 +42,14 @@ namespace TheSocialGame
         }
 
         /* metodi di apertura pagine connesse */
-        void NotificationClicked(Object sender, EventArgs e)
-        {
-            EsciSenzaSalvareFrame.IsVisible = true;
-            prossima = new NotificationPage();
-        }
-
-        void HomeClicked(Object sender, EventArgs e)
-        {
-            EsciSenzaSalvareFrame.IsVisible = true;
-            prossima = new HomePage();
-        }
-
+     
         void ProfileClicked(Object sender, EventArgs e)
         {
             EsciSenzaSalvareFrame.IsVisible = true;
             prossima = new ProfilePage(user);
         }
 
-        void SearchClicked(Object sender, EventArgs e)
-        {
-            EsciSenzaSalvareFrame.IsVisible = true;
-            prossima = new SearchPage();
-        }
+       
 
         void RankingClicked(Object sender, EventArgs e)
         {

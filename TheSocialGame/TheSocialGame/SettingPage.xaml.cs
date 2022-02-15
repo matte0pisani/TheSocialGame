@@ -145,13 +145,13 @@ namespace TheSocialGame
                 User.Secondario = Color.DodgerBlue;
 
             }
-            if(Tranquillo.IsChecked) {
+            if(Rilassante.IsChecked) {
                 User.Sfondo = Color.Azure;
                 User.Primario = Color.LightSeaGreen;
                 User.Secondario = Color.MediumTurquoise;
 
             }
-            if(Vivace.IsChecked)
+            if(Delicato.IsChecked)
             {
                 User.Sfondo = Color.MistyRose;
                 User.Primario = Color.Plum;
@@ -165,7 +165,7 @@ namespace TheSocialGame
                 User.Secondario = Color.MediumSlateBlue;
 
             }
-            if(Divertente.IsChecked)
+            if(Vivace.IsChecked)
             {
                 User.Sfondo = Color.LavenderBlush;
                 User.Primario = Color.MediumOrchid;
@@ -173,8 +173,11 @@ namespace TheSocialGame
 
             }
 
-            await Navigation.PushAsync(new SettingPage(User));
+            SettingPage page = new SettingPage(User);
+            page.Dirty = true;
+            await Navigation.PushAsync(page);
             Navigation.RemovePage(this);
+
         }
 
         private async void Elimina(Object sender, EventArgs e)

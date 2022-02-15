@@ -29,24 +29,7 @@
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.06}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}" />
 
-            <ImageButton x:Name="NotificationButton" Source="{StaticResource iconaNotifiche}"  BackgroundColor="Transparent" Clicked="NotificationClicked"
-                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.048}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
-           
-            <ImageButton x:Name="HomeButton" Source="{StaticResource iconaHome}" BackgroundColor="Transparent" Clicked="HomeClicked"
-                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.045}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"/>
-
-            <ImageButton x:Name="SearchButton" Source="{StaticResource iconaCerca}"  BackgroundColor="Transparent" Clicked="SearchClicked"
-                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
-                     RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.055}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.945}"/>
-           
+          
             <ImageButton x:Name="RankingButton" Source="{StaticResource iconaClassifiche}"  BackgroundColor="Transparent" Clicked="RankingClicked"
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.2}"

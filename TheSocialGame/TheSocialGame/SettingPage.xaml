@@ -88,10 +88,10 @@
                     <RadioButton x:Name="Default" Content="Default" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,480,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
                     <RadioButton x:Name="Caldo" Content="Caldo" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,520,150,30', iOS='20,520,150,27'}" CheckedChanged="cambiaTema"  />
                     <RadioButton x:Name="Freddo" Content="Freddo" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,560,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
-                    <RadioButton x:Name="Tranquillo" Content="Tranquillo" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,600,150,30', iOS='20,520,150,27'}" CheckedChanged="cambiaTema" />
-                    <RadioButton x:Name="Vivace" Content="Vivace" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,640,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
+                    <RadioButton x:Name="Rilassante" Content="Rilassante" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,600,150,30', iOS='20,520,150,27'}" CheckedChanged="cambiaTema" />
+                    <RadioButton x:Name="Delicato" Content="Delicato" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,640,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
                     <RadioButton x:Name="Elegante" Content="Elegante" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,680,150,30', iOS='20,520,150,27'}" CheckedChanged="cambiaTema"  />
-                    <RadioButton x:Name="Divertente" Content="Divertente" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,720,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
+                    <RadioButton x:Name="Vivace" Content="Vivace" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,720,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
                    
                    
                     <Frame AbsoluteLayout.LayoutBounds="0,785,420,180" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}"/>
