@@ -27,7 +27,7 @@ namespace TheSocialGame
             {
                 return new MemoryStream(exp.Copertina);
             }); ;
-            if (exp.CopertinaLiveIOS) Copertina.Rotation = 90;
+            if (exp.CopertinaLiveiOS) Copertina.Rotation = 90;
             if (exp.DataInizio.Equals(exp.DataFine)) Data.Text = exp.DataInizio.ToString("d MMM yyyy");
             else Data.Text = exp.DataInizio.ToString("d MMM yyyy") + "-" + exp.DataFine.ToString("d MMM yyyy");
             Tipologia.Text = "Tipologia: " + exp.Tipologia;

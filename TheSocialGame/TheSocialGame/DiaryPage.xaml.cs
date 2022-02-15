@@ -65,7 +65,7 @@ namespace TheSocialGame
                     im.Scale = 1.8;
                     f.IsClippedToBounds = true;
                     f.Content = im;
-                    if (e.CopertinaLiveIOS) im.Rotation = 90;
+                    if (e.CopertinaLiveiOS) im.Rotation = 90;
                     if (e.Live)
                     {
                         b.BorderWidth = 3;
