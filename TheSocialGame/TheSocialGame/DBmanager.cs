@@ -13,8 +13,6 @@ namespace TheSocialGame
     public static class DBmanager
     {
         private static Utente current = null;
-
-
         private static Utente ConvertiJsonInUtente(JObject json)
         {
             return new Utente
@@ -61,6 +59,27 @@ namespace TheSocialGame
             return res;
         }
 
+        private static JObject ConvertiEsperienzaInJson(Esperienza exp)
+        {
+            JObject res = new JObject();
+            res.Add("Titolo", exp.Titolo);
+            if (exp.Copertina != null) { res.Add("Copertina", Convert.ToBase64String(exp.Copertina)); }
+            else { res.Add("Copertina", null); }
+            res.Add("CopertinaLiveiOS", exp.CopertinaLiveiOS);
+            res.Add("DataInizio", exp.DataInizio.ToString());
+            res.Add("DataFine", exp.DataFine.ToString());
+            res.Add("Tipologia", exp.Tipologia);
+            res.Add("Privata", exp.Privata);
+            res.Add("Live", exp.Live);
+            JArray members = new JArray();
+            foreach (Utente mem in exp.ListaPartecipanti)
+            {
+                members.Add(mem.ID);
+            }
+            res.Add("Partecipanti", members.ToString());
+            return res;
+        }
+
         public static async Task<bool> InserisciUtente(Utente usr)
         {
             string url = ConfigurationManager.AppSettings["insertUserAPI"];
@@ -84,9 +103,27 @@ namespace TheSocialGame
             return result;
         }
 
-        public static async Task<int> InserisciEsperienza(Esperienza exp)
+        public static async void InserisciEsperienza(Esperienza exp)
         {
+            string url = ConfigurationManager.AppSettings["insertExperienceAPI"];
+            System.Diagnostics.Debug.Print("Inserisco in DB utente {0} {1}\n", exp.ID, exp.Titolo);
 
+            string jstring = ConvertiEsperienzaInJson(exp).ToString();
+            System.Diagnostics.Debug.Print("Creato JSON da oggetto Esperienza: {0}\n", jstring);
+
+            var body = new StringContent(jstring, Encoding.UTF8, "application/json");
+            System.Diagnostics.Debug.Print("POST body creato\n");
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.PostAsync(url, body);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da insertExperienceAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La insertExperienceAPI non ha risposto correttamente");
+
+            string resultString = await response.Content.ReadAsStringAsync();
+            if (!Int32.TryParse(resultString, out int eid)) throw new Exception("Errore nel parsing del risultato per insertExperienceAPI");
+            System.Diagnostics.Debug.Print("Parsing del risultato corretto per insertExperienceAPI: {0}\n", eid);
+
+            exp.ID = eid;
         }
 
         /**

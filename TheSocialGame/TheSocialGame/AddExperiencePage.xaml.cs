@@ -126,7 +126,7 @@ namespace TheSocialGame
                 switch (Device.RuntimePlatform)
                 {
                     case Device.iOS:
-                        nuova.CopertinaLiveIOS = true;
+                        nuova.CopertinaLiveiOS = true;
                         Copertina.Rotation = 90;
                         break;
                 }
@@ -299,6 +299,7 @@ namespace TheSocialGame
         private void SalvaInDB()
         {
             DBmanager.AggiornaUtentiInfoExp(nuova.ListaPartecipanti, nuova.Tipologia);
+            DBmanager.InserisciEsperienza(nuova);
         }
     }
 }

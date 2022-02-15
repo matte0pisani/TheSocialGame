@@ -24,9 +24,9 @@
             <Button Text="SelezionaEsperienze"
                     BackgroundColor="DodgerBlue"
                     Clicked="TriggerEsperienze"/>
-            <Button Text="AggiornaUtente"
+            <Button Text="InserisciEsperienza"
                     BackgroundColor="Purple"
-                    Clicked="TriggerAggiornaUtente"/>
+                    Clicked="TriggerInserisciEsperienza"/>
             <Button Text="EliminaUtente"
                     TextColor="White"
                     BackgroundColor="Black"

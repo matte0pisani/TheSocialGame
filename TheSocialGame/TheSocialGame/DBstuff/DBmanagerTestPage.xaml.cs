@@ -28,6 +28,25 @@ namespace TheSocialGame.DBstuff
             InfoLabel.Text = (await DBmanager.InserisciUtente(usr)).ToString();
         }
 
+        private void TriggerInserisciEsperienza(object sender, EventArgs e)
+        {
+            List<Utente> mems = new List<Utente>();
+            mems.Add(new Utente()
+            {
+                ID = "prova1"
+            });
+            mems.Add(new Utente()
+            {
+                ID = "prova2"
+            });
+            Esperienza exp = new Esperienza()
+            {
+                Tipologia = "Casa",
+                ListaPartecipanti = mems
+            };
+            DBmanager.InserisciEsperienza(exp);
+        }
+
         private async void TriggerSeleziona(object sender, EventArgs e)
         {
             Utente usr = await DBmanager.GetUtente(IDentry.Text);

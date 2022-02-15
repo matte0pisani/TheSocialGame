@@ -11,7 +11,7 @@ namespace TheSocialGame
         public int ID { get; set; }
         public string Titolo { get; set; }
         public byte[] Copertina { get; set; }
-        public bool CopertinaLiveIOS { get; set; }
+        public bool CopertinaLiveiOS { get; set; }
         public DateTime DataInizio { get; set; }
         public DateTime DataFine { get; set; }
         public string Tipologia { get; set; }
@@ -34,7 +34,7 @@ namespace TheSocialGame
             ID = -1;
             Titolo = "dummy";
             Copertina = null;
-            CopertinaLiveIOS = false;
+            CopertinaLiveiOS = false;
             DataInizio = DateTime.Now;
             DataFine = DateTime.Now;
             Tipologia = "dummy";
