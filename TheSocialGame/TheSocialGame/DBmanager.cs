@@ -13,93 +13,7 @@ namespace TheSocialGame
     public static class DBmanager
     {
         private static Utente current = null;
-        public static async Task<bool> InserisciUtente(Utente usr)
-        {
-            string url = ConfigurationManager.AppSettings["insertUserAPI"];
-            System.Diagnostics.Debug.Print("Inserisco in DB utente {0} {1}\n", usr.ID, usr.Username);
 
-            string jstring = ConvertiUtenteInJson(usr).ToString();
-            System.Diagnostics.Debug.Print("Creato JSON da oggetto Utente: {0}\n", jstring);
-
-            var body = new StringContent(jstring, Encoding.UTF8, "application/json");
-            System.Diagnostics.Debug.Print("POST body creato\n");
-
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.PostAsync(url, body);
-            System.Diagnostics.Debug.Print("Risposta ricevuta da insertUserAPI\n");
-            if (!response.IsSuccessStatusCode) throw new Exception("La insertUserAPI non ha risposto correttamente");
-
-            string resultString = await response.Content.ReadAsStringAsync();
-            if (!Boolean.TryParse(resultString, out bool result)) throw new Exception("Errore nel parsing del risultato");
-            System.Diagnostics.Debug.Print("Parsing del risultato corretto: {0}\n", result);
-
-            return result;
-        }
-
-        /**
-         * Inizializza completamente un utente, quindi anche la lista degli amici (a loro volta inizializzati solo a livello "base") e delle esperienze
-         */
-        public static async Task<Utente> GetUtente(string userID)
-        {
-            Utente res = await GetUtenteBase(userID);
-            current = res;
-            res.Amici = await GetTuttiAmici(res.ID);
-            res.Esperienze = await GetTutteEsperienze(res.ID);
-            return res;
-        }
-
-        /**
-        * Inizializza soltanto le proprietà "semplici" dell'utente e i distintivi, quindi no amici/esperienze, che sono lasciate così come le inizializza
-        * Utente() (cioè vuote).
-        */
-        public static async Task<Utente> GetUtenteBase(string userID)
-        {
-            string url = string.Format(ConfigurationManager.AppSettings["selectUserAPI"], userID);
-            System.Diagnostics.Debug.Print("Prendo l'utente con ID: '{0}'\n", userID);
-
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync(url);
-            System.Diagnostics.Debug.Print("Risposta ricevuta da selectUserAPI\n");
-            if (!response.IsSuccessStatusCode) throw new Exception("La selectUserAPI non ha risposto correttamente");
-
-            string jsonString = await response.Content.ReadAsStringAsync();
-            System.Diagnostics.Debug.Print("Risposta: {0}\n", jsonString);
-
-            Utente res = ConvertiJsonInUtente(JObject.Parse(jsonString));
-            System.Diagnostics.Debug.Print("Utente creato\n");
-
-            if (await AggiungiDistintivi(res)) { System.Diagnostics.Debug.Print("Caricamento distintivi completato\n"); }
-            else { System.Diagnostics.Debug.Print("Errore nel caricamento dei distintivi\n"); }
-
-            return res;
-        }
-
-        public static async Task<Utente> GetUtenteBasePerNome(string username)
-        {
-            string url = string.Format(ConfigurationManager.AppSettings["selectUserByNameAPI"], username);
-            System.Diagnostics.Debug.Print("Prendo l'utente con username: '{0}'\n", username);
-
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync(url);
-            System.Diagnostics.Debug.Print("Risposta ricevuta da selectUserByNameAPI\n");
-            if (!response.IsSuccessStatusCode) throw new Exception("La selectUserByNameAPI non ha risposto correttamente");
-
-            string jsonString = await response.Content.ReadAsStringAsync();
-            System.Diagnostics.Debug.Print("Risposta: {0}\n", jsonString);
-
-            if (jsonString == "{}")
-            {
-                System.Diagnostics.Debug.Print("Non è stato trovato alcun utente con nome: {0}", username);
-                return null;
-            }
-            Utente res = ConvertiJsonInUtente(JObject.Parse(jsonString));
-            System.Diagnostics.Debug.Print("Utente creato\n");
-
-            if (await AggiungiDistintivi(res)) { System.Diagnostics.Debug.Print("Caricamento distintivi completato\n"); }
-            else { System.Diagnostics.Debug.Print("Errore nel caricamento dei distintivi\n"); }
-
-            return res;
-        }
 
         private static Utente ConvertiJsonInUtente(JObject json)
         {
@@ -147,7 +61,100 @@ namespace TheSocialGame
             return res;
         }
 
-        private static async Task<bool> AggiungiDistintivi(Utente usr)
+        public static async Task<bool> InserisciUtente(Utente usr)
+        {
+            string url = ConfigurationManager.AppSettings["insertUserAPI"];
+            System.Diagnostics.Debug.Print("Inserisco in DB utente {0} {1}\n", usr.ID, usr.Username);
+
+            string jstring = ConvertiUtenteInJson(usr).ToString();
+            System.Diagnostics.Debug.Print("Creato JSON da oggetto Utente: {0}\n", jstring);
+
+            var body = new StringContent(jstring, Encoding.UTF8, "application/json");
+            System.Diagnostics.Debug.Print("POST body creato\n");
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.PostAsync(url, body);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da insertUserAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La insertUserAPI non ha risposto correttamente");
+
+            string resultString = await response.Content.ReadAsStringAsync();
+            if (!Boolean.TryParse(resultString, out bool result)) throw new Exception("Errore nel parsing del risultato");
+            System.Diagnostics.Debug.Print("Parsing del risultato corretto: {0}\n", result);
+
+            return result;
+        }
+
+        public static async Task<int> InserisciEsperienza(Esperienza exp)
+        {
+
+        }
+
+        /**
+         * Inizializza completamente un utente, quindi anche la lista degli amici (a loro volta inizializzati solo a livello "base") e delle esperienze
+         */
+        public static async Task<Utente> GetUtente(string userID)
+        {
+            Utente res = await GetUtenteBase(userID);
+            current = res;
+            res.Amici = await GetTuttiAmici(res.ID);
+            res.Esperienze = await GetTutteEsperienze(res.ID);
+            return res;
+        }
+
+        /**
+        * Inizializza soltanto le proprietà "semplici" dell'utente e i distintivi, quindi no amici/esperienze, che sono lasciate così come le inizializza
+        * Utente() (cioè vuote).
+        */
+        public static async Task<Utente> GetUtenteBase(string userID)
+        {
+            string url = string.Format(ConfigurationManager.AppSettings["selectUserAPI"], userID);
+            System.Diagnostics.Debug.Print("Prendo l'utente con ID: '{0}'\n", userID);
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(url);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da selectUserAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La selectUserAPI non ha risposto correttamente");
+
+            string jsonString = await response.Content.ReadAsStringAsync();
+            System.Diagnostics.Debug.Print("Risposta: {0}\n", jsonString);
+
+            Utente res = ConvertiJsonInUtente(JObject.Parse(jsonString));
+            System.Diagnostics.Debug.Print("Utente creato\n");
+
+            if (await GetDistintivi(res)) { System.Diagnostics.Debug.Print("Caricamento distintivi completato\n"); }
+            else { System.Diagnostics.Debug.Print("Errore nel caricamento dei distintivi\n"); }
+
+            return res;
+        }
+
+        public static async Task<Utente> GetUtenteBasePerNome(string username)
+        {
+            string url = string.Format(ConfigurationManager.AppSettings["selectUserByNameAPI"], username);
+            System.Diagnostics.Debug.Print("Prendo l'utente con username: '{0}'\n", username);
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(url);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da selectUserByNameAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La selectUserByNameAPI non ha risposto correttamente");
+
+            string jsonString = await response.Content.ReadAsStringAsync();
+            System.Diagnostics.Debug.Print("Risposta: {0}\n", jsonString);
+
+            if (jsonString == "{}")
+            {
+                System.Diagnostics.Debug.Print("Non è stato trovato alcun utente con nome: {0}", username);
+                return null;
+            }
+            Utente res = ConvertiJsonInUtente(JObject.Parse(jsonString));
+            System.Diagnostics.Debug.Print("Utente creato\n");
+
+            if (await GetDistintivi(res)) { System.Diagnostics.Debug.Print("Caricamento distintivi completato\n"); }
+            else { System.Diagnostics.Debug.Print("Errore nel caricamento dei distintivi\n"); }
+
+            return res;
+        }
+        
+        private static async Task<bool> GetDistintivi(Utente usr)
         {
             string url = string.Format(ConfigurationManager.AppSettings["selectBadgesAPI"], usr.ID);
             System.Diagnostics.Debug.Print("Prendo i distintivi dell'utente con ID: '{0}'\n", usr.ID);
@@ -242,7 +249,10 @@ namespace TheSocialGame
             System.Diagnostics.Debug.Print("Risposta ricevuta da selectExperienceInfoAPI\n");
             if (!response.IsSuccessStatusCode) throw new Exception("La selectExperienceInfoAPI non ha risposto correttamente");
 
-            JArray resArray = JArray.Parse(await response.Content.ReadAsStringAsync());
+            string jansw = await response.Content.ReadAsStringAsync();
+            System.Diagnostics.Debug.Print("{0}\n", jansw);
+
+            JArray resArray = JArray.Parse(jansw);
             System.Diagnostics.Debug.Print("Risposta: {0}\n", resArray.ToString());
 
             JArray jmembers = JArray.Parse(resArray[0].ToString());
