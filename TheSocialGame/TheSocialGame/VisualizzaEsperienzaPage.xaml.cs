@@ -247,7 +247,7 @@ namespace TheSocialGame
                     f.Content = im;
                     if (u.FotoLiveiOS) im.Rotation = 90;
                 }
-                f.BackgroundColor = Color.Orange;
+                f.BackgroundColor = user.Primario;
                 f.HasShadow = false;
                 f.IsClippedToBounds = true;
                 f.BorderColor = Color.Black;
@@ -295,7 +295,7 @@ namespace TheSocialGame
                 Grid.SetRow(b, x);
                 Grid.SetColumn(b, 1);
                 RowDefinition riga = new RowDefinition();
-                riga.Height = 50;
+                riga.Height = 60;
                 layout.RowDefinitions.Add(riga);
                 x++;
 

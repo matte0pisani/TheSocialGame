@@ -83,44 +83,17 @@
                     <Frame AbsoluteLayout.LayoutBounds="0,402,420,380" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}" />
                     <Label Text="Tema" TextColor="{DynamicResource SecondColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,420,400,30" />
 
-                    <Label Text="Sfondo" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,470,400,30" />
-                    <Picker x:Name="back"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,520,300,30', iOS='20,520,307,37'}" BackgroundColor="Transparent"  TitleColor="Black" SelectedIndexChanged="Sfondo" />
-                    <!--
-                    <Button BackgroundColor="LemonChiffon" BorderWidth="2" BorderColor="Black" CornerRadius="{OnPlatform Android='100', iOS='13'}"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,520,30,30', iOS='20,520,27,27'}" Clicked="cambiaSfondo"  />
-                    <Button BackgroundColor="AntiqueWhite" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='70,520,30,30', iOS='65,520,27,27'}" Clicked="cambiaSfondo"  />
-                    <Button BackgroundColor="Bisque" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='120,520,30,30', iOS='110,520,27,27'}" Clicked="cambiaSfondo"  />
-                    <Button BackgroundColor="LavenderBlush" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='170,520,30,30', iOS='155,520,27,27'}" Clicked="cambiaSfondo" />
-                    <Button BackgroundColor="Lavender" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='220,520,30,30', iOS='200,520,27,27'}" Clicked="cambiaSfondo" />
-                    <Button BackgroundColor="Azure" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='270,520,30,30', iOS='245,520,27,27'}" Clicked="cambiaSfondo" />
-                    <Button BackgroundColor="Honeydew" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='320,520,30,30', iOS='290,520,27,27'}"  Clicked="cambiaSfondo"/>
-                    <Button BackgroundColor="GhostWhite" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='370,520,30,30', iOS='335,520,27,27'}" Clicked="cambiaSfondo" />
-                    -->
-                    <Label Text="Colore Primario" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,570,400,30" />
-                    <Picker x:Name="prim"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,630,300,30', iOS='20,590,307,27'}" BackgroundColor="Transparent"  TitleColor="Black" SelectedIndexChanged="Primario" />
-                    
-                    <!--
-                    <Button BackgroundColor="Yellow" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,630,30,30', iOS='20,630,27,27'}" Clicked="cambiaPrimario" />
-                    <Button BackgroundColor="Orange" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='70,630,30,30', iOS='65,630,27,27'}" Clicked="cambiaPrimario" />
-                    <Button BackgroundColor="Red" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='120,630,30,30', iOS='110,630,27,27'}" Clicked="cambiaPrimario" />
-                    <Button BackgroundColor="Pink" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='170,630,30,30', iOS='155,630,27,27'}" Clicked="cambiaPrimario" />
-                    <Button BackgroundColor="MediumPurple" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='220,630,30,30', iOS='200,630,27,27'}" Clicked="cambiaPrimario" />
-                    <Button BackgroundColor="Cyan" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='270,630,30,30', iOS='245,630,27,27'}" Clicked="cambiaPrimario" />
-                    <Button BackgroundColor="GreenYellow" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='320,630,30,30', iOS='290,630,27,27'}" Clicked="cambiaPrimario" />
-                    <Button BackgroundColor="LightGray" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='370,630,30,30', iOS='335,630,27,27'}" Clicked="cambiaPrimario" />
-                    -->
-                    <Label Text="Colore Secondario" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,680,400,30" />
-                    <Picker x:Name="sec"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,740,300,30', iOS='20,740,307,27'}" BackgroundColor="Transparent"  TitleColor="Black" SelectedIndexChanged="Secondario"  />
-                    
-                    <!--
-                    <Button BackgroundColor="PaleGoldenrod" BorderWidth="2" BorderColor="Black"  CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,740,30,30', iOS='20,740,27,27'}" Clicked="cambiaSecondario" />
-                    <Button BackgroundColor="NavajoWhite" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='70,740,30,30', iOS='65,740,27,27'}" Clicked="cambiaSecondario" />
-                    <Button BackgroundColor="LightSalmon" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='120,740,30,30', iOS='110,740,27,27'}" Clicked="cambiaSecondario" />
-                    <Button BackgroundColor="MistyRose" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='170,740,30,30', iOS='155,740,27,27'}" Clicked="cambiaSecondario" />
-                    <Button BackgroundColor="Thistle" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='220,740,30,30', iOS='200,740,27,27'}" Clicked="cambiaSecondario" />
-                    <Button BackgroundColor="PaleTurquoise" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='270,740,30,30', iOS='245,740,27,27'}" Clicked="cambiaSecondario" />
-                    <Button BackgroundColor="PaleGreen" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='320,740,30,30', iOS='290,740,27,27'}" Clicked="cambiaSecondario" />
-                    <Button BackgroundColor="WhiteSmoke" BorderWidth="2" BorderColor="Black"   CornerRadius="{OnPlatform Android='100', iOS='13'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='370,740,30,30', iOS='335,740,27,27'}" Clicked="cambiaSecondario" />
-                    -->
+
+
+                    <RadioButton x:Name="Default" Content="Default" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,480,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
+                    <RadioButton x:Name="Caldo" Content="Caldo" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,520,150,30', iOS='20,520,150,27'}" CheckedChanged="cambiaTema"  />
+                    <RadioButton x:Name="Freddo" Content="Freddo" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,560,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
+                    <RadioButton x:Name="Tranquillo" Content="Tranquillo" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,600,150,30', iOS='20,520,150,27'}" CheckedChanged="cambiaTema" />
+                    <RadioButton x:Name="Vivace" Content="Vivace" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,640,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
+                    <RadioButton x:Name="Elegante" Content="Elegante" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,680,150,30', iOS='20,520,150,27'}" CheckedChanged="cambiaTema"  />
+                    <RadioButton x:Name="Divertente" Content="Divertente" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,720,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
+                   
+                   
                     <Frame AbsoluteLayout.LayoutBounds="0,785,420,180" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}"/>
                     <Label Text="Gestione account" TextColor="{DynamicResource SecondColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,800,400,30" />
                     <Button Text="Elimina Account" FontAttributes="Bold" TextColor="{DynamicResource FirstColor}" FontSize="20" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="100,860,200,60"  Clicked="Elimina" />

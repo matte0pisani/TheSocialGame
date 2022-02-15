@@ -283,10 +283,16 @@ namespace TheSocialGame
                         }
                     }
                     u.ListaDistintivi[nuova.Tipologia] = (numExp, dictExp);
-                    u.PuntiEsperienza++;
-                    u.PuntiSocial += nuoviPuntiSocial;  // non credo sia corretto, DA RIVEDERE
-                    u.Livello = (u.PuntiSocial + u.PuntiEsperienza) / 10 + 1;       // formula presa da PuntiFake; DA RIVEDERE
+                    if (nuova.Tipologia.Equals("Ristorante") || nuova.Tipologia.Equals("Compleanno") || nuova.Tipologia.Equals("Cocktail") || nuova.Tipologia.Equals("Casa"))
+                        u.PuntiEsperienza++;
+                    else if (nuova.Tipologia.Equals("Sport") || nuova.Tipologia.Equals("Discoteca") || nuova.Tipologia.Equals("Cultura"))
+                        u.PuntiEsperienza += 4;
+                    else if (nuova.Tipologia.Equals("ViaggioMare") || nuova.Tipologia.Equals("ViaggioMontagna") || nuova.Tipologia.Equals("ViaggioCitta"))
+                        u.PuntiEsperienza += 7;
+                    else u.PuntiEsperienza += 10;
                     u.AggiungiAmici(nuova.ListaPartecipanti);
+                   
+                  
                 }
 
                 await Navigation.PushAsync(new ProfilePage(user));

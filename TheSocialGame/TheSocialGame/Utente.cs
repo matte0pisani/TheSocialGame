@@ -49,9 +49,9 @@ namespace TheSocialGame
             ListaDistintivi = InizializzaListaDistintivi();
             Esperienze = new List<Esperienza>();
             Amici = new Dictionary<Utente, int>();
-            Sfondo = Color.GhostWhite;
-            Primario = Color.LightGray;
-            Secondario = Color.WhiteSmoke;
+            Sfondo = Color.BlanchedAlmond;
+            Primario = Color.DarkOrange;
+            Secondario = Color.Chocolate;
             Privato = false;
             // puntiFake();
         }
@@ -128,11 +128,11 @@ namespace TheSocialGame
         public Dictionary<Utente, int> ClassificaGenerale()
         {
             Dictionary<Utente, int> classifica = new Dictionary<Utente, int>();
-            classifica.Add(this, this.PuntiEsperienza+this.Livello+this.Personalita1+this.Personalita2+this.Personalita3+this.Personalita4+this.Personalita5);
+            classifica.Add(this, this.Esperienze.Count + this.PuntiSocial);
 
             foreach (Utente u in this.Amici.Keys)
             {
-                int punteggio = u.PuntiEsperienza + u.Livello +u.Personalita1 +u.Personalita2 + u.Personalita3 + u.Personalita4 + u.Personalita5;
+                int punteggio = u.Esperienze.Count + u.PuntiSocial;
                 classifica.Add(u, punteggio);
             }
             Dictionary<Utente, int> ordinata = new Dictionary<Utente, int>();
@@ -152,11 +152,17 @@ namespace TheSocialGame
                 if (!(u == this))
                 {
                     if (this.Amici.Keys.Contains(u)) this.Amici[u]++;
-                    else this.Amici.Add(u, 1);
+                    else
+                    {
+                        this.Amici.Add(u, 1);
+                        this.PuntiSocial++;
+
+                    }
                 }
               
             }
-        }
+                this.Livello = (this.PuntiSocial) / 10 + 1;
+            }
 
         public void DecrementaAmici(List<Utente> partecipanti)
         {
@@ -165,7 +171,10 @@ namespace TheSocialGame
                 if (this.Amici.ContainsKey(u))
                 {
                     if (this.Amici[u] == 1)
+                    {
                         this.Amici.Remove(u);
+                        this.PuntiSocial--;
+                    }
                     else this.Amici[u]--;
                 }
             }
@@ -181,7 +190,7 @@ namespace TheSocialGame
             }
             return best;
         }
-
+        /*
         public void PuntiFake()
         {
             this.PuntiSocial = new Random().Next(100);
@@ -192,7 +201,7 @@ namespace TheSocialGame
             this.Personalita4 = new Random().Next(100);
             this.Personalita5 = new Random().Next(100);
         }
-        
+        */
         // forse questi equals e hash code non servono (e hanno poco senso)
         public override bool Equals(object obj)
         {

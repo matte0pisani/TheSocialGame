@@ -21,8 +21,7 @@ namespace TheSocialGame
 
             Scrolling.HeightRequest = 650;
             ConfermaEliminazioneFrame.IsVisible = false;
-            MenuPersonalita.IsVisible = false;
-            TriangoloChiudi.IsVisible = false;
+          
             AddPhotoFrame.IsVisible = false;
             BindingContext = this;
         }
@@ -35,8 +34,7 @@ namespace TheSocialGame
 
             Scrolling.HeightRequest = 650;
             ConfermaEliminazioneFrame.IsVisible = false;
-            MenuPersonalita.IsVisible = false;
-            TriangoloChiudi.IsVisible = false;
+           
             AddPhotoFrame.IsVisible = false;
             BindingContext = this;
         }
@@ -111,39 +109,7 @@ namespace TheSocialGame
             await SocialPointBar.ProgressTo((double)(user.PuntiSocial % 10) / 10, 3000, Easing.Linear);
         }
 
-        void RiempiPersonalityBar()
-        {
-            int puntiTotali = user.Personalita1 + user.Personalita2 + user.Personalita3 + user.Personalita4 + user.Personalita5;
-
-            Tipo1.ProgressTo((double)user.Personalita1 / puntiTotali, 2000, Easing.Linear);
-            Tipo2.ProgressTo((double)user.Personalita2 / puntiTotali, 2000, Easing.Linear);
-            Tipo3.ProgressTo((double)user.Personalita3 / puntiTotali, 2000, Easing.Linear);
-            Tipo4.ProgressTo((double)user.Personalita4 / puntiTotali, 2000, Easing.Linear);
-            Tipo5.ProgressTo((double)user.Personalita5 / puntiTotali, 2000, Easing.Linear);
-
-            PercentualeTipo1.Text = Convert.ToString(user.Personalita1 * 100 / puntiTotali) + "%";
-            PercentualeTipo2.Text = Convert.ToString(user.Personalita2 * 100 / puntiTotali) + "%";
-            PercentualeTipo3.Text = Convert.ToString(user.Personalita3 * 100 / puntiTotali) + "%";
-            PercentualeTipo4.Text = Convert.ToString(user.Personalita4 * 100 / puntiTotali) + "%";
-            PercentualeTipo5.Text = Convert.ToString(user.Personalita5 * 100 / puntiTotali) + "%";
-
-        }
-
-        /*inizializza indicatori personalità, necessario per far avvenire animazione ogni volta che viene aperto il menu */
-        void SvuotaPersonalityBar()
-        {
-            Tipo1.Progress = 0;
-            PercentualeTipo1.Text = "";
-            Tipo2.Progress = 0;
-            PercentualeTipo2.Text = "";
-            Tipo3.Progress = 0;
-            PercentualeTipo3.Text = "";
-            Tipo4.Progress = 0;
-            PercentualeTipo4.Text = "";
-            Tipo5.Progress = 0;
-            PercentualeTipo5.Text = "";
-
-        }
+       
 
         /* abilita i distintivi ottenuti */
         void AbilitaDistintivi()
@@ -282,26 +248,7 @@ namespace TheSocialGame
             ConfermaEliminazioneFrame.IsVisible = false;
         }
 
-        /* gestione menu personalita */
-        void ApriMenuPersonalita(Object sender, EventArgs e)
-        {
-            TriangoloChiudi.IsVisible = true;
-            TriangoloApri.IsVisible = false;
-            MenuPersonalita.IsVisible = true;
-            BestFriendsFrame.TranslateTo(0, 335);
-            Scrolling.HeightRequest = 1000;
-            RiempiPersonalityBar();
-        }
-
-        void ChiudiMenuPersonalita(Object sender, EventArgs e)
-        {
-            TriangoloChiudi.IsVisible = false;
-            TriangoloApri.IsVisible = true;
-            MenuPersonalita.IsVisible = false;
-            BestFriendsFrame.TranslateTo(0, 0);
-            Scrolling.HeightRequest = 650;
-            SvuotaPersonalityBar();
-        }
+      
 
         /* gestione foto profilo*/
         void AddPhoto(Object sender, EventArgs e)
