@@ -55,7 +55,7 @@
             <!-- LISTA DELLE ESPERIENZE -->
             <ScrollView x:Name="default" Margin="0,74"  HeightRequest="{OnPlatform Android='549', iOS='563'}" >
                
-                <Grid x:Name="Contenuti" RowSpacing="10" ColumnSpacing="5" Margin="6" RowDefinitions="0, 100, 55" ColumnDefinitions="{OnPlatform Android='120, 120, 120', iOS='117,117,117'}" >
+                <Grid x:Name="Contenuti" RowSpacing="10" ColumnSpacing="5" Margin="6" RowDefinitions="0, 100, 60" ColumnDefinitions="{OnPlatform Android='120, 120, 120', iOS='117,117,117'}" >
                      </Grid>
             </ScrollView>
 

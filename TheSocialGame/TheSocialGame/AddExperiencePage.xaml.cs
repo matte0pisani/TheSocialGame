@@ -212,6 +212,7 @@ namespace TheSocialGame
                     {
                         nuova.ListaPartecipanti.Add(friend);
                         ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + friend.Username + "  ";
+                        SaveButton.IsEnabled = true;
                         return;
                     }
                 }
