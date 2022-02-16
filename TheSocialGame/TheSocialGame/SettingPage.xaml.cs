@@ -80,26 +80,7 @@ namespace TheSocialGame
             else await DisplayAlert("ERRORE", "Qualcosa è andato storto: la password è errata", "OK");
         }
 
-        private async void NotificationClicked(Object sender, EventArgs e)
-        {
-            if (Dirty) DBmanager.AggiornaUtenteInfoNonExp(User);
-            await Navigation.PushAsync(new NotificationPage());
-            Navigation.RemovePage(this);
-        }
-
-        private async void HomeClicked(Object sender, EventArgs e)
-        {
-            if (Dirty) DBmanager.AggiornaUtenteInfoNonExp(User);
-            await Navigation.PushAsync(new HomePage());
-            Navigation.RemovePage(this);
-        }
-
-        private async void SearchClicked(Object sender, EventArgs e)
-        {
-            if (Dirty) DBmanager.AggiornaUtenteInfoNonExp(User);
-            await Navigation.PushAsync(new SearchPage());
-            Navigation.RemovePage(this);
-        }
+     
 
         private async void RankingClicked(Object sender, EventArgs e)
         {

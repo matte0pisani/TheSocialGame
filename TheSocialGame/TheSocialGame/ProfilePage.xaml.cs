@@ -269,18 +269,7 @@ namespace TheSocialGame
         }
 
         /* metodi di apertura pagine connesse */
-        async void NotificationClicked(Object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new NotificationPage());
-            Navigation.RemovePage(this);
-        }
-
-        async void HomeClicked(Object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new HomePage());
-            Navigation.RemovePage(this);
-        }
-
+      
         async void AddClicked(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddExperiencePage(user));
@@ -288,11 +277,7 @@ namespace TheSocialGame
 
         }
 
-        async void SearchClicked(Object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SearchPage());
-            Navigation.RemovePage(this);
-        }
+       
 
         async void RankingClicked(Object sender, EventArgs e)
         {
