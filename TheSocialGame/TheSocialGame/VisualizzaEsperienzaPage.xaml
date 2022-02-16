@@ -53,7 +53,7 @@
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.015}"/>
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={OnPlatform Android=0, iOS=0.015}}"/>
 
              <Frame BackgroundColor="Black" IsClippedToBounds="True" HasShadow="False" BorderColor="Transparent"
                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
@@ -93,7 +93,7 @@
 
              <ScrollView 
                  RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1}"
-                 RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor={OnPlatform Android='0.735', iOS='0.9'}}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor={OnPlatform Android='1.12', iOS='0.9'}}"
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.78}">
 
 
@@ -186,8 +186,8 @@
             
             </ScrollView>
              <Frame x:Name="Visualizza" BackgroundColor="{DynamicResource BackgroundColor}" BorderColor="{DynamicResource FirstColor}"
-                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
-                 RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.8}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android=0.08, iOS=0.1}}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor={OnPlatform Android=0.87, iOS=0.8}}"
                  RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=1.5}"
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}">
                  <ScrollView IsClippedToBounds="True" Margin="-20">
@@ -212,7 +212,7 @@
                 <ScrollView IsClippedToBounds="True" Margin="-20">
                   <Grid  x:Name="layoutGalleria"  Margin="-3" RowDefinitions="60, 10, 100" RowSpacing="0" ColumnSpacing="0" ColumnDefinitions="{OnPlatform iOS='101, 101, 100', Android='111, 111, 110'}" >
                      <Label x:Name="TitoloGalleria" Text="Galleria" Margin="15" FontAttributes="{OnPlatform Android='Bold'}"  TextColor="Black"  FontSize="Title" TextDecorations="Underline" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10"/>
-                     <ImageButton x:Name="EsciGalleria" Source="{StaticResource iconaX}" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" TranslationX="{OnPlatform Android='10'}"  Margin="50, 10, 5, 5" Scale="0.5" Clicked="Chiudi"/>
+                        <ImageButton x:Name="EsciGalleria" Source="{StaticResource iconaX}" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" TranslationX="{OnPlatform Android='0'}"  Margin="{OnPlatform iOS='50, 10, 5, 5', Android='30, 10, 5, 5'}" Scale="0.5" Clicked="Chiudi"/>
                      <Label x:Name="Empty" Text="Ancora nessun elemento" TextColor="Black" FontSize="Title" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Margin="{OnPlatform iOS='10', Android='34'}" TranslationY="80" />
                      <ImageButton x:Name="AggiungiFoto" BackgroundColor="{DynamicResource FirstColor}" BorderColor="Black" BorderWidth="2" TranslationX="170" TranslationY="-5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" WidthRequest="4" HeightRequest="1" Margin="{OnPlatform iOS='0, 20, 230, 5', Android='10, 20, 230, 5'}" CornerRadius="18" Source="{StaticResource iconaAggiungi}" Clicked="importa"/>
                     

@@ -43,9 +43,9 @@
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.015}"/>
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={OnPlatform Android=0, iOS=0.015}}"/>
 
-           <ScrollView  HeightRequest="{OnPlatform Android='549', iOS='563'}" 
+           <ScrollView  HeightRequest="{OnPlatform Android='665', iOS='563'}" 
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
                 <AbsoluteLayout>
@@ -78,7 +78,7 @@
                    
                     <Frame AbsoluteLayout.LayoutBounds="0,785,420,180" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}"/>
                     <Label Text="Gestione account" TextColor="{DynamicResource SecondColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,800,400,30" />
-                    <Button Text="Elimina Account" FontAttributes="Bold" TextColor="{DynamicResource FirstColor}" FontSize="20" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="100,860,200,60"  Clicked="Elimina" />
+                    <Button Text="Elimina Account" FontAttributes="Bold" TextColor="{DynamicResource FirstColor}" FontSize="20" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="100,850,200,60"  Clicked="Elimina" />
                     <Button Text="Esci" FontSize="20" FontAttributes="Bold" TextColor="{DynamicResource FirstColor}" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="100,910,200,60"  Clicked="Esci" />
                    
                    

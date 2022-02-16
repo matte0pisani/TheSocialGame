@@ -19,7 +19,7 @@
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.18}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"  />
 
-            <Label Text="Aggiungi un'esperienza" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform Android='35', iOS='28'}"
+            <Label Text="Aggiungi esperienza" TextColor="Black" FontAttributes="Bold" FontSize="{OnPlatform Android='35', iOS='28'}"
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.09}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.036', iOS='0.07'}}"/>
                
@@ -46,10 +46,10 @@
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.015}"/>
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={OnPlatform Android=0, iOS=0.015}}"/>
 
            
-            <ScrollView  HeightRequest="{OnPlatform Android='549', iOS='563'}" 
+            <ScrollView  HeightRequest="{OnPlatform Android='660', iOS='563'}" 
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.18}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
                 <AbsoluteLayout>
@@ -57,7 +57,7 @@
                     <Entry x:Name="Titolo" BackgroundColor="Transparent"  PlaceholderColor="Black" TextColor="Black" Placeholder="Titolo" AbsoluteLayout.LayoutBounds="20,40,350,40" TextChanged="TitoloCopertina"  />
                     <Label x:Name="WarningTitolo" Text="!" TextColor="{DynamicResource SecondColor}" FontSize="30" FontAttributes="Bold"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='380,40,350,40', iOS='350,40,350,40'}" />
                     <Label Text="Immagine di copertina" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,85,400,30" />
-                    <Label x:Name="AvvisoCopertina" Text="Se non inserisci un'immagine di copertina verrà usata una copertina di default" TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,110,400,40', iOS='20,110,350,40'}" />
+                    <Label x:Name="AvvisoCopertina" Text="Se non inserisci un'immagine di copertina verrà usata una copertina di default" TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,110,360,40', iOS='20,110,350,40'}" />
                     <Rectangle Stroke="Black" StrokeDashArray="1,1" StrokeDashOffset="6" StrokeThickness="2" AbsoluteLayout.LayoutBounds="20,150,350,150" />
                     <Button x:Name="Fotocamera" Text="SCATTA DA FOTOCAMERA" TextColor="Black" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,170,250,40" Clicked="CameraClicked" />
                     <Button x:Name="Galleria" Text="IMPORTA DA GALLERIA" TextColor="Black" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,230,250,40" Clicked="FromGalleryClicked" />
@@ -66,16 +66,16 @@
                         <Image x:Name="Copertina" Margin="-20" Aspect="AspectFit" />
                     </Frame>
                     <Label Text="Dal" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,310,400,30" />
-                    <DatePicker x:Name="DataInizio" BackgroundColor="{DynamicResource BackgroundColor}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='60,308,100,40', iOS='60,310,100,25'}" FontSize="{OnPlatform Android='18', iOS='16'}" TextColor="Black" DateSelected="DataInizioSelected" />
+                    <DatePicker x:Name="DataInizio" BackgroundColor="{DynamicResource BackgroundColor}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='60,308,110,40', iOS='60,310,100,25'}" FontSize="{OnPlatform Android='18', iOS='16'}" TextColor="Black" DateSelected="DataInizioSelected" />
                     <Label Text="Al" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="180,310,400,30" />
-                    <DatePicker x:Name="DataFine" BackgroundColor="{DynamicResource BackgroundColor}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='220,308,100,40', iOS='220,310,100,25'}" FontSize="{OnPlatform Android='18', iOS='16'}" TextColor="Black" DateSelected="DataFineSelected" />
+                    <DatePicker x:Name="DataFine" BackgroundColor="{DynamicResource BackgroundColor}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='220,308,110,40', iOS='220,310,100,25'}" FontSize="{OnPlatform Android='18', iOS='16'}" TextColor="Black" DateSelected="DataFineSelected" />
                     <Label Text="Esperienza Live" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,345,110,50" />
                     <Switch x:Name="Live" AbsoluteLayout.LayoutBounds="{OnPlatform Android='30,345,150,60', iOS='30,352,150,40'}" OnColor="DarkOrange" ThumbColor="{StaticResource FirstColor}" Scale="{OnPlatform Android='1.2'}" Toggled="LiveChanged" TranslationX="{OnPlatform iOS='110'}" />
                     <Label x:Name="LabelFromTime" Text="Dalle" TextColor="Black" FontSize="{OnPlatform Android='18', iOS='16'}" AbsoluteLayout.LayoutBounds="210,348,110,30" />
                     <TimePicker x:Name="FromTime" BackgroundColor="{DynamicResource BackgroundColor}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='260,342,75,40', iOS='260,338,75,40'}" TextColor="Black" FontSize="{OnPlatform Android='16', iOS='14'}" />
                     <Label x:Name="LabelToTime" Text="Alle" TextColor="Black" FontSize="{OnPlatform Android='18', iOS='16'}" AbsoluteLayout.LayoutBounds="210,375,110,30" />
                     <TimePicker x:Name="ToTime" BackgroundColor="{DynamicResource BackgroundColor}"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='260,369,75,40', iOS='260,365,75,40'}" TextColor="Black" FontSize="{OnPlatform Android='16', iOS='14'}" />
-                    <Label Text="Impostando questa esperienza come live potrete partecipare alle sfide e gli altri utenti potranno interagire con voi" TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,400,393,55', iOS='20,400,350,55'}" />
+                    <Label Text="Impostando questa esperienza come live potrete partecipare alle sfide e gli altri utenti potranno interagire con voi" TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,395,393,60', iOS='20,400,350,55'}" />
                     <Label Text="Tipologia Esperienza"  TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,460,110,53" />                   
                     <Picker x:Name="TipiEsp" Title="Scegli tipologia" TitleColor="Black" BackgroundColor="Transparent"  AbsoluteLayout.LayoutBounds="150,462,190,40" TextColor="Black" SelectedIndexChanged="TipoEsperienza" FontSize="{OnPlatform Android='18', iOS='18'}" />
                     <Label x:Name="WarningTipologia"  Text="!" TextColor="{DynamicResource SecondColor}" FontSize="30" FontAttributes="Bold"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='380,462,350,40', iOS='350,462,350,40'}" />                    
@@ -88,7 +88,7 @@
                     <Label Text="Esperienza Privata" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,610,110,50" />
                     <Switch x:Name="Privata" AbsoluteLayout.LayoutBounds="30,610,150,60" OnColor="{DynamicResource SecondColor}" ThumbColor="{DynamicResource FirstColor}" Scale="{OnPlatform Android='1.2'}" TranslationX="{OnPlatform iOS='110'}" Toggled="PrivataChanged" />
                     <Label Text="Se l'esperienza è privata solo i partecipanti potranno visualizzarla" TextColor="{StaticResource SecondColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="205,610,180,55" />
-                    <Label x:Name="SavingLabel" Text="Salvando l'esperienza sarà aggiunta al diario di tutti i partecipanti ed ognuno potrà modificarne il contenuto " TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='40,685,390,55', iOS='20,675,350,55'}" />     
+                    <Label x:Name="SavingLabel" Text="Salvando l'esperienza sarà aggiunta al diario di tutti i partecipanti ed ognuno potrà modificarne il contenuto " TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='27.5,685,390,55', iOS='20,675,350,55'}" />     
                     <Label x:Name="Warning" Text="Devi completare tutti i campi!" TextColor="{DynamicResource FirstColor}" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='40,685,390,55', iOS='100,700,350,55'}" IsVisible="False"/>    
                     <Button x:Name="SaveButton" Text="SALVA" TextColor="Black" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,730,250,40" Clicked="Salva" />
                     <BoxView Color="Transparent" AbsoluteLayout.LayoutBounds="70,760,250,40" />
@@ -105,10 +105,10 @@
                         <RelativeLayout>
 
                             <Label Text="Attenzione!" TextColor="Black" TextDecorations="Underline" FontAttributes="Bold" FontSize="{OnPlatform Android='30', iOS='25'}"
-                                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.1}"/>
+                                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor={OnPlatform Android=0.03, iOS=0.1}}"/>
 
                             <Label Text="Se lasci la pagina la tua esperienza non sarà salvata &#x0a;Sicuro di voler continuare?" TextColor="Black" FontSize="17"
-                                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor=0.33}"/>
+                                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height, Factor={OnPlatform Android=0.275, iOS=0.33}}"/>
 
                             <Button x:Name="Conferma" BackgroundColor="{DynamicResource FirstColor}" Text="CONFERMA" FontSize="20" TextColor="Black" FontAttributes="Bold" CornerRadius="15"
                                     Clicked="ConfermaClicked"

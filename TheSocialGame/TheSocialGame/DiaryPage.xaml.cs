@@ -132,7 +132,8 @@ namespace TheSocialGame
 
         async void BackClicked(Object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(new ProfilePage(user));
+            Navigation.RemovePage(this);
         }
     }
 }

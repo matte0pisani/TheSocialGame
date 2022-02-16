@@ -158,19 +158,21 @@ namespace TheSocialGame
       
         async void RankingClicked(Object sender, EventArgs e)
         {
+            DBmanager.AggiornaEsperienza(exp);
             await Navigation.PushAsync(new RankingPage(user));
             Navigation.RemovePage(this);
         }
 
         async void ProfileClicked(Object sender, EventArgs e)
         {
+            DBmanager.AggiornaEsperienza(exp);
             await Navigation.PushAsync(new ProfilePage(user));
             Navigation.RemovePage(this);
         }
 
         async void BackClicked(Object sender, EventArgs e)
         {
-
+            DBmanager.AggiornaEsperienza(exp);
             await Navigation.PushAsync(new DiaryPage(user));
             Navigation.RemovePage(this);
 
@@ -316,7 +318,7 @@ namespace TheSocialGame
             Aggiungi.IsVisible = false;
         }
 
-        void MettiInLista(Object sender, EventArgs e)
+        private async void MettiInLista(Object sender, EventArgs e)
         {
             Aggiungi.IsVisible = true;
             if (nomeschermata.Text.Equals("Luoghi"))
@@ -354,10 +356,52 @@ namespace TheSocialGame
             }
             else if (nomeschermata.Text.Equals("Partecipanti"))
             {
-                Utente u = new Utente();
-                u.Username = AggiungiElemento.Text;
-                exp.ListaPartecipanti.Add(u);
-                apriPartecipanti();
+                if (!AggiungiElemento.Text.Equals(""))
+                {
+                    foreach (Utente friend in user.Amici.Keys)
+                    {
+                        if (friend.Username.Equals(AggiungiElemento.Text))
+                        {
+                            exp.ListaPartecipanti.Add(friend);
+                            var x = friend.ListaDistintivi[exp.Tipologia].Item1;
+                            x++;
+                            var y = friend.ListaDistintivi[exp.Tipologia].Item2;
+                            friend.ListaDistintivi[exp.Tipologia] = (x, y);
+                            friend.PuntiEsperienza++;
+                            exp.ListaPartecipanti.Add(friend);
+                            foreach (Utente mem in exp.ListaPartecipanti)
+                            {
+                                mem.PuntiSocial++;
+                                mem.Livello = (mem.PuntiEsperienza + mem.PuntiSocial) / 10 + 1;
+                            }
+                            DBmanager.AggiornaUtentiInfoExp(exp.ListaPartecipanti, exp.Tipologia);
+                            DBmanager.AggiornaAmicizie(exp.ListaPartecipanti, friend);
+                            AggiungiElemento.Text = null;
+                            apriPartecipanti();
+                            return;
+                        }
+                    }
+
+                    Utente DBfriend = await DBmanager.GetUtenteBasePerNome(AggiungiElemento.Text);
+                    if (DBfriend != null)
+                    {
+                        var x = DBfriend.ListaDistintivi[exp.Tipologia].Item1;
+                        x++;
+                        var y = DBfriend.ListaDistintivi[exp.Tipologia].Item2;
+                        DBfriend.ListaDistintivi[exp.Tipologia] = (x, y);
+                        DBfriend.PuntiEsperienza++;
+                        exp.ListaPartecipanti.Add(DBfriend);
+                        foreach (Utente mem in exp.ListaPartecipanti)
+                        {
+                            mem.PuntiSocial++;
+                            mem.Livello = (mem.PuntiEsperienza + mem.PuntiSocial) / 10 + 1;
+                        }
+                        DBmanager.AggiornaUtentiInfoExp(exp.ListaPartecipanti, exp.Tipologia);
+                        DBmanager.AggiornaAmicizie(exp.ListaPartecipanti, DBfriend);
+                        apriPartecipanti();
+                    }
+                    else { await DisplayAlert("Utente inesistente", "Non esiste alcun utente con il nome dato", "OK"); }
+                }
             }
             AggiungiElemento.Text = null;
 

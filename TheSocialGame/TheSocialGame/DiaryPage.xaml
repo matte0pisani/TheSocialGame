@@ -46,7 +46,7 @@
                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.1}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height, Type=RelativeToParent, Factor=0.1}"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.015}"/>
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={OnPlatform Android=0, iOS=0.015}}"/>
 
             <Label x:Name="NoExp" Text="Ancora nessuna esperienza" HorizontalOptions="Center" TextColor="Black" FontSize="25"
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.13}"
@@ -55,9 +55,8 @@
             <!-- LISTA DELLE ESPERIENZE -->
             <ScrollView x:Name="default" Margin="0,74"  HeightRequest="{OnPlatform Android='549', iOS='563'}" >
                
-                <Grid x:Name="Contenuti" RowSpacing="10" ColumnSpacing="5" Margin="6" RowDefinitions="0, 100, 20" ColumnDefinitions="{OnPlatform Android='130, 130, 130', iOS='117,117,117'}" >
+                <Grid x:Name="Contenuti" RowSpacing="10" ColumnSpacing="5" Margin="6" RowDefinitions="0, 100, 55" ColumnDefinitions="{OnPlatform Android='120, 120, 120', iOS='117,117,117'}" >
                      </Grid>
-                
             </ScrollView>
 
              

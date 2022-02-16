@@ -429,5 +429,57 @@ namespace TheSocialGame
             System.Diagnostics.Debug.Print("Parsing del risultato corretto di updateFriendshipsAPI: {0}\n", result);
         }
 
+        public static async void AggiornaEsperienza(Esperienza exp)
+        {
+            string url = ConfigurationManager.AppSettings["updateExperienceAPI"];
+            System.Diagnostics.Debug.Print("Aggiorno l'esperienza con ID {0}\n", exp.ID);
+
+            JArray jbody = new JArray();
+            JObject jexp = ConvertiEsperienzaInJson(exp);
+            jexp.Add("ID", exp.ID);
+            System.Diagnostics.Debug.Print("Json dell'esperienza: {0}\n", jexp.ToString());
+
+            jbody.Add(jexp);
+            jbody.Add(jexp["Partecipanti"]);
+            System.Diagnostics.Debug.Print("Creato primo e secondo membro del body: {0}\n", jbody.ToString());
+
+            JArray jtemp = new JArray();
+            jtemp.Add("Gallerie");
+            foreach (byte[] image in exp.Galleria)
+            {
+                jtemp.Add(Convert.ToBase64String(image));
+            }
+            jbody.Add(jtemp);
+            System.Diagnostics.Debug.Print("Creato terzo membro del body: {0}\n", jbody.ToString());
+
+            jbody.Add(ConvertiCollezioneInJarray("Luoghi", exp.Luoghi));
+            jbody.Add(ConvertiCollezioneInJarray("Slogans", exp.Slogan));
+            jbody.Add(ConvertiCollezioneInJarray("Funfacts", exp.Funfacts));
+            jbody.Add(ConvertiCollezioneInJarray("Playlist", exp.Playlist));
+            jbody.Add(ConvertiCollezioneInJarray("Recensioni", exp.Recensioni));
+            jbody.Add(ConvertiCollezioneInJarray("Altro", exp.Altro));
+            System.Diagnostics.Debug.Print("Creati membri restanti del body: {0}\n", jbody.ToString());
+
+            var body = new StringContent(jbody.ToString(), Encoding.UTF8, "application/json");
+            System.Diagnostics.Debug.Print("POST body creato\n");
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.PostAsync(url, body);
+            System.Diagnostics.Debug.Print("Risposta ricevuta da updateFriendshipsAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La updateFriendshipsAPI non ha risposto correttamente");
+
+            string resultString = await response.Content.ReadAsStringAsync();
+            if (!bool.TryParse(resultString, out bool result)) throw new Exception("Errore nel parsing del risultato di updateFriendshipsAPI");
+            System.Diagnostics.Debug.Print("Parsing del risultato corretto di updateFriendshipsAPI: {0}\n", result);
+        }
+
+        private static JArray ConvertiCollezioneInJarray(string first, List<string> list)
+        {
+            JArray jtemp;
+            jtemp = JArray.Parse(JsonConvert.SerializeObject(list));
+            jtemp.AddFirst(first);
+            return jtemp;
+        }
+
     }
 }
