@@ -676,6 +676,7 @@ namespace TheSocialGame
             if (answer)
             {
                 this.exp.Elimina();
+                DBmanager.EliminaEsperienza(exp.ID);
                 await Navigation.PushAsync(new ProfilePage(user));
                 Navigation.RemovePage(this);
             }

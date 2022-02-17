@@ -279,7 +279,7 @@
                                     <OnPlatform x:TypeArguments="x:Double" Android="25" iOS="23"/>
                                 </Button.FontSize>
                             </Button>
-                            <Button x:Name="FromGalleryButton" Text="IMPORTA DA GALLERIA" FontAttributes="Bold" CornerRadius="15"  BackgroundColor="{DynamicResource FirstColor}"  BorderWidth="3" TextColor="Black"
+                            <Button x:Name="FromGalleryButton" Text="IMPORTA" FontAttributes="Bold" CornerRadius="15"  BackgroundColor="{DynamicResource FirstColor}"  BorderWidth="3" TextColor="Black"
                                      Clicked="FromGalleryClicked" 
                                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.84}"
                                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"

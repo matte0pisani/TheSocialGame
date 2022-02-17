@@ -67,7 +67,9 @@ namespace TheSocialGame
             else { res.Add("Copertina", null); }
             res.Add("CopertinaLiveiOS", exp.CopertinaLiveiOS);
             res.Add("DataInizio", exp.DataInizio.ToString());
+            System.Diagnostics.Debug.Print(exp.DataInizio.ToString());
             res.Add("DataFine", exp.DataFine.ToString());
+            System.Diagnostics.Debug.Print(exp.DataFine.ToString());
             res.Add("Tipologia", exp.Tipologia);
             res.Add("Privata", exp.Privata);
             res.Add("Live", exp.Live);
@@ -329,6 +331,25 @@ namespace TheSocialGame
             System.Diagnostics.Debug.Print("Inviata query di eliminazione via deleteUserAPI\n");
         }
 
+        public static async void EliminaEsperienza(int eid)
+        {
+            string url = ConfigurationManager.AppSettings["deleteExperienceAPI"];
+            System.Diagnostics.Debug.Print("Elimino da DB esperienza {0}\n", eid);
+
+
+            var body = new StringContent(new JArray(eid).ToString(), Encoding.UTF8, "application/json");
+            System.Diagnostics.Debug.Print("POST body creato\n");
+
+            HttpClient client = new HttpClient();
+            var response = await client.PostAsync(url, body);    // per maggiore velocità, non attendo che ritorni il risultato ma proseguo con l'esecuzione 
+            System.Diagnostics.Debug.Print("Risposta ricevuta da updateUserInfoNonExpAPI\n");
+            if (!response.IsSuccessStatusCode) throw new Exception("La updateUserInfoNonExpAPI non ha risposto correttamente");
+
+            string resultString = await response.Content.ReadAsStringAsync();
+            if (!Boolean.TryParse(resultString, out bool result)) throw new Exception("Errore nel parsing del risultato");
+            System.Diagnostics.Debug.Print("Parsing del risultato corretto: {0}\n", result);
+        }
+
         public static async Task<bool> AggiornaUtenteInfoNonExp(Utente usr)
         {
             string url = ConfigurationManager.AppSettings["updateUserInfoNonExpAPI"];
@@ -455,7 +476,7 @@ namespace TheSocialGame
             jbody.Add(ConvertiCollezioneInJarray("Luoghi", exp.Luoghi));
             jbody.Add(ConvertiCollezioneInJarray("Slogans", exp.Slogan));
             jbody.Add(ConvertiCollezioneInJarray("Funfacts", exp.Funfacts));
-            jbody.Add(ConvertiCollezioneInJarray("Playlist", exp.Playlist));
+            jbody.Add(ConvertiCollezioneInJarray("Playlists", exp.Playlist));
             jbody.Add(ConvertiCollezioneInJarray("Recensioni", exp.Recensioni));
             jbody.Add(ConvertiCollezioneInJarray("Altro", exp.Altro));
             System.Diagnostics.Debug.Print("Creati membri restanti del body: {0}\n", jbody.ToString());

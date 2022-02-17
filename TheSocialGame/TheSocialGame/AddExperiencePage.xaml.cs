@@ -276,6 +276,7 @@ namespace TheSocialGame
                     else if (nuova.Tipologia.Equals("ViaggioMare") || nuova.Tipologia.Equals("ViaggioMontagna") || nuova.Tipologia.Equals("ViaggioCitta"))
                         u.PuntiEsperienza += 7;
                     else u.PuntiEsperienza += 10;
+                    u.Livello = (u.PuntiEsperienza + u.PuntiSocial) / 10 + 1;
                     u.AggiungiAmici(nuova.ListaPartecipanti);
                    
                   

@@ -74,14 +74,14 @@
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={OnPlatform Android='0.12', iOS='0.13'}}"/>
 
              <Button Text="Modifica" TextColor="white" Opacity="0.3" FontAttributes="Bold" FontSize="16"  BackgroundColor="Black" Clicked="modificaClicked"
-                 RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.24}"
-                 RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.75}"                 
-                 RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.09}"  
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor={OnPlatform Android='0.3', iOS='0.24'}}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor={OnPlatform Android='0.73', iOS='0.75'}}"                 
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor={OnPlatform Android='0.1', iOS='0.09'}}"  
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.19}" />
              <Button x:Name="importaCopertina" Text="Importa" TextColor="Black" FontAttributes="Bold" FontSize="16"  BackgroundColor="LightGray" Clicked="cambiaCopertina"
-                 RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.24}"
-                 RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.75}"                 
-                 RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.09}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor={OnPlatform Android='0.3', iOS='0.24'}}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor={OnPlatform Android='0.73', iOS='0.75'}}"                 
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor={OnPlatform Android='0.1', iOS='0.09'}}"
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.28}" />
              <Button x:Name="eliminaCompertina" Text="Elimina" TextColor="black"  FontAttributes="Bold" FontSize="16"  BackgroundColor="LightGray" Clicked="eliminaCopertina"
                  RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.24}"
