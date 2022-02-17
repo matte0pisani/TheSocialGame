@@ -280,7 +280,15 @@ namespace TheSocialGame
                 Grid.SetRow(b, x);
                 Grid.SetColumn(b, 1);
                 RowDefinition riga = new RowDefinition();
-                riga.Height = 60;
+                switch (Device.RuntimePlatform)
+                {
+                    case Device.iOS:
+                        riga.Height = 50;
+                        break;
+                    case Device.Android:
+                        riga.Height = 65;
+                        break;
+                }
                 layout.RowDefinitions.Add(riga);
                 x++;
 

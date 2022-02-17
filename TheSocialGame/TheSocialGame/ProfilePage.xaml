@@ -411,7 +411,19 @@
 
                 </RelativeLayout>
             </ScrollView>
+
+        <Frame x:Name="sfondoCaricamento" BackgroundColor="White" Opacity="0.5" HeightRequest="700" WidthRequest="500" />
+        <ActivityIndicator x:Name="caricamento"  Color="{DynamicResource SecondColor}"
+                            RelativeLayout.XConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.3}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width, Type=RelativeToParent, Factor=0.4}"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Property=Width,  Type=RelativeToParent, Factor=0.4}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}" />
+                       
+       
+
         </RelativeLayout>
+
+
 
 
     </ContentPage.Content>

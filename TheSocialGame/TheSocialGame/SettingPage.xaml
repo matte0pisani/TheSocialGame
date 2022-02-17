@@ -61,19 +61,19 @@
                     <Label Text="Privacy" TextColor="{DynamicResource SecondColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,240,400,30" />
                     <Label Text="Profilo privato" TextColor="Black" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="20,290,400,30" />
                     <Switch x:Name="Privacy" Toggled="CambiaPrivacy" AbsoluteLayout.LayoutBounds="250,290,50,30" OnColor="{DynamicResource SecondColor}" ThumbColor="{DynamicResource FirstColor}" Scale="{OnPlatform Android='1.2', iOS='0.8'}"   />
-                    <Label Text="Impostando il profilo come privato per partecipare alle esperienze di utenti non presenti tra i tuoi amici dovrai accettare l'invito" TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,320,393,55', iOS='20,290,350,58'}" />
+                    <Label Text="Impostando il profilo come privato per partecipare alle esperienze di utenti non presenti tra i tuoi amici dovrai accettare l'invito" TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,320,393,55', iOS='20,330,350,58'}" />
                     <Frame AbsoluteLayout.LayoutBounds="0,402,420,380" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}" />
                     <Label Text="Tema" TextColor="{DynamicResource SecondColor}" FontAttributes="Bold" FontSize="25"  AbsoluteLayout.LayoutBounds="20,420,400,30" />
 
 
 
-                    <RadioButton x:Name="Default" Content="Default" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,480,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
-                    <RadioButton x:Name="Caldo" Content="Caldo" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,520,150,30', iOS='20,520,150,27'}" CheckedChanged="cambiaTema"  />
-                    <RadioButton x:Name="Freddo" Content="Freddo" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,560,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
-                    <RadioButton x:Name="Rilassante" Content="Rilassante" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,600,150,30', iOS='20,520,150,27'}" CheckedChanged="cambiaTema" />
-                    <RadioButton x:Name="Delicato" Content="Delicato" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,640,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
-                    <RadioButton x:Name="Elegante" Content="Elegante" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,680,150,30', iOS='20,520,150,27'}" CheckedChanged="cambiaTema"  />
-                    <RadioButton x:Name="Vivace" Content="Vivace" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,720,150,30', iOS='20,480,150,27'}" CheckedChanged="cambiaTema"  />
+                    <RadioButton x:Name="Default" Content="Default" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,480,150,30', iOS='20,470,150,27'}" CheckedChanged="cambiaTema" BackgroundColor="Transparent" TextColor="Black" />
+                    <RadioButton x:Name="Caldo" Content="Caldo" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,520,150,30', iOS='20,510,150,27'}" CheckedChanged="cambiaTema" BackgroundColor="Transparent" TextColor="Black"  />
+                    <RadioButton x:Name="Freddo" Content="Freddo" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,560,150,30', iOS='20,550,150,27'}" CheckedChanged="cambiaTema" BackgroundColor="Transparent" TextColor="Black"  />
+                    <RadioButton x:Name="Rilassante" Content="Rilassante" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,600,150,30', iOS='20,590,150,27'}" CheckedChanged="cambiaTema" BackgroundColor="Transparent" TextColor="Black" />
+                    <RadioButton x:Name="Delicato" Content="Delicato" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,640,150,30', iOS='20,630,150,27'}" CheckedChanged="cambiaTema" BackgroundColor="Transparent" TextColor="Black"  />
+                    <RadioButton x:Name="Elegante" Content="Elegante" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,680,150,30', iOS='20,670,150,27'}" CheckedChanged="cambiaTema" BackgroundColor="Transparent" TextColor="Black"  />
+                    <RadioButton x:Name="Vivace" Content="Vivace" FontSize="{OnPlatform Android='22', iOS='20'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='20,720,150,30', iOS='20,710,150,27'}" CheckedChanged="cambiaTema" BackgroundColor="Transparent" TextColor="Black" />
                    
                    
                     <Frame AbsoluteLayout.LayoutBounds="0,785,420,180" HasShadow="True" BackgroundColor="{DynamicResource BackgroundColor}"/>

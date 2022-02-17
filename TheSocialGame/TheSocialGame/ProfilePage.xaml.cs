@@ -41,6 +41,8 @@ namespace TheSocialGame
 
         protected override async void OnAppearing()
         {
+            sfondoCaricamento.IsVisible = true;
+            caricamento.IsRunning = true;
             base.OnAppearing();
             if (user == null) { user = await DBmanager.GetUtente(usrID); }
 
@@ -70,6 +72,8 @@ namespace TheSocialGame
             if (user.Livello < 10)
                 LabelLevelSingle.Text = Convert.ToString(user.Livello);
             else LabelLevelDouble.Text = Convert.ToString(user.Livello);
+            sfondoCaricamento.IsVisible = false;
+            caricamento.IsRunning = false;
         }
 
 

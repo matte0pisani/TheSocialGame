@@ -32,7 +32,7 @@
                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.1 }">
                 <Frame x:Name="FirstFrame"
                        CornerRadius="5"
-                       BackgroundColor="FloralWhite"
+                       BackgroundColor="{StaticResource SecondColor}"
                        Padding="8">
                     <FlexLayout Direction="Row"
                                 AlignItems="Center">
@@ -48,7 +48,7 @@
                     </FlexLayout>
                 </Frame>
                 <Frame CornerRadius="5"
-                       BackgroundColor="FloralWhite"
+                       BackgroundColor="{StaticResource SecondColor}"
                        Padding="8">
                     <FlexLayout Direction="Row"
                                 AlignItems="Center">
@@ -62,7 +62,7 @@
                     </FlexLayout>
                 </Frame>
                 <Frame CornerRadius="5"
-                       BackgroundColor="FloralWhite"
+                       BackgroundColor="{StaticResource SecondColor}"
                        Padding="8">
                     <FlexLayout Direction="Row"
                                 AlignItems="Center">
@@ -78,7 +78,7 @@
                     </FlexLayout>
                 </Frame>
                 <Frame CornerRadius="5"
-                       BackgroundColor="FloralWhite"
+                       BackgroundColor="{StaticResource SecondColor}"
                        Padding="8">
                     <FlexLayout Direction="Row"
                                 AlignItems="Center">
