@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Xamarin.Forms.Internals;
 
-namespace TheSocialGame.DBstuff
+namespace TheSocialGame.ProveDB
 {
     class UserSimple
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace TheSocialGame.DBstuff
+namespace TheSocialGame.ProveDB
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DBmanagerTestPage : ContentPage

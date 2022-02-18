@@ -16,14 +16,15 @@
                    Padding="8"
                    Margin="20, 0, 20, 0">
             <StackLayout>
-                <Label Text="Share. Inspire. Have fun!"
+                <Label Text="Share. Get points. Have fun!"
                                TextColor="Black"
                                FontSize="Medium"
                                FontAttributes="Bold" />
                 <BoxView Color="{StaticResource FirstColor}"
                                HeightRequest="2"
                                HorizontalOptions="Fill" />
-                <Label TextColor="Black" Text="Benvenuto in TheSocialGame, il primo social network basato sui gruppi e sulle esperienze delle persone."/>
+                <Label TextColor="Black" Text="Benvenuto in TheSocialGame! Condividi esperienze con i tuoi amici per guadagnare punti e distintivi 
+                                                e per immortalare i momenti trascorsi insieme in un diario virtuale."/>
             </StackLayout>
         </Frame>
         <Button Margin="80, 40, 80, 40"

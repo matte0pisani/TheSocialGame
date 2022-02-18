@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheSocialGame.DBstuff
+namespace TheSocialGame.ProveDB
 {
     class DBcaller
     {

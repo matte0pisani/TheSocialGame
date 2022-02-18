@@ -78,9 +78,9 @@
                         <Label x:Name="ListaPartecipanti" TextColor="{DynamicResource FirstColor}" FontSize="{OnPlatform Android='16', iOS='14'}" AbsoluteLayout.LayoutBounds="20,1000,360,55" />
                     </ScrollView>
                     <Label x:Name="WarningPartecipanti"  Text="!" TextColor="{DynamicResource SecondColor}" FontSize="30" FontAttributes="Bold"  AbsoluteLayout.LayoutBounds="{OnPlatform Android='380,417,350,40', iOS='350,415,350,40'}" />            
-                    <Label x:Name="SavingLabel" Text="Salvando l'esperienza sarà aggiunta al diario di tutti i partecipanti ed ognuno potrà modificarne il contenuto " TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='27.5,540,390,55', iOS='20,480,350,55'}" />     
-                    <Label x:Name="Warning" Text="Devi completare tutti i campi!" TextColor="{DynamicResource FirstColor}" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='40,520,390,55', iOS='100,520,350,55'}" />    
-                    <Button x:Name="SaveButton" Text="SALVA" TextColor="Black" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="70,550,250,40" Clicked="Salva" />
+                    <Label x:Name="SavingLabel" Text="Salvando l'esperienza sarà aggiunta al diario di tutti i partecipanti ed ognuno potrà modificarne il contenuto " TextColor="{DynamicResource SecondColor}" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='27.5,520,390,55', iOS='20,480,350,55'}" />     
+                    <Label x:Name="Warning" Text="Devi completare tutti i campi!" TextColor="{DynamicResource FirstColor}" FontSize="{OnPlatform Android='14', iOS='14'}" AbsoluteLayout.LayoutBounds="{OnPlatform Android='40,520,390,55', iOS='100,520,350,55'}" />
+                    <Button x:Name="SaveButton" Text="SALVA" TextColor="Black" BackgroundColor="{DynamicResource FirstColor}" CornerRadius="10" AbsoluteLayout.LayoutBounds="{OnPlatform Android='70,575,250,40', iOS='70,550,250,40'}" Clicked="Salva" />
                     <BoxView Color="Transparent" AbsoluteLayout.LayoutBounds="70,590,250,40" />
                     
                     

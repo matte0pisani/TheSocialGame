@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Collections.Generic;
-using TheSocialGame.DBstuff;
+using TheSocialGame.ProveDB;
 using System.Text;
 
 namespace TheSocialGame
