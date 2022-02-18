@@ -31,6 +31,7 @@ namespace TheSocialGame
             EsciSenzaSalvareFrame.IsVisible = false;
             CopertinaFrame.IsVisible = false;
             Rimuovi.IsVisible = false;
+            Warning.IsVisible = false;
             WarningPartecipanti.IsVisible = false;
             WarningTipologia.IsVisible = false;
             WarningTitolo.IsVisible = false;
@@ -224,13 +225,15 @@ namespace TheSocialGame
             if (nuova.DataInizio.Equals(new DateTime())) nuova.DataInizio = DataInizio.Date;
             if (nuova.DataFine.Equals(new DateTime())) nuova.DataFine = DataFine.Date;
 
-            if (nuova.Titolo == null || nuova.Tipologia == null || nuova.ListaPartecipanti.Count == 0)
+            if (nuova.Titolo.Equals("dummy") || nuova.Tipologia.Equals("dummy") || nuova.ListaPartecipanti.Count == 0)
             {
                 SavingLabel.IsVisible = false;
                 Warning.IsVisible = true;
                 if (nuova.Titolo == null) WarningTitolo.IsVisible = true;
                 if (nuova.Tipologia == null) WarningTipologia.IsVisible = true;
                 if (nuova.ListaPartecipanti.Count == 1) WarningPartecipanti.IsVisible = true;
+                await DisplayAlert("ERRORE", "Completa tutti i campi obbligatori!", "OK");
+                return;
             }
             else
             {
