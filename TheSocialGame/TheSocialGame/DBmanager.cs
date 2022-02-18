@@ -43,7 +43,7 @@ namespace TheSocialGame
             res.Add("Username", usr.Username);
             res.Add("PuntiSocial", usr.PuntiSocial);
             res.Add("PuntiEsperienza", usr.PuntiEsperienza);
-            res.Add("Livello", usr.Livello);
+            res.Add("Livello", (usr.PuntiEsperienza+usr.PuntiSocial)/10 + 1);
             if (usr.FotoBytes != null) { res.Add("FotoBytes", Convert.ToBase64String(usr.FotoBytes)); }
             else { res.Add("FotoBytes", null); }
             res.Add("FotoLiveiOS", usr.FotoLiveiOS);
@@ -66,10 +66,10 @@ namespace TheSocialGame
             if (exp.Copertina != null) { res.Add("Copertina", Convert.ToBase64String(exp.Copertina)); }
             else { res.Add("Copertina", null); }
             res.Add("CopertinaLiveiOS", exp.CopertinaLiveiOS);
-            res.Add("DataInizio", exp.DataInizio.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("en-US")));
+            res.Add("DataInizio", exp.DataInizio.ToString());
             System.Diagnostics.Debug.Print(exp.DataInizio.ToString());
-            res.Add("DataFine", exp.DataFine.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("en-US")));
-            System.Diagnostics.Debug.Print(exp.DataFine.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("en-US")));
+            res.Add("DataFine", exp.DataFine.ToString());
+            System.Diagnostics.Debug.Print(exp.DataFine.ToString());
             res.Add("Tipologia", exp.Tipologia);
             res.Add("Privata", exp.Privata);
             res.Add("Live", exp.Live);
