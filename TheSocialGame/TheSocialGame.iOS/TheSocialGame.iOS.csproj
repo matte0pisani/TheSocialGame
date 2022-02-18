@@ -96,14 +96,30 @@
       <Visible>false</Visible>
     </ImageAsset>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-2.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-3.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-4.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-5.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-6.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-7.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-6.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iconaApp-7.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
