@@ -220,9 +220,17 @@ namespace TheSocialGame
                 Utente DBfriend = await DBmanager.GetUtenteBasePerNome(Partecipanti.Text);
                 if (DBfriend != null)
                 {
+                    if (!DBfriend.Privato)
+                    {
                     nuoviPuntiSocial++;     // aumento i punti social ad ogni nuovo amico; possibile uso dei punti social, DA RIVEDERE
                     nuova.ListaPartecipanti.Add(DBfriend);
-                    ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + DBfriend.Username + "  "; 
+                    ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + DBfriend.Username + "  ";
+                    }
+                    else
+                    {
+                        await DisplayAlert("Utente privato", "Non puoi aggiungere un utente privato ad una esperienza a meno che non " +
+                            "sia tuo amico. Per stringere amicizia, l'utente deve aggiungere te ad una sua esperienza.", "OK");
+                    }                     
                 }
                 else { await DisplayAlert("Utente inesistente", "Non esiste alcun utente con il nome dato", "OK") ; }
 

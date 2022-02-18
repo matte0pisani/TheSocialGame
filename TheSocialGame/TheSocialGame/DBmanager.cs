@@ -66,10 +66,10 @@ namespace TheSocialGame
             if (exp.Copertina != null) { res.Add("Copertina", Convert.ToBase64String(exp.Copertina)); }
             else { res.Add("Copertina", null); }
             res.Add("CopertinaLiveiOS", exp.CopertinaLiveiOS);
-            res.Add("DataInizio", exp.DataInizio.ToString());
+            res.Add("DataInizio", exp.DataInizio.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("en-US")));
             System.Diagnostics.Debug.Print(exp.DataInizio.ToString());
-            res.Add("DataFine", exp.DataFine.ToString());
-            System.Diagnostics.Debug.Print(exp.DataFine.ToString());
+            res.Add("DataFine", exp.DataFine.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("en-US")));
+            System.Diagnostics.Debug.Print(exp.DataFine.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("en-US")));
             res.Add("Tipologia", exp.Tipologia);
             res.Add("Privata", exp.Privata);
             res.Add("Live", exp.Live);
