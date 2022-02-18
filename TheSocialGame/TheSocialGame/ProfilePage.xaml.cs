@@ -186,13 +186,11 @@ namespace TheSocialGame
                 {
                     return new MemoryStream(user.FotoBytes);
                 });
-                switch (Device.RuntimePlatform)
-                {
-                    case Device.iOS:
+
                         user.FotoLiveiOS = true;
                         ProfilePic.Rotation = 90;
-                        break;
-                }
+                        
+                
             }
 
             DBmanager.AggiornaUtenteInfoNonExp(user);

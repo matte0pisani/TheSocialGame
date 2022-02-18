@@ -312,6 +312,7 @@ namespace TheSocialGame
                 layout.Children.Add(nomeschermata);
                 layout.Children.Add(Esci);
                 layout.Children.Add(EmptyList);
+                
                 layout.Children.Add(Aggiungi);
                 layout.Children.Add(AggiungiElemento);
                 Visualizza.IsVisible = false;
@@ -331,36 +332,51 @@ namespace TheSocialGame
             Aggiungi.IsVisible = true;
             if (nomeschermata.Text.Equals("Luoghi"))
             {
-                exp.Luoghi.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.Luoghi);
+                if (!AggiungiElemento.Text.Equals(""))
+                {
+                    exp.Luoghi.Add(AggiungiElemento.Text);
+                    apriListaSemplice(exp.Luoghi);
+                }
             }
             else if (nomeschermata.Text.Equals("Slogan"))
             {
-                exp.Slogan.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.Slogan);
+                if (!AggiungiElemento.Text.Equals(""))
+                {
+                    exp.Slogan.Add(AggiungiElemento.Text);
+                    apriListaSemplice(exp.Slogan);
+                }
             }
             else if (nomeschermata.Text.Equals("Fun Facts"))
             {
-
-                exp.Funfacts.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.Funfacts);
+                if (!AggiungiElemento.Text.Equals(""))
+                {
+                    exp.Funfacts.Add(AggiungiElemento.Text);
+                    apriListaSemplice(exp.Funfacts);
+                }
             }
             else if (nomeschermata.Text.Equals("Playlist"))
             {
-                exp.Playlist.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.Playlist);
+                if (!AggiungiElemento.Text.Equals(""))
+                {
+                    exp.Playlist.Add(AggiungiElemento.Text);
+                    apriListaSemplice(exp.Playlist);
+                }
             }
             else if (nomeschermata.Text.Equals("Recensioni"))
             {
-
-                exp.Recensioni.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.Recensioni);
+                if (!AggiungiElemento.Text.Equals(""))
+                {
+                    exp.Recensioni.Add(AggiungiElemento.Text);
+                    apriListaSemplice(exp.Recensioni);
+                }
             }
             else if (nomeschermata.Text.Equals("Altro"))
             {
-
-                exp.Altro.Add(AggiungiElemento.Text);
-                apriListaSemplice(exp.Altro);
+                if (!AggiungiElemento.Text.Equals(""))
+                {
+                    exp.Altro.Add(AggiungiElemento.Text);
+                    apriListaSemplice(exp.Altro);
+                }
             }
             else if (nomeschermata.Text.Equals("Partecipanti"))
             {
@@ -412,6 +428,7 @@ namespace TheSocialGame
                 }
             }
             AggiungiElemento.Text = null;
+
 
         }
 
