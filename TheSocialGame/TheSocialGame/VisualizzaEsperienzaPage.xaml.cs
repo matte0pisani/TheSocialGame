@@ -312,7 +312,7 @@ namespace TheSocialGame
                 layout.Children.Add(nomeschermata);
                 layout.Children.Add(Esci);
                 layout.Children.Add(EmptyList);
-                
+                Aggiungi.IsVisible = true;
                 layout.Children.Add(Aggiungi);
                 layout.Children.Add(AggiungiElemento);
                 Visualizza.IsVisible = false;
