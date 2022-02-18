@@ -105,13 +105,9 @@ namespace TheSocialGame
                     return new MemoryStream(nuova.Copertina);
                 });
 
-                switch (Device.RuntimePlatform)
-                {
-                    case Device.iOS:
-                        nuova.CopertinaLiveiOS = true;
-                        Copertina.Rotation = 90;
-                        break;
-                }
+                     nuova.CopertinaLiveiOS = true;
+                     Copertina.Rotation = 90;
+                       
             }
 
         }
@@ -192,6 +188,7 @@ namespace TheSocialGame
                         nuova.ListaPartecipanti.Add(friend);
                         ListaPartecipanti.Text = ListaPartecipanti.Text + "@" + friend.Username + "  ";
                         SaveButton.IsEnabled = true;
+                        Partecipanti.Text = null;
                         return;
                     }
                 }
@@ -213,10 +210,11 @@ namespace TheSocialGame
                 }
                 else { await DisplayAlert("Utente inesistente", "Non esiste alcun utente con il nome dato", "OK") ; }
 
-                Partecipanti.Text = null;
+              
             }
 
             SaveButton.IsEnabled = true;
+            Partecipanti.Text = null;
         }
 
        

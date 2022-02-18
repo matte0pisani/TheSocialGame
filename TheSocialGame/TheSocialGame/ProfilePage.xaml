@@ -212,7 +212,7 @@
 
                   
                     <!--FOTO PROFILO e GESTIONE-->
-                    <Frame  x:Name="ProfilePicFrame" BorderColor="Black" BackgroundColor="Black" IsClippedToBounds="True" Padding="0" 
+                    <Frame  x:Name="ProfilePicFrame" BorderColor="Black" BackgroundColor="Transparent"  IsClippedToBounds="True" Padding="0" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.55}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.55}"
                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=0.24}"
