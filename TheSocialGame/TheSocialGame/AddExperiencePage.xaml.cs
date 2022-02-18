@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using Plugin.FirebasePushNotification;
+
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using FirebaseAdmin;
@@ -31,10 +31,6 @@ namespace TheSocialGame
             EsciSenzaSalvareFrame.IsVisible = false;
             CopertinaFrame.IsVisible = false;
             Rimuovi.IsVisible = false;
-            LabelFromTime.IsVisible = false;
-            FromTime.IsVisible = false;
-            LabelToTime.IsVisible = false;
-            ToTime.IsVisible = false;
             WarningPartecipanti.IsVisible = false;
             WarningTipologia.IsVisible = false;
             WarningTitolo.IsVisible = false;
@@ -174,26 +170,8 @@ namespace TheSocialGame
             DataInizio.MaximumDate = DataFine.Date;
         }
 
-        //Capire come gestire esperienze in diretta
-        void LiveChanged(Object sender, EventArgs e)
-        {
-            if (Live.IsToggled)
-            {
-                LabelFromTime.IsVisible = true;
-                FromTime.IsVisible = true;
-                LabelToTime.IsVisible = true;
-                ToTime.IsVisible = true;
-                nuova.Live = true;
-            }
-            else
-            {
-                LabelFromTime.IsVisible = false;
-                FromTime.IsVisible = false;
-                LabelToTime.IsVisible = false;
-                ToTime.IsVisible = false;
-                nuova.Live = false;
-            }
-        }
+        
+      
 
         private void TipoEsperienza(Object sender, EventArgs e)
         {
@@ -240,13 +218,7 @@ namespace TheSocialGame
             SaveButton.IsEnabled = true;
         }
 
-        private void PrivataChanged(Object sender, EventArgs e)
-        {
-            if (Privata.IsToggled)
-                nuova.Privata = true;
-            else nuova.Privata = false;
-        }
-
+       
         private async void Salva(object sender, EventArgs e)
         {
             if (nuova.DataInizio.Equals(new DateTime())) nuova.DataInizio = DataInizio.Date;

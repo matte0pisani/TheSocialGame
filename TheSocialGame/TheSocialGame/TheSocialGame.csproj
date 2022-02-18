@@ -18,8 +18,7 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing" Version="0.1.2" />
-    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.4.0.50" />
-    <PackageReference Include="Plugin.FirebasePushNotification" Version="3.4.1" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.4.0.52" />
     <PackageReference Include="FirebaseAdmin" Version="2.2.0" />
   </ItemGroup>
 
